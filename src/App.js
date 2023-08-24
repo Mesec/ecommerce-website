@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from './features/counter/counterSlice'
+// import { useSelector, useDispatch } from 'react-redux'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
-  const count = useSelector((state) => state.counter.value)
-  const dispatch = useDispatch()
+  // const count = useSelector((state) => state.counter.value)
+  // const dispatch = useDispatch()
 
   return (
     <div className="App">
-      <button
+      <Navbar/>
+      {/* <Header /> */}
+      {/* <button
         aria-label="Increment value"
         onClick={ () => dispatch(increment()) }
       >
@@ -21,7 +22,7 @@ function App() {
         onClick={ () => dispatch(decrement()) }
       >
         Decrement
-      </button>
+      </button> */}
     </div>
   );
 }
