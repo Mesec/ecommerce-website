@@ -15,7 +15,24 @@ import { Link } from 'react-router-dom'
 import './Navbar.css';
 
 
-const pages = ['Home', 'Headphones', 'Speakers', 'Earphones'];
+const pages = [
+  {
+    title: 'Home',
+    url: '/',
+  },
+  {
+    title: 'Headphones',
+    url: '/headphones',
+  },
+  {
+    title: 'Speakers',
+    url: '/speakers',
+  },
+  {
+    title: 'Earphones',
+    url: '/earphones',
+  },
+]
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -66,8 +83,8 @@ function ResponsiveAppBar() {
                   } }
                 >
                   { pages.map((page) => (
-                    <MenuItem key={ page } onClick={ handleCloseNavMenu }>
-                      <Typography textAlign="center">{ page }</Typography>
+                    <MenuItem key={ page.url } onClick={ handleCloseNavMenu }>
+                      <Typography textAlign="center">{ page.name }</Typography>
                     </MenuItem>
                   )) }
                 </Menu>
@@ -93,8 +110,8 @@ function ResponsiveAppBar() {
                 fontFamily: theme.typography.fontFamily
               } }>
               { pages.map((page) => (
-                <Link href="#" className='Link'>
-                  { page }
+                <Link to={page.url} className='Link'>
+                  { page.title }
                 </Link>
               )) }
             </Box>
