@@ -13,26 +13,8 @@ import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom'
 import './Navbar.css';
-
-
-const pages = [
-  {
-    title: 'Home',
-    url: '/',
-  },
-  {
-    title: 'Headphones',
-    url: '/headphones',
-  },
-  {
-    title: 'Speakers',
-    url: '/speakers',
-  },
-  {
-    title: 'Earphones',
-    url: '/earphones',
-  },
-]
+import { pages } from '../../app/constants';
+import NavigationItems from './NavigationItems/NavigationItems';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -49,10 +31,10 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar color='primary' position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style={ { padding: ' 0 165px' } }>
         <Toolbar disableGutters>
           <Box width='100%' justifyContent='space-between' display='flex'>
-            <Box display='flex' md={ { paddingLeft: '160px' } }>
+            <Box display='flex'>
               <Box sx={ { display: { md: 'none' } } }>
                 <IconButton
                   size="large"
@@ -94,28 +76,13 @@ function ResponsiveAppBar() {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={ handleOpenNavMenu }
                 color="secondary"
               >
                 <img style={ { width: '143px', height: '25px' } } src={ Logo } alt='Audiophile' />
               </IconButton>
             </Box>
-            <Box
-              sx={ {
-                flexGrow: 1,
-                gap: 2,
-                display: { xs: 'none', md: 'flex' },
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontFamily: theme.typography.fontFamily
-              } }>
-              { pages.map((page) => (
-                <Link to={page.url} className='Link'>
-                  { page.title }
-                </Link>
-              )) }
-            </Box>
-            <Box display='flex' md={ { paddingRight: '160px' } }>
+              <NavigationItems />
+            <Box display='flex'>
               <img src={ Cart } alt="Add to Cart" />
             </Box>
           </Box>

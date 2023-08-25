@@ -5,17 +5,5 @@
 }
 
 .Items {
-  font-size: 13px;
   font-size: bold;
-}
-
-.Link {
-  text-decoration: none;
-  color: var(--secondary-color);
-  text-transform: uppercase;
-  font-family: 'Manrope', sans-serif;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 25px;
-  letter-spacing: 2px;
 }

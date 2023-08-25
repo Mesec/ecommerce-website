@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 
-import Home from '../home/Home';
-import Headphones from '../headphones/Headphones';
+import Home from '../Home/Home';
+import Headphones from '../Headphones/Headphones';
 
 const PageRoutes = () => {
   return (
