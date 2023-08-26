@@ -31,7 +31,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar color='primary' position="static">
-      <Container maxWidth="xl" style={ { padding: ' 0 165px' } }>
+      <Container maxWidth="xxl" style={ { padding: ' 0 165px' } }>
         <Toolbar disableGutters>
           <Box width='100%' justifyContent='space-between' display='flex'>
             <Box display='flex'>
