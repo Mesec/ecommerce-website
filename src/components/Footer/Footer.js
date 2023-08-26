@@ -38,7 +38,8 @@ export default function Footer() {
       <Box
         display='flex'
         width='100%'
-        justifyContent='space-between'>
+        justifyContent='space-between'
+        className='Footer-Description'>
         <Typography variant='body1' color='secondary' fontSize='15px' lineHeight='25px' wordWrap='break-word'>
           Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
         </Typography>
@@ -53,7 +54,7 @@ export default function Footer() {
           <InstagramIcon color='secondary' />
         </Box>
       </Box>
-      <Box marginTop='56px'>
+      <Box marginTop='56px' className='Footer-Copy-Right'>
         <Typography variant='body1' color='secondary' fontSize='15px' lineHeight='25px' wordWrap='break-word'>
           Copyright 2021. All Rights Reserved
         </Typography>
