@@ -9,7 +9,7 @@ function App() {
   // const dispatch = useDispatch()
 
   return (
-    <Container style={{ width: '100%', padding: '0', maxWidth: '100%' }}>
+    <Container style={{ width: '100%%', maxWidth: '74%' }}>
       <Layout/>
       {/* <Header /> */}
       {/* <button

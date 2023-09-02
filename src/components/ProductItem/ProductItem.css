@@ -1,0 +1,57 @@
+.Product-Item {
+  height: 100px;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  height: 206px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.Product-Item  h6 {
+  color: #000000;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.29px;
+  line-height: normal;
+  text-align: center;
+}
+
+.Product-Item-Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.Product-Item-Link > p {
+  text-transform: uppercase;
+  color: #000000;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.Product-Item-Link > svg {
+  font-size: 13px;
+  color: #e96518;
+}
+
+.Product-Item-Info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 30px;
+}
+
+.Product-Item > img {
+  height: 140px;
+  position: absolute;
+  top: -75px;
+}
