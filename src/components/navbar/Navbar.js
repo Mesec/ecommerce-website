@@ -11,14 +11,15 @@ import Logo from '../../assets/icons/logo.svg'
 import Cart from '../../assets/icons/cart.svg'
 import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css';
 import { pages } from '../../app/constants';
 import NavigationItems from './NavigationItems/NavigationItems';
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
-  const theme = useTheme();
+  const location = useLocation();
+  console.log(location.pathname)
 
   const handleOpenNavMenu = (event) => {
     console.log('event')
@@ -30,8 +31,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar color='primary' position="static">
-      <Container maxWidth="xxl" style={ { padding: ' 0 165px' } }>
+    <AppBar color='primary' position="static" style={ { padding: '0 165px' }}>
+      <Container maxWidth="xxl" style={ { borderBottom: location.pathname === '/' ? '1px solid rgba(255, 255, 255, 0.2)' : 'none' } }>
         <Toolbar disableGutters>
           <Box width='100%' justifyContent='space-between' display='flex'>
             <Box display='flex'>
