@@ -4,8 +4,9 @@ import Headphones from '../../assets/images/headphones.png'
 import Speakers from '../../assets/images/speakers.png'
 import Earphones from '../../assets/images/earphones.png'
 import './Home.css'
-import ProductItem from '../ProductItem/ProductItem';
+import ProductItem from '../ProductNavigation/NavItem/NavItem';
 import Person from '../../assets/images/person.png'
+import ProductNavigation from '../ProductNavigation/ProductNavigation'
 
 export default function Home() {
   return (
@@ -26,11 +27,7 @@ export default function Home() {
         </Box>
       </Box>
       <Box className='Home-Main-Content'>
-        <Box display='flex' justifyContent='space-between' gap='30px'>
-          <ProductItem title='HEADPHONES' icon={ Headphones }/>
-          <ProductItem title='SPEAKERS' icon={ Speakers }/>
-          <ProductItem title='EARPHONES' icon={ Earphones }/>
-        </Box>
+        <ProductNavigation />
         <Box className='Home-First'>
           <img src={ Speakers } alt="" />
           <Box className='Home-First-Description'>
@@ -58,7 +55,7 @@ export default function Home() {
             <Button variant="outlined">See Product</Button>
           </Box>
         </Box>
-        <Box className='Home-Fourth'>
+        {/* <Box className='Home-Fourth'>
           <Box>
             <Typography variant='h4'>
               Bringing you the <Box component="span">best</Box> audio gear
@@ -70,7 +67,7 @@ export default function Home() {
           <Box>
             <img src={ Person } alt="" />
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   )

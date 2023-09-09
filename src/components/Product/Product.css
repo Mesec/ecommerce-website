@@ -1,0 +1,78 @@
+.Product {
+  padding: 160px 165px;
+}
+
+.Product-Image-Container {
+  background-color: #f0f0f0;
+  background-position: center;
+  background-size: cover;
+  width: 480px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+  box-sizing: border-box;
+}
+
+.Product-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  margin-bottom: 240px;
+}
+
+.Product-Items {
+  justify-content: space-between;
+}
+
+.New-Product {
+  color: #d87d4a;
+  font-family: "Manrope-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.Product-Description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Product-Description > h4 {
+  color: #000000;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.43px;
+  line-height: 44px;
+  width: 445px;
+  margin-bottom: 32px;
+}
+
+.Product-Description > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.5;
+  width: 445px;
+  margin-bottom: 40px;
+}
+
+.Product-Description > button {
+  background-color: #d87d4a;
+  height: 50px;
+  width: 162px;
+  color: #ffffff;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+}

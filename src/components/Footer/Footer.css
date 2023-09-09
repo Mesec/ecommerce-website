@@ -1,6 +1,72 @@
 .Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.TopFooter {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center ;
+  padding-bottom: 160px;
+}
+
+.TopFooter > div{
+  border-radius: 8px;
+}
+
+.TopFooter > div:nth-child(1) {
+  margin-right: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.TopFooter > div:nth-child(1) > h4{
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.43px;
+  line-height: 44px;
+  width: 445px;
+  text-transform: uppercase;
+}
+
+.TopFooter > div:nth-child(1) > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.5;
+  width: 445px;
+
+}
+
+.TopFooter > div:nth-child(1) span {
+  color: #d87d4a;
+}
+
+.TopFooter > div:nth-child(2) {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.TopFooter > div:nth-child(2) > img {
+  border-radius: 8px;
+}
+
+.BottomFooter {
   background-color: var(--primary-color);
 }
+
 .Footer-Description p:nth-child(1) {
   color: #ffffff;
   font-family: "Manrope-Medium", Helvetica;
