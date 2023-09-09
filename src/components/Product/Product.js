@@ -18,7 +18,7 @@ export default function Product(props) {
                   <img src={ item.src } alt={ item.title } />
                 </Box>
                 <Box className='Product-Description'>
-                  { item.newProduct && <Typography className='New-Product' variant='h5'>NEW PRODUCT</Typography>}
+                  { item.newProduct && <Typography className='New-Product' variant='h7'>NEW PRODUCT</Typography>}
                   <Typography variant='h4'>{ item.title }</Typography>
                   <Typography variant='body1'>{ item.description }</Typography>
                   <Button variant='contained'>SEE PRODUCT</Button>

@@ -25,16 +25,6 @@
   justify-content: space-between;
 }
 
-.New-Product {
-  color: #d87d4a;
-  font-family: "Manrope-Regular", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 10px;
-  line-height: normal;
-  margin-bottom: 16px;
-}
-
 .Product-Description {
   display: flex;
   flex-direction: column;
@@ -75,4 +65,14 @@
   line-height: normal;
   border: none;
   cursor: pointer;
+}
+
+.New-Product {
+  color: #d87d4a;
+  font-family: "Manrope-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  line-height: normal;
+  margin-bottom: 16px;
 }
