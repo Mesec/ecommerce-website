@@ -1,0 +1,43 @@
+.ProductSection-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  margin-bottom: 240px;
+  padding: 0 160px;
+}
+
+.See-Product {
+  background-color: #d87d4a;
+  color: #ffffff;
+  height: 50px;
+  width: 162px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+}
+
+.Product-Header {
+  background-color: var(--primary-color);
+  height: 160px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 79px;
+}
+
+.Product-Header > h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}

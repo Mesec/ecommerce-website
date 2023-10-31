@@ -1,8 +1,10 @@
-.Product {
-  padding: 160px 165px;
+.Product-Item-Container {
+  display: flex;
+  justify-content: space-between;
+  gap: 125px;
 }
 
-.Product-Image-Container {
+.Product-Item-Image {
   background-color: #f0f0f0;
   background-position: center;
   background-size: cover;
@@ -14,24 +16,13 @@
   box-sizing: border-box;
 }
 
-.Product-Container {
-  display: flex;
-  flex-direction: column;
-  gap: 160px;
-  margin-bottom: 240px;
-}
-
-.Product-Items {
-  justify-content: space-between;
-}
-
-.Product-Description {
+.Product-General-Info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.Product-Description > h4 {
+.Product-General-Info > h4 {
   color: #000000;
   font-size: 40px;
   font-weight: 700;
@@ -41,7 +32,7 @@
   margin-bottom: 32px;
 }
 
-.Product-Description > p {
+.Product-General-Info > p {
   color: #000000;
   font-family: "Manrope-Medium", Helvetica;
   font-size: 15px;
@@ -51,20 +42,6 @@
   opacity: 0.5;
   width: 445px;
   margin-bottom: 40px;
-}
-
-.Product-Description > button {
-  background-color: #d87d4a;
-  height: 50px;
-  width: 162px;
-  color: #ffffff;
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: normal;
-  border: none;
-  cursor: pointer;
 }
 
 .New-Product {

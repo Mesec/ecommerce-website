@@ -4,9 +4,10 @@ import Headphones from '../../assets/images/headphones.png'
 import Speakers from '../../assets/images/speakers.png'
 import Earphones from '../../assets/images/earphones.png'
 import './Home.css'
-import ProductItem from '../ProductNavigation/NavItem/NavItem';
+import ProductItem from '../../components/ProductNavigation/NavItem/NavItem';
 import Person from '../../assets/images/person.png'
-import ProductNavigation from '../ProductNavigation/ProductNavigation'
+import ProductNavigation from '../../components/ProductNavigation/ProductNavigation'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -17,13 +18,16 @@ export default function Home() {
             NEW PRODUCT
           </Typography>
           <Typography variant='h4' color='secondary' fontSize='15px'>
-            XX99 Mark II HeadphoneS
+            XX99 Mark II Headphones
           </Typography>
           <Typography variant='body1' color='secondary'>
             Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
           </Typography>
-          <Button variant="contained">See Product</Button>
-
+          <Link to={ `/product/h-01` }>
+            <Button variant="contained">
+              NEW PRODUCT
+            </Button>
+          </Link>
         </Box>
       </Box>
       <Box className='Home-Main-Content'>

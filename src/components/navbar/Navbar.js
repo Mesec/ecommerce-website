@@ -19,10 +19,8 @@ import NavigationItems from './NavigationItems/NavigationItems';
 function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const location = useLocation();
-  console.log(location.pathname)
 
   const handleOpenNavMenu = (event) => {
-    console.log('event')
     setAnchorElNav(event.currentTarget);
   };
 
@@ -30,9 +28,11 @@ function ResponsiveAppBar(props) {
     setAnchorElNav(null);
   };
 
+  const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
+
   return (
     <AppBar color='primary' position="static" style={ { padding: '0 165px' }}>
-      <Container maxWidth="xxl" style={ { borderBottom: location.pathname === '/' ? '1px solid rgba(255, 255, 255, 0.2)' : 'none' } }>
+      <Container maxWidth="xxl" style={ { borderBottom: borderPathNames.includes(location.pathname) ? '1px solid rgba(255, 255, 255, 0.2)' : 'none' } }>
         <Toolbar disableGutters>
           <Box width='100%' justifyContent='space-between' display='flex'>
             <Box display='flex'>

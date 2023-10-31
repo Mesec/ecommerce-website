@@ -1,0 +1,102 @@
+.Product-Container{
+  padding: 0 160px;
+   display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.Product-Controls {
+  display: flex;
+  gap: 16px;
+}
+
+.Product-Controls input {
+  height: 50px;
+  width: 162px;
+  padding: 0 10px;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.Product-Features {
+  width: 50%;
+  margin-right: 125px;
+}
+
+.Product-Features > h4, .In-Box > h4 {
+  color: #000000;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.43px;
+  line-height: 44px;
+  width: 445px;
+  margin-bottom: 32px;
+}
+
+.Product-Features > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.5;
+  width: 445px;
+  margin-bottom: 40px;
+}
+
+.In-Box-Items {
+  display: flex;
+  gap: 24px;
+}
+
+.In-Box-Items p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 30px;
+  opacity: 0.5;
+}
+
+.In-Box-Items p:nth-child(1) {
+  color: #D87D4A;
+  font-weight: 700;
+}
+
+.Product-Spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Product-Gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.Product-Gallery-Left-Column {
+  display: flex;
+  flex-direction: column;
+  width: 510px;
+  gap: 10px;
+}
+
+.Product-Gallery-Left-Column > div {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.Product-Gallery-Left-Column img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.Product-Gallery-Right-Column {
+  border-radius: 5px;
+  overflow: hidden;
+}
+

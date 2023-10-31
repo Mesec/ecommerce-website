@@ -35,6 +35,11 @@
   background-color: #faaf84;
 }
 
+.Home-Header button a {
+  text-decoration: none;
+  color: white;
+}
+
 .Home-Header > span:nth-child(1){
   color: #ffffff;
   font-family: "Manrope-Regular", Helvetica;
