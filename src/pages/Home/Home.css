@@ -76,13 +76,12 @@
 
 .Home-Main-Content {
   margin-top: 200px;
-  padding: 0 165px 165px 165px;
+  padding: 0 100px 100px 100px;
   box-sizing: border-box;
 }
 
 .Home-First {
   background-color: #D87D4A;
-  margin-top: 168px;
   box-sizing: border-box;
   padding: 0 0 0 120px;
   gap: 140px;

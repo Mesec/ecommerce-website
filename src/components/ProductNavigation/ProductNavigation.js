@@ -7,7 +7,7 @@ import Earphones from '../../assets/images/earphones.png'
 
 export default function ProductNavigation() {
   return (
-    <Box display='flex' justifyContent='space-between' gap='30px'>
+    <Box display='flex' justifyContent='space-between' gap='30px' paddingBottom='160px'>
       <ProductItem title='HEADPHONES' icon={ Headphones } />
       <ProductItem title='SPEAKERS' icon={ Speakers } />
       <ProductItem title='EARPHONES' icon={ Earphones } />

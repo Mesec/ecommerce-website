@@ -15,8 +15,9 @@ import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css';
 import { pages } from '../../app/constants';
 import NavigationItems from './NavigationItems/NavigationItems';
+import Button from '@mui/material/Button';
 
-function ResponsiveAppBar(props) {
+function ResponsiveAppBar({ openCartModal }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const location = useLocation();
 
@@ -83,9 +84,9 @@ function ResponsiveAppBar(props) {
               </IconButton>
             </Box>
               <NavigationItems />
-            <Box display='flex'>
+            <Button onClick={ openCartModal }>
               <img src={ Cart } alt="Add to Cart" />
-            </Box>
+            </Button>
           </Box>
         </Toolbar>
       </Container>

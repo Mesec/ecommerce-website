@@ -11,33 +11,40 @@ import Image1 from '../../assets/test/gallery1.png'
 import Image2 from '../../assets/test/gallery2.png'
 import Image3 from '../../assets/test/gallery3.png'
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
+import { addToCart } from '../../features/cart/cartSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Product() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState(true);
-  const [amount, setAmount] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   const location = useLocation();
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     setTimeout(() => {
       const getProduct = products.filter(item => item.id === id);
-      console.log('getProduct', getProduct);
       setProduct(getProduct);
       setLoading(false)
     }, 1200)
   }, [id]);
 
   const setAmountHandler = (e) => {
-    const newAmount = e.target.value;
-    setAmount(newAmount)
+    const value = parseInt(e.target.value, 10);
+    setQuantity(value)
+  }
 
-  } 
+  const addToCartHandler = () => {
+    dispatch(addToCart({ quantity, id: product[0].id }));
+    setQuantity(1)
+  }
 
   if (loading) {
     return <Box className='Product-Spinner'><CircularProgress/></Box>
   }
-  console.log('ID', id);
+
   return (
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
       <Box className='Product-Container'>
@@ -47,12 +54,12 @@ export default function Product() {
               onChange={ setAmountHandler }
               variant="outlined"
               type="number"
-              value={ amount }
+              value={ quantity }
               InputProps={ {
                 inputProps: { min: 1 },
               } }
             />
-            <Button className='See-Product' variant='contained'>ADD TO CART</Button>
+            <Button onClick={ addToCartHandler } className='See-Product' variant='contained'>ADD TO CART</Button>
           </Box>
         </ProductItem>
         <Box display='flex' className='Product-Info'>
