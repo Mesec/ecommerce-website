@@ -27,8 +27,7 @@ export default function Footer() {
       <Box
         display='flex'
         flexDirection='column'
-        className='BottomFooter'
-        style={ { padding: '65px 165px 48px 165px' } }>
+        className='BottomFooter'>
         <Box></Box>
         <Box
           display='flex'

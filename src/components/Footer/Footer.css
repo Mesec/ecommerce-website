@@ -65,6 +65,7 @@
 
 .BottomFooter {
   background-color: var(--primary-color);
+  padding: 65px 348px 48px 348px;
 }
 
 .Footer-Description p:nth-child(1) {
