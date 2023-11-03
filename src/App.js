@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Box } from '@mui/material';
 import React from 'react';
 import './App.css';
 import Layout from './components/Layout/Layout';
@@ -10,23 +10,9 @@ function App() {
   // const dispatch = useDispatch()
 
   return (
-    <Container style={{ width: '100%%', maxWidth: '74%' }}>
+    <Box>
       <Layout/>
-      {/* <Header /> */}
-      {/* <button
-        aria-label="Increment value"
-        onClick={ () => dispatch(increment()) }
-      >
-        Increment
-      </button>
-      <span>{ count }</span>
-      <button
-        aria-label="Decrement value"
-        onClick={ () => dispatch(decrement()) }
-      >
-        Decrement
-      </button> */}
-    </Container>
+    </Box>
   );
 }
 
