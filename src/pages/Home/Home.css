@@ -1,83 +1,13 @@
 .Home {
   width: 100%;
 }
-.Home-Header-Container {
-  width: 100%;
-  background-color: var(--primary-color);
-  padding: 0 165px;
-  box-sizing: border-box;
-}
-.Home-Header{
-  background-image: url('../../assets/images/cover.png');
-  background-size: 45%;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
-  height: 100%;
-  width: 100%;
-  padding-top: 128px;
-  padding-bottom: 158px;
-  box-sizing: border-box;
-}
-
-.Home-Header button {
-  background-color: #D87D4A;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 0;
-}
-
-.Home-Header button:hover {
-  background-color: #faaf84;
-}
-
-.Home-Header button a {
-  text-decoration: none;
-  color: white;
-}
-
-.Home-Header > span:nth-child(1){
-  color: #ffffff;
-  font-family: "Manrope-Regular", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 10px;
-  line-height: normal;
-  opacity: 0.5;
-}
-
-.Home-Header > h4 {
-  color: #ffffff;
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: 58px;
-  text-transform: uppercase;
-  width: 396px;
-  margin: 24px 0;
-}
-
-.Home-Header > p {
-  color: #ffffff;
-  font-family: "Manrope-Medium", Helvetica;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 25px;
-  opacity: 0.75;
-  width: 349px;
-  margin-bottom: 40px;
-}
 
 .Home-Main-Content {
   margin-top: 200px;
-  padding: 0 100px 100px 100px;
+  padding: 0 348px 100px 348px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .Home-First {
@@ -86,14 +16,15 @@
   padding: 0 0 0 120px;
   gap: 140px;
   overflow: hidden;
-  height: 500px;
   border-radius: 8px;
   display: flex;
+  position: relative;
 }
 
 .Home-First-Description {
   text-align: left;
-  padding-top: 133px;
+  padding-top: 185px;
+  z-index: 2;
 }
 
 .Home-First-Description > h4 {
@@ -107,29 +38,28 @@
   word-wrap: 'break-word';
   width: 100px;
   margin-bottom: 24px;
+  z-index: 2;
 }
 .Home-First-Description > p {
   color: white;
   word-wrap: break-word;
   text-align: left;
   width: 350px;
-  font-family: "Manrope-Medium", Helvetica;
+  font-family: "Manrope";
   font-size: 15px;
-  font-weight: 500;
+  /* font-weight: 500; */
   left: 0;
   letter-spacing: 0;
   line-height: 25px;
   opacity: 0.75;
   margin-bottom: 40px;
+  z-index: 2;
 }
 .Home-First > img {
-  /* height: 400px;
-  position: absolute;
-  bottom: -20px; */
-  position: relative;
-  top: 20px;
   padding-top: 110px;
-
+  position: relative;
+  bottom: -30px;
+  z-index: 2;
 }
 
 .Home-First-Description > button{
@@ -142,21 +72,51 @@
   letter-spacing: 1px;
   line-height: normal;
   padding: 15px 30px;
+  z-index: 2;
+}
+
+
+.Circle {
+  border: 1px solid rgba(251, 251, 251, 0.3);
+  z-index: 1;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.Home-First-Circle1 {
+  width: 1100px;
+  height: 1100px;
+  top: 0;
+  left: -200px;
+}
+
+.Home-First-Circle2 {
+  width: 650px;
+  height: 650px;
+  bottom: -200px;
+  left: 40px;
+}
+
+.Home-First-Circle3 {
+  width: 570px;
+  height: 570px;
+  bottom: -160px;
+  left: 80px;
 }
 
 .Home-Second {
   background-image: url('../../assets/images/Bitmap.png');
-  height: 300px;
-  width: 100%;
   margin-top: 50px;
   border-radius: 8px;
-  background-size: contain;
+  background-size: cover;
+  background-position: right;
   display: flex;
   flex-direction: column;
   padding-left: 130px;
   justify-content: center;
   gap: 32px;
   box-sizing: border-box;
+  height: 350px;
 }
 
 .Home-Second > button {
@@ -182,18 +142,20 @@
 
 .Home-Third {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin-top: 50px;
+  height: 350px;
 }
 
 .Home-Third div {
-  height: 300px;
-  width: 100%;
   border-radius: 8px;
 }
 
 .Home-Third-Earphones {
   background-image: url('../../assets/images/earphones-bitmap.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
 .Home-Third > div:nth-child(2) {
@@ -204,6 +166,8 @@
   align-items: flex-start;
   gap: 32px;
   padding-left: 95px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .Home-Third > div:nth-child(2) h4 {
