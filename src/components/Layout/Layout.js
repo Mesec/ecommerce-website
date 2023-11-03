@@ -24,7 +24,7 @@ export default function Layout() {
       width='100%'>
       <Cart open={ openCart } handleClose={ handleCloseCart } />
       <Navbar openCartModal={ handleOpenCart }/>
-      <Box>
+      <Box className='Layout-Main-Content'>
         <PageRoutes/>
       </Box>
       <Footer/>
