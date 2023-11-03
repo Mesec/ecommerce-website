@@ -1,0 +1,72 @@
+.Home-Header-Container {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 0 348px;
+  box-sizing: border-box;
+}
+.Home-Header{
+  background-image: url('../../assets/images/cover.png');
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 128px;
+  padding-bottom: 158px;
+  box-sizing: border-box;
+}
+
+.Home-Header button {
+  background-color: #D87D4A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+}
+
+.Home-Header button:hover {
+  background-color: #faaf84;
+}
+
+.Home-Header button a {
+  text-decoration: none;
+  color: white;
+}
+
+.Home-Header > span:nth-child(1){
+  color: #ffffff;
+  font-family: "Manrope-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.Home-Header > h4 {
+  color: #ffffff;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 58px;
+  text-transform: uppercase;
+  width: 396px;
+  margin: 24px 0;
+}
+
+.Home-Header > p {
+  color: #ffffff;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.75;
+  width: 349px;
+  margin-bottom: 40px;
+}

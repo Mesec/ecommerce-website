@@ -1,9 +1,25 @@
-.Navbar {
-  width: 80%;
-  padding-left: 200px;
-  padding-right: 200px;
+  .Items {
+  font-size: bold;
 }
 
-.Items {
-  font-size: bold;
+.Product-Header {
+  background-color: var(--primary-color);
+  height: 160px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 79px;
+}
+
+.Product-Header > h3 {
+  color: #FFF;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
 }
