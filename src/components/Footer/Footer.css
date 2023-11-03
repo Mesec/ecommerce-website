@@ -1,7 +1,7 @@
 .Footer {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center ;
   padding-bottom: 160px;
+  gap: 150px;
 }
 
 .TopFooter > div{
@@ -45,7 +46,6 @@
   line-height: 25px;
   opacity: 0.5;
   width: 445px;
-
 }
 
 .TopFooter > div:nth-child(1) span {
@@ -54,7 +54,6 @@
 
 .TopFooter > div:nth-child(2) {
   overflow: hidden;
-  width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -75,7 +74,8 @@
   letter-spacing: 0;
   line-height: 25px;
   opacity: 0.5;
-  width: 540px
+  width: 540px;
+  text-align: left;
 }
 
 .Footer-Copy-Right p:nth-child(1) {
@@ -87,4 +87,5 @@
   line-height: 25px;
   opacity: 0.5;
   width: 540px;
+  text-align: left;
 }
