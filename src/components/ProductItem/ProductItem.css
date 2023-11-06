@@ -1,21 +1,3 @@
-.Product-Item-Container {
-  display: flex;
-  justify-content: space-between;
-  gap: 125px;
-}
-
-.Product-Item-Image {
-  background-color: #f0f0f0;
-  background-position: center;
-  background-size: cover;
-  width: 480px;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  padding: 70px;
-  box-sizing: border-box;
-}
-
 .Product-General-Info {
   display: flex;
   flex-direction: column;

@@ -21,6 +21,7 @@ import Promoted from '../Promoted/Promoted';
 function ResponsiveAppBar({ openCartModal }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const location = useLocation();
+  const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -29,8 +30,6 @@ function ResponsiveAppBar({ openCartModal }) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
 
   return (
     <Box width='100%'>
@@ -94,9 +93,9 @@ function ResponsiveAppBar({ openCartModal }) {
         </Container>
       </AppBar>
       { location.pathname === '/' && <Promoted/>}
-      { (location.pathname === '/speakers' || location.pathname === '/headphones' || location.pathname === 'earphones')
+      { (location.pathname === '/speakers' || location.pathname === '/headphones' || location.pathname === '/earphones')
         && <Box className='Product-Header'>
-          <Typography variant='h3'>{ location.pathname } </Typography>
+          <Typography variant='h3'>{ location.pathname.split('/')[1] } </Typography>
         </Box>}
     </Box>
   );

@@ -1,9 +1,12 @@
+.Product {
+  padding: 0 348px;
+}
+
 .ProductSection-Container {
   display: flex;
   flex-direction: column;
   gap: 160px;
   margin-bottom: 240px;
-  padding: 0 160px;
 }
 
 .See-Product {
@@ -20,24 +23,20 @@
   cursor: pointer;
 }
 
-.Product-Header {
-  background-color: var(--primary-color);
-  height: 160px;
-  color: white;
+.Product-Item-Container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 79px;
+  gap: 125px;
+  justify-content: left;
 }
 
-.Product-Header > h3 {
-  color: #FFF;
-  text-align: center;
-  font-family: Manrope;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 1.429px;
-  text-transform: uppercase;
+.Product-Item-Image {
+  background-color: #f0f0f0;
+  background-position: center;
+  background-size: cover;
+  width: 480px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  padding: 70px;
+  box-sizing: border-box;
 }

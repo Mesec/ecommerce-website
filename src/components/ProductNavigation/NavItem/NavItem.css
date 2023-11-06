@@ -1,13 +1,14 @@
 .Product-Item {
-  height: 100px;
   width: 100%;
   background-color: #f0f0f0;
   border-radius: 8px;
-  height: 206px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
+  text-align: center;
+  padding: 0 10px 0 10px
 }
 
 .Product-Item  h6 {
@@ -23,15 +24,17 @@
 .Product-Item-Link {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2px;
+  align-items: flex-start;
+  gap: 3px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .Product-Item-Link > p {
   text-transform: uppercase;
   color: #000000;
   font-family: "Manrope-Bold", Helvetica;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: normal;
@@ -54,4 +57,15 @@
   height: 140px;
   position: absolute;
   top: -75px;
+}
+
+.Product-Item-Info > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 13px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20px;
+  opacity: 0.5;
 }

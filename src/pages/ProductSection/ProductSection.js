@@ -12,9 +12,6 @@ export default function Products(props) {
 
   return (
     <Box className='Product'>
-      <Box className='Product-Header'>
-        <Typography variant='h3'>{ type} </Typography>
-      </Box>
       <Box className='ProductSection-Container'>
         {
           products?.map((item, index) => {

@@ -1,6 +1,6 @@
 .Product-Container{
-  padding: 0 160px;
-   display: flex;
+  padding: 0 348px;
+  display: flex;
   flex-direction: column;
   gap: 150px;
 }
