@@ -33,7 +33,7 @@ function ResponsiveAppBar({ openCartModal }) {
   return (
     <Box width='100%'>
       <AppBar color='primary' position="static" style={ { padding: '0 348px' } }>
-        <Container maxWidth="xxl" style={ { borderBottom: borderPathNames.includes(location.pathname) ? '1px solid rgba(255, 255, 255, 0.2)' : 'none', padding: '7px 0 7px 0' } }>
+        <Container maxWidth="xxl" style={ { borderBottom: borderPathNames.includes(location.pathname) ? '1px solid rgba(255, 255, 255, 0.2)' : 'none', padding: '5px 0 5px 0' } }>
           <Toolbar disableGutters>
             <Box width='100%' justifyContent='space-between' display='flex'>
               <Box display='flex'>

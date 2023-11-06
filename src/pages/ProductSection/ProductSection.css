@@ -23,6 +23,10 @@
   cursor: pointer;
 }
 
+.See-Product:hover {
+  background-color: #FBAF85;
+}
+
 .Product-Item-Image {
   background-color: #f0f0f0;
   background-position: center;

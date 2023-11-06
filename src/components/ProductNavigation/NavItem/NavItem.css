@@ -25,21 +25,25 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 3px;
+  gap: 1px;
   cursor: pointer;
   text-decoration: none;
   padding: 0;
 }
 
+.Product-Item-Link:hover {
+  text-decoration: underline;
+  color: #e96518;
+}
+
 .Product-Item-Link > p {
   text-transform: uppercase;
-  color: #000000;
+  color: #e96518;
   font-family: "Manrope-Bold", Helvetica;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: normal;
-  opacity: 0.5;
 }
 
 .Product-Item-Link > svg {
@@ -68,5 +72,5 @@
   left: 0;
   letter-spacing: 0;
   line-height: 20px;
-  opacity: 0.5;
+  opacity: 0.8;
 }

@@ -1,10 +1,10 @@
-  .Items {
+.Items {
   font-size: bold;
 }
 
 .Product-Header {
   background-color: var(--primary-color);
-  height: 160px;
+  height: 140px;
   color: white;
   display: flex;
   justify-content: center;
