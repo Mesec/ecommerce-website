@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import './Cart.css'
+import { TextField } from '@mui/material';
+import Image1 from '../../assets/test/gallery1.png'
 
 export default function Cart({ open, handleClose }) {
   if (open) {
@@ -15,42 +17,61 @@ export default function Cart({ open, handleClose }) {
   return (
     <Box className={`Modal-Wrapper ${open ? 'Visible' : 'Hidden'}`}>
       <Box className='Modal-Overlay' onClick={ handleClose }></Box>
-       <Box className='Cart'>
-          <Box>
-            <Typography>Cart (3)</Typography>
+       <Box className={`Cart ${open ? 'ShowCart' : 'HideCart'}`}>
+          <Box className='Cart-Header'>
+            <Typography variant='body1'>CART (3)</Typography>
             <Button>Remove all</Button>
           </Box>
-          <Box></Box>
+          <Box className='Cart-Items'>
+             <Box className='Cart-Item'>
+                <Box className='Cart-Left'>
+                  <Box className='Cart-Item-Image'>
+                  </Box>
+                  <Box>
+                    <Typography variant='h5'>XX99 MK II</Typography>
+                    <Typography variant='body'>$ 2,999</Typography>
+                  </Box>
+              </Box>
+            <TextField
+              onChange={ () => {} }
+              variant="outlined"
+              type="number"
+              value={ 1 }
+              InputProps={ {
+                inputProps: { min: 1 },
+              } }
+            />
+             </Box>
+          <Box className='Cart-Item'>
+            <Box className='Cart-Left'>
+              <Box className='Cart-Item-Image'>
+              </Box>
+              <Box>
+                <Typography variant='h5'>XX99 MK II</Typography>
+                <Typography variant='body'>$ 2,999</Typography>
+              </Box>
+            </Box>
+            <TextField
+              onChange={ () => { } }
+              variant="outlined"
+              type="number"
+              value={ 1 }
+              InputProps={ {
+                inputProps: { min: 1 },
+              } }
+            />
+          </Box>
+          </Box>
+          <Box className='Cart-Total'>
+            <Typography variant='body1'>
+              TOTAL
+            </Typography>
+            <Typography variant='h6'>
+              $ 5.396
+            </Typography>
+          </Box>
+        <Button variant='contained'>CHECKOUT</Button>
        </Box>
     </Box>
   )
-  // const style = {
-  //   position: 'absolute',
-  //   top: '50%',
-  //   left: '50%',
-  //   transform: 'translate(-50%, -50%)',
-  //   width: 400,
-  //   bgcolor: 'background.paper',
-  //   border: '2px solid #000',
-  //   boxShadow: 24,
-  //   p: 4,
-  // };
-
-  // return (
-  //   <Modal
-  //     open={ open }
-  //     onClose={ handleClose }
-  //     aria-labelledby="modal-modal-title"
-  //     aria-describedby="modal-modal-description"
-  //   >
-  //     <Box sx={ style }>
-  //       <Typography id="modal-modal-title" variant="h6" component="h2">
-  //         Text in a modal
-  //       </Typography>
-  //       <Typography id="modal-modal-description" sx={ { mt: 2 } }>
-  //         Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-  //       </Typography>
-  //     </Box>
-  //   </Modal>
-  // )
 }

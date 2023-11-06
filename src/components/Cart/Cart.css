@@ -4,11 +4,11 @@ body.active-modal {
 }
 
 .Visible {
-  display: block;
+  visibility: visible;
 }
 
 .Hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .Modal-Overlay, .Modal-Wrapper {
@@ -19,7 +19,7 @@ body.active-modal {
   right: 0;
   bottom: 0;
   position: fixed;
-  z-index: 1; /* Ensure a higher z-index value */
+  z-index: 1;
 }
 
 .Modal-Overlay {
@@ -28,14 +28,126 @@ body.active-modal {
 
 .Cart {
   position: absolute;
-  top: 12%;
-  right: 0%;
-  transform: translate(-50%, -50%);
+  right: -800px;
   line-height: 1.4;
+  height: 100%;
   background: white;
   padding: 14px 28px;
   border-radius: 3px;
   max-width: 600px;
   min-width: 300px;
   z-index: 2;
+  transition: all 0.5s ease-out;
+  border-radius: 0;
+}
+
+.HideCart {
+  right: -800px;
+}
+
+.ShowCart {
+  width: 450px;
+  right: 0;
+}
+
+.Cart-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.Cart-Header > p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Cart-Header > button {
+  padding: 0;
+  color: #000;
+  opacity: 0.5;
+  text-transform: capitalize;
+}
+
+.Cart-Header > button:hover {
+  text-decoration: underline;
+}
+
+.Cart-Items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.Cart-Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Cart-Item-Image {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+  background-image: url(../../assets/images/products/xx59.png);
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Cart-Item input {
+  width: 100px;
+  padding: 10px 10px;
+  background-color: #F1F1F1;
+  border-radius: 0;
+  text-align: center;
+}
+
+.Cart-Left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Cart-Left h5 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Cart-Left span {
+  color: black;
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 15px;
+}
+.Cart-Info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Cart-Total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.Cart-Total > h6 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.Cart-Total > p {
+  font-size: 16px;
+}
+
+.Cart > button {
+  background-color: #d87d4a;
+  height: 50px;
+  width: 100%;
+  margin-top: 25px;
 }
