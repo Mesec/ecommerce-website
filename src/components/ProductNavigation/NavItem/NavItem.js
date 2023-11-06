@@ -5,7 +5,7 @@ import './NavItem.css'
 import { Link } from 'react-router-dom';
 
 export default function ProductItem(props) {
-  const { title, icon, info } = props
+  const { title, icon, info, path } = props
 
   return (
     <Box className='Product-Item'>
@@ -17,7 +17,7 @@ export default function ProductItem(props) {
         <Typography variant='body1'>
           { info }
         </Typography>
-        <Link to={`/${title.toLowerCase()}`} className='Product-Item-Link'>
+        <Link to={ path } className='Product-Item-Link'>
           <Typography variant='body1'>
             Shop
           </Typography>

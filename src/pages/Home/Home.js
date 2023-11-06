@@ -3,6 +3,7 @@ import React from 'react'
 import Speakers from '../../assets/images/speakers.png'
 import './Home.css'
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -21,14 +22,18 @@ export default function Home() {
             <Typography variant='body1'>
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </Typography>
-            <Button variant="contained">See Product</Button>
+            <Link to={`/product/s-01`}>
+              <Button variant="contained">See Product</Button>
+            </Link>
           </Box>
         </Box>
         <Box className='Home-Second'>
             <Typography variant='h4'>
-              ZX9 SPEAKER
+              ZX7 SPEAKER
             </Typography>
-          <Button variant="outlined">See Product</Button>
+          <Link to={ `/product/s-02` }>
+            <Button variant="outlined">See Product</Button>
+          </Link>
         </Box>
         <Box className='Home-Third'>
           <Box className='Home-Third-Earphones'></Box>
@@ -36,7 +41,9 @@ export default function Home() {
             <Typography variant='h4'>
               YX1 EARPHONES
             </Typography>
-            <Button variant="outlined">See Product</Button>
+            <Link to={ `/product/e-01` }>
+              <Button variant="outlined">See Product</Button>
+            </Link>
           </Box>
         </Box>
       </Box>

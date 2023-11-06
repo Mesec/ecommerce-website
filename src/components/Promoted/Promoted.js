@@ -18,7 +18,7 @@ export default function Promoted() {
         </Typography>
         <Link to={ `/product/h-01` }>
           <Button variant="contained">
-            NEW PRODUCT
+            SEE PRODUCT
           </Button>
         </Link>
       </Box>

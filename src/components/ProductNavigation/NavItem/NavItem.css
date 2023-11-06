@@ -8,7 +8,7 @@
   align-items: flex-end;
   position: relative;
   text-align: center;
-  padding: 0 10px 0 10px
+  padding: 0 20px 0 20px
 }
 
 .Product-Item  h6 {
@@ -28,6 +28,7 @@
   gap: 3px;
   cursor: pointer;
   text-decoration: none;
+  padding: 0;
 }
 
 .Product-Item-Link > p {
@@ -49,7 +50,7 @@
 .Product-Item-Info {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   padding-bottom: 30px;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .Product-Item-Info > p {
-  color: #000000;
+  color: #050505;
   font-family: "Manrope-Medium", Helvetica;
   font-size: 13px;
   font-weight: 500;

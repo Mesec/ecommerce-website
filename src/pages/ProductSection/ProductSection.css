@@ -23,12 +23,6 @@
   cursor: pointer;
 }
 
-.Product-Item-Container {
-  display: flex;
-  gap: 125px;
-  justify-content: left;
-}
-
 .Product-Item-Image {
   background-color: #f0f0f0;
   background-position: center;

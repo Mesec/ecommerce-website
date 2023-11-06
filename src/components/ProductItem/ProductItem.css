@@ -35,3 +35,9 @@
   line-height: normal;
   margin-bottom: 16px;
 }
+
+.Product-Item-Container {
+  display: flex;
+  gap: 125px;
+  justify-content: space-around;
+}

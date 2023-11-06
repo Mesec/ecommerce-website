@@ -9,7 +9,6 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../assets/icons/logo.svg'
 import Cart from '../../assets/icons/cart.svg'
-import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css';
@@ -74,15 +73,17 @@ function ResponsiveAppBar({ openCartModal }) {
                     )) }
                   </Menu>
                 </Box>
-                <IconButton
-                  size="small"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  color="secondary"
-                >
-                  <img style={ { width: '143px', height: '25px' } } src={ Logo } alt='Audiophile' />
-                </IconButton>
+                <Link to='/'>
+                  <IconButton
+                    size="small"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    color="secondary"
+                  >
+                    <img style={ { width: '143px', height: '25px' } } src={ Logo } alt='Audiophile' />
+                  </IconButton>
+                </Link>
               </Box>
               <NavigationItems />
               <Button onClick={ openCartModal }>

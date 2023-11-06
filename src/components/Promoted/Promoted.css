@@ -26,6 +26,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 0;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'Manrope';
+  letter-spacing: 1;
 }
 
 .Home-Header button:hover {

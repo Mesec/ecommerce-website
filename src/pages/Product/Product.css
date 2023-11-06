@@ -20,7 +20,6 @@
 
 .Product-Features {
   width: 50%;
-  margin-right: 125px;
 }
 
 .Product-Features > h4, .In-Box > h4 {
@@ -100,4 +99,7 @@
   border-radius: 5px;
   overflow: hidden;
 }
-
+.Product-Info {
+  display: flex;
+  justify-content: space-around;
+}
