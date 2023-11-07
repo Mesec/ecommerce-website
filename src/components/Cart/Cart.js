@@ -2,12 +2,13 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import './Cart.css'
 import { TextField } from '@mui/material';
-import Image1 from '../../assets/test/gallery1.png'
+import { useSelector } from 'react-redux';
 
 export default function Cart({ open, handleClose }) {
+  const cartItems = useSelector((state) => state.cart.items)
+
   if (open) {
     document.body.classList.add('active-modal')
   } else {
@@ -23,26 +24,30 @@ export default function Cart({ open, handleClose }) {
             <Button>Remove all</Button>
           </Box>
           <Box className='Cart-Items'>
-             <Box className='Cart-Item'>
-                <Box className='Cart-Left'>
-                  <Box className='Cart-Item-Image'>
+             { cartItems?.map((item, index) => {
+              return (
+                <Box className='Cart-Item' key={ index }>
+                  <Box className='Cart-Left'>
+                    <Box className='Cart-Item-Image'>
+                    </Box>
+                    <Box>
+                      <Typography variant='h5'>XX99 MK II</Typography>
+                      <Typography variant='body'>$ 2,999</Typography>
+                    </Box>
                   </Box>
-                  <Box>
-                    <Typography variant='h5'>XX99 MK II</Typography>
-                    <Typography variant='body'>$ 2,999</Typography>
-                  </Box>
-              </Box>
-            <TextField
-              onChange={ () => {} }
-              variant="outlined"
-              type="number"
-              value={ 1 }
-              InputProps={ {
-                inputProps: { min: 1 },
-              } }
-            />
-             </Box>
-          <Box className='Cart-Item'>
+                  <TextField
+                    onChange={ () => { } }
+                    variant="outlined"
+                    type="number"
+                    value={ 1 }
+                    InputProps={ {
+                      inputProps: { min: 1 },
+                    } }
+                  />
+                </Box>
+              )
+             })}
+          {/* <Box className='Cart-Item'>
             <Box className='Cart-Left'>
               <Box className='Cart-Item-Image'>
               </Box>
@@ -60,7 +65,7 @@ export default function Cart({ open, handleClose }) {
                 inputProps: { min: 1 },
               } }
             />
-          </Box>
+          </Box> */}
           </Box>
           <Box className='Cart-Total'>
             <Typography variant='body1'>

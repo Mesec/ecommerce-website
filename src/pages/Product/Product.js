@@ -7,29 +7,34 @@ import { Box } from '@mui/system'
 import './Product.css'
 import ProductItem from '../../components/ProductItem/ProductItem';
 import CircularProgress from '@mui/material/CircularProgress';
-import Image1 from '../../assets/test/gallery1.png'
-import Image2 from '../../assets/test/gallery2.png'
-import Image3 from '../../assets/test/gallery3.png'
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
 import { addToCart } from '../../features/cart/cartSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Product() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
-  const [product, setProduct] = useState(true);
+  const [product, setProduct] = useState();
   const [quantity, setQuantity] = useState(1);
   const location = useLocation();
 
-  const dispatch = useDispatch()
+  const products = useSelector((state) => state.products.data)
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    setTimeout(() => {
-      const getProduct = products.filter(item => item.id === id);
-      setProduct(getProduct);
-      setLoading(false)
-    }, 1200)
-  }, [id]);
+  const setBackgroundImage = (position) => {
+    let image;
+    if (position === 'top') {
+      image = require(`/src/assets/images/products${product?.images?.gallery[0]}`);
+    }
+    if (position === 'bottom') {
+      image = require(`/src/assets/images/products${product?.images?.gallery[2]}`);
+    }
+    if (position === 'right') {
+      image = require(`/src/assets/images/products${product?.images?.gallery[1]}`);
+    }
+
+    return { backgroundImage: `url(${image})` }
+  }
 
   const setAmountHandler = (e) => {
     const value = parseInt(e.target.value, 10);
@@ -37,9 +42,20 @@ export default function Product() {
   }
 
   const addToCartHandler = () => {
-    dispatch(addToCart({ quantity, id: product[0].id }));
+    dispatch(addToCart({ quantity, id: product?.id }));
     setQuantity(1)
   }
+
+  useEffect(() => {
+    if (products?.length > 0) {
+      const prod = products.filter(item => item.id === id);
+      setProduct(prod[0])
+    }
+  }, [products, id]);
+
+  useEffect(() => {
+    setLoading(false)
+  }, [product]);
 
   if (loading) {
     return <Box className='Product-Spinner'><CircularProgress/></Box>
@@ -47,8 +63,9 @@ export default function Product() {
 
   return (
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
+      { product &&
       <Box className='Product-Container'>
-        <ProductItem { ...product[0] }>
+        <ProductItem { ...product }>
           <Box className='Product-Controls'>
             <TextField
               onChange={ setAmountHandler }
@@ -67,17 +84,19 @@ export default function Product() {
             <Typography variant='h4'>
               FEATURES
             </Typography>
-            { product[0]?.features?.map((item, index) => {
-              return <Typography variant='body1' key={ index }>
-                { item }
-              </Typography>
+            { product?.features?.map((item, index) => {
+              return (
+                <Typography variant='body1' key={ index }>
+                  { item }
+                </Typography>
+              )
             }) }
           </Box>
           <Box className='In-Box'>
             <Typography variant='h4'>
               IN THE BOX
             </Typography>
-            { product[0].inBox.map((item, index) => {
+            { product?.inBox.map((item, index) => {
               return (
                 <Box className='In-Box-Items' key={ index }>
                   <Typography variant='body1'>{ `${item.quantity}x` }</Typography>
@@ -88,20 +107,19 @@ export default function Product() {
           </Box>
         </Box>
         <Box className='Product-Gallery'>
-          <Box className='Product-Gallery-Left-Column'>
-            <Box>
-              <img src={ Image1 } alt="" />
-            </Box>
-           <Box>
-              <img src={ Image2 } alt="" />
-           </Box>
+          <Box className='Product-Gallery-Left'>
+            <Box className='Product-Gallery-Top' style={ setBackgroundImage('top') }></Box>
+            <Box className='Product-Gallery-Bottom' style={ setBackgroundImage('bottom') }></Box>
           </Box>
-          <Box className='Product-Gallery-Right-Column'>
-            <img src={ Image3 } alt="" />
+          <Box className='Product-Gallery-Right'>
+            <Box className='Product-Gallery-Right' style={ setBackgroundImage('right') }></Box>
           </Box>
         </Box>
-        <ProductNavigation />
-      </Box>
+        <Box className='You-May-Also-Like'>
+          <Typography variant='h5'>You may also like</Typography>
+          <ProductNavigation />
+        </Box>
+      </Box> }
     </Box>
   )
 }

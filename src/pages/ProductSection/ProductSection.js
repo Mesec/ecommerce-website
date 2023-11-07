@@ -17,7 +17,7 @@ export default function Products(props) {
           products?.map((item, index) => {
             if (item.type === type) {
               return (
-                <ProductItem { ...item }>
+                <ProductItem { ...item } key={ index }>
                   <Link to={ `/product/${item.id}` }>
                     <Button variant='contained' className='See-Product'>
                       SEE PRODUCT

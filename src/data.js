@@ -1,6 +1,6 @@
 import xx59 from './assets/images/products/xx59.png';
 import xx99I from './assets/images/products/xx99 I.png'
-import xx99II from './assets/images/products/xx99 mark II.png'
+import xx99II from './assets/images/products/xx99markII.png'
 import zx9 from './assets/images/products/zx9.png';
 import zx7 from './assets/images/products/zx7.png';
 import yx1 from './assets/images/products/yx1.png';

@@ -10,6 +10,11 @@
   gap: 16px;
 }
 
+.Product-Info {
+  display: flex;
+  justify-content: space-around;
+}
+
 .Product-Controls input {
   height: 50px;
   width: 162px;
@@ -74,32 +79,60 @@
 .Product-Gallery {
   display: flex;
   gap: 10px;
-  padding-bottom: 40px;
+  width: 100%;
+  height: 600px;
+  /* background-color: red; */
 }
 
-.Product-Gallery-Left-Column {
+.Product-Gallery-Left {
   display: flex;
   flex-direction: column;
-  width: 510px;
+  width: 100%;
+  height: 100%;
   gap: 10px;
 }
 
-.Product-Gallery-Left-Column > div {
+.Product-Gallery-Top, .Product-Gallery-Bottom {
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
 }
 
-.Product-Gallery-Left-Column img {
-  max-width: 100%;
+.Product-Gallery-Right {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
 }
-.Product-Gallery-Right-Column {
+
+.Product-Gallery-Right {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
-  overflow: hidden;
 }
-.Product-Info {
+
+.You-May-Also-Like {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
 }
+
+.You-May-Also-Like > h5 {
+  margin-bottom: 140px;
+  color: #000000;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1.14px;
+  line-height: 36px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+

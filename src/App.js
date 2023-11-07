@@ -1,17 +1,30 @@
-import { Container, Box } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Box, CircularProgress } from '@mui/material';
 import './App.css';
 import Layout from './components/Layout/Layout';
-// import { useSelector, useDispatch } from 'react-redux'
-import Navbar from './components/Navbar/Navbar'
-import Routes from './components/Routes/Routes'
+import { useDispatch } from 'react-redux'
+import { fetchProducts, setPromotedProduct } from './features/product/productSlice';
+
 function App() {
-  // const count = useSelector((state) => state.counter.value)
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    console.log('Mounted');
+    dispatch(fetchProducts());
+    dispatch(setPromotedProduct())
+    setTimeout(() => {
+      setLoading(false)
+    }, 500);
+  }, [dispatch]);
+
+  if (loading) {
+    return <Box className='Product-Spinner'><CircularProgress /></Box>
+  }
 
   return (
     <Box>
-      <Layout/>
+      <Layout />
     </Box>
   );
 }

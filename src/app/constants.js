@@ -16,3 +16,5 @@ export const pages = [
     url: '/earphones',
   },
 ]
+
+export const productImagesBasePath = '/src/assets/images/products'

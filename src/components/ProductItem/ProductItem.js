@@ -3,11 +3,13 @@ import { Typography } from '@mui/material';
 import { Box } from '@mui/system'
 import './ProductItem.css'
 
-export default function ProductItem({ src, title, newProduct, generalInfo, children }) {
+export default function ProductItem({ title, newProduct, generalInfo, children, images }) {
+  const cover = require(`/src/assets/images/products${images?.main}`);
+
   return (
     <Box className='Product-Item-Container'>
       <Box className='Product-Item-Image'>
-        <img src={ src} alt={ title } />
+        <img src={ cover } alt={ title } />
       </Box>
       <Box className='Product-General-Info'>
         { newProduct && <Typography className='New-Product' variant='h7'>NEW PRODUCT</Typography> }
