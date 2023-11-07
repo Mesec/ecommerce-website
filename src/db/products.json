@@ -38,7 +38,8 @@
           "name": "Travel Bag",
           "quantity": 1
         }
-      ]
+      ],
+      "price": 2410
     },
     {
       "id": "h-02",
@@ -72,7 +73,8 @@
           "name": "3.5mm 5m Audio Cable",
           "quantity": 1
         }
-      ]
+      ],
+      "price": 999
     },
     {
       "id": "h-03",
@@ -106,7 +108,8 @@
           "name": "3.5mm 5m Audio Cable",
           "quantity": 1
         }
-      ]
+      ],
+      "price": 1399
     },
     {
       "id": "s-01",
@@ -144,7 +147,8 @@
           "name": "10m Optical Cable",
           "quantity": 1
         }
-      ]
+      ],
+      "price": 1600
     },
     {
       "id": "s-02",
@@ -182,7 +186,8 @@
           "name": "7.5m Optical Cable",
           "quantity": 1
         }
-      ]
+      ],
+      "price": 1990
     },
     {
       "id": "e-01",
@@ -220,7 +225,8 @@
           "name": "Travel Pouch",
           "quantity": 1
         }
-      ]
+      ],
+      "price": 790
     }
   ]
 }
