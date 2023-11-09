@@ -9,24 +9,6 @@
   margin-bottom: 240px;
 }
 
-.See-Product {
-  background-color: #d87d4a;
-  color: #ffffff;
-  height: 50px;
-  width: 162px;
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: normal;
-  border: none;
-  cursor: pointer;
-}
-
-.See-Product:hover {
-  background-color: #FBAF85;
-}
-
 .Product-Item-Image {
   background-color: #f0f0f0;
   background-position: center;

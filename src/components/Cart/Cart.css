@@ -11,6 +11,14 @@ body.active-modal {
   visibility: hidden;
 }
 
+.Modal-Overlay {
+  z-index: 2;
+}
+
+.Modal-Wrapper {
+  z-index: 3;
+}
+
 .Modal-Overlay, .Modal-Wrapper {
   width: 100vw;
   height: 100vh;
@@ -19,7 +27,6 @@ body.active-modal {
   right: 0;
   bottom: 0;
   position: fixed;
-  z-index: 1;
 }
 
 .Modal-Overlay {
@@ -32,7 +39,7 @@ body.active-modal {
   line-height: 1.4;
   height: 100%;
   background: white;
-  padding: 14px 28px;
+  padding: 16px 28px;
   border-radius: 3px;
   max-width: 600px;
   min-width: 300px;
@@ -86,29 +93,29 @@ body.active-modal {
 }
 
 .Cart-Item-Image {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   box-sizing: border-box;
   background-color: #F1F1F1;
-  background-image: url(../../assets/images/products/xx59.png);
   background-position: center;
   background-size: 60%;
   background-repeat: no-repeat;
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .Cart-Item input {
-  width: 100px;
-  padding: 10px 10px;
+  /* width: 100px;
+  padding: 5px 10px;
   background-color: #F1F1F1;
   border-radius: 0;
-  text-align: center;
+  text-align: center; */
 }
 
 .Cart-Left {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -134,6 +141,7 @@ body.active-modal {
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .Cart-Total > h6 {
@@ -149,5 +157,5 @@ body.active-modal {
   background-color: #d87d4a;
   height: 50px;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 10px;
 }

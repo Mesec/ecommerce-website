@@ -3,3 +3,8 @@
   display: flex;
   justify-content: center;
 }
+
+.Snackbar {
+  background-color: red;
+  width: 100%;
+}

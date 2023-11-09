@@ -8,8 +8,10 @@ import './Product.css'
 import ProductItem from '../../components/ProductItem/ProductItem';
 import CircularProgress from '@mui/material/CircularProgress';
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
-import { addToCart } from '../../features/cart/cartSlice';
+import { addToCart, decreaseCart, increaseCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import QuantityInput from 'components/QuantityInput/QuantityInput';
+import { openSnackbar } from 'features/snackbar/snackbarSlice';
 
 export default function Product() {
   const { id } = useParams();
@@ -18,7 +20,10 @@ export default function Product() {
   const [quantity, setQuantity] = useState(1);
   const location = useLocation();
 
-  const products = useSelector((state) => state.products.data)
+  const products = useSelector((state) => state.products.data);
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartItem = cartItems.filter(item => item.id === product.id);
+
   const dispatch = useDispatch();
 
   const setBackgroundImage = (position) => {
@@ -42,8 +47,28 @@ export default function Product() {
   }
 
   const addToCartHandler = () => {
-    dispatch(addToCart({ quantity, id: product?.id }));
+    dispatch(addToCart({
+      quantity,
+      id: product?.id,
+      title: product?.shortName,
+      price: product?.price,
+      image: product?.images?.main,
+      inStock: product?.inStock
+    }));
+    dispatch(openCart());
     setQuantity(1)
+  }
+
+  const increaseProductHandler = () => {
+    setQuantity(quantity + 1)
+    if ((quantity + 1) + cartItem.quantity === cartItem.inStock) {
+      dispatch(openSnackbar('No more products in stock.'))
+    }
+  }
+
+  const decreaseProductHandler = () => {
+    setQuantity(quantity - 1)
+    // dispatch(decreaseCart({ id, quantity }));
   }
 
   useEffect(() => {
@@ -61,22 +86,56 @@ export default function Product() {
     return <Box className='Product-Spinner'><CircularProgress/></Box>
   }
 
+  const disableIncreaseButton = () => {
+      if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
+        return true;
+      }
+    if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
+      return true;
+    }
+    if (cartItem.length <= 0 && quantity === product.inStock) {
+      return true;
+    }
+    return false;
+  }
+
+  console.log(cartItem)
+  const disableAddToCartButton = () => {
+    if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
+      console.log(cartItem[0].quantity);
+      console.log(quantity);
+      return true
+    } 
+    if (cartItem.length === 0 && quantity === product.inStock) {
+      return true;
+    }
+    if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
+      return true;
+    }
+    return false
+  }
+
   return (
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
       { product &&
       <Box className='Product-Container'>
         <ProductItem { ...product }>
           <Box className='Product-Controls'>
-            <TextField
-              onChange={ setAmountHandler }
-              variant="outlined"
-              type="number"
-              value={ quantity }
-              InputProps={ {
-                inputProps: { min: 1 },
-              } }
-            />
-            <Button onClick={ addToCartHandler } className='See-Product' variant='contained'>ADD TO CART</Button>
+              <QuantityInput
+                id={ product.id }
+                quantity={ quantity }
+                inStock={ product.inStock }
+                increaseHandler={ increaseProductHandler }
+                decreaseHandler={ decreaseProductHandler }
+                increaseDisabled={ disableIncreaseButton() }
+                decreaseDisabled={ quantity === 1 }/>
+            <Button 
+              disabled={ disableAddToCartButton ()}
+              onClick={ addToCartHandler }
+              className='See-Product'
+              variant='contained'>
+                ADD TO CART
+              </Button>
           </Box>
         </ProductItem>
         <Box display='flex' className='Product-Info'>

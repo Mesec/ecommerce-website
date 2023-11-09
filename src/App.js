@@ -10,7 +10,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('Mounted');
     dispatch(fetchProducts());
     dispatch(setPromotedProduct())
     setTimeout(() => {

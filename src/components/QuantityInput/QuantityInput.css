@@ -1,0 +1,50 @@
+  .quantity-input-container {
+    position: relative;
+    z-index: inherit;
+  }
+
+  .quantity-input-container > .quantity-input {
+    border: none;
+    padding: 10px 0;
+    background-color: #F1F1F1;
+    text-align: center;
+    font-family: "Manrope-Bold", Helvetica;
+    pointer-events: none;
+    width: 125px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+   .quantity-input-container > .quantity-input:focus, .quantity-input-container > .quantity-input:hover {
+    outline: none;
+   }
+
+  .quantity-input-container > .quantity-button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+    font-family: "Manrope-Bold", Helvetica;
+    color: #000000;
+    opacity: 0.25;
+    z-index: 1;
+  }
+
+  .quantity-input-container > .quantity-button:hover {
+    opacity: 1;
+  }
+
+  .quantity-input-container > .quantity-button:disabled {
+    opacity: 0.25;
+  }
+
+  .quantity-input-container > .decrement {
+    left: 0;
+  }
+
+  .quantity-input-container > .increment {
+    right: 0;
+  }

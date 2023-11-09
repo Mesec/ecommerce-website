@@ -16,11 +16,14 @@ import { pages } from '../../app/constants';
 import NavigationItems from './NavigationItems/NavigationItems';
 import Button from '@mui/material/Button';
 import Promoted from '../Promoted/Promoted';
+import { useDispatch } from 'react-redux';
+import { openCart } from 'features/cart/cartSlice';
 
-function ResponsiveAppBar({ openCartModal }) {
+function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const location = useLocation();
   const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
+  const dispatch = useDispatch();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -29,6 +32,10 @@ function ResponsiveAppBar({ openCartModal }) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleOpenCart = () => {
+    dispatch(openCart());
+  }
 
   return (
     <Box width='100%'>
@@ -86,7 +93,7 @@ function ResponsiveAppBar({ openCartModal }) {
                 </Link>
               </Box>
               <NavigationItems />
-              <Button onClick={ openCartModal }>
+              <Button onClick={ handleOpenCart }>
                 <img src={ Cart } alt="Add to Cart" />
               </Button>
             </Box>
