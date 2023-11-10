@@ -41,7 +41,6 @@ body.active-modal {
   background: white;
   padding: 16px 28px;
   border-radius: 3px;
-  max-width: 600px;
   min-width: 300px;
   z-index: 2;
   transition: all 0.5s ease-out;
@@ -105,14 +104,6 @@ body.active-modal {
   border-radius: 5px;
 }
 
-.Cart-Item input {
-  /* width: 100px;
-  padding: 5px 10px;
-  background-color: #F1F1F1;
-  border-radius: 0;
-  text-align: center; */
-}
-
 .Cart-Left {
   display: flex;
   gap: 15px;
@@ -163,31 +154,50 @@ body.active-modal {
 .Empty-Cart {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: center;
   font-family: "Manrope-Regular", Helvetica;
-  /* height: 70%; */
-  padding-top: 40px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.Empty-Cart > h5 {
-  font-size: 20px;
+.Empty-Cart-Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Empty-Cart-Header > h5 {
+  font-size: 18px;
+  font-weight: 500;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
+  padding: 16px 28px;
+  color: white;
 }
 
 .Empty-Cart > p {
   font-family: "Manrope-Regular", Helvetica;
   opacity: 0.6;
   text-align: center;
+  padding: 16px 28px;
 }
 
 .Empty-Cart-Image {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
+  padding: 16px 28px;
 }
 
 .Empty-Cart-Image > img {
   width: 150px;
   opacity: 0.8;
+  margin-top: 20px;
+}
+
+.Empty-Cart-Header {
+  background-color: #d87d4a;
+  height: 50px;
 }

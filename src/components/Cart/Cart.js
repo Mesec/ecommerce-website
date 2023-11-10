@@ -107,9 +107,11 @@ export default function Cart() {
           </>
           :
           <Box className='Empty-Cart'>
+            <Box className='Empty-Cart-Header'>
               <Typography variant='h5'>
                 Your shopping cart is currently empty
               </Typography>
+            </Box>
               <Box className='Empty-Cart-Image'><img src={ CartIcon } alt="" /></Box>
               <Typography variant='body1'>
                 Feel free to explore our products and add items to your cart whenever you're ready. We're here to assist you with your shopping needs.
