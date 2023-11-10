@@ -3,12 +3,11 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Cart.css'
-import { TextField } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, closeCart, decreaseCart, increaseCart } from 'features/cart/cartSlice';
 import QuantityInput from 'components/QuantityInput/QuantityInput';
-import { increase } from 'utils/utils';
 import { openSnackbar } from 'features/snackbar/snackbarSlice';
+import CartIcon from '../../assets/icons/cart-black.svg'
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -107,7 +106,16 @@ export default function Cart() {
             <Button variant='contained'>CHECKOUT</Button>
           </>
           :
-          <Box>Nothing in Cart</Box>}
+          <Box className='Empty-Cart'>
+              <Typography variant='h5'>
+                Your shopping cart is currently empty
+              </Typography>
+              <Box className='Empty-Cart-Image'><img src={ CartIcon } alt="" /></Box>
+              <Typography variant='body1'>
+                Feel free to explore our products and add items to your cart whenever you're ready. We're here to assist you with your shopping needs.
+              </Typography>
+          </Box>
+      }
        </Box>
     </Box>
   )

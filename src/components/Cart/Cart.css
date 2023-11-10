@@ -159,3 +159,35 @@ body.active-modal {
   width: 100%;
   margin-top: 10px;
 }
+
+.Empty-Cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  font-family: "Manrope-Regular", Helvetica;
+  /* height: 70%; */
+  padding-top: 40px;
+}
+
+.Empty-Cart > h5 {
+  font-size: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.Empty-Cart > p {
+  font-family: "Manrope-Regular", Helvetica;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.Empty-Cart-Image {
+  display: flex;
+  justify-content: center;  
+}
+
+.Empty-Cart-Image > img {
+  width: 150px;
+  opacity: 0.8;
+}
