@@ -22,7 +22,7 @@ export default function Product() {
 
   const products = useSelector((state) => state.products.data);
   const cartItems = useSelector((state) => state.cart.items);
-  const cartItem = cartItems.filter(item => item.id === product.id);
+  const cartItem = cartItems?.filter(item => item?.id === product?.id);
 
   const dispatch = useDispatch();
 
@@ -39,11 +39,6 @@ export default function Product() {
     }
 
     return { backgroundImage: `url(${image})` }
-  }
-
-  const setAmountHandler = (e) => {
-    const value = parseInt(e.target.value, 10);
-    setQuantity(value)
   }
 
   const addToCartHandler = () => {
@@ -68,7 +63,6 @@ export default function Product() {
 
   const decreaseProductHandler = () => {
     setQuantity(quantity - 1)
-    // dispatch(decreaseCart({ id, quantity }));
   }
 
   useEffect(() => {
@@ -99,14 +93,11 @@ export default function Product() {
     return false;
   }
 
-  console.log(cartItem)
   const disableAddToCartButton = () => {
     if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
-      console.log(cartItem[0].quantity);
-      console.log(quantity);
       return true
     } 
-    if (cartItem.length === 0 && quantity === product.inStock) {
+    if (cartItem.length === 0 && quantity > product.inStock) {
       return true;
     }
     if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
