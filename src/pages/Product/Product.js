@@ -106,12 +106,22 @@ export default function Product() {
     return false
   }
 
+  const getAvailableProductStock = () => {
+    if (cartItem?.length) {
+      return product.inStock - cartItem[0].quantity;
+    }
+    if(!cartItem?.length) {
+      return product.inStock;
+    }
+  }
+
   return (
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
       { product &&
       <Box className='Product-Container'>
         <ProductItem { ...product }>
           <Box className='Product-Controls'>
+            <Box className='Product-Controls-Form'>
               <QuantityInput
                 id={ product.id }
                 quantity={ quantity }
@@ -119,15 +129,26 @@ export default function Product() {
                 increaseHandler={ increaseProductHandler }
                 decreaseHandler={ decreaseProductHandler }
                 increaseDisabled={ disableIncreaseButton() }
-                decreaseDisabled={ quantity === 1 }/>
-            <Button 
-              disabled={ disableAddToCartButton ()}
-              onClick={ addToCartHandler }
-              className='See-Product'
-              variant='contained'>
+                decreaseDisabled={ quantity === 1 } />
+              <Button
+                disabled={ disableAddToCartButton() }
+                onClick={ addToCartHandler }
+                className='Add-Product'
+                variant='contained'>
                 ADD TO CART
               </Button>
+            </Box>
+              { getAvailableProductStock() === 0 ?
+              <Typography variant='h6'>
+                Out of stock. We'll restock soon.
+              </Typography>
+                :
+              <Typography variant='h6'>
+                Available stock quantity: <span>{ getAvailableProductStock() }</span>
+              </Typography>
+              }
           </Box>
+
         </ProductItem>
         <Box display='flex' className='Product-Info'>
           <Box className='Product-Features'>
