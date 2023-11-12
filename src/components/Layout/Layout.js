@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, Snackbar, Button, IconButton } from '@mui/material'
+import { Container, Box, Snackbar, Button, IconButton, Grid } from '@mui/material'
 import Navbar from '../Navbar/Navbar'
 import PageRoutes from '../Routes/Routes'
 import Footer from '../Footer/Footer'
@@ -32,14 +32,8 @@ export default function Layout() {
   );
 
   return (
-    <Box 
-      display='flex'
-      flexDirection='column'
-      justifyContent='space-between'
-      height='100%'
-      width='100%'>
+    <Box width='100%'>
       <Cart />
-      <Navbar />
       <Snackbar
         anchorOrigin={ { vertical: 'bottom', horizontal: 'right' } }
         open={ isSnackbarOpened }
@@ -48,10 +42,15 @@ export default function Layout() {
         message={ snackbarMessage }
         action={ action }
       />
-      <Box className='Layout-Main-Content'>
-        <PageRoutes/>
-      </Box>
-      <Footer/>
+      <Grid container width='100%'>
+        <Grid item xl={ 12 } width='100%'>
+          <Navbar />
+        </Grid>
+        <Grid item xl={ 12 }>
+          <PageRoutes />
+        </Grid>
+        <Footer />
+      </Grid>
     </Box>
   )
 }
