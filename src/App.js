@@ -22,9 +22,9 @@ function App() {
   }
 
   return (
-    <Box>
-      <Layout />
-    </Box>
+      <Box className='App'>
+        <Layout />
+      </Box>
   );
 }
 
