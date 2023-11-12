@@ -1,5 +1,5 @@
 .Product {
-  padding: 0 348px;
+  padding: 0 122px;
 }
 
 .ProductSection-Container {
@@ -19,4 +19,28 @@
   justify-content: center;
   padding: 70px;
   box-sizing: border-box;
+}
+
+.See-Product {
+  background-color: #d87d4a;
+  color: #ffffff;
+  height: 100%;
+  width: 162px;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+}
+
+.See-Product:hover {
+  background-color: #FBAF85;
+}
+
+.See-Product:disabled {
+  background-color: #867b76;
+  cursor: unset;
 }
