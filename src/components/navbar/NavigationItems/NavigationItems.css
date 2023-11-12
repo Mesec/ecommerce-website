@@ -8,3 +8,11 @@
   line-height: 25px;
   letter-spacing: 2px;
 }
+
+.Link:hover {
+  color: #d87d4a;
+}
+
+.active {
+  color: #d87d4a;
+}

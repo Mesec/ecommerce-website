@@ -3,7 +3,7 @@
 }
 
 .Product-Header {
-  background-color: var(--primary-color);
+  background-color: #141414;
   height: 140px;
   color: white;
   display: flex;
@@ -22,4 +22,50 @@
   line-height: 44px;
   letter-spacing: 1.429px;
   text-transform: uppercase;
+}
+
+.NavBar-Wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #141414;
+  box-shadow: none;
+  border: none;
+}
+
+.Nav-Item-Top {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #141414;
+}
+
+.Nav-Item-Middle {
+  box-sizing: border-box;
+  background-color: #141414;
+  width: 1000px;
+}
+
+.Toolbar-Item-1 {
+  text-align: left;
+}
+
+.Toolbar-Item-3 {
+  text-align: right;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+  .NavBar-Wrapper {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .NavBar-Wrapper {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .NavBar-Wrapper {
+    padding: 0 100px;
+  }
 }
