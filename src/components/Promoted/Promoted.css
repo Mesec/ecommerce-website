@@ -1,19 +1,35 @@
 
 .Promoted {
+  padding: 0;
+  align-items: center;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .Home-Header-Image-Container {
   background-image: url('/src/assets/images/products/xx99II/cover.png');
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
   background-color: transparent;
   overflow: hidden;
   height: 600px;
   width: 620px;
   background-size: contain;
+  background-position-x: center;
+  background-position-y: top;
+  order: -1;
+}
+
+.Promoted-Info {
+  justify-self: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.Promoted-Info-Text {
+  justify-self: center;
+  text-align: center;
+  width: 350px;
+  word-wrap: break-word;
 }
 
 .Promoted-Info > .New-Product{
@@ -73,35 +89,10 @@
   color: white;
 }
 
-/* MD */
-@media screen and (min-width: 900px) {
-  .Promoted {
-    padding: 0;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  }
-  .Promoted-Info {
-    justify-self: center;
-    text-align: center;
-    padding-bottom: 50px;
-  }
-  .Promoted-Info-Text {
-    justify-self: center;
-    text-align: center;
-    width: 350px;
-    word-wrap: break-word;
-  }
-  .Home-Header-Image-Container {
-    background-position-x: center;
-    background-position-y: top;
-    order: -1;
-  }
-}
-/* LG */
 @media screen and (min-width: 1200px) {
     .Promoted {
-      padding: 0 250px;
+      padding: 0 180px;
+      justify-content: space-around;
     }
     .Promoted-Info {
       text-align: left;
@@ -121,18 +112,8 @@
   }
 }
 
-/* XL */
 @media screen and (min-width: 1623px) {
   .Promoted {
     padding: 0 300px;
   }
 }
-
-
-
-
-
-
-
-
-
