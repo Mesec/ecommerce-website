@@ -2,19 +2,19 @@
   width: 100%;
   background-color: #f0f0f0;
   border-radius: 8px;
-  height: 250px;
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: relative;
   text-align: center;
-  padding: 0 20px 0 20px
+  box-sizing: border-box;
 }
 
 .Product-Item  h6 {
   color: #000000;
   font-family: "Manrope-Bold", Helvetica;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.29px;
   line-height: normal;
@@ -31,20 +31,18 @@
   padding: 0;
 }
 
-.Product-Item-Link:hover {
-  text-decoration: underline;
-  color: #e96518;
-}
-
-.Product-Item-Link > p {
+.Product-Item-Link > button {
   text-transform: uppercase;
   color: #000000;
   font-family: "Manrope-Bold", Helvetica;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 1px;
   line-height: normal;
   opacity: 0.5;
+}
+
+.Product-Item-Link > button:hover {
+  color: #e96518;
 }
 
 .Product-Item-Link > svg {
@@ -60,18 +58,35 @@
 }
 
 .Product-Item > img {
-  height: 140px;
+  height: 160px;
   position: absolute;
-  top: -75px;
+  top: -60px;
 }
 
 .Product-Item-Info > p {
   color: #050505;
   font-family: "Manrope-Medium", Helvetica;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   left: 0;
   letter-spacing: 0;
   line-height: 20px;
-  opacity: 0.8;
+  opacity: 0.6;
+  letter-spacing: 1.1px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+   .Product-Item {
+    /* background-color: blue; */
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .Product-Item {
+    /* background-color: red; */
+  }
 }

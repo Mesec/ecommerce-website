@@ -1,13 +1,9 @@
-.Home {
-  width: 100%;
-}
-
 .Home-Main-Content {
-  margin-top: 200px;
-  padding: 0 348px 100px 348px;
+  margin-top: 240px;
+  padding: 0 122px 100px 122px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
 }
 
 .Home-Main-Content a {
@@ -126,16 +122,21 @@
   border-radius: 8px;
   background-size: cover;
   background-position: right;
-  display: flex;
-  flex-direction: column;
   padding-left: 130px;
-  justify-content: center;
-  gap: 32px;
   box-sizing: border-box;
   height: 350px;
 }
 
-.Home-Second > a > button {
+.Home-Second > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  gap: 32px;
+}
+
+.Home-Second > div > a > button {
   border: 1px solid;
   border-color: #000000;
   height: 48px;
@@ -146,12 +147,12 @@
   border-radius: 0;
 }
 
-.Home-Second > a > button:hover {
+.Home-Second > div > a > button:hover {
   background-color: black;
   color: white;
 }
 
-.Home-Second > h4 {
+.Home-Second > div > h4 {
   color: #000000;
   font-family: "Manrope-Bold", Helvetica;
   font-size: 28px;
@@ -214,4 +215,16 @@
 .Home-Third > div:nth-child(2) > a > button:hover {
   background-color: black;
   color: white;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
 }

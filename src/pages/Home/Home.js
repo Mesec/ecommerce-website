@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import Speakers from '../../assets/images/speakers.png'
 import './Home.css'
@@ -7,10 +7,11 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <Box width className='Home' height='100%'>
-      <Box className='Home-Main-Content'>
-        <ProductNavigation />
-        <Box className='Home-First'>
+      <Grid container className='Home-Main-Content'>
+        <Grid lg={ 10 } item>
+          <ProductNavigation />
+        </Grid>
+        <Grid lg={ 10 }item className='Home-First'>
           <Box className='Circle Home-First-Circle1'></Box>
           <Box className='Circle Home-First-Circle2'></Box>
           <Box className='Circle Home-First-Circle3'></Box>
@@ -26,16 +27,18 @@ export default function Home() {
               <Button variant="contained">See Product</Button>
             </Link>
           </Box>
-        </Box>
-        <Box className='Home-Second'>
-            <Typography variant='h4'>
-              ZX7 SPEAKER
-            </Typography>
+        </Grid>
+        <Grid lg={ 10 } item className='Home-Second'>
+          <Box>
+          <Typography variant='h4'>
+            ZX7 SPEAKER
+          </Typography>
           <Link to={ `/product/s-02` }>
             <Button variant="outlined">See Product</Button>
           </Link>
-        </Box>
-        <Box className='Home-Third'>
+          </Box>
+        </Grid>
+        <Grid lg={ 10 } item className='Home-Third'>
           <Box className='Home-Third-Earphones'></Box>
           <Box>
             <Typography variant='h4'>
@@ -45,8 +48,7 @@ export default function Home() {
               <Button variant="outlined">See Product</Button>
             </Link>
           </Box>
-        </Box>
-      </Box>
-    </Box>
+        </Grid>
+      </Grid>
   )
 }

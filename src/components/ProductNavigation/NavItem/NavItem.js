@@ -1,6 +1,7 @@
 import React from 'react'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Box, Typography } from '@mui/material';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+import { Box, Button, Typography } from '@mui/material';
 import './NavItem.css'
 import { Link } from 'react-router-dom';
 
@@ -18,10 +19,9 @@ export default function ProductItem(props) {
           { info }
         </Typography>
         <Link to={ path } className='Product-Item-Link'>
-          <Typography variant='body1'>
+          <Button variant="text" endIcon={ <KeyboardArrowRightIcon /> }>
             Shop
-          </Typography>
-          <ArrowForwardIosIcon fontSize='small'/>
+          </Button>
         </Link>
       </Box>
     </Box>

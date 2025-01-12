@@ -1,10 +1,17 @@
+.Nav-Items {
+  flex-grow: 1;
+  gap: 2;
+  justify-content: 'center';
+  align-items: 'center';
+}
+
 .Link {
   text-decoration: none;
   color: var(--secondary-color);
   text-transform: uppercase;
   font-family: 'Manrope', sans-serif;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 25px;
   letter-spacing: 2px;
 }

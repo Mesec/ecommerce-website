@@ -4,15 +4,14 @@
 }
 
 .Home-Header-Image-Container {
-  height: 650px;
+  height: 700px;
   background-image: url('/src/assets/images/products/xx99II/cover.png');
-  background-position-y: center;
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 600px;
+  background-position-y: center;
   background-color: transparent;
-  position: relative;
-  bottom: 23px;
+  overflow: hidden;
+  /* background-size: contain; */
 }
 
 .Promoted-Info {
@@ -166,8 +165,14 @@
 }
 
 @media screen and (min-width: 1920px) {
+  .Home-Header-Image-Container {
+    position: relative;
+    z-index: 0;
+    right: -100px;
+    bottom: 60px;
+  }
   .Promoted {
-    padding: 0 100px;
+    padding: 0 300px;
   }
 
   .Promoted-Info {

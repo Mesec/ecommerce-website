@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from '@mui/material'
+import { Box, Grid, IconButton, Typography } from '@mui/material'
 import React from 'react'
 import Logo from '../../assets/icons/logo.svg'
 import NavigationItems from '../Navbar/NavigationItems/NavigationItems'
@@ -10,9 +10,9 @@ import './Footer.css'
 
 export default function Footer() {
   return (
-    <Box className='Footer'>
-      <Box className='TopFooter'>
-        <Box>
+    <Grid container className='Footer'>
+      <Grid xl={ 12 } item className='TopFooter'>
+        <Box xl={ 9 }>
           <Typography variant='h4'>
             Bringing you the <Box component="span">best</Box> audio gear
           </Typography>
@@ -20,11 +20,9 @@ export default function Footer() {
             Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.
           </Typography>
         </Box>
-        <Box>
-          <img src={ Person } alt="" />
-        </Box>
-      </Box>
-      <Box
+        <Box xl={ 3 } className='Footer-Image'></Box>
+      </Grid>
+      <Grid xl={ 12 } item
         display='flex'
         flexDirection='column'
         className='BottomFooter'>
@@ -73,8 +71,8 @@ export default function Footer() {
             Copyright 2021. All Rights Reserved
           </Typography>
         </Box>
-      </Box>
-    </Box>
+      </Grid>
+    </Grid>
    
   )
 }

@@ -1,16 +1,11 @@
 .Footer {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
-
 
 .TopFooter {
   display: flex;
   margin-top: 0px;
   justify-content: center;
-  align-items: center ;
-  padding-bottom: 160px;
+  padding: 0 300px 160px 300px;
   gap: 150px;
   text-align: left;
 }
@@ -65,7 +60,7 @@
 
 .BottomFooter {
   background-color: var(--primary-color);
-  padding: 65px 348px 48px 348px;
+  padding: 65px 300px 48px 300px;
 }
 
 .Footer-Description p:nth-child(1) {
@@ -90,4 +85,15 @@
   opacity: 0.5;
   width: 540px;
   text-align: left;
+}
+
+.Footer-Image {
+  width: 100%;
+  background-image: url('/src/assets/images/person.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-position: right;
+  border-radius: 10px;
+  margin-left: 150px;
 }
