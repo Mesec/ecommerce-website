@@ -74,19 +74,3 @@
   opacity: 0.6;
   letter-spacing: 1.1px;
 }
-
-@media screen and (min-width: 900px) and (max-width: 1279px) {
-
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
-   .Product-Item {
-    /* background-color: blue; */
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .Product-Item {
-    /* background-color: red; */
-  }
-}
