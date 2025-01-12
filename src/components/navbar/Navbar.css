@@ -3,7 +3,7 @@
 }
 
 .Product-Header {
-  background-color: #141414;
+  background-color: #131313;
   height: 140px;
   color: white;
   display: flex;
@@ -27,7 +27,7 @@
 .NavBar-Wrapper {
   box-sizing: border-box;
   width: 100%;
-  background-color: #141414;
+  background-color: #131313;
   box-shadow: none;
   border: none;
   z-index: 1;
@@ -36,12 +36,12 @@
 .Nav-Item-Top {
   box-sizing: border-box;
   width: 100%;
-  background-color: #141414;
+  background-color: #131313;
 }
 
 .Nav-Item-Middle {
   box-sizing: border-box;
-  background-color: #141414;
+  background-color: #131313;
   width: 1000px;
 }
 
@@ -57,19 +57,15 @@
   text-align: right;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1279px) {
+/* L */
+@media screen and (min-width: 1200px) {
   .NavBar-Wrapper {
-    padding: 0 100px;
+    padding: 0 250px;
   }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
-  .NavBar-Wrapper {
-    padding: 0 100px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
+/* XL */
+@media screen and (min-width: 1623px) {
   .NavBar-Wrapper {
     padding: 0 300px;
   }
