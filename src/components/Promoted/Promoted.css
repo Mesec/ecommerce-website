@@ -89,9 +89,15 @@
   color: white;
 }
 
+@media screen and (min-width: 900px) {
+  .Promoted-Info-Text {
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 1200px) {
     .Promoted {
-      padding: 0 180px;
+      padding: 0 100px;
       justify-content: space-around;
     }
     .Promoted-Info {
@@ -100,6 +106,7 @@
     .Promoted-Info-Text {
       justify-self: left;
       text-align: left;
+      margin: unset;
     }
    .Home-Header-Image-Container {
      position: relative;
@@ -112,8 +119,8 @@
   }
 }
 
-@media screen and (min-width: 1623px) {
+@media screen and (min-width: 1536px) {
   .Promoted {
-    padding: 0 300px;
+    padding: 0 200px;
   }
 }

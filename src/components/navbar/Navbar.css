@@ -65,12 +65,12 @@
 
 @media screen and (min-width: 1200px) {
   .NavBar-Wrapper {
-    padding: 0 180px;
+    padding: 0 100px;
   }
 }
 
-@media screen and (min-width: 1623px) {
+@media screen and (min-width: 1536px) {
   .NavBar-Wrapper {
-    padding: 0 300px;
+    padding: 0 200px;
   }
 }
