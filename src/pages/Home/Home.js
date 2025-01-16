@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
+    <Box className='Home-Main-Content'>
+      <ProductNavigation />
       <Grid container className='Home-Main-Content'>
-        <Grid lg={ 10 } item>
-          <ProductNavigation />
-        </Grid>
-        <Grid lg={ 10 }item className='Home-First'>
+        <Grid lg={ 10 } item className='Home-First'>
           <Box className='Circle Home-First-Circle1'></Box>
           <Box className='Circle Home-First-Circle2'></Box>
           <Box className='Circle Home-First-Circle3'></Box>
@@ -23,19 +22,19 @@ export default function Home() {
             <Typography variant='body1'>
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </Typography>
-            <Link to={`/product/s-01`}>
+            <Link to={ `/product/s-01` }>
               <Button variant="contained">See Product</Button>
             </Link>
           </Box>
         </Grid>
         <Grid lg={ 10 } item className='Home-Second'>
           <Box>
-          <Typography variant='h4'>
-            ZX7 SPEAKER
-          </Typography>
-          <Link to={ `/product/s-02` }>
-            <Button variant="outlined">See Product</Button>
-          </Link>
+            <Typography variant='h4'>
+              ZX7 SPEAKER
+            </Typography>
+            <Link to={ `/product/s-02` }>
+              <Button variant="outlined">See Product</Button>
+            </Link>
           </Box>
         </Grid>
         <Grid lg={ 10 } item className='Home-Third'>
@@ -50,5 +49,6 @@ export default function Home() {
           </Box>
         </Grid>
       </Grid>
+      </Box>
   )
 }
