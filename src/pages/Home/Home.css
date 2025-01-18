@@ -7,20 +7,6 @@
   justify-content: center;
 }
 
-/* .Home-Main-Content a {
-  text-decoration: none;
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 13px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 1px;
-  line-height: normal;
-  z-index: 2;
-  border-radius: 0;
-} */
-
-
-
 @media screen and (min-width: 900px) {
   .Home-Main-Content {
     padding: 0 100px;
@@ -36,6 +22,6 @@
 
 @media screen and (min-width: 1536px) {
    .Home-Main-Content {
-    padding: 0 200px 100px 200px;
+    padding: 0 200px 0 200px;
   }
 }

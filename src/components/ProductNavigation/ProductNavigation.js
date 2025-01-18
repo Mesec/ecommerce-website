@@ -7,7 +7,7 @@ import Earphones from '../../assets/images/earphones.png'
 
 export default function ProductNavigation() {
   return (
-    <Grid container spacing={ 3 } marginBottom='100px' wrap="wrap">
+    <Grid container spacing={ 3 } wrap="wrap">
         <Grid xl={4} lg={4} md={12} sm={12} xs={12} item>
           <ProductItem
             path='/headphones'

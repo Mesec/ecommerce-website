@@ -2,12 +2,11 @@
 }
 
 .TopFooter {
-  display: flex;
   margin-top: 0px;
   justify-content: center;
-  padding: 0 300px 160px 300px;
-  gap: 150px;
   text-align: left;
+  margin-bottom: 100px;
+  padding: 0 30px;
 }
 
 .TopFooter > div{
@@ -15,12 +14,10 @@
 }
 
 .TopFooter > div:nth-child(1) {
-  margin-right: 82px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  gap: 32px;
 }
 
 .TopFooter > div:nth-child(1) > h4{
@@ -29,7 +26,6 @@
   font-weight: 700;
   letter-spacing: 1.43px;
   line-height: 44px;
-  width: 445px;
   text-transform: uppercase;
 }
 
@@ -59,8 +55,8 @@
 }
 
 .BottomFooter {
-  background-color: var(--primary-color);
-  padding: 65px 300px 48px 300px;
+  width: 100%;
+  background-color: #131313;
 }
 
 .Footer-Description p:nth-child(1) {
@@ -88,12 +84,91 @@
 }
 
 .Footer-Image {
-  width: 100%;
   background-image: url('/src/assets/images/person.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 800px;
+  width: 100%;
   background-position: right;
   border-radius: 10px;
-  margin-left: 150px;
+}
+
+
+@media screen and (min-width: 900px) {
+  .TopFooter {
+    padding: 0 100px;
+    margin-top: 150px;
+  }
+  .TopFooter > div:nth-child(1) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .TopFooter > div:nth-child(1) > h4 {
+    width: 70%;
+    text-align: center;
+  }
+  .TopFooter > div:nth-child(1) > p {
+    width: 70%;
+    text-align: center;
+  }
+  .Footer-Image {
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position-y: -30px;
+    order: -1;
+}
+ .BottomFooter {
+  padding: 65px 80px 48px 80px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+  .TopFooter {
+    padding: 0 120px;
+  }
+   .Footer-Image {
+    background-position: center;
+    height: 500px;
+    background-size: contain;
+    background-position: top;
+    order: 1;
+}
+  .TopFooter > div:nth-child(1) {
+    align-items: start;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .TopFooter > div:nth-child(1) > h4 {
+    width: 445px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .TopFooter > div:nth-child(1) > p {
+    width: 445px;
+    text-align: left;
+  }
+ .BottomFooter {
+  padding: 65px 100px 48px 100px;
+}
+}
+
+@media screen and (min-width: 1536px) {
+   .TopFooter {
+    padding: 0 200px 0 200px;
+  }
+  .Footer-Image {
+    height: 950px;
+}
+ .BottomFooter {
+  padding: 65px 200px 48px 200px;
+}
+.Footer-Image {
+  background-position: center;
+  height: 600px;
+  background-size:contain;
+  background-position: top;
+}
 }
