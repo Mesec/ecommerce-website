@@ -149,6 +149,108 @@
   }
 }
 
+.FeaturedItemTwo {
+  background-image: url('../../assets/images/Bitmap.png');
+  margin-top: 50px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: right;
+  padding-left: 130px;
+  box-sizing: border-box;
+  background-color: red;
+  height: 350px;
+}
+
+.FeaturedItemTwo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  gap: 32px;
+}
+
+.FeaturedItemTwo > div > a > button {
+  border: 1px solid;
+  border-color: #000000;
+  height: 48px;
+  position: relative;
+  width: 160px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+.FeaturedItemTwo > div > a > button:hover {
+  background-color: black;
+  color: white;
+}
+
+.FeaturedItemTwo > div > h4 {
+  color: #000000;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 2px;
+  line-height: normal;
+}
+
+.Featured-Item-Three {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  height: 350px;
+}
+
+.Featured-Item-Three div {
+  border-radius: 8px;
+}
+
+.Featured-Item-Three-Earphones {
+  background-image: url('../../assets/images/earphones-bitmap.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.Featured-Item-Three > div:nth-child(2) {
+  background-color: #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  padding-left: 95px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.Featured-Item-Three > div:nth-child(2) h4 {
+  color: #000000;
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: normal;
+}
+
+.Featured-Item-Three > div:nth-child(2) > a > button {
+  border: 1px solid;
+  border-color: #000000;
+  height: 48px;
+  position: relative;
+  width: 160px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+.Featured-Item-Three > div:nth-child(2) > a > button:hover {
+  background-color: black;
+  color: white;
+}
+
 
 @media screen and (min-width: 1200px) {
   .Featured-Item-One {
