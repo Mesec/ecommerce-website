@@ -15,6 +15,6 @@ export default function Home() {
       <FeaturedItemOne />
       <FeaturedItemTwo/>
       <FeaturedItemThree />
-      </Box>
+    </Box>
   )
 }

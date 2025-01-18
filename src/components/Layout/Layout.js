@@ -49,8 +49,8 @@ export default function Layout() {
         <Grid item xl={ 12 }>
           <PageRoutes />
         </Grid>
-        <Footer />
       </Grid>
+      <Footer />
     </Box>
   )
 }
