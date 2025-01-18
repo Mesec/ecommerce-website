@@ -1,21 +1,35 @@
 
 .Promoted {
+  padding: 0;
+  align-items: center;
   width: 100%;
+  justify-content: center;
 }
 
 .Home-Header-Image-Container {
-  height: 700px;
   background-image: url('/src/assets/images/products/xx99II/cover.png');
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: center;
   background-color: transparent;
   overflow: hidden;
-  /* background-size: contain; */
+  height: 600px;
+  width: 620px;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: top;
+  order: -1;
 }
 
 .Promoted-Info {
+  justify-self: center;
   text-align: center;
+  padding-bottom: 50px;
+}
+
+.Promoted-Info-Text {
+  justify-self: center;
+  text-align: center;
+  width: 350px;
+  word-wrap: break-word;
 }
 
 .Promoted-Info > .New-Product{
@@ -36,7 +50,6 @@
   letter-spacing: 2px;
   line-height: 48px;
   text-transform: uppercase;
-  width: 396px;
   margin: 24px 0;
 }
 
@@ -76,131 +89,38 @@
   color: white;
 }
 
-@media screen and (min-width: 410px) and (max-width: 899px) {
-  .Promoted {
-    position: relative;
-    height: 600px;
-  }
-
-  .Home-Header-Image-Container {
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    z-index: 1;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-position: center;
-  }
-
-  .Promoted-Info {
-    z-index: 2;
-    text-align: center;
-    width: 396px;
-    position: relative;
-    bottom: 45px;
-  }
-
-  .Promoted-Info h4 {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    line-height: 33px;
-    text-transform: uppercase;
-    width: 396px;
-    margin: 24px 0;
-  }
-
-  .Promoted-Info p {
-    font-size: 13px;
-  }
-
+@media screen and (min-width: 900px) {
   .Promoted-Info-Text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
   }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1279px) {
-  .Promoted-Info {
-    text-align: left;
-  }
-  
-  .Promoted-Info-Text > h4 {
-    font-size: 40px;
-  }
-
-  .Promoted-Info-Text > p {
-    font-size: 13px;
-    width: 306px;
-  }
-
-  .Home-Header-Image-Container {
-    background-size: 450px;
-  }
-
-  .Promoted-Info > h4 {
-    font-size: 45px;
+@media screen and (min-width: 1200px) {
+    .Promoted {
+      padding: 0 100px;
+      justify-content: space-around;
+    }
+    .Promoted-Info {
+      text-align: left;
+    }
+    .Promoted-Info-Text {
+      justify-self: left;
+      text-align: left;
+      margin: unset;
+    }
+   .Home-Header-Image-Container {
+     position: relative;
+     z-index: 0;
+     right: -80px;
+     bottom: 60px;
+     order:unset;
+     background-position-x: right;
+     background-position-y: center;
   }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
+@media screen and (min-width: 1536px) {
   .Promoted {
-    padding: 0 100px;
-  }
-
-  .Promoted-Info {
-    text-align: left;
-  }
-
-  .Promoted-Info-Text > h4 {
-    font-size: 45px;
-  }
-
-  .Home-Header-Image-Container {
-    background-size: 550px;
+    padding: 0 200px;
   }
 }
-
-@media screen and (min-width: 1920px) {
-  .Home-Header-Image-Container {
-    position: relative;
-    z-index: 0;
-    right: -100px;
-    bottom: 60px;
-  }
-  .Promoted {
-    padding: 0 300px;
-  }
-
-  .Promoted-Info {
-    text-align: left;
-  }
-  
-  .Promoted-Info button {
-    font-size: 13px;
-  }
-
-  .Promoted-Info > .New-Product {
-    font-size: 14px;
-  }
-  
-  .Promoted-Info-Text h4 {
-    font-size: 56px;
-    line-height: 58px;  
-  }
-
-  .Promoted-Info-Text p {
-    font-size: 15px;
-  }
-}
-
-
-
-
-
-
-
-
