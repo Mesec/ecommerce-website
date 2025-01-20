@@ -1,10 +1,27 @@
 .Home-Main-Content {
   padding: 0 30px;
   box-sizing: border-box;
+}
+
+.Home-Body {
   display: flex;
   flex-direction: column;
   gap: 100px;
   justify-content: center;
+}
+
+.Home-Header {
+  margin-bottom: 100px;
+}
+
+@media screen and (min-width: 600px) {
+  .Home-Main-Content {
+    padding: 0 20px;
+    margin-top: 100px;
+  }
+  .Home-Header {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 900px) {

@@ -11,10 +11,14 @@ import FeaturedItemThree from 'components/FeaturedItems/FeaturedItemThree'
 export default function Home() {
   return (
     <Box className='Home-Main-Content'>
-      <ProductNavigation />
-      <FeaturedItemOne />
-      <FeaturedItemTwo/>
-      <FeaturedItemThree />
+      <Box className='Home-Header'>
+        <ProductNavigation />
+      </Box>
+      <Box className='Home-Body'>
+        <FeaturedItemOne />
+        <FeaturedItemTwo />
+        <FeaturedItemThree />
+      </Box>
     </Box>
   )
 }
