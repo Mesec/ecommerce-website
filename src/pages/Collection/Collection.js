@@ -9,7 +9,7 @@ export default function Collection(props) {
   const { products, type } = props;
   console.log(products)
   return (
-      <Box container className='ProductSection-Container'>
+      <Box container className='Collection'>
         {
           products?.map((item, index) => {
             const numberFromId = Number(item.id.split('-')[1]);
