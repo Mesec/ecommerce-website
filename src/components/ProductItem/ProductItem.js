@@ -1,24 +1,34 @@
 import React from 'react'
-import { Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system'
 import './ProductItem.css'
 
-export default function ProductItem({ title, newProduct, generalInfo, children, images }) {
-  const cover = require(`/src/assets/images/products${images?.main}`);
+export default function ProductItem({ title, newProduct, generalInfo, children, images, reverse }) {
+  const thumbnail = require(`/src/assets/images/products${images?.main}`);
 
   return (
-    <Box className='Product-Item-Container'>
-      <Box className='Product-Item-Image'>
-        <img src={ cover } alt={ title } />
-      </Box>
-      <Box className='Product-General-Info'>
-        { newProduct && <Typography className='New-Product' variant='h7'>NEW PRODUCT</Typography> }
-        <Typography variant='h4'>{ title }</Typography>
-        <Typography variant='body1'>{ generalInfo }</Typography>
-        <Box display='flex' gap='16px' className='Product-Controls'>
-          { children }
+    <Grid
+      container
+      spacing={{ lg: 15, md: 5, sm: 5}}
+      direction={ reverse ? "row" : "row-reverse" }
+      style={{ justifyContent: `${reverse ? 'start': 'end'}` }}
+      className='Product-Item-Container'>
+      <Grid item xl={6} lg={6} md={6} sm={12}>
+        <Box
+          className='Product-Item-Image'
+          style={ { backgroundImage: `url(${thumbnail})`, justifySelf: `${reverse ? 'end': 'start'}` }}>
         </Box>
-      </Box>
-    </Box>
+      </Grid>
+      <Grid item xl={ 6 } lg={ 6 } md={ 6 } sm={ 12 } className='Product-General-Item-Info'>
+        <Box style={ { justifySelf: `${reverse ? 'start' : 'end'}` }}>
+          { newProduct && <Box className='New-Product-Container'><Typography className='Product-General-New-Product' variant='h7'>NEW PRODUCT</Typography></Box> }
+          <Typography variant='h4'>{ title }</Typography>
+          <Typography variant='body1'>{ generalInfo }</Typography>
+          <Box display='flex' gap='16px' className='Product-Controls'>
+            { children }
+          </Box>
+        </Box>
+      </Grid>
+    </Grid>
   )
 }
