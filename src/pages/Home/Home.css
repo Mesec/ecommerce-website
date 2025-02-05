@@ -10,10 +10,6 @@
   justify-content: center;
 }
 
-.Home-Header {
-  margin-bottom: 100px;
-}
-
 @media screen and (min-width: 600px) {
   .Home-Main-Content {
     padding: 0 20px;
@@ -35,6 +31,9 @@
   .Home-Main-Content {
     padding: 0 120px;
   }
+  .Home-Header {
+  margin-bottom: 100px;
+}
 }
 
 @media screen and (min-width: 1536px) {

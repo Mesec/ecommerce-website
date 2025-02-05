@@ -49,7 +49,7 @@ function ResponsiveAppBar() {
     if (location.pathname === '/speakers' || location.pathname === '/headphones' || location.pathname === '/earphones') {
       return (
         <Box className='Product-Header'>
-          <Typography variant='h3'>{ location.pathname.split('/')[1] } </Typography>
+          <Typography style={{fontSize:'25px', textTransform: 'capitalize'}} variant='h3'>{ location.pathname.split('/')[1] } </Typography>
         </Box>
       )
     }
@@ -102,7 +102,7 @@ function ResponsiveAppBar() {
         </AppBar>
       </Grid>
       <Grid item xl={ 12 } lg={ 12 } md={ 12 } sm={ 12 } className='Nav-Item-Middle'>{ renderPromotedProduct() }</Grid>
-      <Grid item xl={ 12 } lg={ 12 } md={ 12 } sm={ 12 } className='Nav-Item-Bottom'>{ renderProductTitle() }</Grid>
+      {/* <Grid item xl={ 12 } lg={ 12 } md={ 12 } sm={ 12 } className='Nav-Item-Bottom'>{ renderProductTitle() }</Grid> */}
     </Grid>
   );
 }

@@ -7,7 +7,7 @@ import yx1 from './assets/images/products/yx1.png';
 
 export const products = [
   {
-    id: 'h-01',
+    id: 'h-1',
     newProduct: true,
     title: 'XX99 Mark II Headphones',
     generalInfo: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.',
@@ -41,7 +41,7 @@ export const products = [
     ]
   },
   {
-    id: 'h-02',
+    id: 'h-2',
     newProduct: false,
     title: 'XX99 Mark I Headphones',
     generalInfo: 'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.',
@@ -75,7 +75,7 @@ export const products = [
     ]
   },
   {
-    id: 'h-03',
+    id: 'h-3',
     newProduct: false,
     title: 'XX59 Headphones',
     generalInfo: 'Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.',
@@ -109,7 +109,7 @@ export const products = [
     ]
   },
   {
-    id: 's-01',
+    id: 's-1',
     newProduct: false,
     title: 'ZX9 SPEAKER',
     generalInfo: 'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.',
@@ -143,7 +143,7 @@ export const products = [
     ]
   },
   {
-    id: 's-02',
+    id: 's-2',
     newProduct: true,
     title: 'ZX7 SPEAKER',
     generalInfo: 'Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.',
@@ -177,7 +177,7 @@ export const products = [
     ]
   },
   {
-    id: 'e-01',
+    id: 'e-1',
     newProduct: true,
     title: 'YX1 WIRELESS EARPHONES',
     generalInfo: 'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.',

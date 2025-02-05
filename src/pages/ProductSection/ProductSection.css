@@ -1,39 +1,25 @@
 .Product {
-  padding: 0 122px;
+  /* padding: 0 122px; */
+  margin-top: 100px;
 }
 
 .ProductSection-Container {
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 160px;
+  gap: 100px;
   margin-bottom: 240px;
-}
-
-.Product-Item-Image {
-  background-color: #f0f0f0;
-  background-position: center;
-  background-size: cover;
-  width: 480px;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  padding: 70px;
-  box-sizing: border-box;
 }
 
 .See-Product {
   background-color: #d87d4a;
   color: #ffffff;
-  height: 100%;
-  width: 162px;
   font-family: "Manrope-Bold", Helvetica;
-  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: normal;
   border: none;
   cursor: pointer;
-  height: 50px;
 }
 
 .See-Product:hover {
@@ -43,4 +29,45 @@
 .See-Product:disabled {
   background-color: #867b76;
   cursor: unset;
+}
+
+@media screen and (min-width: 600px) {
+ .ProductSection-Container {
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+}
+
+@media screen and (min-width: 900px) {
+  .Product {
+    padding: 0 80px;
+  }
+  .See-Product {
+    width: 140px;
+    font-size: 11px;
+    height: 44px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+   .Product {
+    padding: 0 120px;
+   }
+   .See-Product {
+    width: 162px;
+    font-size: 13px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+   .Product {
+    padding: 0 200px;
+}
+}
+
+@media screen and (min-width: 1700px) {
+   .Product {
+    padding: 0 300px;
+   }
 }
