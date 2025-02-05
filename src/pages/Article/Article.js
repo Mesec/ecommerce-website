@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom';
-import { products } from '../../data';
-// import {  } from '@mui/base';
-import { TextField, Typography, Button } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
-import './Product.css'
+import './Article.css'
 import ProductItem from '../../components/ProductItem/ProductItem';
 import CircularProgress from '@mui/material/CircularProgress';
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
-import { addToCart, decreaseCart, increaseCart, openCart } from '../../features/cart/cartSlice';
+import { addToCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import QuantityInput from 'components/QuantityInput/QuantityInput';
 import { openSnackbar } from 'features/snackbar/snackbarSlice';
 
-export default function Product() {
+export default function Article() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();

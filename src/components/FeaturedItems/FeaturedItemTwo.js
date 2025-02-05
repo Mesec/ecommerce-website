@@ -10,7 +10,7 @@ export default function FeaturedItemTwo() {
         <Typography variant='h4'>
           ZX7 SPEAKER
         </Typography>
-        <Link to={ `/product/s-02` }>
+        <Link to={ `/article/s-02` }>
           <Button variant="outlined">See Product</Button>
         </Link>
       </Box>

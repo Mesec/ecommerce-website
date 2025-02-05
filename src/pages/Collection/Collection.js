@@ -3,9 +3,9 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom';
 import ProductItem from '../../components/ProductItem/ProductItem';
-import './ProductSection.css'
+import './Collection.css'
 
-export default function Products(props) {
+export default function Collection(props) {
   const { products, type } = props;
   console.log(products)
   return (
@@ -19,7 +19,7 @@ export default function Products(props) {
                     { ...item }
                     reverse={ numberFromId % 2 !== 0 }
                     key={ index }>
-                    <Link to={ `/product/${item.id}` }>
+                    <Link to={ `/article/${item.id}` }>
                       <Button variant='contained' className='See-Product'>
                         SEE PRODUCT
                       </Button></Link>

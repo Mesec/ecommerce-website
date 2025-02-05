@@ -11,7 +11,7 @@ export default function FeaturedItemThree() {
         <Typography variant='h4'>
           YX1 EARPHONES
         </Typography>
-        <Link to={ `/product/e-01` }>
+        <Link to={ `/article/e-01` }>
           <Button variant="outlined">See Product</Button>
         </Link>
       </Box>
