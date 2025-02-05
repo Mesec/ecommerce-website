@@ -75,7 +75,7 @@ export default function Article() {
   }, [product]);
 
   if (loading) {
-    return <Box className='Product-Spinner'><CircularProgress/></Box>
+    return <Box className='Article-Spinner'><CircularProgress/></Box>
   }
 
   const disableIncreaseButton = () => {
@@ -116,10 +116,10 @@ export default function Article() {
   return (
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
       { product &&
-      <Box className='Product-Container'>
+      <Box className='Article-Container'>
         <ProductItem { ...product }>
-          <Box className='Product-Controls'>
-            <Box className='Product-Controls-Form'>
+          <Box className='Article-Controls'>
+            <Box className='Article-Controls-Form'>
               <QuantityInput
                 id={ product.id }
                 quantity={ quantity }
@@ -131,7 +131,7 @@ export default function Article() {
               <Button
                 disabled={ disableAddToCartButton() }
                 onClick={ addToCartHandler }
-                className='Add-Product'
+                className='Add-Article'
                 variant='contained'>
                 ADD TO CART
               </Button>
@@ -148,8 +148,8 @@ export default function Article() {
           </Box>
 
         </ProductItem>
-        <Box display='flex' className='Product-Info'>
-          <Box className='Product-Features'>
+        <Box display='flex' className='Article-Info'>
+          <Box className='Article-Features'>
             <Typography variant='h4'>
               FEATURES
             </Typography>
@@ -175,13 +175,13 @@ export default function Article() {
             }) }
           </Box>
         </Box>
-        <Box className='Product-Gallery'>
-          <Box className='Product-Gallery-Left'>
-            <Box className='Product-Gallery-Top' style={ setBackgroundImage('top') }></Box>
-            <Box className='Product-Gallery-Bottom' style={ setBackgroundImage('bottom') }></Box>
+        <Box className='Article-Gallery'>
+          <Box className='Article-Gallery-Left'>
+            <Box className='Article-Gallery-Top' style={ setBackgroundImage('top') }></Box>
+            <Box className='Article-Gallery-Bottom' style={ setBackgroundImage('bottom') }></Box>
           </Box>
-          <Box className='Product-Gallery-Right'>
-            <Box className='Product-Gallery-Right' style={ setBackgroundImage('right') }></Box>
+          <Box className='Article-Gallery-Right'>
+            <Box className='Article-Gallery-Right' style={ setBackgroundImage('right') }></Box>
           </Box>
         </Box>
         <Box className='You-May-Also-Like'>

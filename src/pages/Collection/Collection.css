@@ -1,8 +1,4 @@
-.Product {
-  margin-top: 100px;
-}
-
-.ProductSection-Container {
+.Collection {
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -31,16 +27,13 @@
 }
 
 @media screen and (min-width: 600px) {
- .ProductSection-Container {
+ .Collection {
   padding-left: 20px;
   padding-right: 20px;
  }
 }
 
 @media screen and (min-width: 900px) {
-  .Product {
-    padding: 0 80px;
-  }
   .See-Product {
     width: 140px;
     font-size: 11px;
@@ -49,9 +42,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-   .Product {
-    padding: 0 120px;
-   }
    .See-Product {
     width: 162px;
     font-size: 13px;
@@ -60,13 +50,7 @@
 }
 
 @media screen and (min-width: 1536px) {
-   .Product {
-    padding: 0 200px;
-}
 }
 
 @media screen and (min-width: 1700px) {
-   .Product {
-    padding: 0 300px;
-   }
 }
