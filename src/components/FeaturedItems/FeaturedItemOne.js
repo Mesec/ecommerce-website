@@ -19,7 +19,7 @@ export default function FeaturedItemOne() {
         <Typography variant='body1'>
           Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
         </Typography>
-        <Link to={ `/product/s-01` }>
+        <Link to={ `/article/s-01` }>
           <Button variant="contained">See Product</Button>
         </Link>
       </Grid>

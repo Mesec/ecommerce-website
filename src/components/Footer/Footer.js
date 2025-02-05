@@ -5,7 +5,6 @@ import NavigationItems from '../Navbar/NavigationItems/NavigationItems'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Person from '../../assets/images/person.png'
 import './Footer.css'
 import { useLocation } from 'react-router-dom';
 
