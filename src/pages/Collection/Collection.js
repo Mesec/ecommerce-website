@@ -20,7 +20,7 @@ export default function Collection(props) {
                     reverse={ numberFromId % 2 !== 0 }
                     key={ index }>
                     <Link to={ `/article/${item.id}` }>
-                      <Button variant='contained' className='See-Product'>
+                      <Button variant='contained'>
                         SEE PRODUCT
                       </Button></Link>
                   </ProductItem>

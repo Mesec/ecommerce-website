@@ -9,18 +9,18 @@ export default function ProductItem({ title, newProduct, generalInfo, children, 
   return (
     <Grid
       container
-      spacing={{ lg: 15, md: 5, sm: 5}}
-      direction={ reverse ? "row" : "row-reverse" }
-      style={{ justifyContent: `${reverse ? 'start': 'end'}` }}
+      spacing={{ lg: 5, md: 5, sm: 5}}
+      // direction={ reverse ? "row" : "row-reverse" }
+      // style={{ justifyContent: `${reverse ? 'start': 'end'}` }}
       className='Product-Item-Container'>
-      <Grid item xl={6} lg={6} md={6} sm={12}>
+      <Grid item xl={4} lg={4} md={6} sm={12}>
         <Box
           className='Product-Item-Image'
-          style={ { backgroundImage: `url(${thumbnail})`, justifySelf: `${reverse ? 'end': 'start'}` }}>
+          style={ { backgroundImage: `url(${thumbnail})` }}>
         </Box>
       </Grid>
       <Grid item xl={ 6 } lg={ 6 } md={ 6 } sm={ 12 } className='Product-General-Item-Info'>
-        <Box style={ { justifySelf: `${reverse ? 'start' : 'end'}` }}>
+        <Box>
           { newProduct && <Box className='New-Product-Container'><Typography className='Product-General-New-Product' variant='h7'>NEW PRODUCT</Typography></Box> }
           <Typography variant='h4'>{ title }</Typography>
           <Typography variant='body1'>{ generalInfo }</Typography>
