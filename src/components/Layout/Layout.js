@@ -46,11 +46,11 @@ export default function Layout() {
         <Grid item xl={ 12 } width='100%'>
           <Navbar />
         </Grid>
-        <Grid item xl={ 12 }>
+        <Grid item xl={ 12 } width='100%'>
           <PageRoutes />
         </Grid>
-        <Footer />
       </Grid>
+      <Footer />
     </Box>
   )
 }

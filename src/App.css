@@ -1,4 +1,9 @@
 .App {
-  text-align: center;
   width: 100%;
+}
+.Product-Spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,151 @@
+
+
+.Collection-Item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.40);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.40);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.40);
+}
+
+.Collection-Item-Thumbnail {
+  background-color: #f0f0f0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 220px;
+  justify-content: center;
+  padding: 70px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 340px;
+}
+
+.Collection-Item-New-Product {
+  position: absolute;
+  color: #d87d4a;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: normal;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -0);
+  font-size: 13px;
+}
+
+.Collection-Item-Information {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  padding: 30px 30px;
+}
+
+.Collection-Item-Information > h4 {
+  font-weight: 500;
+}
+
+.Collection-Item-Information > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  opacity: 0.5;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 60px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.Collection-Item-Information button {
+  background-color: #d87d4a;
+  color: #ffffff;
+  font-family: "Manrope-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  width: 170px;
+  align-self: center;
+}
+
+.Collection-Item-Information button:hover {
+  background-color: #FBAF85;
+}
+
+.Collection-Item-Information button:disabled {
+  background-color: #867b76;
+  cursor: unset;
+}
+
+@media screen and (min-width: 900px) {
+  .Collection-Item {
+    flex-direction: row;
+  }
+  .Collection-Item-Thumbnail {
+    max-width: 280px;
+    min-width: 280px;
+    height: 260px;
+    background-size: 130px;
+  }
+  .Collection-Item-Information {
+    height: 260px;
+  }
+  .Collection-Item-New-Product {
+    font-size: 10px;
+    top: 30px;
+    left: unset;
+      transform: translate(0, -0);
+  }
+  .Collection-Item-Information > h4 {
+    font-size: 25px;
+    width: 300px;
+
+  }
+  .Collection-Item-Information > p {
+    font-size: 14px;
+    text-align: left;
+  }
+  .Collection-Item-Information button {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Collection-Item-Thumbnail {
+    max-width: 300px;
+    min-width: 300px;
+    height: 280px;
+    background-size: 150px;
+  }
+  .Collection-Item-Information {
+    height: 280px;
+    text-align: left;
+  }
+  .Collection-Item-New-Product {
+    font-size: 11px;
+    top: 15px;
+  }
+  .Collection-Item-Information > h4 {
+    font-size: 27px;
+    width: 300px;
+
+  }
+  .Collection-Item-Information > p {
+    font-size: 15px;
+    text-align: left;
+  }
+}

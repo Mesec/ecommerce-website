@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom';
-import { products } from '../../data';
-// import {  } from '@mui/base';
-import { TextField, Typography, Button } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
-import './Product.css'
-import ProductItem from '../../components/ProductItem/ProductItem';
+import './Article.css'
+import CollectionItem from '../../components/CollectionItem/CollectionItem';
 import CircularProgress from '@mui/material/CircularProgress';
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
-import { addToCart, decreaseCart, increaseCart, openCart } from '../../features/cart/cartSlice';
+import { addToCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import QuantityInput from 'components/QuantityInput/QuantityInput';
 import { openSnackbar } from 'features/snackbar/snackbarSlice';
 
-export default function Product() {
+export default function Article() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();
@@ -77,7 +75,7 @@ export default function Product() {
   }, [product]);
 
   if (loading) {
-    return <Box className='Product-Spinner'><CircularProgress/></Box>
+    return <Box className='Article-Spinner'><CircularProgress/></Box>
   }
 
   const disableIncreaseButton = () => {
@@ -118,10 +116,10 @@ export default function Product() {
   return (
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
       { product &&
-      <Box className='Product-Container'>
-        <ProductItem { ...product }>
-          <Box className='Product-Controls'>
-            <Box className='Product-Controls-Form'>
+      <Box className='Article-Container'>
+        <CollectionItem { ...product }>
+          <Box className='Article-Controls'>
+            <Box className='Article-Controls-Form'>
               <QuantityInput
                 id={ product.id }
                 quantity={ quantity }
@@ -133,7 +131,7 @@ export default function Product() {
               <Button
                 disabled={ disableAddToCartButton() }
                 onClick={ addToCartHandler }
-                className='Add-Product'
+                className='Add-Article'
                 variant='contained'>
                 ADD TO CART
               </Button>
@@ -149,9 +147,9 @@ export default function Product() {
               }
           </Box>
 
-        </ProductItem>
-        <Box display='flex' className='Product-Info'>
-          <Box className='Product-Features'>
+        </CollectionItem>
+        <Box display='flex' className='Article-Info'>
+          <Box className='Article-Features'>
             <Typography variant='h4'>
               FEATURES
             </Typography>
@@ -177,13 +175,13 @@ export default function Product() {
             }) }
           </Box>
         </Box>
-        <Box className='Product-Gallery'>
-          <Box className='Product-Gallery-Left'>
-            <Box className='Product-Gallery-Top' style={ setBackgroundImage('top') }></Box>
-            <Box className='Product-Gallery-Bottom' style={ setBackgroundImage('bottom') }></Box>
+        <Box className='Article-Gallery'>
+          <Box className='Article-Gallery-Left'>
+            <Box className='Article-Gallery-Top' style={ setBackgroundImage('top') }></Box>
+            <Box className='Article-Gallery-Bottom' style={ setBackgroundImage('bottom') }></Box>
           </Box>
-          <Box className='Product-Gallery-Right'>
-            <Box className='Product-Gallery-Right' style={ setBackgroundImage('right') }></Box>
+          <Box className='Article-Gallery-Right'>
+            <Box className='Article-Gallery-Right' style={ setBackgroundImage('right') }></Box>
           </Box>
         </Box>
         <Box className='You-May-Also-Like'>

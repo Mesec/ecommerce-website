@@ -13,11 +13,9 @@ export default function Promoted() {
       { product &&
         <Grid
           className='Promoted'
-          width='100%'
           container
-          alignItems="center"
           >
-          <Grid xl={ 6 } item  className='Promoted-Info'>
+          <Grid xl={ 6 } lg={ 6 } md={ 12 } item  className='Promoted-Info'>
           <Typography className='New-Product' variant='h7' color='secondary' fontSize='14px'>
             NEW PRODUCT
           </Typography>
@@ -29,13 +27,13 @@ export default function Promoted() {
                 { product.promoInfo }
               </Typography>
           </Box>
-          <Link to={ `/product/${product.id}` }>
+          <Link to={ `/article/${product.id}` }>
             <Button variant="contained">
               SEE PRODUCT
             </Button>
           </Link>
         </Grid>
-          <Grid item xl={ 6 } className='Home-Header-Image-Container'></Grid>
+          <Grid xl={ 6 } lg={ 6 } md={ 12 } item className='Home-Header-Image-Container'></Grid>
       </Grid> }
     </Box>
   )
