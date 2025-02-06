@@ -1,57 +1,24 @@
 .Collection {
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-  margin-bottom: 240px;
-}
-
-.Collection button {
-  background-color: #d87d4a;
-  color: #ffffff;
-  font-family: "Manrope-Bold", Helvetica;
-  font-weight: 700;
-  letter-spacing: 1px;
-  line-height: normal;
-  border: none;
-  cursor: pointer;
-}
-
-.Collection button:hover {
-  background-color: #FBAF85;
-}
-
-.Collection button:disabled {
-  background-color: #867b76;
-  cursor: unset;
-}
-
-@media screen and (min-width: 600px) {
- .Collection {
-  padding-left: 20px;
-  padding-right: 20px;
- }
+  padding: 50px 20px 0 20px;
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 900px) {
-  .Collection button {
-    width: 140px;
-    font-size: 11px;
-    height: 44px;
+ .Collection {
+    padding: 50px 100px 0 100px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-   .Collection button {
-    width: 162px;
-    font-size: 13px;
-    height: 50px;
+ .Collection {
+    padding: 80px 120px 0 120px;
+    margin-bottom: 80px;
   }
 }
 
 @media screen and (min-width: 1536px) {
  .Collection {
-    padding: 100px 200px 0 200px;
+    padding: 80px 200px 0 200px;
   }
 }
 

@@ -3,7 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
-import ProductItem from '../../components/ProductItem/ProductItem';
+import CollectionItem from '../../components/CollectionItem/CollectionItem';
 import CircularProgress from '@mui/material/CircularProgress';
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
 import { addToCart, openCart } from '../../features/cart/cartSlice';
@@ -117,7 +117,7 @@ export default function Article() {
     <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
       { product &&
       <Box className='Article-Container'>
-        <ProductItem { ...product }>
+        <CollectionItem { ...product }>
           <Box className='Article-Controls'>
             <Box className='Article-Controls-Form'>
               <QuantityInput
@@ -147,7 +147,7 @@ export default function Article() {
               }
           </Box>
 
-        </ProductItem>
+        </CollectionItem>
         <Box display='flex' className='Article-Info'>
           <Box className='Article-Features'>
             <Typography variant='h4'>
