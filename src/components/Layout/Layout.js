@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Snackbar, IconButton, Grid } from '@mui/material'
-import Navbar from '../Navbar/Navbar'
+import Navbar from '/src/components/Navbar/Navbar'
 import PageRoutes from '../Routes/Routes'
 import Footer from '../Footer/Footer'
 import './Layout.css'
