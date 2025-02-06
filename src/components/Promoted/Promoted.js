@@ -27,7 +27,7 @@ export default function Promoted() {
                 { product.promoInfo }
               </Typography>
           </Box>
-          <Link to={ `/product/${product.id}` }>
+          <Link to={ `/article/${product.id}` }>
             <Button variant="contained">
               SEE PRODUCT
             </Button>

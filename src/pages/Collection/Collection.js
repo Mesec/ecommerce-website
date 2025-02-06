@@ -3,13 +3,13 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom';
 import ProductItem from '../../components/ProductItem/ProductItem';
-import './ProductSection.css'
+import './Collection.css'
 
-export default function Products(props) {
+export default function Collection(props) {
   const { products, type } = props;
   console.log(products)
   return (
-      <Box container className='ProductSection-Container'>
+      <Box container className='Collection'>
         {
           products?.map((item, index) => {
             const numberFromId = Number(item.id.split('-')[1]);
@@ -19,8 +19,8 @@ export default function Products(props) {
                     { ...item }
                     reverse={ numberFromId % 2 !== 0 }
                     key={ index }>
-                    <Link to={ `/product/${item.id}` }>
-                      <Button variant='contained' className='See-Product'>
+                    <Link to={ `/article/${item.id}` }>
+                      <Button variant='contained'>
                         SEE PRODUCT
                       </Button></Link>
                   </ProductItem>

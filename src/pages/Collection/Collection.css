@@ -1,9 +1,4 @@
-.Product {
-  /* padding: 0 122px; */
-  margin-top: 100px;
-}
-
-.ProductSection-Container {
+.Collection {
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -11,7 +6,7 @@
   margin-bottom: 240px;
 }
 
-.See-Product {
+.Collection button {
   background-color: #d87d4a;
   color: #ffffff;
   font-family: "Manrope-Bold", Helvetica;
@@ -22,27 +17,24 @@
   cursor: pointer;
 }
 
-.See-Product:hover {
+.Collection button:hover {
   background-color: #FBAF85;
 }
 
-.See-Product:disabled {
+.Collection button:disabled {
   background-color: #867b76;
   cursor: unset;
 }
 
 @media screen and (min-width: 600px) {
- .ProductSection-Container {
+ .Collection {
   padding-left: 20px;
   padding-right: 20px;
  }
 }
 
 @media screen and (min-width: 900px) {
-  .Product {
-    padding: 0 80px;
-  }
-  .See-Product {
+  .Collection button {
     width: 140px;
     font-size: 11px;
     height: 44px;
@@ -50,10 +42,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-   .Product {
-    padding: 0 120px;
-   }
-   .See-Product {
+   .Collection button {
     width: 162px;
     font-size: 13px;
     height: 50px;
@@ -61,13 +50,11 @@
 }
 
 @media screen and (min-width: 1536px) {
-   .Product {
-    padding: 0 200px;
-}
+ .Collection {
+    padding: 100px 200px 0 200px;
+  }
 }
 
 @media screen and (min-width: 1700px) {
-   .Product {
-    padding: 0 300px;
-   }
+
 }
