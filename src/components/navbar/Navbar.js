@@ -15,7 +15,7 @@ import { Grid } from '@mui/material';
 import MenuNavBar from './MenuNavBar/MenuNavBar';
 import './Navbar.css';
 
-function Navbar() {
+const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const location = useLocation();
   const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
