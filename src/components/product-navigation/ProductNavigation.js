@@ -1,4 +1,4 @@
-import { Box, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
 import ProductItem from './NavItem/NavItem'
 import Headphones from '../../assets/images/headphones.png'

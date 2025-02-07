@@ -3,20 +3,19 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Logo from '../../assets/icons/logo.svg'
 import Cart from '../../assets/icons/cart.svg'
 import { Link, useLocation } from 'react-router-dom'
-import NavigationItems from './NavigationItems/NavigationItems';
+import NavigationItems from './navigation-items/NavigationItems';
 import Button from '@mui/material/Button';
-import Promoted from '../Promoted/Promoted';
+import Promoted from '../promoted/Promoted';
 import { useDispatch } from 'react-redux';
 import { openCart } from 'features/cart/cartSlice';
 import { Grid } from '@mui/material';
-import MenuNavBar from './MenuNavBar/MenuNavBar';
+import MenuNavBar from './menu-navbar/MenuNavBar';
 import './Navbar.css';
 
-function ResponsiveAppBar() {
+const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const location = useLocation();
   const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
@@ -43,17 +42,6 @@ function ResponsiveAppBar() {
         </IconButton>
       </Link>
     )
-  }
-
-  const renderProductTitle = () => {
-    if (location.pathname === '/speakers' || location.pathname === '/headphones' || location.pathname === '/earphones') {
-      return (
-        <Box className='Product-Header'>
-          <Typography style={{fontSize:'25px', textTransform: 'capitalize'}} variant='h3'>{ location.pathname.split('/')[1] } </Typography>
-        </Box>
-      )
-    }
-    return null;
   }
 
   const renderPromotedProduct = () => {
@@ -106,4 +94,4 @@ function ResponsiveAppBar() {
     </Grid>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;
