@@ -7,7 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux'
 import { closeSnackbar } from 'features/snackbar/snackbarSlice'
 import Footer from 'components/Footer/Footer'
-import Navbar from 'components/Navbar/navbar'
+import Navbar from 'components/navbar/navbar'
 
 export default function Layout() {
   const isSnackbarOpened = useSelector(state => state.snackbar.isOpen);
