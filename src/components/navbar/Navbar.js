@@ -12,7 +12,7 @@ import { openCart } from 'features/cart/cartSlice';
 import { Grid } from '@mui/material';
 import './Navbar.css';
 import Promoted from 'components/promoted/Promoted';
-import MenuNavBar from './menuNavbar/MenuNavBar';
+import MenuNavBar from './menuNavbar/MenuNavbar';
 import NavigationItems from './navigationItems/NavigationItems';
 
 function ResponsiveAppBar() {
