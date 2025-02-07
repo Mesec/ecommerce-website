@@ -67,13 +67,12 @@
 .Product-Item-Info > p {
   color: #050505;
   font-family: "Manrope-Medium", Helvetica;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   left: 0;
-  letter-spacing: 0;
   line-height: 20px;
   opacity: 0.6;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.4px;
   max-height: 40px;
   text-overflow: ellipsis;
   overflow: hidden;
