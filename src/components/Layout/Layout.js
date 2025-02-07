@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Snackbar, IconButton, Grid } from '@mui/material'
-import Navbar from 'components/Navbar/Navbar'
 import PageRoutes from 'components/Routes/Routes'
 import './Layout.css'
 import Cart from 'components/Cart/Cart'
@@ -8,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux'
 import { closeSnackbar } from 'features/snackbar/snackbarSlice'
 import Footer from 'components/Footer/Footer'
+import Navbar from 'components/Navbar/navbar'
 
 export default function Layout() {
   const isSnackbarOpened = useSelector(state => state.snackbar.isOpen);
