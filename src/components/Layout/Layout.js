@@ -7,7 +7,7 @@ import { closeSnackbar } from 'features/snackbar/snackbarSlice'
 import Cart from 'components/cart/Cart';
 import Navbar from 'components/navbar/Navbar';
 import PageRoutes from 'components/routes/Routes';
-import Footer from 'components/footer/Footer';
+import Footer from '../Footer/Footer';
 
 export default function Layout() {
   const isSnackbarOpened = useSelector(state => state.snackbar.isOpen);

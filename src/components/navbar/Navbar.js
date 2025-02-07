@@ -11,9 +11,9 @@ import { useDispatch } from 'react-redux';
 import { openCart } from 'features/cart/cartSlice';
 import { Grid } from '@mui/material';
 import './Navbar.css';
-import Promoted from 'components/promoted/Promoted';
-import MenuNavBar from './menuNavbar/MenuNavBar';
-import NavigationItems from './navigationItems/NavigationItems';
+import MenuNavBar from './MenuNavBar/MenuNavBar';
+import NavigationItems from './NavigationItems/NavigationItems';
+import Promoted from '../Promoted/Promoted';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
