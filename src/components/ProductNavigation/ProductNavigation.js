@@ -1,15 +1,15 @@
-import { Box, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
-import ProductItem from './NavItem/NavItem'
 import Headphones from '../../assets/images/headphones.png'
 import Speakers from '../../assets/images/speakers.png'
 import Earphones from '../../assets/images/earphones.png'
+import NavItem from './navItems/NavItem'
 
 export default function ProductNavigation() {
   return (
     <Grid container spacing={ 3 } wrap="wrap">
         <Grid xl={4} lg={4} md={12} sm={12} xs={12} item>
-          <ProductItem
+          <NavItem
             path='/headphones'
             title='HEADPHONES'
             icon={ Headphones }
@@ -17,7 +17,7 @@ export default function ProductNavigation() {
             />
         </Grid>
         <Grid xl={4} lg={4} md={12} sm={12} xs={12} item>
-          <ProductItem
+          <NavItem
             path='/speakers'
             title='SPEAKERS'
             icon={ Speakers }
@@ -25,7 +25,7 @@ export default function ProductNavigation() {
             />
         </Grid>
         <Grid xl={4} lg={4} md={12} sm={12} xs={12} item>
-          <ProductItem
+          <NavItem
             path='/earphones'
             title='EARPHONES'
             icon={ Earphones }

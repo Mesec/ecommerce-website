@@ -5,7 +5,7 @@ import { Box, Button, Typography } from '@mui/material';
 import './NavItem.css'
 import { Link } from 'react-router-dom';
 
-export default function ProductItem(props) {
+export default function NavItem(props) {
   const { title, icon, info, path } = props
 
   return (
