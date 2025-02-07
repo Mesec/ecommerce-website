@@ -1,6 +1,6 @@
 import { Box } from '@mui/system'
 import React from 'react'
-import CollectionItem from '../../components/CollectionItem/CollectionItem';
+import CollectionItem from '../../components/collectionItem/CollectionItem';
 import './Collection.css'
 import { Grid } from '@mui/material';
 

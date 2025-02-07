@@ -1,12 +1,12 @@
 import { Box, Grid, IconButton, Typography } from '@mui/material'
 import React from 'react'
 import Logo from '../../assets/icons/logo.svg'
-import NavigationItems from '../Navbar/NavigationItems/NavigationItems'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import './Footer.css'
 import { useLocation } from 'react-router-dom';
+import NavigationItems from 'components/navbar/navigationItems/NavigationItems';
 
 export default function Footer() {
   const location = useLocation();

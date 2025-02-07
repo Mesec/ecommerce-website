@@ -3,12 +3,12 @@ import { useLocation, useParams } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
-import CollectionItem from '../../components/CollectionItem/CollectionItem';
+import CollectionItem from '../../components/collectionItem/CollectionItem';
 import CircularProgress from '@mui/material/CircularProgress';
-import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
+import ProductNavigation from '../../components/productNavigation/ProductNavigation';
 import { addToCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import QuantityInput from 'components/QuantityInput/QuantityInput';
+import QuantityInput from 'components/quantityInput/QuantityInput';
 import { openSnackbar } from 'features/snackbar/snackbarSlice';
 
 export default function Article() {

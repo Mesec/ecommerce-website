@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 import './Cart.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, closeCart, decreaseCart, increaseCart } from 'features/cart/cartSlice';
-import QuantityInput from 'components/QuantityInput/QuantityInput';
 import { openSnackbar } from 'features/snackbar/snackbarSlice';
 import CartIcon from '../../assets/icons/cart-black.svg'
+import QuantityInput from 'components/quantityInput/QuantityInput';
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
