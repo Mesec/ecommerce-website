@@ -6,13 +6,13 @@ import IconButton from '@mui/material/IconButton';
 import Logo from '../../assets/icons/logo.svg'
 import Cart from '../../assets/icons/cart.svg'
 import { Link, useLocation } from 'react-router-dom'
-import NavigationItems from './NavigationItems/NavigationItems';
+import NavigationItems from './navigation-items/NavigationItems';
 import Button from '@mui/material/Button';
-import Promoted from '../Promoted/Promoted';
+import Promoted from '../promoted/Promoted';
 import { useDispatch } from 'react-redux';
 import { openCart } from 'features/cart/cartSlice';
 import { Grid } from '@mui/material';
-import MenuNavBar from './MenuNavBar/MenuNavBar';
+import MenuNavBar from './menu-navbar/MenuNavBar';
 import './Navbar.css';
 
 const Navbar = () => {

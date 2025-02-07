@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import './Cart.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, closeCart, decreaseCart, increaseCart } from 'features/cart/cartSlice';
-import QuantityInput from 'components/QuantityInput/QuantityInput';
+import QuantityInput from 'components/quantity-input/QuantityInput';
 import { openSnackbar } from 'features/snackbar/snackbarSlice';
 import CartIcon from '../../assets/icons/cart-black.svg'
 

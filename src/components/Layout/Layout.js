@@ -1,13 +1,13 @@
 import React from 'react'
 import { Box, Snackbar, IconButton, Grid } from '@mui/material'
-import PageRoutes from 'components/Routes/Routes'
+import Navbar from 'components/navbar/Navbar'
+import PageRoutes from 'components/routes/Routes'
 import './Layout.css'
-import Cart from 'components/Cart/Cart'
+import Cart from 'components/cart/Cart'
 import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux'
 import { closeSnackbar } from 'features/snackbar/snackbarSlice'
-import Footer from 'components/Footer/Footer'
-import Navbar from 'components/navbar/navbar'
+import Footer from 'components/footer/Footer'
 
 export default function Layout() {
   const isSnackbarOpened = useSelector(state => state.snackbar.isOpen);

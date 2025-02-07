@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, CircularProgress } from '@mui/material';
 import './App.css';
-import Layout from './components/Layout/Layout';
+import Layout from './components/layout/Layout';
 import { useDispatch } from 'react-redux'
 import { fetchProducts, setPromotedProduct } from './features/product/productSlice';
 

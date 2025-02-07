@@ -1,12 +1,10 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
-import Speakers from '../../assets/images/speakers.png'
 import './Home.css'
-import ProductNavigation from '../../components/ProductNavigation/ProductNavigation'
-import { Link } from 'react-router-dom'
-import FeaturedItemOne from 'components/FeaturedItems/FeaturedItemOne'
-import FeaturedItemTwo from 'components/FeaturedItems/FeaturedItemTwo'
-import FeaturedItemThree from 'components/FeaturedItems/FeaturedItemThree'
+import ProductNavigation from '../../components/product-navigation/ProductNavigation'
+import FeaturedItemOne from 'components/featured-items/FeaturedItemOne'
+import FeaturedItemTwo from 'components/featured-items/FeaturedItemTwo'
+import FeaturedItemThree from 'components/featured-items/FeaturedItemThree'
 
 export default function Home() {
   return (
