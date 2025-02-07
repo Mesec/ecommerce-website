@@ -4,7 +4,7 @@ import { Box } from '@mui/system'
 import './CollectionItem.css'
 import { useNavigate } from 'react-router-dom';
 
-export default function ProductItem({ title, newProduct, generalInfo, id, images, reverse }) {
+export default function CollectionItem({ title, newProduct, generalInfo, id, images, reverse }) {
   const thumbnail = require(`/src/assets/images/products${images?.main}`);
   const navigate = useNavigate();
 

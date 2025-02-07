@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import './Footer.css'
 import { useLocation } from 'react-router-dom';
-import NavigationItems from 'components/navbar/navigationItems/NavigationItems';
+import NavigationItems from '../navbar/NavigationItems/NavigationItems';
 
 export default function Footer() {
   const location = useLocation();

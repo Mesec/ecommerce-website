@@ -1,8 +1,8 @@
 import { Box } from '@mui/system'
 import React from 'react'
-import CollectionItem from '../../components/collectionItem/CollectionItem';
 import './Collection.css'
 import { Grid } from '@mui/material';
+import CollectionItem from '../../components/CollectionItem/CollectionItem';
 
 export default function Collection(props) {
   const { products, type } = props;

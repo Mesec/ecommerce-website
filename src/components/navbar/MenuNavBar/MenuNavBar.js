@@ -1,7 +1,7 @@
 import { Box, IconButton, Menu, MenuItem, Typography } from '@mui/material'
 import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
-import { pages } from 'app/constants';
+import { pages } from '../../../app/constants';
 
 export default function MenuNavBar({ openMenuBar, closeMenuBar, anchor }) {
   return (
