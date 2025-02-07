@@ -3,10 +3,10 @@ import { Box, Snackbar, IconButton, Grid } from '@mui/material'
 import './Layout.css'
 import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux'
-import { closeSnackbar } from 'features/snackbar/snackbarSlice'
-import Cart from 'components/cart/Cart';
-import Navbar from 'components/navbar/Navbar';
-import PageRoutes from 'components/routes/Routes';
+import { closeSnackbar } from '../../features/snackbar/snackbarSlice';
+import Cart from '../Cart/Cart';
+import ResponsiveAppBar from '../navbar/Navbar';
+import PageRoutes from '../routes/Routes';
 import Footer from '../Footer/Footer';
 
 export default function Layout() {
@@ -44,7 +44,7 @@ export default function Layout() {
       />
       <Grid container width='100%'>
         <Grid item xl={ 12 } width='100%'>
-          <Navbar />
+          <ResponsiveAppBar />
         </Grid>
         <Grid item xl={ 12 } width='100%'>
           <PageRoutes />

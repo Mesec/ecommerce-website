@@ -6,10 +6,10 @@ import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import { addToCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { openSnackbar } from 'features/snackbar/snackbarSlice';
 import QuantityInput from '../../components/QuantityInput/QuantityInput';
 import CollectionItem from '../../components/CollectionItem/CollectionItem';
 import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
+import { openSnackbar } from '../../features/snackbar/snackbarSlice';
 
 export default function Article() {
   const { id } = useParams();

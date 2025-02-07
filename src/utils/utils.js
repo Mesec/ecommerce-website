@@ -1,4 +1,4 @@
-import { decreaseCart, increaseCart } from 'features/cart/cartSlice';
+import { decreaseCart, increaseCart } from '../features/cart/cartSlice';
 
 
 const openSnackbarHandler = (message, snackbarSetter, messageSetter) => {

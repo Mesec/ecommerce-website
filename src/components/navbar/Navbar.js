@@ -8,12 +8,12 @@ import Cart from '../../assets/icons/cart.svg'
 import { Link, useLocation } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import { useDispatch } from 'react-redux';
-import { openCart } from 'features/cart/cartSlice';
 import { Grid } from '@mui/material';
 import './Navbar.css';
 import MenuNavBar from './MenuNavBar/MenuNavBar';
 import NavigationItems from './NavigationItems/NavigationItems';
 import Promoted from '../Promoted/Promoted';
+import { openCart } from '../../features/cart/cartSlice';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
