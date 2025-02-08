@@ -33,13 +33,16 @@
 }
 
 .Product-Item-Link > button {
+  opacity: 0.4;
+}
+
+.Product-Item-Link > button > p {
   text-transform: uppercase;
   color: #000000;
   font-family: "Manrope-Bold", Helvetica;
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
-  opacity: 0.5;
 }
 
 .Product-Item-Link > button:hover {
