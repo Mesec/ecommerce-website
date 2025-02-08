@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
+  box-sizing: border-box;
 }
 
 .Footer-Logo-Container {
@@ -48,21 +50,22 @@
   border-radius: 10px;
 }
 
-.Footer-Bottom {
-  margin-top: 20px;
-}
-
 @media screen and (min-width: 600px) {
   .Footer {
     justify-content: start;
     height: unset;
     padding: 40px;
+    gap: 40px;
   }
   .Footer-Description, .Footer-Copyright {
     text-align: left;
   }
-  .Footer-Bottom {
-    margin-top: 10px;
+  .Footer-Description{
+    width: 340px;
+  }
+  .Social-Icons {
+    position: relative;
+    bottom: 40px;
   }
 }
 

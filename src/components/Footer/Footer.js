@@ -32,7 +32,7 @@ export default function Footer() {
           </Typography>
         </Grid>
         <Grid xl={ 6 } sm={6} xs={12} item>
-          <Box display='flex' justifyContent={{ xs: 'center', sm: 'right'}} gap={2}>
+          <Box display='flex' justifyContent={{ xs: 'center', sm: 'right'}} gap={2} className='Social-Icons'>
             <FacebookIcon color='secondary' />
             <TwitterIcon color='secondary' />
             <InstagramIcon color='secondary' />
