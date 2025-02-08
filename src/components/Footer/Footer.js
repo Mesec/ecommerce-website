@@ -26,12 +26,12 @@ export default function Footer() {
             Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
           </Typography>
         </Grid>
-        <Grid sm={6} xs={12} item>
+        <Grid xl={12} sm={6} xs={12} item>
           <Typography variant='body1' color='secondary' className='Footer-Copyright'>
             Copyright 2021. All Rights Reserved
           </Typography>
         </Grid>
-        <Grid xl={ 6 } sm={6} xs={12} item>
+        <Grid xl={ 12 } sm={6} xs={12} item>
           <Box display='flex' justifyContent={{ xs: 'center', sm: 'right'}} gap={2} className='Social-Icons'>
             <FacebookIcon color='secondary' />
             <TwitterIcon color='secondary' />

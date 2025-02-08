@@ -71,8 +71,7 @@
 
 @media screen and (min-width: 900px) {
   .Footer {
-    padding: 65px 80px 48px 80px;
-    height: 300px;
+    padding: 40px 80px;
   }
 }
 
@@ -80,10 +79,16 @@
  .Footer {
     padding: 65px 100px 48px 100px;
   }
+  .Footer-Description{
+    width: 500px;
+  }
 }
 
 @media screen and (min-width: 1536px) {
  .Footer {
   padding: 40px 200px 40px 200px;
 }
+  .Footer-Description{
+    width: unset;
+  }
 }
