@@ -5,77 +5,40 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import './Footer.css'
-import { useLocation } from 'react-router-dom';
 import NavigationItems from '../navbar/NavigationItems/NavigationItems';
 
 export default function Footer() {
-  const location = useLocation();
-
   return (
-    <Box container className='Footer'>
-      { location.pathname === '/'
-        && <Grid container className='TopFooter'>
-          <Grid xl={ 6 } lg={ 6 } md={ 12 } item>
-            <Typography variant='h4'>
-              Bringing you the <Box component="span">best</Box> audio gear
-            </Typography>
-            <Typography variant='body1'>
-              Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.
-            </Typography>
-          </Grid>
-          <Grid xl={ 6 } lg={ 6 } md={ 12 } item className='Footer-Image'></Grid>
-        </Grid>}
-      <Grid xl={ 12 } item
-        display='flex'
-        flexDirection='column'
-        className='BottomFooter'>
-        <Box></Box>
-        <Box
-          display='flex'
-          justifyContent='space-between'
-          alignItems='center'
-          width='100%'
-          marginBottom='36px'>
-          <IconButton
-            size="small"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            color="secondary"
-          >
-            <img style={ { width: '143px', height: '25px' } } src={ Logo } alt='Audiophile' />
+    <Box className='Footer'>
+      <Grid container spacing={2} alignItems='center'>
+        <Grid xl={ 6 } sm={ 3 } xs={ 12 } item textAlign={{ xs: 'center', sm: 'left' }}>
+          <IconButton size="small">
+            <img src={ Logo } alt='Audiophile' />
           </IconButton>
-
-          <Box>
-            <NavigationItems />
-          </Box>
-        </Box>
-        <Box
-          display='flex'
-          width='100%'
-          justifyContent='space-between'
-          className='Footer-Description'>
-          <Typography variant='body1' color='secondary' fontSize='15px' lineHeight='25px'>
+        </Grid>
+        <Grid xl={ 6 } sm={9} xs={12} item>
+          <NavigationItems calledInFooter={true} />
+        </Grid>
+      </Grid>
+      <Grid container spacing={ 2 } className='Footer-Bottom'>
+        <Grid xl={ 6 } sm={12} xs={12} item>
+          <Typography variant='body1' color='secondary' className='Footer-Description'>
             Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
           </Typography>
-          <Box
-            display='flex'
-            width='500px'
-            justifyContent='flex-end'
-            alignItems='flex-end'
-            gap='15px'>
+        </Grid>
+        <Grid xl={12} sm={6} xs={12} item>
+          <Typography variant='body1' color='secondary' className='Footer-Copyright'>
+            Copyright 2021. All Rights Reserved
+          </Typography>
+        </Grid>
+        <Grid xl={ 12 } sm={6} xs={12} item>
+          <Box display='flex' justifyContent={{ xs: 'center', sm: 'right'}} gap={2} className='Social-Icons'>
             <FacebookIcon color='secondary' />
             <TwitterIcon color='secondary' />
             <InstagramIcon color='secondary' />
           </Box>
-        </Box>
-        <Box marginTop='56px' className='Footer-Copy-Right'>
-          <Typography variant='body1' color='secondary' fontSize='15px' lineHeight='25px'>
-            Copyright 2021. All Rights Reserved
-          </Typography>
-        </Box>
-      </Grid>
-    </Box>
-   
+        </Grid>
+       </Grid>
+     </Box>
   )
 }

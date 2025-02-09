@@ -1,7 +1,6 @@
 .Nav-Items {
   flex-grow: 1;
   gap: 2;
-  justify-content: 'center';
   align-items: 'center';
 }
 

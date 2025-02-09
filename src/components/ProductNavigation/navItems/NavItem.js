@@ -19,8 +19,9 @@ export default function NavItem(props) {
           { info }
         </Typography>
         <Link to={ path } className='Product-Item-Link'>
-          <Button variant="text" endIcon={ <KeyboardArrowRightIcon /> }>
-            Shop
+          <Button variant="text">
+            <Typography variant='body1'>Shop</Typography>
+            <KeyboardArrowRightIcon />
           </Button>
         </Link>
       </Box>

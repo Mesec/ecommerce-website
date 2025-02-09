@@ -1,75 +1,33 @@
 .Footer {
-}
-
-.TopFooter {
-  margin-top: 0px;
-  justify-content: center;
-  text-align: left;
-  margin-bottom: 100px;
-  padding: 0 30px;
-}
-
-.TopFooter > div{
-  border-radius: 8px;
-}
-
-.TopFooter > div:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.TopFooter > div:nth-child(1) > h4{
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 1.43px;
-  line-height: 44px;
-  text-transform: uppercase;
-}
-
-.TopFooter > div:nth-child(1) > p {
-  color: #000000;
-  font-family: "Manrope-Medium", Helvetica;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 25px;
-  opacity: 0.5;
-  width: 445px;
-}
-
-.TopFooter > div:nth-child(1) span {
-  color: #d87d4a;
-}
-
-.TopFooter > div:nth-child(2) {
-  overflow: hidden;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.TopFooter > div:nth-child(2) > img {
-  border-radius: 8px;
-}
-
-.BottomFooter {
   width: 100%;
   background-color: #131313;
+  order: -1;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  box-sizing: border-box;
 }
 
-.Footer-Description p:nth-child(1) {
+.Footer-Logo-Container {
+  text-align: center;
+}
+
+.Footer-Description, .Footer-Copyright {
   color: #ffffff;
   font-family: "Manrope-Medium", Helvetica;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 25px;
   opacity: 0.5;
-  width: 540px;
-  text-align: left;
+  text-align: center;
 }
+
+ .Footer-Copyright {
+  font-size: 14px;
+ }
 
 .Footer-Copy-Right p:nth-child(1) {
  color: #ffffff;
@@ -92,95 +50,45 @@
   border-radius: 10px;
 }
 
-
 @media screen and (min-width: 600px) {
-  .TopFooter {
-    padding: 0 30px;
-    margin-top: 150px;
+  .Footer {
+    justify-content: start;
+    height: unset;
+    padding: 40px;
+    gap: 40px;
   }
-  .TopFooter > div:nth-child(1) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  .Footer-Description, .Footer-Copyright {
+    text-align: left;
   }
-  .TopFooter > div:nth-child(1) > h4 {
-    width: 100%;
-    text-align: center;
-    margin: 50px 0 40px 0;
+  .Footer-Description{
+    width: 340px;
   }
-  .TopFooter > div:nth-child(1) > p {
-    width: 80%;
-    text-align: center;
+  .Social-Icons {
+    position: relative;
+    bottom: 40px;
   }
-  .Footer-Image {
-    background-position: center;
-    width: 100%;
-    height: 600px;
-    background-size: cover;
-    background-position-y: -30px;
-    order: -1;
-}
- .BottomFooter {
-  padding: 65px 80px 48px 80px;
-}
 }
 
 @media screen and (min-width: 900px) {
-  .TopFooter {
-    padding: 0 100px;
-  }
-  .TopFooter > div:nth-child(1) > h4 {
-    width: 70%;
-  }
-  .TopFooter > div:nth-child(1) > p {
-    width: 70%;
+  .Footer {
+    padding: 40px 80px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .TopFooter {
-    padding: 0 120px;
+ .Footer {
+    padding: 65px 100px 48px 100px;
   }
-   .Footer-Image {
-    background-position: center;
-    height: 500px;
-    background-size: contain;
-    background-position: top;
-    order: 1;
-}
-  .TopFooter > div:nth-child(1) {
-    align-items: start;
-    width: 100%;
-    margin-top: 30px;
+  .Footer-Description{
+    width: 500px;
   }
-  .TopFooter > div:nth-child(1) > h4 {
-    width: 445px;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  .TopFooter > div:nth-child(1) > p {
-    width: 445px;
-    text-align: left;
-  }
- .BottomFooter {
-  padding: 65px 100px 48px 100px;
-}
 }
 
 @media screen and (min-width: 1536px) {
-   .TopFooter {
-    padding: 0 200px 0 200px;
+ .Footer {
+  padding: 40px 200px 40px 200px;
+}
+  .Footer-Description{
+    width: unset;
   }
-  .Footer-Image {
-    height: 950px;
-}
- .BottomFooter {
-  padding: 65px 200px 48px 200px;
-}
-.Footer-Image {
-  background-position: center;
-  height: 600px;
-  background-size:contain;
-  background-position: top;
-}
 }

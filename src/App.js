@@ -8,7 +8,6 @@ import Layout from './components/Layout/Layout';
 function App() {
   const dispatch = useDispatch()
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     dispatch(fetchProducts());
     dispatch(setPromotedProduct())

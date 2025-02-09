@@ -9,7 +9,7 @@
   text-align: center;
   box-sizing: border-box;
   padding: 0 10px;
-  margin-bottom: 100px;
+  margin-top: 60px;
 }
 
 .Product-Item  h6 {
@@ -33,13 +33,16 @@
 }
 
 .Product-Item-Link > button {
+  opacity: 0.4;
+}
+
+.Product-Item-Link > button > p {
   text-transform: uppercase;
   color: #000000;
   font-family: "Manrope-Bold", Helvetica;
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
-  opacity: 0.5;
 }
 
 .Product-Item-Link > button:hover {
@@ -67,13 +70,12 @@
 .Product-Item-Info > p {
   color: #050505;
   font-family: "Manrope-Medium", Helvetica;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   left: 0;
-  letter-spacing: 0;
   line-height: 20px;
   opacity: 0.6;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.4px;
   max-height: 40px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -85,7 +87,7 @@
 @media screen and (min-width: 600px) {
   .Product-Item {
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 }
 
