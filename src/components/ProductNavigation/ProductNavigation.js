@@ -7,7 +7,7 @@ import NavItem from './navItems/NavItem'
 
 export default function ProductNavigation() {
   return (
-    <Grid container spacing={ 3 } wrap="wrap">
+    <Grid container spacing={ 3 } wrap="wrap" marginBottom='40px'>
         <Grid xl={4} lg={4} md={12} sm={12} xs={12} item>
           <NavItem
             path='/headphones'

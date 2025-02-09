@@ -12,7 +12,7 @@ export default function NavigationItems({ calledInFooter}) {
         gap: 2,
         display: { xs: `${calledInFooter ? 'flex' : 'none'}`, md: 'flex' },
         flexDirection: { xs: `${calledInFooter ? 'column' : 'row'}`, sm: 'row' },
-        justifyContent: { xs: 'center', sm: 'flex-end'},
+        justifyContent: { xs: 'center', sm: `${!calledInFooter ? 'center' : 'flex-end'}`},
         alignItems: 'center',
       } }>
       { pages.length && pages.map((page) => (
