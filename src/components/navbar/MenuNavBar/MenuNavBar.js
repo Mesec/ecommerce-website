@@ -1,4 +1,4 @@
-import { Box, IconButton, Menu, MenuItem, Typography } from '@mui/material'
+import { Box, IconButton, Menu, MenuItem } from '@mui/material'
 import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import { pages } from '../../../app/constants';
