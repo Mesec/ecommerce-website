@@ -228,6 +228,12 @@
   color: white;
 }
 
+@media screen and (min-width: 600px) {
+ .Featured-Item-Three-Earphones, .Featured-Item-Three > div:nth-child(2) {
+    height: 300px;
+  }
+ }
+
 @media screen and (min-width: 900px) {
   .Featured-Item-Three {
     flex-direction: row;
