@@ -19,6 +19,28 @@
   color: #d87d4a;
 }
 
-.active {
+.MenuNavBar > .active,.active {
+  color: #d87d4a;
+}
+
+.MenuNavBar {
+  text-decoration: none;
+  color:black;
+  text-transform: uppercase;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 0;
+}
+.MenuNavBar > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.MenuNavBar > a:hover{
   color: #d87d4a;
 }
