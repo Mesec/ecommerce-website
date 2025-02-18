@@ -3,6 +3,12 @@
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 600px) {
+ .Collection {
+    padding: 50px 100px 0 100px;
+  }
+}
+
 @media screen and (min-width: 900px) {
  .Collection {
     padding: 50px 100px 0 100px;
