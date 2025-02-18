@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { closeSnackbar } from '../../features/snackbar/snackbarSlice';
 import Cart from '../Cart/Cart';
 import ResponsiveAppBar from '../navbar/Navbar';
-import PageRoutes from '../Routes/Routes';
+import PageRoutes from '../routes/Routes';
 import Footer from '../Footer/Footer';
 
 export default function Layout() {
