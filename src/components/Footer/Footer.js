@@ -5,7 +5,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import './Footer.css'
-import NavigationItems from '../navbar/NavigationItems/NavigationItems';
+import NavigationItems from '../Navbar/NavigationItems/NavigationItems';
 
 export default function Footer() {
   return (

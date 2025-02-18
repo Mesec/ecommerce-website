@@ -15,12 +15,12 @@ export default function NavItem(props) {
         <Typography variant='h6'>
           { title }
         </Typography>
-        <Typography variant='body1'>
+        {/* <Typography variant='body1'>
           { info }
-        </Typography>
+        </Typography> */}
         <Link to={ path } className='Product-Item-Link'>
           <Button variant="text">
-            <Typography variant='body1'>Shop</Typography>
+            Shop
             <KeyboardArrowRightIcon />
           </Button>
         </Link>

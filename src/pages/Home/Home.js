@@ -5,14 +5,13 @@ import ProductNavigation from '../../components/ProductNavigation/ProductNavigat
 import FeaturedItemOne from '../../components/FeaturedItems/FeaturedItemOne'
 import FeaturedItemTwo from '../../components/FeaturedItems/FeaturedItemTwo'
 import FeaturedItemThree from '../../components/FeaturedItems/FeaturedItemThree'
+import Categories from '../../components/Categories/Categories'
 
 export default function Home() {
   return (
     <Box className='Home-Main-Content'>
-      <Box className='Home-Header'>
-        <ProductNavigation />
-      </Box>
       <Box className='Home-Body'>
+        <Categories />
         <FeaturedItemOne />
         <FeaturedItemTwo />
         <FeaturedItemThree />
