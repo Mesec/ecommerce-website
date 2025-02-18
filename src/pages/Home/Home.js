@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import './Home.css'
-import ProductNavigation from '../../components/ProductNavigation/ProductNavigation'
 import FeaturedItemOne from '../../components/FeaturedItems/FeaturedItemOne'
 import FeaturedItemTwo from '../../components/FeaturedItems/FeaturedItemTwo'
 import FeaturedItemThree from '../../components/FeaturedItems/FeaturedItemThree'
