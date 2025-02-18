@@ -5,7 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux'
 import { closeSnackbar } from '../../features/snackbar/snackbarSlice';
 import Cart from '../Cart/Cart';
-import ResponsiveAppBar from '../Navbar/Navbar';
+import ResponsiveAppBar from '../navbar/Navbar';
 import PageRoutes from '../Routes/Routes';
 import Footer from '../Footer/Footer';
 
