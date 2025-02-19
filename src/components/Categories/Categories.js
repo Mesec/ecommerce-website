@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Headphones from '../../assets/images/headphones.png';
 import Speakers from '../../assets/images/speakers.png';
@@ -10,7 +10,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './Categories.css';
 import { Link } from 'react-router-dom';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function Categories() {
   return (
@@ -32,48 +31,30 @@ export default function Categories() {
             slidesPerView: 1,
           },
         } }
-        className="mySwiper"
+        className="Categories-Swiper"
       >
-        <SwiperSlide>
-          <Box className="slide">
-            <Box className="SlideImageContainer">
+        <SwiperSlide className='Category-Swiper-Slide'>
+          <Box className="Category-Slide">
+            <Link to='/headphones' className="Slide-Image-Container">
               <img src={ Headphones } alt="Slide 2" />
-            </Box>
-            <Typography variant='h6'>Headphones</Typography>
-            <Link to='/headphones' className='Product-Item-Link'>
-              <Button variant="text">
-                Shop
-                <KeyboardArrowRightIcon />
-              </Button>
             </Link>
+            <Link to='/headphones'>Headphones</Link>
           </Box>
         </SwiperSlide>
-        <SwiperSlide>
-          <Box className="slide">
-            <Box className="SlideImageContainer">
+        <SwiperSlide className='Category-Swiper-Slide'>
+          <Box className="Category-Slide">
+            <Link to='/speakers' className="Slide-Image-Container">
               <img src={ Speakers } alt="Slide 2" />
-            </Box>
-            <Typography variant='h6'>Speakers</Typography>
-            <Link to='/speakers' className='Product-Item-Link'>
-              <Button variant="text">
-                Shop
-                <KeyboardArrowRightIcon />
-              </Button>
             </Link>
+            <Link to='/speakers'>Speakers</Link>
           </Box>
         </SwiperSlide>
-        <SwiperSlide>
-          <Box className="slide">
-            <Box className="SlideImageContainer">
+        <SwiperSlide className='Category-Swiper-Slide'>
+          <Box className="Category-Slide">
+            <Link to='/earphones' className="Slide-Image-Container">
               <img src={ Earphones } alt="Slide 2" />
-            </Box>
-            <Typography variant='h6'>Earphones</Typography>
-            <Link to='/earphones' className='Product-Item-Link'>
-              <Button variant="text">
-                Shop
-                <KeyboardArrowRightIcon />
-              </Button>
             </Link>
+            <Link to='earphones'>Earphones</Link>
           </Box>
         </SwiperSlide>
       </Swiper>
