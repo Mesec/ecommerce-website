@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 
-const { useLocation } = require('react-router-dom');
-
 const ScrollToTop = ({ children }) => {
   console.log(children)
   const pathname = window.location.pathname;
@@ -12,7 +10,7 @@ const ScrollToTop = ({ children }) => {
     document.body.scrollTop = 0;
     window.scrollTo(0, 0);
     console.log(window)
-  }, [window.location.pathname]);
+  }, [pathname]);
 
   return (
     <>{ children }</>
