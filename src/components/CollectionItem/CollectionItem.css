@@ -30,7 +30,7 @@
   font-weight: 400;
   letter-spacing: 6px;
   line-height: normal;
-  top: 20px;
+  top: 7px;
   left: 50%;
   transform: translate(-50%, -0);
   font-size: 13px;
@@ -90,11 +90,27 @@
   cursor: unset;
 }
 
-/* @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
+  .Collection-Item {
+  }
   .Collection-Item-Thumbnail {
-
-  } 
-} */
+    background-size: 130px;
+    height: 250px;
+  }
+  .Collection-Item-Information {
+    padding: 0 20px;
+    height: 200px;
+  }
+  .Collection-Item-Information > h4 {
+    font-size: 24px;
+  }
+    .Collection-Item-Information > p {
+      font-size: 14px;
+      height: 40px;
+      line-clamp: 2;
+      -webkit-line-clamp:2;
+    }
+}
 
 @media screen and (min-width: 900px) {
   .Collection-Item {
@@ -123,6 +139,9 @@
   .Collection-Item-Information > p {
     font-size: 14px;
     text-align: left;
+    height: 60px;
+    line-clamp: 3;
+    -webkit-line-clamp:3;
   }
   .Collection-Item-Information button {
     align-self: flex-start;
