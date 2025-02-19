@@ -1,17 +1,17 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './FeaturedItems.css'
+import './FeaturedItemSingle.css'
 
-export default function FeaturedItemThree() {
+export default function FeaturedItemSingle({ src, name}) {
+  const image = require(`../../assets/images/${src}`);
   return (
-    <Box className='Featured-Item-Three'>
-      <Box className='Featured-Item-Three-Earphones'></Box>
+    <Box className='FeaturedItemTwo' style={ { backgroundImage: `url(${image})` } }>
       <Box>
         <Typography variant='h4'>
-          YX1 EARPHONES
+          { name }
         </Typography>
-        <Link to={ `/article/e-01` }>
+        <Link to={ `/article/s-02` }>
           <Button variant="outlined">See Product</Button>
         </Link>
       </Box>

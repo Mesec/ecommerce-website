@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
 
-const { useLocation } = require('react-router-dom');
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
+const ScrollToTop = ({ children }) => {
+  console.log(children)
+  const pathname = window.location.pathname;
+  console.log(pathname)
   useEffect(() => {
-    console.log("ScrollToTop triggered", pathname);
-    setTimeout(() => {
-      document.documentElement.scrollTop = 0; // Resetuje <html>
-      document.body.scrollTop = 0; // Resetuje <body>
-    }, 50); // Dodaj mali delay ako treba
+    console.log('TEST')
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
+    console.log(window)
   }, [pathname]);
 
-  return null;
+  return (
+    <>{ children }</>
+  );
 };
 
 export default ScrollToTop;

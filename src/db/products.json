@@ -326,5 +326,43 @@
       "price": 790,
       "inStock": 33
     }
+  ],
+  "categories": [
+    {
+      "id": "headphones",
+      "name": "Headphones",
+      "path": "/headphones",
+      "src": "headphones.png"
+    },
+    {
+      "id": "speakers",
+      "name": "Speakers",
+      "path": "/speakers",
+      "src": "speakers.png"
+    },
+    {
+      "id": "earphones",
+      "name": "Earphones",
+      "path": "/earphones",
+      "src": "earphones.png"
+    },
+    {
+      "id": "microphones",
+      "name": "Microphones",
+      "path": "/microphones",
+      "src": "earphones.png"
+    }
+  ],
+  "newArticles": [
+    {
+      "name": "ZX7 SPEAKER",
+      "id": "s-02",
+      "src": "Bitmap.png"
+    },
+    {
+      "name": "KIRAN SINGH",
+      "id": "s-03",
+      "src": "Kiran.jpg"
+    }
   ]
 }
