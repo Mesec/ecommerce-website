@@ -112,13 +112,15 @@
   }
   .Collection-Item-New-Product {
     font-size: 10px;
-    top: 13px;
+    top: 20px;
     left: unset;
     transform: translate(0, -0);;
+    width: unset;
   }
   .Collection-Item-Information > h4 {
     font-size: 20px;
     text-align: start;
+    margin: unset;
   }
 
   .Collection-Item-Information > p {
@@ -127,6 +129,7 @@
     height: 40px;
     line-clamp: 2;
     -webkit-line-clamp:2;
+    margin: unset;
   }
 
   .Collection-Item-Information button {
@@ -163,7 +166,7 @@
     padding: 10px 0;
   }
     .Collection-Item-New-Product {
-      top: 24px;
+      top: 34px;
     }
 }
 
@@ -180,7 +183,7 @@
   }
   .Collection-Item-New-Product {
     font-size: 11px;
-    top: 30px;
+    top: 44px;
   }
   .Collection-Item-Information > h4 {
     font-size: 27px;

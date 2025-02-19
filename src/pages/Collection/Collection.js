@@ -6,7 +6,6 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem';
 
 export default function Collection(props) {
   const { products, type } = props;
-  console.log(products)
   return (
       <Box container className='Collection'>
         <Grid spacing={4} container justifyContent={{ xl: 'center'}} >

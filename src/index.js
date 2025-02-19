@@ -15,13 +15,11 @@ root.render(
   <React.StrictMode>
     <Provider store={ store }>
       <ThemeProvider theme={ muiColorTheme }>
-        <ScrollToTop>
         <BrowserRouter>
-
-          <App />
+          <ScrollToTop>
+            <App />
+          </ScrollToTop>
         </BrowserRouter>
-      </ScrollToTop>
-
       </ThemeProvider>
     </Provider>
   </React.StrictMode>
