@@ -3,12 +3,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './FeaturedItemSingle.css'
 
-export default function FeaturedItemSingle() {
+export default function FeaturedItemSingle({ src, name}) {
+  const image = require(`../../assets/images/${src}`);
   return (
-    <Box className='FeaturedItemTwo'>
+    <Box className='FeaturedItemTwo' style={ { backgroundImage: `url(${image})` } }>
       <Box>
         <Typography variant='h4'>
-          ZX7 SPEAKER
+          { name }
         </Typography>
         <Link to={ `/article/s-02` }>
           <Button variant="outlined">See Product</Button>

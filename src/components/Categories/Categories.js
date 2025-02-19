@@ -1,26 +1,28 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Headphones from '../../assets/images/headphones.png';
-import Speakers from '../../assets/images/speakers.png';
-import Earphones from '../../assets/images/earphones.png';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './Categories.css';
 import { Link } from 'react-router-dom';
+import data from '../../db/products.json';
 
 export default function Categories() {
   return (
     <>
       <Swiper
+        loop={ true}
         navigation={ true }
         pagination={ { clickable: true } }
         modules={ [Navigation, Pagination] }
         spaceBetween={ 10 }
         slidesPerView={ 3 }
         breakpoints={ {
+          1500: {
+            slidesPerView: 3,
+          },
           1200: {
             slidesPerView: 3,
           },
@@ -33,30 +35,21 @@ export default function Categories() {
         } }
         className="Categories-Swiper"
       >
-        <SwiperSlide className='Category-Swiper-Slide'>
-          <Box className="Category-Slide">
-            <Link to='/headphones' className="Slide-Image-Container">
-              <img src={ Headphones } alt="Slide 2" />
-            </Link>
-            <Link to='/headphones'>Headphones</Link>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide className='Category-Swiper-Slide'>
-          <Box className="Category-Slide">
-            <Link to='/speakers' className="Slide-Image-Container">
-              <img src={ Speakers } alt="Slide 2" />
-            </Link>
-            <Link to='/speakers'>Speakers</Link>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide className='Category-Swiper-Slide'>
-          <Box className="Category-Slide">
-            <Link to='/earphones' className="Slide-Image-Container">
-              <img src={ Earphones } alt="Slide 2" />
-            </Link>
-            <Link to='earphones'>Earphones</Link>
-          </Box>
-        </SwiperSlide>
+        {
+          data?.categories?.map(category => {
+            const image = require(`../../assets/images/${category.src}`);
+            return (
+              <SwiperSlide key={ category.id } className='Category-Swiper-Slide'>
+                <Box className="Category-Slide">
+                  <Link to={ `/${ category.name }` } className="Slide-Image-Container">
+                    <img src={ image } alt={ category.name } />
+                  </Link>
+                  <Link to={ `/${ category.name }` }>{ category.name }</Link>
+                </Box>
+              </SwiperSlide>
+            )
+          })
+        }
       </Swiper>
     </>
   );

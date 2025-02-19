@@ -5,22 +5,24 @@ import FeaturedItemSingle from '../../components/FeaturedItemSingle/FeaturedItem
 import FeaturedItemDouble from '../../components/FeaturedItemDouble/FeaturedItemDouble'
 import Categories from '../../components/Categories/Categories'
 import Commercial from '../../components/Commercial/Commercial'
+import data from '../../db/products.json'
 
 export default function Home() {
   return (
     <Box className='Home-Main-Content'>
       <Categories />
-      <Grid spacing={6} container>
-        <Grid item lg={ 6 } xs={12}>
-          <FeaturedItemSingle /> 
-        </Grid>
-        <Grid item lg={ 6 } xs={12}>
-          <FeaturedItemSingle />
-        </Grid>
-        <Grid item lg={12} width='100%'>
+      <Grid columnSpacing={6} rowSpacing={10} container className='Home-Grid-Item'>
+        {
+          data.newArticles.map(item => {
+            return <Grid item lg={ 6 } xs={ 12 }>
+              <FeaturedItemSingle { ...item }/>
+            </Grid>
+          })
+        }
+        <Grid item lg={12} width='100%' className='Home-Grid-Item'>
           <FeaturedItemDouble />
         </Grid>
-        <Grid xs={12} item>
+        <Grid xs={12} item className='Home-Grid-Item'>
           <Commercial/>
         </Grid>
       </Grid>
