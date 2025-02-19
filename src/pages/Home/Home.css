@@ -3,70 +3,11 @@
   box-sizing: border-box;
   padding: 0 20px;
   margin-top: 40px;
+  margin-bottom: 100px;
 }
   .Home-Header {
     margin: 0;
   }
-.Home-Body {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-}
-
-.Commercial {
-  margin-top: 0px;
-  justify-content: center;
-  text-align: left;
-  margin-bottom: 100px;
-}
-
-.Commercial-Info {
-  align-self: center;
-}
-
-.Commercial-Info > h4{
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 1.43px;
-  line-height: 44px;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.Commercial-Info > p {
-  color: #000000;
-  font-family: "Manrope-Medium", Helvetica;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 25px;
-  opacity: 0.5;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.Commercial-Info span {
-  color: #d87d4a;
-}
-.Commercial-Image {
-  background-image: url('/src/assets/images/microphone-5046876_1920.jpg');
-  background-repeat: no-repeat;
-  width: 100%;
-  overflow: hidden;
-  background-size: contain;
-  justify-self: center;
-  align-self: center;
-  border-radius: 5px;
-  width: 100%;
-  height: 550px;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
-}
 
 @media screen and (min-width: 600px) {
   .Home-Main-Content {
@@ -86,11 +27,7 @@
  .Home-Header {
     margin-bottom: 60px
   }
-  .Home-Body{
-    gap: 60px;
-  }
   .Commercial-Info > h4 {
-    /* width: 70%; */
     margin: 0 0 40px 0;
     text-align: left;
     font-size: 34px;
@@ -99,9 +36,6 @@
     width: unset;
     margin: 0 0 40px 0;
     text-align: left;
-  }
-  .Commercial-Image {
-
   }
 }
 
@@ -140,8 +74,9 @@
     padding: 0 200px 0 200px;
   }
   .Commercial-Image {
-    background-position: center;
+    background-position: right;
     background-position-y: top;
+    background-size: cover;
     min-height: 540px;
   }
 }

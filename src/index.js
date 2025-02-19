@@ -8,15 +8,20 @@ import store from './app/store'
 import { ThemeProvider } from '@mui/material/styles';
 import { muiColorTheme } from './utils/mui';
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={ store }>
       <ThemeProvider theme={ muiColorTheme }>
+        <ScrollToTop>
         <BrowserRouter>
+
           <App />
         </BrowserRouter>
+      </ScrollToTop>
+
       </ThemeProvider>
     </Provider>
   </React.StrictMode>

@@ -1,13 +1,13 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './FeaturedItems.css'
+import './FeaturedItemDouble.css'
 
-export default function FeaturedItemThree() {
+export default function FeaturedItemDouble() {
   return (
     <Box className='Featured-Item-Three'>
-      <Box className='Featured-Item-Three-Earphones'></Box>
-      <Box>
+      <Box className='Featured-Item-Three-Image-Container'></Box>
+      <Box className='Featured-Item-Three-Info'>
         <Typography variant='h4'>
           YX1 EARPHONES
         </Typography>

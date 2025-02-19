@@ -1,11 +1,11 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './FeaturedItems.css'
+import './FeaturedItemSingle.css'
 
-export default function FeaturedItemTwo() {
+export default function FeaturedItemSingle() {
   return (
-    <Grid item className='FeaturedItemTwo'>
+    <Box className='FeaturedItemTwo'>
       <Box>
         <Typography variant='h4'>
           ZX7 SPEAKER
@@ -14,6 +14,6 @@ export default function FeaturedItemTwo() {
           <Button variant="outlined">See Product</Button>
         </Link>
       </Box>
-    </Grid>
+    </Box>
   )
 }

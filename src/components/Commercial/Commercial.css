@@ -1,0 +1,108 @@
+.Commercial {
+  display: flex;
+  width: 100%;
+  gap: 48px;
+  flex-direction: column;
+}
+
+.Commercial-Info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Commercial-Info > h4{
+  font-family: "Manrope-Bold", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.43px;
+  line-height: 44px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Commercial-Info > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.5;
+  text-align: center;
+  margin: 0;
+}
+
+.Commercial-Image {
+  background-image: url('/src/assets/images/microphone-5046876_1920.jpg');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 5px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  width: 100%;
+  height: 300px;
+}
+
+.Commercial-Info span {
+  color: #d87d4a;
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 900px) {
+  .Commercial-Info {
+    width: 100%;
+  }
+  .Commercial-Image {
+    width: 100%;
+  }
+  .Commercial-Info > h4 {
+    font-size: 34px;
+  }
+  .Commercial-Info > p {
+    text-align: left;
+  }
+  .Commercial-Image {
+    height: 500px;
+    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Commercial {
+    flex-direction: row;
+  }
+  .Commercial-Info {
+    align-items: start;
+    justify-content: center;
+  }
+  .Commercial-Info > h4 {
+    width: 450px;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .Commercial-Info > p {
+    text-align: left;
+    width: 450px;
+  }
+  .Commercial-Image {
+    height: 500px;
+    background-position-y: center;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .Commercial-Image {
+    height: 600px;
+  }
+    .Commercial-Info > h4 {
+    width: 500px;
+  }
+  .Commercial-Info > p {
+    width: 500px;
+  }
+}

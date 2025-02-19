@@ -117,136 +117,17 @@
   transform: translate(-50%, 0);
 }
 
-.FeaturedItemTwo {
-  background-image: url('../../assets/images/Bitmap.png');
-  border-radius: 8px;
-  background-size: auto;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  height: 300px;
-  background-position-x: center;
-}
-
-.FeaturedItemTwo > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100%;
-  gap: 32px;
-}
-
-.FeaturedItemTwo > div > h4 {
-  margin: 0 auto;
-}
-
-.FeaturedItemTwo > div > a {
-  align-self: center;
-}
-
-.FeaturedItemTwo > div > a > button {
-  border: 1px solid;
-  border-color: #000000;
-  height: 48px;
-  position: relative;
-  width: 160px;
-  font-size: 13px;
-  font-weight: 700;
-  border-radius: 0;
-  background-color: rgba(251, 251, 251, 0.4);
-}
-
-.FeaturedItemTwo > div > a > button:hover {
-  background-color: black;
-  color: white;
-}
-
-.FeaturedItemTwo > div > h4 {
-  color: #000000;
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 28px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 2px;
-  line-height: normal;
-}
-
-.Featured-Item-Three {
-  display: flex;
-  gap: 20px;
-  height: 100%;
-  flex-direction: column;
-}
-
-.Featured-Item-Three div {
-  border-radius: 8px;
-}
-
-.Featured-Item-Three-Earphones {
-  background-image: url('../../assets/images/earphones-bitmap.png');
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
-}
-
-.Featured-Item-Three > div:nth-child(2) {
-  background-color: #F1F1F1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  padding-left: 95px;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 35px;
-  height: 300px;
-}
-
-.Featured-Item-Three > div:nth-child(2) h4 {
-  color: #000000;
-  font-family: "Manrope-Bold", Helvetica;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  line-height: normal;
-}
-
-.Featured-Item-Three > div:nth-child(2) > a > button {
-  border: 1px solid;
-  border-color: #000000;
-  height: 48px;
-  position: relative;
-  width: 160px;
-  font-size: 13px;
-  font-weight: 700;
-  border-radius: 0;
-}
-
-.Featured-Item-Three > div:nth-child(2) > a > button:hover {
-  background-color: black;
-  color: white;
-}
-
-@media screen and (min-width: 600px) {
- .Featured-Item-Three-Earphones, .Featured-Item-Three > div:nth-child(2) {
-    height: 300px;
-  }
- }
-
 @media screen and (min-width: 900px) {
-  .Featured-Item-Three {
-    flex-direction: row;
+ .Featured-Item-Three {
+    flex-direction: column;
+    width: 100%;
   }
-  .Featured-Item-Three-Earphones {
-    height: 350px;
+  .Featured-Item-Three-Image-Container {
+    width: 100%;
+    background-size: contain;
   }
-  .FeaturedItemTwo {
-    background-size: cover;
-  }
-  .Featured-Item-Three > div:nth-child(2) {
-    height: unset;
+  .Featured-Item-Three-Info {
+    width: 100%;
   }
 }
 
@@ -326,6 +207,15 @@
     bottom: -180px;
     left: 0px;
     transform: translate(0, 0);
+  }
+  .Featured-Item-Three {
+    flex-direction: row;
+  }
+  .Featured-Item-Three-Image-Container {
+    width: 50%;
+  }
+  .Featured-Item-Three-Info {
+    width: 50%;
   }
 }
 
