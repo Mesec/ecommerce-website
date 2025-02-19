@@ -13,12 +13,13 @@
 
 .Commercial-Info > h4{
   font-family: "Manrope-Bold", Helvetica;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 1.43px;
   line-height: 44px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .Commercial-Info > p {
@@ -83,7 +84,6 @@
     width: 450px;
     font-size: 40px;
     text-align: left;
-    margin-bottom: 40px;
   }
   .Commercial-Info > p {
     text-align: left;
