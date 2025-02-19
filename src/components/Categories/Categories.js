@@ -24,7 +24,7 @@ export default function Categories() {
           1200: {
             slidesPerView: 3,
           },
-          900: {
+          600: {
             slidesPerView: 2,
           },
           0: {
