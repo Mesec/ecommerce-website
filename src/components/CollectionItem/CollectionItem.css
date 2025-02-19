@@ -65,7 +65,7 @@
   text-overflow: ellipsis;
   height: 60px;
   line-height: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 .Collection-Item-Information button {
@@ -92,60 +92,74 @@
 
 @media screen and (min-width: 600px) {
   .Collection-Item {
+    flex-direction: row;
+    gap: 15px;
   }
   .Collection-Item-Thumbnail {
+    max-width: 220px;
+    min-width: 220px;
+    height: 220px;
     background-size: 130px;
-    height: 250px;
   }
   .Collection-Item-Information {
-    padding: 0 20px;
-    height: 200px;
+    height: 220px;
+    padding: 15px 15px 15px 0;
+  }
+  .Collection-Item-New-Product {
+    font-size: 10px;
+    top: 13px;
+    left: unset;
+    transform: translate(0, -0);;
   }
   .Collection-Item-Information > h4 {
-    font-size: 24px;
+    font-size: 20px;
+    text-align: start;
   }
-    .Collection-Item-Information > p {
-      font-size: 14px;
-      height: 40px;
-      line-clamp: 2;
-      -webkit-line-clamp:2;
-    }
+
+  .Collection-Item-Information > p {
+    font-size: 14px;
+    text-align: left;
+    height: 40px;
+    line-clamp: 2;
+    -webkit-line-clamp:2;
+  }
+
+  .Collection-Item-Information button {
+    align-self: flex-start;
+    font-size: 12px;
+    padding: 10px 0;
+    width: 140px;
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (min-width: 900px) {
   .Collection-Item {
-    flex-direction: row;
+    gap: 30px;
   }
   .Collection-Item-Thumbnail {
     max-width: 280px;
     min-width: 280px;
     height: 260px;
     background-size: 130px;
+    padding: 30px 30px 30px 0;
   }
   .Collection-Item-Information {
     height: 260px;
   }
-  .Collection-Item-New-Product {
-    font-size: 10px;
-    top: 30px;
-    left: unset;
-      transform: translate(0, -0);
-  }
-  .Collection-Item-Information > h4 {
-    font-size: 25px;
-    width: 300px;
-
-  }
   .Collection-Item-Information > p {
-    font-size: 14px;
-    text-align: left;
     height: 60px;
     line-clamp: 3;
     -webkit-line-clamp:3;
   }
   .Collection-Item-Information button {
-    align-self: flex-start;
+    width: 160px;
+    font-size: 14px;
+    padding: 10px 0;
   }
+    .Collection-Item-New-Product {
+      top: 24px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -161,11 +175,10 @@
   }
   .Collection-Item-New-Product {
     font-size: 11px;
-    top: 15px;
+    top: 30px;
   }
   .Collection-Item-Information > h4 {
     font-size: 27px;
-    width: 300px;
 
   }
   .Collection-Item-Information > p {
