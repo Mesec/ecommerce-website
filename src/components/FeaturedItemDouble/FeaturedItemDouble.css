@@ -1,9 +1,9 @@
 .Featured-Item-Three {
   display: flex;
-  gap: 48px;
   height: 100%;
   width: 100%;
   flex-direction: column;
+  gap: 20px;
 }
 
 .Featured-Item-Three div {
@@ -61,6 +61,7 @@
 @media screen and (min-width: 900px) {
  .Featured-Item-Three {
     flex-direction: row;
+    gap: 48px;
   }
   .Featured-Item-Three-Image-Container {
     width: 50%;
