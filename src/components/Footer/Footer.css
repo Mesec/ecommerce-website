@@ -41,15 +41,6 @@
   text-align: left;
 }
 
-.Footer-Image {
-  background-image: url('/src/assets/images/person.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: right;
-  border-radius: 10px;
-}
-
 @media screen and (min-width: 600px) {
   .Footer {
     justify-content: start;
