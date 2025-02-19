@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import './Home.css'
-import FeaturedItemOne from '../../components/FeaturedItems/FeaturedItemOne'
 import FeaturedItemTwo from '../../components/FeaturedItems/FeaturedItemTwo'
 import FeaturedItemThree from '../../components/FeaturedItems/FeaturedItemThree'
 import Categories from '../../components/Categories/Categories'
@@ -11,7 +10,6 @@ export default function Home() {
     <Box className='Home-Main-Content'>
       <Box className='Home-Body'>
         <Categories />
-        <FeaturedItemOne />
         <FeaturedItemTwo />
         <FeaturedItemThree />
         <Grid container className='Commercial'>
