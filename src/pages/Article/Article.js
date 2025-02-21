@@ -14,51 +14,51 @@ export default function Article() {
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();
   const [quantity, setQuantity] = useState(1);
-  const location = useLocation();
+  // const location = useLocation();
 
   const products = useSelector((state) => state.products.data);
   const cartItems = useSelector((state) => state.cart.items);
   const cartItem = cartItems?.filter(item => item?.id === product?.id);
   const dispatch = useDispatch();
 
-  const setBackgroundImage = (position) => {
-    let image;
-    if (position === 'top') {
-      image = require(`/src/assets/images/products${product?.images?.gallery[0]}`);
-    }
-    if (position === 'bottom') {
-      image = require(`/src/assets/images/products${product?.images?.gallery[2]}`);
-    }
-    if (position === 'right') {
-      image = require(`/src/assets/images/products${product?.images?.gallery[1]}`);
-    }
+  // const setBackgroundImage = (position) => {
+  //   let image;
+  //   if (position === 'top') {
+  //     image = require(`/src/assets/images/products${product?.images?.gallery[0]}`);
+  //   }
+  //   if (position === 'bottom') {
+  //     image = require(`/src/assets/images/products${product?.images?.gallery[2]}`);
+  //   }
+  //   if (position === 'right') {
+  //     image = require(`/src/assets/images/products${product?.images?.gallery[1]}`);
+  //   }
 
-    return { backgroundImage: `url(${image})` }
-  }
+  //   return { backgroundImage: `url(${image})` }
+  // }
 
-  const addToCartHandler = () => {
-    dispatch(addToCart({
-      quantity,
-      id: product?.id,
-      title: product?.shortName,
-      price: product?.price,
-      image: product?.images?.main,
-      inStock: product?.inStock
-    }));
-    dispatch(openCart());
-    setQuantity(1)
-  }
+  // const addToCartHandler = () => {
+  //   dispatch(addToCart({
+  //     quantity,
+  //     id: product?.id,
+  //     title: product?.shortName,
+  //     price: product?.price,
+  //     image: product?.images?.main,
+  //     inStock: product?.inStock
+  //   }));
+  //   dispatch(openCart());
+  //   setQuantity(1)
+  // }
 
-  const increaseProductHandler = () => {
-    setQuantity(quantity + 1)
-    if ((quantity + 1) + cartItem.quantity === cartItem.inStock) {
-      dispatch(openSnackbar('No more products in stock.'))
-    }
-  }
+  // const increaseProductHandler = () => {
+  //   setQuantity(quantity + 1)
+  //   if ((quantity + 1) + cartItem.quantity === cartItem.inStock) {
+  //     dispatch(openSnackbar('No more products in stock.'))
+  //   }
+  // }
 
-  const decreaseProductHandler = () => {
-    setQuantity(quantity - 1)
-  }
+  // const decreaseProductHandler = () => {
+  //   setQuantity(quantity - 1)
+  // }
 
   useEffect(() => {
     if (products?.length > 0) {
@@ -75,40 +75,40 @@ export default function Article() {
     return <Box className='Article-Spinner'><CircularProgress/></Box>
   }
 
-  const disableIncreaseButton = () => {
-      if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
-        return true;
-      }
-    if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
-      return true;
-    }
-    if (cartItem.length <= 0 && quantity === product.inStock) {
-      return true;
-    }
-    return false;
-  }
+  // const disableIncreaseButton = () => {
+  //     if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
+  //       return true;
+  //     }
+  //   if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
+  //     return true;
+  //   }
+  //   if (cartItem.length <= 0 && quantity === product.inStock) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
-  const disableAddToCartButton = () => {
-    if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
-      return true
-    } 
-    if (cartItem.length === 0 && quantity > product.inStock) {
-      return true;
-    }
-    if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
-      return true;
-    }
-    return false
-  }
+  // const disableAddToCartButton = () => {
+  //   if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
+  //     return true
+  //   } 
+  //   if (cartItem.length === 0 && quantity > product.inStock) {
+  //     return true;
+  //   }
+  //   if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
+  //     return true;
+  //   }
+  //   return false
+  // }
 
-  const getAvailableProductStock = () => {
-    if (cartItem?.length) {
-      return product.inStock - cartItem[0].quantity;
-    }
-    if(!cartItem?.length) {
-      return product.inStock;
-    }
-  }
+  // const getAvailableProductStock = () => {
+  //   if (cartItem?.length) {
+  //     return product.inStock - cartItem[0].quantity;
+  //   }
+  //   if(!cartItem?.length) {
+  //     return product.inStock;
+  //   }
+  // }
 
   return (
     <>
