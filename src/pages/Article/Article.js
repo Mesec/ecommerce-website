@@ -1,25 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Typography, Grid } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
-import { addToCart, openCart } from '../../features/cart/cartSlice';
-import { useDispatch, useSelector } from 'react-redux';
-import { openSnackbar } from '../../features/snackbar/snackbarSlice';
+import { useSelector } from 'react-redux';
 import Gallery from '../../components/Gallery/Gallery';
 
 export default function Article() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
   // const location = useLocation();
 
   const products = useSelector((state) => state.products.data);
-  const cartItems = useSelector((state) => state.cart.items);
-  const cartItem = cartItems?.filter(item => item?.id === product?.id);
-  const dispatch = useDispatch();
+  // const cartItems = useSelector((state) => state.cart.items);
+  // const cartItem = cartItems?.filter(item => item?.id === product?.id);
+  // const dispatch = useDispatch();
 
   // const setBackgroundImage = (position) => {
   //   let image;
