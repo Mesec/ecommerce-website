@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom';
-import { Typography, Button } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import { addToCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import QuantityInput from '../../components/QuantityInput/QuantityInput';
-import CollectionItem from '../../components/CollectionItem/CollectionItem';
-import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
+import Gallery from '../../components/Gallery/Gallery';
 
 export default function Article() {
   const { id } = useParams();
@@ -21,7 +19,6 @@ export default function Article() {
   const products = useSelector((state) => state.products.data);
   const cartItems = useSelector((state) => state.cart.items);
   const cartItem = cartItems?.filter(item => item?.id === product?.id);
-
   const dispatch = useDispatch();
 
   const setBackgroundImage = (position) => {
@@ -114,8 +111,20 @@ export default function Article() {
   }
 
   return (
-    <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
+    <>
       { product &&
+        <Grid container columnSpacing={{ xl: 8, lg: 4}} className='Article'>
+          <Grid item xl={8} lg={8} xs={12} className='Article-Gallery'>
+            <Gallery images={product.images.gallery}/>
+          </Grid>
+          <Grid item xl={4} lg={4} xs={12} className='Article-Info'>
+            { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
+            <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
+            <Typography variant='body1'>{ product.generalInfo }</Typography>
+          </Grid>
+        </Grid>
+      }
+      {/* { product &&
       <Box className='Article-Container'>
         <CollectionItem { ...product }>
           <Box className='Article-Controls'>
@@ -188,7 +197,7 @@ export default function Article() {
           <Typography variant='h5'>You may also like</Typography>
           <ProductNavigation />
         </Box>
-      </Box> }
-    </Box>
+      </Box> } */}
+    </>
   )
 }
