@@ -14,7 +14,7 @@ export default function Collection(props) {
             const numberFromId = Number(item.id.split('-')[1]);
             if (item.type === type) {
               return (
-                <Grid xl={11} lg={12} sm={12} item>
+                <Grid xl={11} lg={12} md={12} sm={6} xs={12} item>
                   <CollectionItem
                     { ...item }
                     reverse={ numberFromId % 2 !== 0 }
