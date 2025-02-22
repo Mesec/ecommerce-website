@@ -6,11 +6,16 @@ import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import { useSelector } from 'react-redux';
 import Gallery from '../../components/Gallery/Gallery';
+import { useMediaQuery } from "@mui/material";
 
 export default function Article() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();
+
+
+  const isSmallScreen = useMediaQuery("(max-width: 900px)");
+
   // const [quantity, setQuantity] = useState(1);
   // const location = useLocation();
 
@@ -111,13 +116,19 @@ export default function Article() {
   return (
     <>
       { product &&
-        <Grid container columnSpacing={{ xl: 8, lg: 4}} className='Article'>
+        <Grid rowGap={{ xs: 3}} container className='Article'>
+          { isSmallScreen && <Grid item xs={ 12 } className='Article-Title'>
+            { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
+            <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
+          </Grid> }
           <Grid item xl={6} lg={8} xs={12} className='Article-Gallery'>
             <Gallery images={product.images.gallery}/>
           </Grid>
           <Grid item xl={6} lg={4} xs={12} className='Article-Info'>
-            { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
-            <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
+            { !isSmallScreen && <Box>
+                { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
+                <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
+              </Box>}
             <Typography variant='body1'>{ product.generalInfo }</Typography>
           </Grid>
         </Grid>

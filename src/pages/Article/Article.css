@@ -176,28 +176,59 @@
   min-height: 70vh;
   height: 100%;
   box-sizing: border-box;
-  padding: 50px 20px 0 20px;
+  padding: 50px 20px 50px 20px;
   box-sizing: border-box;
   width: 100%;
  }
 
- .Article-Gallery {
+.Article-Gallery {
   padding: 0 !important;
- }
+}
 
-  .Article-Info {
-    width: 80%;
-    text-align: right;
-  }
+.Article-Title {
+  width: 100%;
+  position: relative;
+}
 
- .Article-Info h4 {
-  font-weight: bold;
-    width: 300px;
+.Article-Title > h4{
+ font-weight: bold;
+ width: 100%;
+ font-size: 27px;
+}
 
- }
+.Article-Info > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  opacity: 0.5;
+  text-align: center;
+  font-size: 13px;
+  width: 100%;
+}
+
+.Article-Title > .New-Product-Flag {
+  position: absolute;
+  color: #d87d4a;
+  font-family: "Manrope-Regular", Helvetica;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: normal;
+  top: -2px;
+  left: 50%;
+  transform: translate(-50%, -0);
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.Article-Info {
+  /* width: 80%; */
+  /* text-align: right; */
+}
+
+
 
  .Article-Info p {
-      width: 300px;
+      /* width: 300px; */
  }
 
 @media screen and (min-width: 600px) {
