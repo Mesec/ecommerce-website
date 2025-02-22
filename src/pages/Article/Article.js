@@ -112,10 +112,10 @@ export default function Article() {
     <>
       { product &&
         <Grid container columnSpacing={{ xl: 8, lg: 4}} className='Article'>
-          <Grid item xl={8} lg={8} xs={12} className='Article-Gallery'>
+          <Grid item xl={6} lg={8} xs={12} className='Article-Gallery'>
             <Gallery images={product.images.gallery}/>
           </Grid>
-          <Grid item xl={4} lg={4} xs={12} className='Article-Info'>
+          <Grid item xl={6} lg={4} xs={12} className='Article-Info'>
             { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
             <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
             <Typography variant='body1'>{ product.generalInfo }</Typography>

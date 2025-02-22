@@ -175,23 +175,52 @@
  .Article {
   min-height: 70vh;
   height: 100%;
-  display: flex;
-  padding: 80px 200px 80px 200px;
   box-sizing: border-box;
+  padding: 50px 20px 0 20px;
+  box-sizing: border-box;
+  width: 100%;
  }
 
  .Article-Gallery {
-  /* width: 600px; */
+  padding: 0 !important;
  }
 
   .Article-Info {
-    /* padding: 0 !important; */
+    width: 80%;
+    text-align: right;
   }
 
  .Article-Info h4 {
   font-weight: bold;
+    width: 300px;
+
  }
 
  .Article-Info p {
-  padding: 0 !important;
+      width: 300px;
  }
+
+@media screen and (min-width: 600px) {
+ .Article {
+    padding: 50px 100px 0 100px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+ .Article {
+    padding: 50px 100px 0 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Article {
+      padding: 80px 120px 80px 120px;
+  }
+}
+
+
+@media screen and (min-width: 1536px) {
+  .Article {
+    padding: 80px 200px 80px 200px;
+  }
+}

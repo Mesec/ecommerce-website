@@ -4,15 +4,19 @@ import { useState } from "react";
 import "./Gallery.css";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { Grid } from '@mui/material';
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Box, Grid } from '@mui/material';
+import { useMediaQuery } from "@mui/material";
 
 const Gallery = ({ images }) => {
-  const image1 = require(`../../assets/images/products${images[0]}`);
+  const mainImage = require(`../../assets/images/products${images[0]}`);
+  const isSmallScreen = useMediaQuery("(max-width: 900px)");
 
-  const [selectedImage, setSelectedImage] = useState(image1);
+  const [selectedImage, setSelectedImage] = useState(mainImage);
   const [startIndex, setStartIndex] = useState(0);
 
-  const thumbnailsToShow = 3;
+  const thumbnailsToShow = isSmallScreen ? 3 : 4;
   const canSlideUp = startIndex > 0;
   const canSlideDown = startIndex + thumbnailsToShow < images.length;
 
@@ -29,31 +33,32 @@ const Gallery = ({ images }) => {
   };
 
   return (
-    <Grid container spacing={{ xl: 5, lg: 10}} direction={{ xs: 'column-reverse', lg: 'row'}} className="gallery-container">
-      <Grid xl={3} lg={2} xs={12} item className="thumbnails-container" justifyContent='center' alignItems='center'>
+    <Grid container className="gallery-container">
+      <Grid item xs={12} md={3} className="thumbnails-container">
         <button disabled={ !canSlideUp } onClick={ slideUp } className="arrow-button">
-            <KeyboardArrowUpIcon />
+         {/* <KeyboardArrowUpIcon /> */}
+          { isSmallScreen ? <KeyboardArrowLeftIcon /> : <KeyboardArrowUpIcon/>}
         </button>
-        <div className="thumbnails">
+        <Box className="thumbnails">
           { images.slice(startIndex, startIndex + thumbnailsToShow).map((img, index) => {
-            const test = require(`../../assets/images/products${img}`);
+            const thumbnail = require(`../../assets/images/products${img}`);
 
             return (
               <img
                 key={ index }
-                src={ test }
+                src={ thumbnail }
                 alt={ `Thumbnail ${index}` }
-                className={ `thumbnail ${selectedImage === test ? "selected" : ""}` }
-                onClick={ () => handleThumbnailClick(test) }
+                className={ `thumbnail ${selectedImage === thumbnail ? "selected" : ""}` }
+                onClick={ () => handleThumbnailClick(thumbnail) }
               />
             )
           }) }
-        </div>
+        </Box>
           <button disabled={ !canSlideDown } onClick={ slideDown } className="arrow-button">
-            <KeyboardArrowDownIcon />
+          { isSmallScreen ? <KeyboardArrowRightIcon /> : <KeyboardArrowDownIcon /> }
           </button>
       </Grid>
-      <Grid xl={9} lg={10} xs={12} item>
+      <Grid item xs={12} md={9} className='main-image-container'>
         <img src={ selectedImage } alt="Main" className="main-image" />
       </Grid>
     </Grid>
