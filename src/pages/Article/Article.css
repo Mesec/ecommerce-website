@@ -179,29 +179,34 @@
   padding: 50px 20px 50px 20px;
   box-sizing: border-box;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
  }
 
 .Article-Gallery {
   padding: 0 !important;
-}
+} 
 
 .Article-Title {
-  width: 100%;
+  width: 90%;
   position: relative;
 }
 
 .Article-Title > h4{
- font-weight: bold;
- width: 100%;
- font-size: 27px;
+  font-weight: bold;
+  width: 100%;
+  font-size: 27px;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-.Article-Info > p {
+.Article-Title > p {
   color: #000000;
   font-family: "Manrope-Medium", Helvetica;
   opacity: 0.5;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   width: 100%;
 }
 
@@ -212,7 +217,7 @@
   font-weight: 400;
   letter-spacing: 6px;
   line-height: normal;
-  top: -2px;
+  top: -15px;
   left: 50%;
   transform: translate(-50%, -0);
   font-size: 12px;
@@ -220,16 +225,29 @@
   text-align: center;
 }
 
-.Article-Info {
-  /* width: 80%; */
-  /* text-align: right; */
+.Article-Controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Article-Controls-Form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.Article-Controls-Form > button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #d87d4a;
 }
 
 
-
- .Article-Info p {
-      /* width: 300px; */
- }
 
 @media screen and (min-width: 600px) {
  .Article {
@@ -239,13 +257,48 @@
 
 @media screen and (min-width: 900px) {
  .Article {
-    padding: 50px 100px 0 100px;
+    padding: 50px 100px 50px 100px;
+    flex-direction: column;
+  }
+  .Article-Title > h4 {
+    text-align: left;
+  }
+  .Article-Title > .New-Product-Flag {
+    text-align: left;
+  }
+  .Article-Title > p {
+    text-align: start;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .Article {
-      padding: 80px 120px 80px 120px;
+    padding: 80px 120px 80px 120px;
+    flex-direction: row;
+  }
+  .Article-Gallery {
+    flex: 0 0 50%;
+  }
+  .Article-Info {
+    flex: 0 0 50%;
+  }
+  .Article-Controls-Form {
+    width: 50%;
+  }
+    .Article-Title > h4 {
+    text-align: left;
+  }
+  .Article-Title > .New-Product-Flag {
+    text-align: left;
+  }
+  .Article-Title > p {
+    text-align: start;
+  }
+  .Article-Controls-Form {
+    flex-direction: row;
+  }
+  .Article-Controls {
+    align-items: start;
   }
 }
 
@@ -253,5 +306,12 @@
 @media screen and (min-width: 1536px) {
   .Article {
     padding: 80px 200px 80px 200px;
+    gap: 60px;
   }
+  .Article-Gallery {
+    flex: 0 0 20%;
+  }
+ .Article-Info {
+  /* flex: 0 0 60%; */
+ }
 }

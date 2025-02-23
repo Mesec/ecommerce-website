@@ -1,6 +1,8 @@
   .quantity-input-container {
     position: relative;
     z-index: inherit;
+    width: 100%;
+    border-radius: 5px;
   }
 
   .quantity-input-container > .quantity-input {
@@ -10,9 +12,11 @@
     text-align: center;
     font-family: "Manrope-Bold", Helvetica;
     pointer-events: none;
-    width: 125px;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
+    padding: 15px 0;
+    border-radius: 5px;
   }
 
    .quantity-input-container > .quantity-input:focus, .quantity-input-container > .quantity-input:hover {

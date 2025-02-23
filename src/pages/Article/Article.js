@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Gallery from '../../components/Gallery/Gallery';
 import { useMediaQuery } from "@mui/material";
+import QuantityInput from '../../components/QuantityInput/QuantityInput';
+import { openSnackbar } from '../../features/snackbar/snackbarSlice';
+import { addToCart, openCart } from '../../features/cart/cartSlice';
 
 export default function Article() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();
 
-
-  const isSmallScreen = useMediaQuery("(max-width: 900px)");
-
-  // const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   // const location = useLocation();
 
   const products = useSelector((state) => state.products.data);
-  // const cartItems = useSelector((state) => state.cart.items);
-  // const cartItem = cartItems?.filter(item => item?.id === product?.id);
-  // const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartItem = cartItems?.filter(item => item?.id === product?.id);
+  const dispatch = useDispatch();
 
   // const setBackgroundImage = (position) => {
   //   let image;
@@ -39,29 +39,29 @@ export default function Article() {
   //   return { backgroundImage: `url(${image})` }
   // }
 
-  // const addToCartHandler = () => {
-  //   dispatch(addToCart({
-  //     quantity,
-  //     id: product?.id,
-  //     title: product?.shortName,
-  //     price: product?.price,
-  //     image: product?.images?.main,
-  //     inStock: product?.inStock
-  //   }));
-  //   dispatch(openCart());
-  //   setQuantity(1)
-  // }
+  const addToCartHandler = () => {
+    dispatch(addToCart({
+      quantity,
+      id: product?.id,
+      title: product?.shortName,
+      price: product?.price,
+      image: product?.images?.main,
+      inStock: product?.inStock
+    }));
+    dispatch(openCart());
+    setQuantity(1)
+  }
 
-  // const increaseProductHandler = () => {
-  //   setQuantity(quantity + 1)
-  //   if ((quantity + 1) + cartItem.quantity === cartItem.inStock) {
-  //     dispatch(openSnackbar('No more products in stock.'))
-  //   }
-  // }
+  const increaseProductHandler = () => {
+    setQuantity(quantity + 1)
+    if ((quantity + 1) + cartItem.quantity === cartItem.inStock) {
+      dispatch(openSnackbar('No more products in stock.'))
+    }
+  }
 
-  // const decreaseProductHandler = () => {
-  //   setQuantity(quantity - 1)
-  // }
+  const decreaseProductHandler = () => {
+    setQuantity(quantity - 1)
+  }
 
   useEffect(() => {
     if (products?.length > 0) {
@@ -78,61 +78,83 @@ export default function Article() {
     return <Box className='Article-Spinner'><CircularProgress/></Box>
   }
 
-  // const disableIncreaseButton = () => {
-  //     if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
-  //       return true;
-  //     }
-  //   if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
-  //     return true;
-  //   }
-  //   if (cartItem.length <= 0 && quantity === product.inStock) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
+  const disableIncreaseButton = () => {
+      if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
+        return true;
+      }
+    if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
+      return true;
+    }
+    if (cartItem.length <= 0 && quantity === product.inStock) {
+      return true;
+    }
+    return false;
+  }
 
-  // const disableAddToCartButton = () => {
-  //   if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
-  //     return true
-  //   } 
-  //   if (cartItem.length === 0 && quantity > product.inStock) {
-  //     return true;
-  //   }
-  //   if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
-  //     return true;
-  //   }
-  //   return false
-  // }
+  const disableAddToCartButton = () => {
+    if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
+      return true
+    } 
+    if (cartItem.length === 0 && quantity > product.inStock) {
+      return true;
+    }
+    if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
+      return true;
+    }
+    return false
+  }
 
-  // const getAvailableProductStock = () => {
-  //   if (cartItem?.length) {
-  //     return product.inStock - cartItem[0].quantity;
-  //   }
-  //   if(!cartItem?.length) {
-  //     return product.inStock;
-  //   }
-  // }
+  const getAvailableProductStock = () => {
+    if (cartItem?.length) {
+      return product.inStock - cartItem[0].quantity;
+    }
+    if(!cartItem?.length) {
+      return product.inStock;
+    }
+  }
 
   return (
     <>
-      { product &&
-        <Grid rowGap={{ xs: 3}} container className='Article'>
-          { isSmallScreen && <Grid item xs={ 12 } className='Article-Title'>
+      <Box className='Article'>
+        <Box className='Article-Gallery'>
+          <Gallery images={ product.images.gallery } />
+        </Box>
+        <Box className='Article-Info'>
+          <Box className='Article-Title'>
             { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
             <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
-          </Grid> }
-          <Grid item xl={6} lg={8} xs={12} className='Article-Gallery'>
-            <Gallery images={product.images.gallery}/>
-          </Grid>
-          <Grid item xl={6} lg={4} xs={12} className='Article-Info'>
-            { !isSmallScreen && <Box>
-                { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
-                <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
-              </Box>}
             <Typography variant='body1'>{ product.generalInfo }</Typography>
-          </Grid>
-        </Grid>
-      }
+          </Box>
+          <Box className='Article-Controls'>
+            <Box className='Article-Controls-Form'>
+              <QuantityInput
+                id={ product.id }
+                quantity={ quantity }
+                inStock={ product.inStock }
+                increaseHandler={ increaseProductHandler }
+                decreaseHandler={ decreaseProductHandler }
+                increaseDisabled={ disableIncreaseButton() }
+                decreaseDisabled={ quantity === 1 } />
+              <Button
+                disabled={ disableAddToCartButton() }
+                onClick={ addToCartHandler }
+                className='Add-Article'
+                variant='contained'>
+                ADD TO CART
+              </Button>
+            </Box>
+              { getAvailableProductStock() === 0 ?
+                <Typography variant='p'>
+                  Out of stock. We'll restock soon.
+                </Typography>
+                :
+                <Typography variant='p'>
+                  Available stock quantity: <span>{ getAvailableProductStock() }</span>
+                </Typography>
+              }
+              </Box>
+          </Box>
+      </Box>
       {/* { product &&
       <Box className='Article-Container'>
         <CollectionItem { ...product }>
