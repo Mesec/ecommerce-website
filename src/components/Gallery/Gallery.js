@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./Gallery.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { Box, Button  } from '@mui/material';
+import { Box  } from '@mui/material';
 import { useMediaQuery } from "@mui/material";
 
 const Gallery = ({ images }) => {
