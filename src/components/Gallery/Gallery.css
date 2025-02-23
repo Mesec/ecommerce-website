@@ -141,7 +141,7 @@
   height: auto;
   max-height: 600px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .product-gallery .thumbs-slider {
@@ -170,6 +170,11 @@
 }
 
 /* Responsive poboljšanja */
+@media (min-width: 600px) {
+  .product-gallery .main-slider {
+    max-height: 300px;
+  }
+}
 @media (max-width: 768px) {
   .product-gallery .main-slider img {
     max-height: 400px;
