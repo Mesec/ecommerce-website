@@ -189,7 +189,7 @@
 } 
 
 .Article-Title {
-  width: 90%;
+  width: 100%;
   position: relative;
 }
 
@@ -205,7 +205,7 @@
   color: #000000;
   font-family: "Manrope-Medium", Helvetica;
   opacity: 0.5;
-  text-align: center;
+  text-align: left;
   font-size: 15px;
   width: 100%;
 }
@@ -218,11 +218,9 @@
   letter-spacing: 6px;
   line-height: normal;
   top: -15px;
-  left: 50%;
-  transform: translate(-50%, -0);
   font-size: 12px;
   width: 100%;
-  text-align: center;
+  text-align: center
 }
 
 .Article-Controls {
@@ -247,11 +245,17 @@
   background-color: #d87d4a;
 }
 
-
+.Available-Quantity {
+  color: #000;
+  opacity: 0.5;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 15px;
+}
 
 @media screen and (min-width: 600px) {
  .Article {
-    padding: 50px 30px 0 30px;
+    padding: 50px 30px 50px 30px;
   }
 }
 

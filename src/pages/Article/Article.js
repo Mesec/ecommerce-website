@@ -143,11 +143,11 @@ export default function Article() {
               </Button>
             </Box>
               { getAvailableProductStock() === 0 ?
-                <Typography variant='p'>
+                <Typography variant='p' className='Available-Quantity'>
                   Out of stock. We'll restock soon.
                 </Typography>
                 :
-                <Typography variant='p'>
+                <Typography variant='p' className='Available-Quantity'>
                   Available stock quantity: <span>{ getAvailableProductStock() }</span>
                 </Typography>
               }
