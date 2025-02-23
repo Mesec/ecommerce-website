@@ -7,7 +7,6 @@ const openSnackbarHandler = (message, snackbarSetter, messageSetter) => {
 };
 
 export const increase = (id, quantity, inStock, message, dispatch, snackbarSetter, messageSetter) => {
-  console.log('TEST')
   dispatch(increaseCart({ id, quantity }));
   if (quantity + 1 === inStock) {
     snackbarSetter(true);

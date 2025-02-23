@@ -1,43 +1,42 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
-import { addToCart, openCart } from '../../features/cart/cartSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import Gallery from '../../components/Gallery/Gallery';
 import QuantityInput from '../../components/QuantityInput/QuantityInput';
-import CollectionItem from '../../components/CollectionItem/CollectionItem';
-import ProductNavigation from '../../components/ProductNavigation/ProductNavigation';
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
+import { addToCart, openCart } from '../../features/cart/cartSlice';
 
 export default function Article() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState();
+
   const [quantity, setQuantity] = useState(1);
-  const location = useLocation();
+  // const location = useLocation();
 
   const products = useSelector((state) => state.products.data);
   const cartItems = useSelector((state) => state.cart.items);
   const cartItem = cartItems?.filter(item => item?.id === product?.id);
-
   const dispatch = useDispatch();
 
-  const setBackgroundImage = (position) => {
-    let image;
-    if (position === 'top') {
-      image = require(`/src/assets/images/products${product?.images?.gallery[0]}`);
-    }
-    if (position === 'bottom') {
-      image = require(`/src/assets/images/products${product?.images?.gallery[2]}`);
-    }
-    if (position === 'right') {
-      image = require(`/src/assets/images/products${product?.images?.gallery[1]}`);
-    }
+  // const setBackgroundImage = (position) => {
+  //   let image;
+  //   if (position === 'top') {
+  //     image = require(`/src/assets/images/products${product?.images?.gallery[0]}`);
+  //   }
+  //   if (position === 'bottom') {
+  //     image = require(`/src/assets/images/products${product?.images?.gallery[2]}`);
+  //   }
+  //   if (position === 'right') {
+  //     image = require(`/src/assets/images/products${product?.images?.gallery[1]}`);
+  //   }
 
-    return { backgroundImage: `url(${image})` }
-  }
+  //   return { backgroundImage: `url(${image})` }
+  // }
 
   const addToCartHandler = () => {
     dispatch(addToCart({
@@ -114,8 +113,48 @@ export default function Article() {
   }
 
   return (
-    <Box marginTop={ location.pathname.length > 8 &&  '79px'}>
-      { product &&
+    <>
+      <Box className='Article'>
+        <Box className='Article-Gallery'>
+          <Gallery images={ product.images.gallery } />
+        </Box>
+        <Box className='Article-Info'>
+          <Box className='Article-Title'>
+            { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
+            <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
+            <Typography variant='body1'>{ product.generalInfo }</Typography>
+          </Box>
+          <Box className='Article-Controls'>
+            <Box className='Article-Controls-Form'>
+              <QuantityInput
+                id={ product.id }
+                quantity={ quantity }
+                inStock={ product.inStock }
+                increaseHandler={ increaseProductHandler }
+                decreaseHandler={ decreaseProductHandler }
+                increaseDisabled={ disableIncreaseButton() }
+                decreaseDisabled={ quantity === 1 } />
+              <Button
+                disabled={ disableAddToCartButton() }
+                onClick={ addToCartHandler }
+                className='Add-Article'
+                variant='contained'>
+                ADD TO CART
+              </Button>
+            </Box>
+              { getAvailableProductStock() === 0 ?
+                <Typography variant='p'>
+                  Out of stock. We'll restock soon.
+                </Typography>
+                :
+                <Typography variant='p'>
+                  Available stock quantity: <span>{ getAvailableProductStock() }</span>
+                </Typography>
+              }
+              </Box>
+          </Box>
+      </Box>
+      {/* { product &&
       <Box className='Article-Container'>
         <CollectionItem { ...product }>
           <Box className='Article-Controls'>
@@ -188,7 +227,7 @@ export default function Article() {
           <Typography variant='h5'>You may also like</Typography>
           <ProductNavigation />
         </Box>
-      </Box> }
-    </Box>
+      </Box> } */}
+    </>
   )
 }

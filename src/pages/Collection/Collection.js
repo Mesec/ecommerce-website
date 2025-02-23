@@ -6,7 +6,6 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem';
 
 export default function Collection(props) {
   const { products, type } = props;
-  console.log(products)
   return (
       <Box container className='Collection'>
         <Grid spacing={4} container justifyContent={{ xl: 'center'}} >
@@ -15,7 +14,7 @@ export default function Collection(props) {
             const numberFromId = Number(item.id.split('-')[1]);
             if (item.type === type) {
               return (
-                <Grid xl={11} lg={12} sm={12} item>
+                <Grid xl={11} lg={12} md={12} sm={6} xs={12} item>
                   <CollectionItem
                     { ...item }
                     reverse={ numberFromId % 2 !== 0 }
