@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { Typography, Grid, Button } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import { useDispatch, useSelector } from 'react-redux';
 import Gallery from '../../components/Gallery/Gallery';
-import { useMediaQuery } from "@mui/material";
 import QuantityInput from '../../components/QuantityInput/QuantityInput';
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
 import { addToCart, openCart } from '../../features/cart/cartSlice';
