@@ -45,7 +45,7 @@ export default function Cart() {
 
   const closeCartHandler = useCallback(() =>{
     dispatch(closeCart());
-  })
+  }, [dispatch])
 
   const increaseProductHandler = (id, quantity, inStock) => {
     const message = 'No more products in stock.';
