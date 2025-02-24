@@ -39,12 +39,26 @@ body.active-modal {
   line-height: 1.4;
   height: 100%;
   background: white;
-  padding: 16px 28px;
+  padding: 16px 20px;
   border-radius: 3px;
+  box-sizing: border-box;
   min-width: 300px;
   z-index: 2;
   transition: all 0.5s ease-out;
   border-radius: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Cart-Close-Icon {
+  align-self: flex-end;
+}
+
+.Cart-Close-Icon > button {
+  width: 40px !important;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .HideCart {
@@ -95,18 +109,18 @@ body.active-modal {
   width: 70px;
   height: 70px;
   box-sizing: border-box;
-  background-color: #F1F1F1;
   background-position: center;
-  background-size: 60%;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 1);
 }
 
 .Cart-Left {
   display: flex;
   gap: 15px;
+  box-sizing: border-box;
   align-items: center;
 }
 
@@ -144,13 +158,6 @@ body.active-modal {
   font-size: 16px;
 }
 
-.Cart > button {
-  background-color: #d87d4a;
-  height: 50px;
-  width: 100%;
-  margin-top: 10px;
-}
-
 .Empty-Cart {
   display: flex;
   flex-direction: column;
@@ -161,21 +168,22 @@ body.active-modal {
   top: 0;
   width: 100%;
   text-align: center;
+  height: 100%;
 }
 
 .Empty-Cart-Header {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .Empty-Cart-Header > h5 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
   opacity: 0.9;
-  padding: 16px 28px;
-  color: white;
+  padding: 16px 16px;
+  width: 85%;
+  text-align: center;
 }
 
 .Empty-Cart > p {
@@ -200,4 +208,35 @@ body.active-modal {
 .Empty-Cart-Header {
   background-color: #d87d4a;
   height: 50px;
+  text-align: left;
+}
+
+.Cart-Controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.Cart-Buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.Cart-Button {
+  background-color: #d87d4a !important;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Clear-Cart {
+  background-color: rgb(229, 229, 229) !important;
+  color: black !important;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5) !important;
+}
+
+.Empty-Cart-Close-Icon {
+  position: absolute;
+  right: 0;
 }

@@ -26,7 +26,7 @@ export default function Article() {
       id: product?.id,
       title: product?.shortName,
       price: product?.price,
-      image: product?.images?.main,
+      image: product?.images?.gallery[0],
       inStock: product?.inStock
     }));
     dispatch(openCart());
@@ -56,13 +56,13 @@ export default function Article() {
   }, [product]);
 
   if (loading) {
-    return <Box className='Article-Spinner'><CircularProgress/></Box>
+    return <Box className='Article-Spinner'><CircularProgress /></Box>
   }
 
   const disableIncreaseButton = () => {
-      if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
-        return true;
-      }
+    if (cartItem.length > 0 && cartItem[0].quantity + quantity === product.inStock) {
+      return true;
+    }
     if (cartItem.length > 0 && cartItem[0].quantity === product.inStock) {
       return true;
     }
@@ -75,7 +75,7 @@ export default function Article() {
   const disableAddToCartButton = () => {
     if (cartItem.length > 0 && (cartItem[0].quantity + quantity > product.inStock)) {
       return true
-    } 
+    }
     if (cartItem.length === 0 && quantity > product.inStock) {
       return true;
     }
@@ -89,7 +89,7 @@ export default function Article() {
     if (cartItem?.length) {
       return product.inStock - cartItem[0].quantity;
     }
-    if(!cartItem?.length) {
+    if (!cartItem?.length) {
       return product.inStock;
     }
   }
@@ -124,46 +124,46 @@ export default function Article() {
                 ADD TO CART
               </Button>
             </Box>
-              { getAvailableProductStock() === 0 ?
-                <Typography variant='p' className='Available-Quantity'>
-                  Out of stock. We'll restock soon.
-                </Typography>
-                :
-                <Typography variant='p' className='Available-Quantity'>
-                  Available stock quantity: <span>{ getAvailableProductStock() }</span>
-                </Typography>
-              }
-              </Box>
-          </Box>
-
-      </Box>
-        <Box className='Article-Info'>
-          <Box className='Article-Features'>
-            <Typography variant='h4'>
-              FEATURES
-            </Typography>
-            { product?.features?.map((item, index) => {
-              return (
-                <Typography variant='body1' key={ index }>
-                  { item }
-                </Typography>
-              )
-            }) }
-          </Box>
-          <Box className='In-Box'>
-            <Typography variant='h4'>
-              IN THE BOX
-            </Typography>
-            { product?.inBox.map((item, index) => {
-              return (
-                <Box className='In-Box-Items' key={ index }>
-                  <Typography variant='body1'>{ `${item.quantity}x` }</Typography>
-                  <Typography variant='body1'>{ item.name }</Typography>
-                </Box>
-              );
-            }) }
+            { getAvailableProductStock() === 0 ?
+              <Typography variant='p' className='Available-Quantity'>
+                Out of stock. We'll restock soon.
+              </Typography>
+              :
+              <Typography variant='p' className='Available-Quantity'>
+                Available stock quantity: <span>{ getAvailableProductStock() }</span>
+              </Typography>
+            }
           </Box>
         </Box>
+
+      </Box>
+      <Box className='Article-Info'>
+        <Box className='Article-Features'>
+          <Typography variant='h4'>
+            FEATURES
+          </Typography>
+          { product?.features?.map((item, index) => {
+            return (
+              <Typography variant='body1' key={ index }>
+                { item }
+              </Typography>
+            )
+          }) }
+        </Box>
+        <Box className='In-Box'>
+          <Typography variant='h4'>
+            IN THE BOX
+          </Typography>
+          { product?.inBox.map((item, index) => {
+            return (
+              <Box className='In-Box-Items' key={ index }>
+                <Typography variant='body1'>{ `${item.quantity}x` }</Typography>
+                <Typography variant='body1'>{ item.name }</Typography>
+              </Box>
+            );
+          }) }
+        </Box>
+      </Box>
     </Box>
   )
 }
