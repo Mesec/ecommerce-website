@@ -254,7 +254,7 @@
   opacity: 0.5;
   font-weight: normal;
   font-style: italic;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .Article-Info {
@@ -328,26 +328,20 @@
     gap: 100px;
     flex-direction: row;
   }
-   .Article-Features {
-  max-width: 300px;
+  .Article-Features {
+    max-width: 300px;
  }
  .Article-Description {
-   width: 40%;
+   width: 100%;
    align-self: center;
  }
  .Article-Top {
-  gap: 100px;
- }
+    gap: 30px;
+  }
  .Article-Features {
    max-width: 300px;
  }
-}
-
-@media screen and (min-width: 900px) {
- .Article {
-    padding: 50px 100px 50px 100px;
-  }
-  .Article-Title > h4 {
+   .Article-Title > h4 {
     text-align: left;
   }
   .Article-Title > .New-Product-Flag {
@@ -356,10 +350,24 @@
   .Article-Title > p {
     text-align: start;
   }
+}
+
+@media screen and (min-width: 900px) {
+ .Article {
+    padding: 50px 100px 50px 100px;
+  }
+
   .Article-Features {
     max-width: 350px;
   }
 
+  .Article-Info {
+    gap: 100px;
+  }
+
+  .Article-Description {
+    width: 100%;
+   }
 }
 
 @media screen and (min-width: 1200px) {
@@ -393,6 +401,9 @@
   .Article-Features {
     max-width: 500px;
   }
+     .Article-Description {
+    width: 60%;
+   }
 }
 
 
