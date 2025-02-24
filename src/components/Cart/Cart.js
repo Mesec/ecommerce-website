@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -9,10 +9,13 @@ import QuantityInput from '../QuantityInput/QuantityInput';
 import { clearCart, closeCart, decreaseCart, increaseCart } from '../../features/cart/cartSlice';
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
 import CloseIcon from '@mui/icons-material/Close';
+import { useLocation } from 'react-router-dom';
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
   const open = useSelector((state) => state.cart.isCartOpen);
+
+  const location = useLocation();
 
   const dispatch = useDispatch();
 
@@ -40,9 +43,9 @@ export default function Cart() {
     dispatch(clearCart());
   }
 
-  const closeCartHandler = () => {
+  const closeCartHandler = useCallback(() =>{
     dispatch(closeCart());
-  }
+  })
 
   const increaseProductHandler = (id, quantity, inStock) => {
     const message = 'No more products in stock.';
@@ -61,6 +64,15 @@ export default function Cart() {
   } else {
     document.body.classList.remove('active-modal')
   }
+
+  useEffect(() => {
+    return () => {
+      if (open) {
+        console.log('test')
+        closeCartHandler();
+      }
+    };
+  }, [location, closeCartHandler, open]);
 
   return (
     <Box className={ `Modal-Wrapper ${open ? 'Visible' : 'Hidden'}` }>
