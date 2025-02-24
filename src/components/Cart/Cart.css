@@ -87,13 +87,6 @@ body.active-modal {
   font-weight: bold;
 }
 
-/* .Cart-Header > button {
-  padding: 0;
-  color: #000;
-  opacity: 0.5;
-  text-transform: capitalize;
-} */
-
 .Cart-Header > button:hover {
   text-decoration: underline;
 }
@@ -253,15 +246,20 @@ body.active-modal {
 }
 
 @media (min-width: 600px) {
-    .Populated-Cart {
+  .Populated-Cart {
     flex-direction: column;
   }
 .Cart-Controls {
   margin-top: 20px;
-  width: 50%;
   flex-direction: column;
-  align-self: flex-end;
 }
+.ShowCart {
+  width: 60%;
+}
+  .Cart-Total {
+    margin-top: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: 900px) {
@@ -272,11 +270,12 @@ body.active-modal {
   .Cart-Controls {
     width: 100%;
   }
-  .Cart-Total {
-    margin-top: 35px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
+
   .Cart-Items {
     border: none;
+  }
+    .Cart-Total {
+    margin-top: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
 }
