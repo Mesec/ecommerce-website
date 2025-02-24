@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { Typography, Button, Snackbar } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
