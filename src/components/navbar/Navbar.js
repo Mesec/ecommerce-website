@@ -7,7 +7,7 @@ import Logo from '../../assets/icons/logo.svg'
 import Cart from '../../assets/icons/cart.svg'
 import { Link, useLocation } from 'react-router-dom'
 import Button from '@mui/material/Button';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Grid } from '@mui/material';
 import './Navbar.css';
 import MenuNavBar from './MenuNavBar/MenuNavBar';
@@ -17,12 +17,12 @@ import { openCart } from '../../features/cart/cartSlice';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
+  const cartLength = useSelector((state) => state.cart.items).length;
   const location = useLocation();
   const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
   const dispatch = useDispatch();
 
   const handleOpenNavMenu = (event) => {
-    console.log('open', event.currentTarget);
     setAnchorElNav(event.currentTarget);
   };
 
@@ -81,6 +81,9 @@ function ResponsiveAppBar() {
                 </Grid>
                 <Grid xl={ 1 } md={ 4 } item className='Toolbar-Item-3'>
                   <Button onClick={ handleOpenCart }>
+                    {
+                      cartLength && <Box className='Nav-Cart-Quantity'>{ cartLength }</Box>
+                    }
                     <img src={ Cart } alt="Add to Cart" />
                   </Button>
                 </Grid>

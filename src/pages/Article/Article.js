@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import { Typography, Button } from '@mui/material';
+import { Typography, Button, Snackbar } from '@mui/material';
 import { Box } from '@mui/system'
 import './Article.css'
 import CircularProgress from '@mui/material/CircularProgress';
@@ -8,7 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Gallery from '../../components/Gallery/Gallery';
 import QuantityInput from '../../components/QuantityInput/QuantityInput';
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
-import { addToCart, openCart } from '../../features/cart/cartSlice';
+import { addToCart } from '../../features/cart/cartSlice';
+import { useSnackbar } from 'notistack';
 
 export default function Article() {
   const { id } = useParams();
@@ -19,6 +20,7 @@ export default function Article() {
   const cartItems = useSelector((state) => state.cart.items);
   const cartItem = cartItems?.filter(item => item?.id === product?.id);
   const dispatch = useDispatch();
+  const { enqueueSnackbar } = useSnackbar();
 
   const addToCartHandler = () => {
     dispatch(addToCart({
@@ -29,7 +31,10 @@ export default function Article() {
       image: product?.images?.gallery[0],
       inStock: product?.inStock
     }));
-    dispatch(openCart());
+    enqueueSnackbar('The article has been added to your cart!', {
+      variant: 'default',
+      anchorOrigin: { vertical: "bottom", horizontal: "center" },
+    });
     setQuantity(1)
   }
 

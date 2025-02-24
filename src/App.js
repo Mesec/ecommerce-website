@@ -21,9 +21,9 @@ function App() {
   }
 
   return (
-      <Box className='App'>
-        <Layout />
-      </Box>
+    <Box className='App'>
+      <Layout />
+    </Box>
   );
 }
 

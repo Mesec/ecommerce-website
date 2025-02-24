@@ -51,6 +51,7 @@ body.active-modal {
 
 .Populated-Cart {
   display: flex;
+  min-height: 100vh;
   height: 100%;
 }
 

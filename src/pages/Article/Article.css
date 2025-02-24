@@ -330,18 +330,18 @@
   }
   .Article-Features {
     max-width: 300px;
- }
- .Article-Description {
-   width: 100%;
-   align-self: center;
- }
+  }
+  .Article-Description {
+    width: 100%;
+    align-self: center;
+  }
  .Article-Top {
     gap: 30px;
   }
  .Article-Features {
    max-width: 300px;
  }
-   .Article-Title > h4 {
+  .Article-Title > h4 {
     text-align: left;
   }
   .Article-Title > .New-Product-Flag {
@@ -356,28 +356,29 @@
  .Article {
     padding: 50px 100px 50px 100px;
   }
-
   .Article-Features {
     max-width: 350px;
   }
-
   .Article-Info {
     gap: 100px;
   }
-
   .Article-Description {
     width: 100%;
    }
+  .Article-Controls-Form {
+    flex-direction: row;
+    width: 100%;
+  }
+  .Article-Controls {
+    align-items: start;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .Article {
     padding: 80px 120px 80px 120px;
   }
-  .Article-Controls-Form {
-    width: 50%;
-  }
-    .Article-Title > h4 {
+  .Article-Title > h4 {
     text-align: left;
   }
   .Article-Title > .New-Product-Flag {
@@ -385,12 +386,6 @@
   }
   .Article-Title > p {
     text-align: start;
-  }
-  .Article-Controls-Form {
-    flex-direction: row;
-  }
-  .Article-Controls {
-    align-items: start;
   }
   .Article-Features > p {
     width: 500px;
