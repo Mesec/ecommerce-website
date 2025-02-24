@@ -39,20 +39,32 @@ body.active-modal {
   line-height: 1.4;
   height: 100%;
   background: white;
-  padding: 16px 28px;
-  border-radius: 3px;
+  /* padding: 16px 20px; */
+  box-sizing: border-box;
   min-width: 300px;
   z-index: 2;
   transition: all 0.5s ease-out;
-  border-radius: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
+
+.Populated-Cart {
+  display: flex;
+  /* min-height: 100vh; */
+  padding: 16px 20px;
+  height: 100%;
+  flex-direction: column;
+}
+
+
 
 .HideCart {
   right: -800px;
 }
 
 .ShowCart {
-  width: 380px;
+  width: 100%;
   right: 0;
 }
 
@@ -61,18 +73,26 @@ body.active-modal {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  background-color: #d87d4a;
+  position: relative;
+}
+.Cart-Close-Icon {
+  position: absolute;
+  top: 50%; right: 0;
+  transform: translate(0, -50%);
+  color: white;
 }
 
-.Cart-Header > p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.Cart-Header > button {
-  padding: 0;
-  color: #000;
-  opacity: 0.5;
-  text-transform: capitalize;
+.Cart-Header > h5 {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.9;
+  padding: 16px 16px;
+  width: 85%;
+  text-align: center;
+  color: white;
+  font-family: Manrope, sans-serif;
 }
 
 .Cart-Header > button:hover {
@@ -83,6 +103,7 @@ body.active-modal {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  padding-right: 10px;
 }
 
 .Cart-Item {
@@ -95,18 +116,24 @@ body.active-modal {
   width: 70px;
   height: 70px;
   box-sizing: border-box;
-  background-color: #F1F1F1;
   background-position: center;
-  background-size: 60%;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 1);
+}
+
+.Cart-Controls {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .Cart-Left {
   display: flex;
   gap: 15px;
+  box-sizing: border-box;
   align-items: center;
 }
 
@@ -132,7 +159,7 @@ body.active-modal {
   justify-content: space-between;
   align-items: center;
   margin-top: 35px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .Cart-Total > h6 {
@@ -142,13 +169,6 @@ body.active-modal {
 
 .Cart-Total > p {
   font-size: 16px;
-}
-
-.Cart > button {
-  background-color: #d87d4a;
-  height: 50px;
-  width: 100%;
-  margin-top: 10px;
 }
 
 .Empty-Cart {
@@ -161,21 +181,23 @@ body.active-modal {
   top: 0;
   width: 100%;
   text-align: center;
+  height: 100%;
 }
 
 .Empty-Cart-Header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .Empty-Cart-Header > h5 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
   opacity: 0.9;
-  padding: 16px 28px;
-  color: white;
+  padding: 16px 16px;
+  width: 85%;
+  text-align: center;
 }
 
 .Empty-Cart > p {
@@ -183,6 +205,7 @@ body.active-modal {
   opacity: 0.6;
   text-align: center;
   padding: 16px 28px;
+  font-size: 14px;
 }
 
 .Empty-Cart-Image {
@@ -200,4 +223,70 @@ body.active-modal {
 .Empty-Cart-Header {
   background-color: #d87d4a;
   height: 50px;
+  text-align: left;
+}
+
+.Empty-Cart-Close-Icon {
+  position: absolute;
+  right: 0;
+}
+
+.Cart-Controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.Cart-Buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.Cart-Button {
+  background-color: #d87d4a !important;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Clear-Cart {
+  background-color: rgb(229, 229, 229) !important;
+  color: black !important;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5) !important;
+}
+
+@media (min-width: 600px) {
+  .Populated-Cart {
+    flex-direction: column;
+  }
+.Cart-Controls {
+  margin-top: 20px;
+  flex-direction: column;
+}
+.ShowCart {
+  width: 60%;
+}
+  .Cart-Total {
+    margin-top: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: 900px) {
+  .ShowCart {
+   width: 380px;
+  }
+
+  .Cart-Controls {
+    width: 100%;
+  }
+
+  .Cart-Items {
+    border: none;
+  }
+    .Cart-Total {
+    margin-top: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
 }

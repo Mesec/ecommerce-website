@@ -78,6 +78,8 @@
   font-weight: bold;
   font-family: 'Manrope';
   letter-spacing: 1;
+  width: 90%;
+  border-radius: 5px;
 }
 
 .Promoted-Info button:hover {
@@ -95,6 +97,9 @@
   }
   .Home-Header-Image-Container {
     height: 600px;
+  }
+  .Promoted-Info button {
+    width: unset;
   }
 }
 

@@ -9,6 +9,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { muiColorTheme } from './utils/mui';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import { SnackbarProvider } from 'notistack';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,9 @@ root.render(
       <ThemeProvider theme={ muiColorTheme }>
         <BrowserRouter>
           <ScrollToTop>
-            <App />
+            <SnackbarProvider autoHideDuration={ 2000 }>
+              <App />
+            </SnackbarProvider>
           </ScrollToTop>
         </BrowserRouter>
       </ThemeProvider>
