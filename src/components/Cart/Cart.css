@@ -104,7 +104,6 @@ body.active-modal {
   flex-direction: column;
   gap: 25px;
   padding-right: 10px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .Cart-Item {
@@ -159,6 +158,8 @@ body.active-modal {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .Cart-Total > h6 {
