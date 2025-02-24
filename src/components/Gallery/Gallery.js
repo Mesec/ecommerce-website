@@ -76,7 +76,6 @@ import "swiper/css/thumbs";
 import "./Gallery.css";
 
 const Gallery = ({ images }) => {
-  console.log('IMAGEs', images)
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
 
   return (

@@ -113,12 +113,12 @@ export default function Article() {
   }
 
   return (
-    <>
-      <Box className='Article'>
+    <Box className='Article'>
+      <Box className='Article-Top'>
         <Box className='Article-Gallery'>
           <Gallery images={ product.images.gallery } />
         </Box>
-        <Box className='Article-Info'>
+        <Box className='Article-Description'>
           <Box className='Article-Title'>
             { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
             <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
@@ -153,7 +153,35 @@ export default function Article() {
               }
               </Box>
           </Box>
+
       </Box>
+        <Box className='Article-Info'>
+          <Box className='Article-Features'>
+            <Typography variant='h4'>
+              FEATURES
+            </Typography>
+            { product?.features?.map((item, index) => {
+              return (
+                <Typography variant='body1' key={ index }>
+                  { item }
+                </Typography>
+              )
+            }) }
+          </Box>
+          <Box className='In-Box'>
+            <Typography variant='h4'>
+              IN THE BOX
+            </Typography>
+            { product?.inBox.map((item, index) => {
+              return (
+                <Box className='In-Box-Items' key={ index }>
+                  <Typography variant='body1'>{ `${item.quantity}x` }</Typography>
+                  <Typography variant='body1'>{ item.name }</Typography>
+                </Box>
+              );
+            }) }
+          </Box>
+        </Box>
       {/* { product &&
       <Box className='Article-Container'>
         <CollectionItem { ...product }>
@@ -228,6 +256,6 @@ export default function Article() {
           <ProductNavigation />
         </Box>
       </Box> } */}
-    </>
+    </Box>
   )
 }

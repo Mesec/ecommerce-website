@@ -171,12 +171,16 @@
   opacity: 0.5;
 } */
 
-
- .Article {
+.Article {
+  padding: 50px 20px 50px 20px;
   min-height: 70vh;
   height: 100%;
-  box-sizing: border-box;
-  padding: 50px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+ .Article-Top {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -253,11 +257,90 @@
   font-size: 15px;
 }
 
+.Article-Info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.Article-Features {
+  width: 100%;
+}
+
+.Article-Features > h4, .In-Box > h4 {
+  color: #000000;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.43px;
+  line-height: 44px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.Article-Features > p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-bottom: 40px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.In-Box-Items {
+  display: flex;
+  gap: 24px;
+}
+
+.In-Box-Items p {
+  color: #000000;
+  font-family: "Manrope-Medium", Helvetica;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 30px;
+  opacity: 0.5;
+  font-size: 14px;
+  text-align: center;
+}
+
+.In-Box-Items p:nth-child(1) {
+  color: #D87D4A;
+  font-weight: 700;
+}
+
+.Article-Spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 700px) {
  .Article {
-    flex-direction: row;
     padding: 30px 30px 30px 30px;
   }
+  .Article-Top {
+    flex-direction: row;
+  }
+  .Article-Info {
+    gap: 100px;
+    flex-direction: row;
+  }
+   .Article-Features {
+  max-width: 300px;
+ }
+ .Article-Description {
+   width: 40%;
+   align-self: center;
+ }
+ .Article-Top {
+  gap: 100px;
+ }
+ .Article-Features {
+   max-width: 300px;
+ }
 }
 
 @media screen and (min-width: 900px) {
@@ -273,17 +356,15 @@
   .Article-Title > p {
     text-align: start;
   }
+  .Article-Features {
+    max-width: 350px;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
   .Article {
     padding: 80px 120px 80px 120px;
-  }
-  .Article-Gallery {
-    flex: 0 0 50%;
-  }
-  .Article-Info {
-    flex: 0 0 50%;
   }
   .Article-Controls-Form {
     width: 50%;
@@ -303,6 +384,15 @@
   .Article-Controls {
     align-items: start;
   }
+  .Article-Features > p {
+    width: 500px;
+  }
+  .Article-Info {
+    gap: 100px;
+  }
+  .Article-Features {
+    max-width: 500px;
+  }
 }
 
 
@@ -311,10 +401,7 @@
     padding: 80px 200px 80px 200px;
     gap: 60px;
   }
-  .Article-Gallery {
-    flex: 0 0 20%;
+  .Article-Features {
+    max-width: 550px;
   }
- .Article-Info {
-  /* flex: 0 0 60%; */
- }
 }
