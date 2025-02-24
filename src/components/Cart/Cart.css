@@ -240,3 +240,9 @@ body.active-modal {
   position: absolute;
   right: 0;
 }
+
+@media (max-width: 600px) {
+.ShowCart {
+  width: 100%;
+}
+}
