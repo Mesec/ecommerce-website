@@ -67,53 +67,57 @@ export default function Cart() {
       <Box className='Modal-Overlay' onClick={ closeCartHandler }></Box>
       <Box className={ `Cart ${open ? 'ShowCart' : 'HideCart'}` }>
         { cartItems?.length > 0 ?
-          <>
+          <Box>
             <Box className='Cart-Header'>
               <Typography variant='body1'>CART ({ cartItems?.length })</Typography>
               <Box className='Cart-Close-Icon'>
                 <Button variant='text' onClick={ closeCartHandler }><CloseIcon /></Button>
               </Box>
             </Box>
-            <Box className='Cart-Items'>
-              { cartItems?.map((item, index) => {
-                console.log(item)
-                return (
-                  <Box className='Cart-Item' key={ index }>
-                    <Box className='Cart-Left'>
-                      <Box className='Cart-Item-Image' style={ setBackgroundImage(item?.image) }>
+            <Box className='Populated-Cart'>
+              <Box className='Cart-Items'>
+                { cartItems?.map((item, index) => {
+                  console.log(item)
+                  return (
+                    <Box className='Cart-Item' key={ index }>
+                      <Box className='Cart-Left'>
+                        <Box className='Cart-Item-Image' style={ setBackgroundImage(item?.image) }>
+                        </Box>
+                        <Box>
+                          <Typography variant='h5'>{ item.title }</Typography>
+                          <Typography variant='body'>{ formatCurrency(item.price) }</Typography>
+                        </Box>
                       </Box>
-                      <Box>
-                        <Typography variant='h5'>{ item.title }</Typography>
-                        <Typography variant='body'>{ formatCurrency(item.price) }</Typography>
+                      <Box className='Cart-Quantity-Input'>
+                        <QuantityInput
+                          inStock={ item.inStock }
+                          quantity={ item.quantity }
+                          id={ item.id }
+                          increaseHandler={ () => increaseProductHandler(item.id, item.quantity, item.inStock) }
+                          decreaseHandler={ () => decreaseProductHandler(item.id, item.quantity) }
+                          increaseDisabled={ item.quantity === item.inStock }
+                          openSnackbar={ openSnackbar } />
                       </Box>
                     </Box>
-                    <Box className='Cart-Quantity-Input'>
-                      <QuantityInput
-                        inStock={ item.inStock }
-                        quantity={ item.quantity }
-                        id={ item.id }
-                        increaseHandler={ () => increaseProductHandler(item.id, item.quantity, item.inStock) }
-                        decreaseHandler={ () => decreaseProductHandler(item.id, item.quantity) }
-                        increaseDisabled={ item.quantity === item.inStock }
-                        openSnackbar={ openSnackbar } />
-                    </Box>
-                  </Box>
-                )
-              }) }
+                  )
+                }) }
+              </Box>
+              <Box className='Cart-Controls'>
+                <Box className='Cart-Total'>
+                  <Typography variant='body1'>
+                    TOTAL
+                  </Typography>
+                  <Typography variant='h6'>
+                    { formatCurrency(calculateTotal()) }
+                  </Typography>
+                </Box>
+                <Box className='Cart-Buttons'>
+                  <Button className='Cart-Button' variant='contained'>CHECKOUT</Button>
+                  <Button className='Cart-Button Clear-Cart' variant='contained' onClick={ clearCartHandler }>DISCARD</Button>
+                </Box>
+              </Box>
             </Box>
-            <Box className='Cart-Total'>
-              <Typography variant='body1'>
-                TOTAL
-              </Typography>
-              <Typography variant='h6'>
-                { formatCurrency(calculateTotal()) }
-              </Typography>
-            </Box>
-            <Box className='Cart-Buttons'>
-              <Button className='Cart-Button Clear-Cart' variant='contained' onClick={ clearCartHandler }>Remove all</Button>
-              <Button className='Cart-Button' variant='contained'>CHECKOUT</Button>
-            </Box>
-          </>
+          </Box>
           :
           <Box className='Empty-Cart'>
             <Box className='Empty-Cart-Header'>
