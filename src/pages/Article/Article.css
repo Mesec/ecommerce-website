@@ -262,7 +262,6 @@
 @media screen and (min-width: 900px) {
  .Article {
     padding: 50px 100px 50px 100px;
-    flex-direction: column;
   }
   .Article-Title > h4 {
     text-align: left;
