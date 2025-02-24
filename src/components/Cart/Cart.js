@@ -81,9 +81,9 @@ export default function Cart() {
         { cartItems?.length > 0 ?
           <Box>
             <Box className='Cart-Header'>
-              <Typography variant='body1'>Shopping Cart ({ cartItems?.length })</Typography>
+              <Typography variant='h5'>Shopping cart ({ cartItems?.length })</Typography>
               <Box className='Cart-Close-Icon'>
-                <Button variant='text' onClick={ closeCartHandler }><CloseIcon /></Button>
+                <Button variant='text' onClick={ closeCartHandler }><CloseIcon sx={ { color: "white" } } /></Button>
               </Box>
             </Box>
             <Box className='Populated-Cart'>
@@ -137,7 +137,7 @@ export default function Cart() {
                 Your shopping cart is currently empty
               </Typography>
               <Box className='Empty-Cart-Close-Icon'>
-                <Button variant='text' onClick={ closeCartHandler }><CloseIcon /></Button>
+                <Button variant='text' onClick={ closeCartHandler }><CloseIcon sx={ { color: "white" } } /></Button>
               </Box>
             </Box>
             <Box className='Empty-Cart-Image'><img src={ CartIcon } alt="" /></Box>
