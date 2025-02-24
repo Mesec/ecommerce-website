@@ -1,6 +1,6 @@
 .product-gallery {
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: auto;
   text-align: center;
 }
@@ -48,10 +48,7 @@
 
 @media (min-width: 600px) {
   .product-gallery {
-    width: 100%;
-  }
-    .product-gallery {
-    min-width: 400px;
+    max-width: 300px;
   }
 }
 
@@ -61,14 +58,14 @@
 
 @media (min-width: 1200px) {
   .product-gallery {
-    min-width: 500px;
+    max-width: 500px;
     width: 100%;
   }
 }
 
 @media (min-width: 1536px) {
   .product-gallery {
-    min-width: 600px;
+    max-width: 600px;
     width: 100%;
   }
 }

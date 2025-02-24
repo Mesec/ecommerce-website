@@ -255,6 +255,7 @@
 
 @media screen and (min-width: 600px) {
  .Article {
+    flex-direction: row;
     padding: 30px 30px 30px 30px;
   }
 }
@@ -277,7 +278,6 @@
 @media screen and (min-width: 1200px) {
   .Article {
     padding: 80px 120px 80px 120px;
-    flex-direction: row;
   }
   .Article-Gallery {
     flex: 0 0 50%;
