@@ -46,13 +46,19 @@
   border-radius: 5px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .product-gallery {
     max-width: 300px;
   }
 }
 
 @media (min-width: 900px) {
+    .product-gallery {
+    max-width: 350px;
+    width: 100%;
+
+
+  }
   /* PODESITI DA GLARIJA I INFO BUDU U ISTOM REDU ZA OVU SIRINU SCREENA*/
 }
 

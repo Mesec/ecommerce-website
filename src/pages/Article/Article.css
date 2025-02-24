@@ -253,7 +253,7 @@
   font-size: 15px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
  .Article {
     flex-direction: row;
     padding: 30px 30px 30px 30px;
