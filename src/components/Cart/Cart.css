@@ -39,7 +39,7 @@ body.active-modal {
   line-height: 1.4;
   height: 100%;
   background: white;
-  padding: 16px 20px;
+  /* padding: 16px 20px; */
   box-sizing: border-box;
   min-width: 300px;
   z-index: 2;
@@ -51,20 +51,13 @@ body.active-modal {
 
 .Populated-Cart {
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  padding: 16px 20px;
   height: 100%;
   flex-direction: column;
 }
 
-.Cart-Close-Icon {
-  align-self: flex-end;
-}
 
-.Cart-Close-Icon > button {
-  width: 40px !important;
-  display: flex;
-  justify-content: flex-end;
-}
 
 .HideCart {
   right: -800px;
@@ -80,11 +73,24 @@ body.active-modal {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  background-color: #d87d4a;
+  position: relative;
+}
+.Cart-Close-Icon {
+  position: absolute;
+  top: 50%; right: 0;
+  transform: translate(0, -50%);
 }
 
 .Cart-Header > p {
-  font-size: 18px;
-  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.9;
+  padding: 16px 16px;
+  width: 85%;
+  text-align: center;
 }
 
 .Cart-Header > button:hover {

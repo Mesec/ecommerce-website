@@ -81,7 +81,7 @@ export default function Cart() {
         { cartItems?.length > 0 ?
           <Box>
             <Box className='Cart-Header'>
-              <Typography variant='body1'>CART ({ cartItems?.length })</Typography>
+              <Typography variant='body1'>Shopping Cart ({ cartItems?.length })</Typography>
               <Box className='Cart-Close-Icon'>
                 <Button variant='text' onClick={ closeCartHandler }><CloseIcon /></Button>
               </Box>
