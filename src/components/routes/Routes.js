@@ -4,6 +4,7 @@ import Home from '../../pages/Home/Home';
 import Collection from '../../pages/Collection/Collection';
 import data from '../../db/products.json';
 import Article from '../../pages/Article/Article';
+import Checkout from '../../pages/Checkout/Checkout';
 
 const PageRoutes = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const PageRoutes = () => {
         <Route path="/speakers" element={ <Collection products={ data.products } type='speakers'/> } />
         <Route path="/earphones" element={ <Collection products={ data.products } type='earphones'/> } />
         <Route path="/article/:id" element={ <Article/> } />
+        <Route path="/checkout" element={ <Checkout /> } />
       </Routes>
   );
 }

@@ -1,0 +1,134 @@
+.Checkout-Container {
+  margin: 0 auto;
+  padding: 24px 16px;
+  max-width: 1200px;
+}
+
+/* Checkout glavni naslov */
+.Checkout-Main-Header {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: black;
+}
+
+/* Sekcijski naslovi (Billing, Shipping, Payment) */
+.Section-Title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #d87d4a;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Label za Payment Method */
+.Payment-Method-Label {
+  font-size: 12px;
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+/* Input polja (TextFields) */
+.MuiTextField-root {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 8px;
+}
+
+.MuiInputBase-input {
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+/* Radio Group sekcija */
+.Payment-Options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.Payment-Option-Box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  padding-left: 16px;
+  width: 250px;
+}
+
+.Payment-Option-Box:hover {
+  border-color: #d87d4a;
+}
+
+/* Kada je Radio selektovan */
+.Mui-checked + .MuiTypography-root {
+  font-weight: bold;
+  color: #d87d4a;
+}
+
+/* Cash on Delivery info */
+.Cash-On-Delivery-Info {
+  margin-top: 24px;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Summary Card */
+.Summary-Card {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Dugme Continue */
+.Continue-Button {
+  margin-top: 24px;
+  background-color: #d87d4a !important;
+  color: white !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.Continue-Button:hover {
+  background-color: #c56c3d !important;
+}
+
+@media screen and (min-width: 600px) {
+  .Checkout-Container {
+    margin-top: 50px;
+    padding: 0 100px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .Checkout-Container  {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Checkout-Container {
+    padding: 0 120px !important;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+   .Checkout-Container {
+    padding: 0 200px 0 200px !important;
+  }
+}
+
