@@ -34,6 +34,7 @@ export default function Cart() {
   };
 
   const clearCartHandler = () => {
+    closeCartHandler();
     dispatch(clearCart());
   };
 
@@ -140,28 +141,45 @@ export default function Cart() {
                     Checkout
                   </Button>
                 </Link>
-                <Button fullWidth variant="outlined" color="secondary" onClick={ clearCartHandler }>
+                <Button sx={ {
+                  borderColor: '#d87d4a', /* ili neka tamnija nijansa */
+                  color: '#d87d4a',
+                  '&:hover': {
+                    borderColor: '#c56c3d',
+                    color: '#c56c3d',
+                  }
+                } } fullWidth variant="outlined" color="secondary" onClick={ clearCartHandler }>
                   Discard Cart
                 </Button>
               </Box>
             </Box>
           </Box>
         ) : (
-          // Empty cart state
-          <Box className="Empty-Cart">
-            <Box className="Empty-Cart-Header">
-              <Typography variant="h6">Your shopping cart is currently empty</Typography>
-              <IconButton onClick={ closeCartHandler } size="small" sx={ { position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)' } }>
-                <CloseIcon sx={ { color: 'white' } } />
-              </IconButton>
+            <Box className="Empty-Cart">
+              <Box className="Empty-Cart-Header">
+                <Typography variant="h6">Shopping Cart (0)</Typography>
+                <IconButton
+                  onClick={ closeCartHandler }
+                  size="small"
+                  sx={ { position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)' } }
+                >
+                  <CloseIcon sx={ { color: 'white' } } />
+                </IconButton>
+              </Box>
+
+              <Box className="Empty-Cart-Content">
+                <Box className="Empty-Cart-Image">
+                  <img src={ CartIcon } alt="Empty cart" />
+                </Box>
+
+                <Typography variant="body2" sx={ { mt: 2, mb: 2, px: 2, textAlign: 'center' } }>
+                  Feel free to explore our products and add items to your cart whenever you're ready.
+                </Typography>
+                <Button onClick={ closeCartHandler } variant="contained" sx={ { backgroundColor: '#d87d4a', '&:hover': { backgroundColor: '#c56c3d' } } }>
+                  Continue Shopping
+                </Button>
+              </Box>
             </Box>
-            <Box className="Empty-Cart-Image">
-              <img src={ CartIcon } alt="Empty cart" />
-            </Box>
-            <Typography variant="body2" sx={ { padding: 2, textAlign: 'center' } }>
-              Feel free to explore our products and add items to your cart whenever you're ready.
-            </Typography>
-          </Box>
         ) }
       </Box>
     </Box>

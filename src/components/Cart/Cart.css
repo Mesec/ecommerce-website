@@ -43,12 +43,17 @@ body.active-modal {
   display: flex;
   flex-direction: column;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-  transition: right 0.4s ease-in-out;
   overflow: hidden;
+  z-index: 30;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .ShowCart {
   right: 0;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .HideCart {
@@ -115,20 +120,27 @@ body.active-modal {
   gap: 10px;
 }
 
+.Cart-Button:hover {
+  transform: scale(1.02);
+}
+
 /* Empty Cart styling */
 .Empty-Cart {
-  padding: 40px 20px;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
   align-items: center;
 }
 
 .Empty-Cart-Header {
-  background-color: #d87d4a;
   width: 100%;
-  padding: 16px;
+  background-color: #d87d4a;
   position: relative;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .Empty-Cart-Header h6 {
@@ -137,9 +149,17 @@ body.active-modal {
   font-weight: 600;
 }
 
+.Empty-Cart-Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .Empty-Cart-Image img {
-  width: 120px;
-  margin-top: 20px;
+  width: 100px;
+  height: auto;
   opacity: 0.8;
 }
 
