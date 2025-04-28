@@ -16,11 +16,6 @@ export default function Cart() {
   const location = useLocation();
   const dispatch = useDispatch();
 
-  const setBackgroundImage = (path) => {
-    const image = require(`/src/assets/images/products${path}`);
-    return { backgroundImage: `url(${image})` };
-  };
-
   function formatCurrency(number) {
     return number.toLocaleString('en-US', {
       style: 'currency',
