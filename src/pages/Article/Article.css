@@ -58,12 +58,13 @@
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  gap: 10px;
 }
 
 .Article-Price {
   background-color: #D87D4A;
   height: auto;
-  padding: 8px 20px;
+  padding: 5px 14px;
   color: #ffffff;
   margin-top: 20px;
   border-radius: 4px;
@@ -95,7 +96,8 @@
 
 .Article-Controls-Form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
   width: 100%;
@@ -103,6 +105,7 @@
 
 .Article-Quantity-Input-Container {
   align-self: flex-end;
+  width: 100%;
 }
 
 .Article-Controls > button {
@@ -113,7 +116,8 @@
 
 .Article-Benefits-Container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 10px;
   width: 100%;
 }
@@ -132,7 +136,7 @@
   color: #000;
   opacity: 0.6;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
 }
 
@@ -202,6 +206,7 @@
   }
     .Article-Price > h4 {
       font-size: 25px;
+      padding: 8px 20px;
     }
 
   .Article-Id {
@@ -248,6 +253,7 @@
   
   .Article-Quantity-Input-Container {
     margin-left: auto;
+    width: unset;
   }
   
   .Article-Benefits-Container {
