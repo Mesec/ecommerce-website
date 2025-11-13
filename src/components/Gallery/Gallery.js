@@ -9,6 +9,7 @@ import "./Gallery.css";
 const Gallery = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
 
+
   return (
     <div className="product-gallery">
       <Swiper
@@ -31,10 +32,11 @@ const Gallery = ({ images }) => {
       <Swiper
         onSwiper={ setThumbsSwiper }
         spaceBetween={ 10 }
-        slidesPerView={ 4 }
+        slidesPerView={ 3 }
+        navigation={ true }
         freeMode={ true }
         watchSlidesProgress={ true }
-        modules={ [Thumbs] }
+        modules={ [Thumbs, Navigation] }
         className="thumbs-slider"
       >
         { images.map((image, index) => (
