@@ -56,29 +56,15 @@
   object-fit: contain;
 }
 
-@media (min-width: 700px) {
-  .product-gallery {
-    max-width: 300px;
-  }
-}
-
-@media (min-width: 900px) {
-    .product-gallery {
-    max-width: 350px;
-    width: 100%;
-  }
-}
 
 @media (min-width: 1200px) {
   .product-gallery {
     max-width: 500px;
-    width: 100%;
   }
 }
 
 @media (min-width: 1536px) {
   .product-gallery {
     max-width: 550px;
-    width: 100%;
   }
 }
