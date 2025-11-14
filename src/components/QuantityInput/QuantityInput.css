@@ -1,56 +1,21 @@
-  .quantity-input-container {
-    position: relative;
-    z-index: inherit;
-    width: 100%;
-    border-radius: 5px;
-  }
+.quantity-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
 
-  .quantity-input-container > .quantity-input {
-    border: none;
-    padding: 10px 0;
-    background-color: #F1F1F1;
-    text-align: center;
-    font-family: "Manrope-Bold", Helvetica;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 15px 0;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.40);
-    color: rgba(0, 0, 0, 0.60);;
-  }
+.quantity-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
 
-   .quantity-input-container > .quantity-input:focus, .quantity-input-container > .quantity-input:hover {
-    outline: none;
-   }
-
-  .quantity-input-container > .quantity-button {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
-    border: none;
-    cursor: pointer;
-    width: 30px;
-    height: 100%;
-    font-family: "Manrope-Bold", Helvetica;
-    color: #000000;
-    opacity: 0.25;
-    z-index: 1;
-  }
-
-  .quantity-input-container > .quantity-button:hover {
-    opacity: 1;
-  }
-
-  .quantity-input-container > .quantity-button:disabled {
-    opacity: 0.25;
-  }
-
-  .quantity-input-container > .decrement {
-    left: 0;
-  }
-
-  .quantity-input-container > .increment {
-    right: 0;
-  }
+.quantity-number {
+  min-width: 24px;
+  text-align: center;
+  font-weight: bold;
+}

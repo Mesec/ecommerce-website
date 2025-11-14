@@ -1,22 +1,31 @@
-import React from 'react'
-import './QuantityInput.css'
+import React from 'react';
+import { Box, IconButton, Typography } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import './QuantityInput.css';
 
 export default function QuantityInput({ increaseHandler, decreaseHandler, quantity, increaseDisabled, decreaseDisabled }) {
   return (
-    <div className="quantity-input-container">
-      <input onChange={() => {}} className="quantity-input" type="number" value={ quantity }/>
-      <button
-        disabled={ decreaseDisabled && decreaseDisabled }
-        className="quantity-button decrement"
-        onClick={ decreaseHandler }>
-          -
-        </button>
-      <button
+    <Box className="quantity-input-container">
+      <IconButton
+        onClick={ decreaseHandler }
+        disabled={ decreaseDisabled }
+        size="small"
+        className="quantity-button"
+      >
+        <RemoveIcon fontSize="small" />
+      </IconButton>
+      <Typography variant="body1" className="quantity-number">
+        { quantity }
+      </Typography>
+      <IconButton
+        onClick={ increaseHandler }
         disabled={ increaseDisabled }
-        className="quantity-button increment"
-        onClick={ increaseHandler }>
-          +
-        </button>
-    </div>
-  )
+        size="small"
+        className="quantity-button"
+      >
+        <AddIcon fontSize="small" />
+      </IconButton>
+    </Box>
+  );
 }
