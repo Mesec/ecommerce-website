@@ -10,6 +10,8 @@ import QuantityInput from '../../components/QuantityInput/QuantityInput';
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
 import { addToCart } from '../../features/cart/cartSlice';
 import { useSnackbar } from 'notistack';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'; 
+import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 
 export default function Article() {
   const { id } = useParams();
@@ -109,40 +111,68 @@ export default function Article() {
           <Box className='Article-Title'>
             { product.newProduct && <Typography className='New-Product-Flag' variant='h7'>NEW PRODUCT</Typography> }
             <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
-            <Typography variant='body1'>{ product.generalInfo }</Typography>
+          </Box>
+          <Typography variant='body1'>{ product.generalInfo }</Typography>
+          <Box className='Article-Price-Container'>
+            <Box>
+              <Typography className='Article-Id' style={ { fontSize: '14px' } } variant='body1'>ID { product.id }</Typography>
+              <Box className='Article-Price' >
+                <Typography variant='h4'>$ { product.price },00</Typography>
+              </Box>
+            </Box>
+            <Box>
+                { product?.inBox.map((item, index) => {
+                  return (
+                    <Box className='In-Box-Items' key={ index }>
+                      <Typography variant='body1'>{ `${item.quantity}x` }</Typography>
+                      <Typography variant='body1'>{ item.name }</Typography>
+                    </Box>
+                  );
+                }) }
+            </Box>
           </Box>
           <Box className='Article-Controls'>
             <Box className='Article-Controls-Form'>
-              <QuantityInput
-                id={ product.id }
-                quantity={ quantity }
-                inStock={ product.inStock }
-                increaseHandler={ increaseProductHandler }
-                decreaseHandler={ decreaseProductHandler }
-                increaseDisabled={ disableIncreaseButton() }
-                decreaseDisabled={ quantity === 1 } />
-              <Button
-                disabled={ disableAddToCartButton() }
-                onClick={ addToCartHandler }
-                className='Add-Article'
-                variant='contained'>
-                ADD TO CART
-              </Button>
+              <Box className='Article-In-Additional-Info-Container'>
+                { getAvailableProductStock() === 0 ?
+                  <Typography variant='p' className='Available-Quantity'>
+                    Out of stock. We'll restock soon.
+                  </Typography>
+                  :
+                  <Typography variant='p' className='Available-Quantity'>
+                    Available stock quantity: <span>{ getAvailableProductStock() }</span>
+                  </Typography>
+                }
+
+                <Box className='Article-Benefits-Container'>
+                  <Typography className='Article-Benefits' variant='p'><CheckCircleOutlineIcon/>2-Year Warranty</Typography>
+                  <Typography className='Article-Benefits' variant='p'><CheckCircleOutlineIcon />Fast shipping</Typography>
+                  <Typography className='Article-Benefits' variant='p'><PaidOutlinedIcon />Secure payment</Typography>
+                </Box>
+              </Box>
+              <Box className='Article-Quantity-Input-Container'>
+                <QuantityInput
+                  id={ product.id }
+                  quantity={ quantity }
+                  inStock={ product.inStock }
+                  increaseHandler={ increaseProductHandler }
+                  decreaseHandler={ decreaseProductHandler }
+                  increaseDisabled={ disableIncreaseButton() }
+                  decreaseDisabled={ quantity === 1 } />
+              </Box>
             </Box>
-            { getAvailableProductStock() === 0 ?
-              <Typography variant='p' className='Available-Quantity'>
-                Out of stock. We'll restock soon.
-              </Typography>
-              :
-              <Typography variant='p' className='Available-Quantity'>
-                Available stock quantity: <span>{ getAvailableProductStock() }</span>
-              </Typography>
-            }
+            <Button
+              disabled={ disableAddToCartButton() }
+              onClick={ addToCartHandler }
+              className='Add-Article'
+              variant='contained'>
+              ADD TO CART
+            </Button>
           </Box>
         </Box>
 
       </Box>
-      <Box className='Article-Info'>
+      {/* <Box className='Article-Info'>
         <Box className='Article-Features'>
           <Typography variant='h4'>
             FEATURES
@@ -168,7 +198,7 @@ export default function Article() {
             );
           }) }
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   )
 }

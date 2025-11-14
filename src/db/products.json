@@ -175,7 +175,7 @@
         "images": {
         "cover": "/xx59/cover.png",
         "main": "/xx59/main.png",
-        "gallery": ["/xx59/top.png", "/xx59/right.png", "/xx59/bottom.png"]
+        "gallery": ["/xx59/right.png", "/xx59/top.png", "/xx59/bottom.png"]
       },
       "type": "headphones",
       "features": [
