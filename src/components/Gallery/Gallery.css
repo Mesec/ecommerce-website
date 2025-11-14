@@ -84,11 +84,13 @@
 /* Mobilni telefoni u landscape modu */
 @media (max-width: 900px) and (orientation: landscape) {
     .product-gallery {
-      height: 50vh;
+      /* height: 50vh; */
     }
   .product-gallery .main-slider {
-    aspect-ratio: 4/3;
-    max-height: 60vh;
+    aspect-ratio: 5/5;
+    height: 200px;
+    /* max-height: 200px; */
+    height: 350px;
   }
   
   .product-gallery .thumbs-slider {

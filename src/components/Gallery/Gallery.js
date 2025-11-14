@@ -32,7 +32,7 @@ const Gallery = ({ images }) => {
         )) }
       </Swiper>
 
-      <Swiper
+      {/* <Swiper
         onSwiper={ setThumbsSwiper }
         spaceBetween={ 10 }
         slidesPerView={ 6 }
@@ -50,7 +50,7 @@ const Gallery = ({ images }) => {
             />
           </SwiperSlide>
         )) }
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 };
