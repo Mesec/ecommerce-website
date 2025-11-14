@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./Gallery.css";
-import { Box } from '@mui/system'
 
 import { Pagination } from 'swiper/modules';
 const Gallery = ({ images }) => {
