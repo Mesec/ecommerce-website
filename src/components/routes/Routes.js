@@ -4,7 +4,7 @@ import Home from '../../pages/Home/Home';
 import Collection from '../../pages/Collection/Collection';
 import data from '../../db/products.json';
 import Article from '../../pages/Article/Article';
-import Checkout from '../../pages/Checkout/Checkout';
+import Checkout from '../../pages/Checkout/Checkout.jsx';
 
 const PageRoutes = () => {
   const location = useLocation();
