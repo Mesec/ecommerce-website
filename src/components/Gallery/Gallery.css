@@ -2,22 +2,24 @@
   width: 100%;
   margin: auto;
   text-align: center;
+  /* border: 1px solid rgb(230, 225, 225);
+  border-radius: 5px;
+  padding: 10px; */
 }
 
 .product-gallery .main-slider {
   width: 100%;
-  height: auto;
-  max-height: 800px;
-  border: 1px solid rgb(230, 225, 225);
+  aspect-ratio: 3/3;
+  /* border: 1px solid rgb(230, 225, 225); */
   border-radius: 5px;
+  /* background-color: gray; */
 }
 
 .product-gallery .main-slider img {
   width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 5px;
+  height: 100%;
   object-fit: contain;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
@@ -31,29 +33,33 @@
   cursor: pointer;
   opacity: 0.6;
   transition: opacity 0.3s ease-in-out;
-}
-
-.product-gallery .thumbs-slider .swiper-slide-thumb-active {
-  opacity: 1;
-  border: 2px solid #000;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-.product-gallery .thumbs-slider .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 80px;
-  width: 100%;
+  aspect-ratio: 3/3;
+  /* height: 80px; */
+}
+
+.product-gallery .thumbs-slider .swiper-slide:hover {
+  opacity: 1;
+}
+
+.product-gallery .thumbs-slider .swiper-slide-thumb-active {
+  opacity: 1;
+  /* border: 2px solid #000; */
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .product-gallery .thumbs-slider img {
-  width: auto;
+  width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
+}
+
+.product-gallery .swiper-pagination-progressbar-fill {
+  background-color: #D87D4A;
 }
 
 @media (min-width: 900px) {
@@ -71,5 +77,25 @@
 @media (min-width: 1536px) {
   .product-gallery {
     max-width: 550px;
+  }
+}
+
+
+/* Mobilni telefoni u landscape modu */
+@media (max-width: 900px) and (orientation: landscape) {
+    .product-gallery {
+      height: 50vh;
+    }
+  .product-gallery .main-slider {
+    aspect-ratio: 16/9;
+    max-height: 60vh;
+  }
+  
+  .product-gallery .thumbs-slider {
+    margin-top: 5px;
+  }
+  
+  .product-gallery .thumbs-slider .swiper-slide {
+    /* aspect-ratio: 16/9; */
   }
 }

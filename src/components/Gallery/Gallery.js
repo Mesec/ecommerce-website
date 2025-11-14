@@ -5,18 +5,22 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./Gallery.css";
+import { Box } from '@mui/system'
 
+import { Pagination } from 'swiper/modules';
 const Gallery = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
-
 
   return (
     <div className="product-gallery">
       <Swiper
+        pagination={ {
+          type: 'progressbar',
+        } }
         spaceBetween={ 10 }
         navigation={ true }
         thumbs={ { swiper: thumbsSwiper } }
-        modules={ [Navigation, Thumbs] }
+        modules={ [Navigation, Thumbs, Pagination] }
         className="main-slider"
       >
         { images.map((image, index) => (
@@ -32,7 +36,7 @@ const Gallery = ({ images }) => {
       <Swiper
         onSwiper={ setThumbsSwiper }
         spaceBetween={ 10 }
-        slidesPerView={ 3 }
+        slidesPerView={ 6 }
         navigation={ true }
         freeMode={ true }
         watchSlidesProgress={ true }

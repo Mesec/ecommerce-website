@@ -42,6 +42,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 .Article-Description > p {
   color: #000000;
@@ -305,9 +306,15 @@
   .Article-Features {
     max-width: 550px;
   }
-       .Article-Price-Container {
+  .Article-Price-Container {
     flex-direction: row;
     justify-content: flex-start;
     gap: 20px;
-   }
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  .Article-Top {
+    flex-direction: row;
+  }
 }
