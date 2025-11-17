@@ -11,7 +11,7 @@
 
 .product-gallery .main-slider {
   width: 100%;
-  aspect-ratio: 3/3;
+  aspect-ratio: 4/4;
   /* border: 1px solid rgb(230, 225, 225); */
   border-radius: 5px;
   /* background-color: gray; */
@@ -23,6 +23,7 @@
   object-fit: contain;
   border-radius: 5px;
   box-sizing: border-box;
+  
 }
 
 .product-gallery .thumbs-slider {
@@ -78,16 +79,13 @@
 
 @media (min-width: 1536px) {
   .product-gallery {
-    max-width: 550px;
+    max-width: 670px;
   }
 }
 
 
 /* Mobilni telefoni u landscape modu */
 @media (max-width: 900px) and (orientation: landscape) {
-    .product-gallery {
-      /* height: 50vh; */
-    }
   .product-gallery .main-slider {
     aspect-ratio: 5/5;
     height: 200px;
@@ -97,9 +95,5 @@
   
   .product-gallery .thumbs-slider {
     margin-top: 5px;
-  }
-  
-  .product-gallery .thumbs-slider .swiper-slide {
-    /* aspect-ratio: 16/9; */
   }
 }

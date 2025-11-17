@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Thumbs } from "swiper/modules";
+import { Navigation, Thumbs, EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
@@ -19,7 +19,8 @@ const Gallery = ({ images }) => {
         spaceBetween={ 10 }
         navigation={ true }
         thumbs={ { swiper: thumbsSwiper } }
-        modules={ [Navigation, Thumbs, Pagination] }
+        modules={ [Navigation, Thumbs, Pagination, EffectCards] }
+        effect={ 'cards'}
         className="main-slider"
       >
         { images.map((image, index) => (

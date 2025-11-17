@@ -310,9 +310,18 @@
     justify-content: flex-start;
     gap: 20px;
   }
+  .Article-Description {
+    height: 700px;
+  }
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
+  .Article-Top {
+    gap: 20px;
+  }
+  .Article-Description {
+    background-clip: red;
+  }
   .Article-Top {
     flex-direction: row;
   }
