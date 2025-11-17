@@ -12,6 +12,7 @@ import { addToCart } from '../../features/cart/cartSlice';
 import { useSnackbar } from 'notistack';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'; 
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
+import ActiveLastBreadcrumb from '../../components/Breadcrumbs/Breadcrumbs';
 
 export default function Article() {
   const { id } = useParams();
@@ -103,6 +104,7 @@ export default function Article() {
 
   return (
     <Box className='Article'>
+      <ActiveLastBreadcrumb />
       <Box className='Article-Top'>
         <Box className='Article-Gallery'>
           <Gallery images={ product.images.gallery } />
