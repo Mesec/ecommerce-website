@@ -13,7 +13,6 @@ export default function Layout() {
   const isSnackbarOpened = useSelector(state => state.snackbar.isOpen);
   const snackbarMessage = useSelector(state => state.snackbar.message);
   const dispatch = useDispatch();
-
   const handleCloseSnackbar = () => {
     dispatch(closeSnackbar())
   }

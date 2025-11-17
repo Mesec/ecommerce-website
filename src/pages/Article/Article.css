@@ -4,7 +4,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
 }
 
  .Article-Top {
@@ -301,7 +301,6 @@
 @media screen and (min-width: 1536px) {
   .Article {
     padding: 80px 200px 80px 200px;
-    gap: 60px;
   }
   .Article-Features {
     max-width: 550px;
