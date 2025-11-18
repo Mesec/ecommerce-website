@@ -38,47 +38,6 @@
       "inStock": 6
     },
     {
-      "id": "e-01",
-      "newProduct": true,
-      "title": "YX1 WIRELESS EARPHONES",
-      "shortName": "YX1",
-      "generalInfo": "Customize your listening experience like never before with the cutting-edge dynamic drivers in the new YX1 Wireless Earphones. These earphones are designed to deliver exceptional high-fidelity sound, providing rich, detailed audio that brings your music to life. With its advanced active noise cancellation feature, the YX1 ensures an immersive listening experience, even in the most noisy and crowded environments. Whether you're commuting, traveling, or working out, the YX1 helps you enjoy crystal-clear sound without distractions, making it the ideal choice for those who demand the best in both comfort and performance.",
-        "images": {
-        "cover": "/yx1/cover.png",
-        "main": "/yx1/main.png",
-        "gallery": ["/yx1/top.png", "/yx1/right.png", "/yx1/bottom.png"]
-      },
-      "type": "earphones",
-      "features": [
-        "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.",
-        "The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black."
-      ],
-      "inBox": [
-        {
-          "name": "Earphone Unit",
-          "quantity": 2
-        },
-        {
-          "name": "Multi-size Earplugs",
-          "quantity": 6
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "USB-C Charging Cable",
-          "quantity": 1
-        },
-        {
-          "name": "Travel Pouch",
-          "quantity": 1
-        }
-      ],
-      "price": 790,
-      "inStock": 33
-    },
-    {
       "id": "h-04",
       "newProduct": true,
       "title": "Premium Studio Headphones",
@@ -165,22 +124,20 @@
       "inStock": 15
     },
     {
-      "id": "h-01",
-      "promoInfo": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
-      "promoted": true,
+      "id": "h-06",
       "newProduct": true,
-      "title": "XX99 Mark II Headphones",
-      "shortName": "XX99 MK II",
-      "generalInfo": "The new XX99 Mark II headphones represent the ultimate achievement in high-fidelity audio technology, delivering an unparalleled listening experience. Designed to redefine the standard for premium headphones, they reproduce sound with exceptional clarity, capturing every nuance with studio-quality precision. The meticulously balanced depth ensures that every note, beat, and instrument is heard exactly as intended, providing an immersive and true-to-life soundstage. Whether you are an audiophile seeking perfection or a casual listener craving superior audio, the XX99 Mark II headphones elevate your listening experience to a whole new level of excellence.",
+      "title": "HyperX Cloud 3 Gaming Headphones",
+      "shortName": "HyperX Cloud 3",
+      "generalInfo": "Elevate your gaming experience with the HyperX Cloud 3, the ultimate gaming headset designed for competitive gamers and streaming professionals. Featuring advanced acoustic technology and premium comfort, these headphones deliver crystal-clear audio with powerful bass and precise positional accuracy. Whether you're competing in esports tournaments or streaming to thousands of viewers, the Cloud 3 ensures you hear every footstep, gunshot, and voice command with exceptional clarity and detail.",
       "images": {
-        "cover": "/xx99II/cover.png",
-        "main": "/xx99II/main.png",
-        "gallery": ["/xx99II/top.png", "/xx99II/right.png", "/xx99II/bottom.png"]
+        "cover": "/HyperXCloud3/photo-1.png",
+        "main": "/HyperXCloud3/photo-1.png",
+        "gallery": ["/HyperXCloud3/photo-1.png", "/HyperXCloud3/photo-2.png", "/HyperXCloud3/photo-3.png"]
       },
       "type": "headphones",
       "features": [
-        "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
-        "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17-hour battery life, the XX99 Mark II headphones give you superior sound, cutting-edge technology, and a modern design aesthetic."
+        "The HyperX Cloud 3 features custom-tuned 53mm drivers that deliver immersive gaming audio with enhanced bass response and crystal-clear highs. The lightweight aluminum frame combined with memory foam ear cushions wrapped in premium leatherette ensures maximum comfort during extended gaming sessions. Advanced noise isolation technology blocks out distractions, allowing you to focus entirely on your game.",
+        "Equipped with a detachable noise-cancelling microphone certified by TeamSpeak and Discord, your voice commands and team communications come through with exceptional clarity. DTS Headphone:X spatial audio creates a precise 3D soundscape, giving you a competitive edge by accurately positioning in-game sounds. Multi-platform compatibility means you can use these headphones with PC, PlayStation, Xbox, Nintendo Switch, and mobile devices."
       ],
       "inBox": [
         {
@@ -188,24 +145,122 @@
           "quantity": 1
         },
         {
-          "name": "Replacement Earcups",
-          "quantity": 2
+          "name": "Detachable Microphone",
+          "quantity": 1
         },
         {
           "name": "User Manual",
           "quantity": 1
         },
         {
-          "name": "3.5mm 5m Audio Cable",
+          "name": "3.5mm Audio Cable",
           "quantity": 1
         },
         {
-          "name": "Travel Bag",
+          "name": "USB-C to USB-A Cable",
+          "quantity": 1
+        },
+        {
+          "name": "Microphone Windscreen",
+          "quantity": 2
+        }
+      ],
+      "price": 1499,
+      "inStock": 12
+    },
+    {
+      "id": "m-01",
+      "newProduct": true,
+      "title": "Macro Flux Studio Microphone",
+      "shortName": "Macro Flux Studio",
+      "generalInfo": "Capture studio-quality audio with the Macro Flux Studio, a professional-grade condenser microphone designed for podcasters, streamers, musicians, and content creators. Engineered with precision acoustics and premium components, this microphone delivers broadcast-quality sound with exceptional clarity, warmth, and detail. Whether you're recording vocals, instruments, or hosting a podcast, the Macro Flux Studio ensures your voice is heard with uncompromising fidelity and professional polish.",
+      "images": {
+        "cover": "/MacroFluxStudio/photo-1.png",
+        "main": "/MacroFluxStudio/photo-1.png",
+        "gallery": ["/MacroFluxStudio/photo-1.png", "/MacroFluxStudio/photo-2.png", "/MacroFluxStudio/photo-3.png", "/MacroFluxStudio/photo-4.png"]
+      },
+      "type": "headphones",
+      "features": [
+        "The Macro Flux Studio features a large 34mm gold-sputtered diaphragm that captures every nuance of your voice with remarkable accuracy. The cardioid polar pattern effectively isolates your sound source while minimizing background noise and room reflections. Built-in shock mount system eliminates vibrations and handling noise, ensuring clean recordings every time. The premium metal construction provides durability while maintaining excellent acoustic properties.",
+        "Studio-grade circuitry with low self-noise (under 10dBA) ensures pristine audio quality for professional applications. Multiple polar pattern options allow you to adapt to different recording scenarios, from solo vocals to group discussions. High SPL handling capability means you can record everything from whispered ASMR to powerful vocal performances without distortion. USB and XLR connectivity provides versatility for both home studios and professional setups."
+      ],
+      "inBox": [
+        {
+          "name": "Microphone Unit",
+          "quantity": 1
+        },
+        {
+          "name": "Shock Mount",
+          "quantity": 1
+        },
+        {
+          "name": "Pop Filter",
+          "quantity": 1
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "USB-C Cable (3m)",
+          "quantity": 1
+        },
+        {
+          "name": "XLR Cable (3m)",
+          "quantity": 1
+        },
+        {
+          "name": "Carrying Case",
           "quantity": 1
         }
       ],
-      "price": 2410,
-      "inStock": 4
+      "price": 2199,
+      "inStock": 7
+    },
+    {
+      "id": "e-02",
+      "newProduct": true,
+      "title": "AudioVerse Wireless Earbuds",
+      "shortName": "AudioVerse",
+      "generalInfo": "Experience premium wireless audio with the AudioVerse earbuds, designed for music lovers who demand exceptional sound quality and uncompromising comfort. These true wireless earbuds combine advanced acoustic engineering with sleek, modern design to deliver an immersive listening experience. Whether you're working out, commuting, or relaxing at home, AudioVerse earbuds provide crystal-clear highs, rich mids, and powerful bass that brings your favorite music to life with stunning clarity and detail.",
+      "images": {
+        "cover": "/AudioVerse/photo-1.png",
+        "main": "/AudioVerse/photo-1.png",
+        "gallery": ["/AudioVerse/photo-1.png", "/AudioVerse/photo-2.png", "/AudioVerse/photo-3.png"]
+      },
+      "type": "earphones",
+      "features": [
+        "The AudioVerse features premium 10mm dynamic drivers engineered to deliver balanced, high-fidelity sound across the entire frequency spectrum. Advanced Bluetooth 5.3 technology ensures stable connectivity with minimal latency, perfect for gaming and video streaming. Active noise cancellation intelligently blocks out ambient noise, while transparency mode lets you stay aware of your surroundings when needed. Touch controls on each earbud provide intuitive control over music, calls, and voice assistants.",
+        "Ergonomic design with multiple ear tip sizes ensures a secure, comfortable fit for extended wear. IPX7 waterproof rating means you can confidently use these earbuds during intense workouts or in light rain. Fast charging provides 8 hours of playback on a single charge, with the portable charging case extending total battery life to 32 hours. Premium matte finish and LED indicators add a touch of sophistication to these high-performance earbuds."
+      ],
+      "inBox": [
+        {
+          "name": "Earbuds (Left & Right)",
+          "quantity": 2
+        },
+        {
+          "name": "Charging Case",
+          "quantity": 1
+        },
+        {
+          "name": "Silicone Ear Tips (S/M/L)",
+          "quantity": 6
+        },
+        {
+          "name": "USB-C Charging Cable",
+          "quantity": 1
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "Quick Start Guide",
+          "quantity": 1
+        }
+      ],
+      "price": 899,
+      "inStock": 24
     }
   ],
   "categories": [

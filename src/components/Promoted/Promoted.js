@@ -1,16 +1,12 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import './Promoted.css'
 
 
 export default function Promoted() {
-  const product = useSelector((state) => state.products.promoted)
-
   return (
     <Box width='100%'>
-      { product &&
         <Grid
           className='Promoted'
           container
@@ -32,14 +28,14 @@ export default function Promoted() {
                 Experience every nuance with precision-tuned drivers, premium materials, and engineering built to deliver a truly immersive listening environment.
               </Typography>
           </Box>
-          <Link to={ `/article/${product.id}` }>
+          <Link to='#'>
             <Button variant="contained">
               SEE PRODUCT
             </Button>
           </Link>
         </Grid>
           <Grid xl={ 6 } lg={ 6 } md={ 12 } item className='Home-Header-Image-Container'></Grid>
-      </Grid> }
+      </Grid>
     </Box>
   )
 }

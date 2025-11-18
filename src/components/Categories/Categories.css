@@ -10,29 +10,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 20px 0 30px 0;
   text-align: center;
   border-radius: 5px;
   display: flex;
   gap: 10px;
   transition: all 0.3s ease-in-out;
-
+  overflow: hidden;
 }
 
 .Slide-Image-Container {
-  width: 150px;
-  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 180px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e0e0e0;
   border-radius: 50%;
+  border-radius: 10px;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
-  border: 4px solid transparent;
+  /* border: 2px solid rgb(79, 79, 79); */
+  overflow: hidden;
+
 }
 
 .Category-Slide > a {
@@ -43,24 +48,13 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* .Slide-Image-Container:hover {
-  border: 4px solid #d87d4a;
-  transition: all 0.3s ease-in-out;
-} */
-
-/* .Slide-Image-Container:hover + a {
-  font-size: 21px;
-  transition: all 0.3s ease-in-out;
-} */
-
-
 .Category-Slide img {
-  width: 100px;
-  height: auto;
+  padding: 10px;
+
+  width: 210px;
   margin-bottom: 10px;
   filter: grayscale(30%);
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -79,4 +73,31 @@
 
 .swiper-pagination-bullet-active {
   background-color: #000 !important;
+}
+.mySwiper {
+  padding-bottom: 20px;
+}
+
+.Categories-Container .swiper-pagination-progressbar {
+  top: auto !important;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-progressbar {
+  background: #ddd;
+  height: 4px;
+}
+
+/* Aktivni deo (iskorišćeni progress) */
+.Categories-Container .swiper-pagination-progressbar-fill {
+  background: #d87d4a !important;
+  background: black !important;
+
+}
+
+.Categories-Title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  color: #d87d4a;
+  color: black;
 }
