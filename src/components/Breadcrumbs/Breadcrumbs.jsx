@@ -21,7 +21,7 @@ export default function ActiveLastBreadcrumb() {
     type = products?.find(item => item.id === id)?.type;
     articlePaths = pathname.split('/').filter(path => path !== '');
   }
-  console.log(type, type)
+
   return (
     <div role="presentation" onClick={handleClick}>
       <Breadcrumbs separator="›" aria-label="breadcrumb" className='Breadcrumbs'>

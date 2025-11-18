@@ -1,289 +1,41 @@
 {
   "products": [
     {
-      "id": "h-01",
-      "promoted": true,
-      "promoInfo": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
+      "id": "s-03",
       "newProduct": true,
-      "title": "XX99 Mark II Headphones",
-      "shortName": "XX99 MK II",
-      "generalInfo": "The new XX99 Mark II headphones represent the ultimate achievement in high-fidelity audio technology, delivering an unparalleled listening experience. Designed to redefine the standard for premium headphones, they reproduce sound with exceptional clarity, capturing every nuance with studio-quality precision. The meticulously balanced depth ensures that every note, beat, and instrument is heard exactly as intended, providing an immersive and true-to-life soundstage. Whether you are an audiophile seeking perfection or a casual listener craving superior audio, the XX99 Mark II headphones elevate your listening experience to a whole new level of excellence.",
+      "title": "KRK Classic 5",
+      "shortName": "KRK Classic 5",
+      "generalInfo": "Experience studio-grade monitoring with the legendary KRK Classic 5 powered studio monitors. Trusted by audio professionals worldwide, these precision-engineered speakers deliver unmatched clarity, accuracy, and detail for critical listening. Whether you're producing music, mixing tracks, or mastering your latest project, the KRK Classic 5 ensures you hear every element of your sound with absolute transparency. With their iconic design and proven performance, these monitors have become the industry standard for professional audio production.",
       "images": {
-        "cover": "/xx99II/cover.png",
-        "main": "/xx99II/main.png",
-        "gallery": ["/y01/y01-01.jpeg", "/y01/y01-02.jpeg", "/y01/y01-03.jpeg", "/y01/y01-04.jpeg"]
-      },
-      "type": "headphones",
-      "features": [
-        "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
-        "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17-hour battery life, the XX99 Mark II headphones give you superior sound, cutting-edge technology, and a modern design aesthetic."
-      ],
-      "inBox": [
-        {
-          "name": "Headphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Replacement Earcups",
-          "quantity": 2
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm 5m Audio Cable",
-          "quantity": 1
-        },
-        {
-          "name": "Travel Bag",
-          "quantity": 1
-        }
-      ],
-      "price": 2410,
-      "inStock": 4
-    },
-        {
-      "id": "h-01",
-      "promoted": true,
-      "promoInfo": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
-      "newProduct": true,
-      "title": "XX99 Mark II Headphones",
-      "shortName": "XX99 MK II",
-      "generalInfo": "The new XX99 Mark II headphones represent the ultimate achievement in high-fidelity audio technology, delivering an unparalleled listening experience. Designed to redefine the standard for premium headphones, they reproduce sound with exceptional clarity, capturing every nuance with studio-quality precision. The meticulously balanced depth ensures that every note, beat, and instrument is heard exactly as intended, providing an immersive and true-to-life soundstage. Whether you are an audiophile seeking perfection or a casual listener craving superior audio, the XX99 Mark II headphones elevate your listening experience to a whole new level of excellence.",
-      "images": {
-        "cover": "/xx99II/cover.png",
-        "main": "/xx99II/main.png",
-        "gallery": ["/xx99II/top.png", "/xx99II/right.png", "/xx99II/bottom.png"]
-      },
-      "type": "headphones",
-      "features": [
-        "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
-        "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17-hour battery life, the XX99 Mark II headphones give you superior sound, cutting-edge technology, and a modern design aesthetic."
-      ],
-      "inBox": [
-        {
-          "name": "Headphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Replacement Earcups",
-          "quantity": 2
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm 5m Audio Cable",
-          "quantity": 1
-        },
-        {
-          "name": "Travel Bag",
-          "quantity": 1
-        }
-      ],
-      "price": 2410,
-      "inStock": 4
-    },
-        {
-      "id": "h-01",
-      "promoted": true,
-      "promoInfo": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
-      "newProduct": true,
-      "title": "XX99 Mark II Headphones",
-      "shortName": "XX99 MK II",
-      "generalInfo": "The new XX99 Mark II headphones represent the ultimate achievement in high-fidelity audio technology, delivering an unparalleled listening experience. Designed to redefine the standard for premium headphones, they reproduce sound with exceptional clarity, capturing every nuance with studio-quality precision. The meticulously balanced depth ensures that every note, beat, and instrument is heard exactly as intended, providing an immersive and true-to-life soundstage. Whether you are an audiophile seeking perfection or a casual listener craving superior audio, the XX99 Mark II headphones elevate your listening experience to a whole new level of excellence.",
-      "images": {
-        "cover": "/xx99II/cover.png",
-        "main": "/xx99II/main.png",
-        "gallery": ["/xx99II/top.png", "/xx99II/right.png", "/xx99II/bottom.png"]
-      },
-      "type": "headphones",
-      "features": [
-        "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
-        "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17-hour battery life, the XX99 Mark II headphones give you superior sound, cutting-edge technology, and a modern design aesthetic."
-      ],
-      "inBox": [
-        {
-          "name": "Headphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Replacement Earcups",
-          "quantity": 2
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm 5m Audio Cable",
-          "quantity": 1
-        },
-        {
-          "name": "Travel Bag",
-          "quantity": 1
-        }
-      ],
-      "price": 2410,
-      "inStock": 4
-    },
-    {
-      "id": "h-02",
-      "newProduct": false,
-      "title": "XX99 Mark I Headphones",
-      "shortName": "XX99 MK I",
-      "generalInfo": "As the ultimate benchmark for high-performance headphones, the classic XX99 Mark I sets the gold standard in detailed and accurate audio reproduction. Designed for audiophiles, mixing engineers, and passionate music lovers, these headphones deliver an exceptional listening experience whether in professional studio environments or on the go. With a finely tuned sound signature, they ensure every note, tone, and nuance is captured with remarkable precision, allowing users to experience music exactly as the artist intended. Combining timeless design with cutting-edge acoustic engineering, the XX99 Mark I continues to be the go-to choice for those who demand nothing but the best in sound quality.",
-      "images": {
-        "cover": "/xx99I/cover.png",
-        "main": "/xx99I/main.png",
-        "gallery": ["/xx99I/top.png", "/xx99I/right.png", "/xx99I/bottom.png"]
-      },
-      "type": "headphones",
-      "features": [
-        "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.",
-        "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector."
-      ],
-      "inBox": [
-        {
-          "name": "Headphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Replacement Earcups",
-          "quantity": 2
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm 5m Audio Cable",
-          "quantity": 1
-        }
-      ],
-      "price": 999,
-      "inStock": 2
-    },
-    {
-      "id": "h-03",
-      "newProduct": false,
-      "title": "XX59 Headphones",
-      "shortName": "XX59",
-      "generalInfo": "Experience high-quality audio wherever you go and tailor it to your personal preferences with the XX59 headphones. Combining style, durability, and versatility, this premium wireless headset offers exceptional sound performance for any setting. Whether you're relaxing at home, commuting, or traveling, the XX59 delivers a seamless listening experience with comfort and convenience. Designed to be both fashionable and robust, it is the perfect companion for those who value superior sound, flexibility, and modern aesthetics in their everyday audio gear.",
-        "images": {
-        "cover": "/xx59/cover.png",
-        "main": "/xx59/main.png",
-        "gallery": ["/xx59/right.png", "/xx59/top.png", "/xx59/bottom.png"]
-      },
-      "type": "headphones",
-      "features": [
-        "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.",
-        "More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C."
-      ],
-      "inBox": [
-        {
-          "name": "Headphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Replacement Earcups",
-          "quantity": 2
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm 5m Audio Cable",
-          "quantity": 1
-        }
-      ],
-      "price": 1399,
-      "inStock": 10
-    },
-    {
-      "id": "s-01",
-      "newProduct": false,
-      "title": "ZX9 SPEAKER",
-      "shortName": "ZX9",
-      "generalInfo": "Enhance your audio experience with the all-new ZX9 active speaker, a powerful and versatile addition to any sound system. Designed as a premium bookshelf speaker, it delivers exceptional sound quality while offering truly wireless connectivity for a seamless and clutter-free setup. Whether you're looking to elevate your home entertainment system or create a more practical and aesthetically pleasing audio arrangement, the ZX9 provides the perfect blend of performance, convenience, and modern design. Enjoy rich, immersive sound without the limitations of traditional wired connections, and redefine the way you experience music, movies, and more.",
-      "images": {
-        "cover": "/zx9/cover.png",
-        "main": "/zx9/main.png",
-        "gallery": ["/zx9/top.png", "/zx9/right.png", "/zx9/bottom.png"]
+        "cover": "/KrkClassic5/photo-1.jpg",
+        "main": "/KrkClassic5/photo-2.jpg",
+        "gallery": ["/KrkClassic5/photo-1.jpg", "/KrkClassic5/photo-2.jpg", "/KrkClassic5/photo-3.jpg"]
       },
       "type": "speakers",
       "features": [
-        "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).",
-        "Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms."
+        "The KRK Classic 5 features a 5-inch aramid glass composite woofer and 1-inch soft dome tweeter that deliver a flat frequency response from 53Hz to 20kHz. The bi-amped design provides 50 watts of Class A/B amplification, ensuring clean, powerful sound at any volume level. Professional-grade components and advanced waveguide technology create an expansive sweet spot, allowing for accurate monitoring from multiple listening positions.",
+        "Built-in room correction and multiple input options including balanced XLR, TRS, and RCA connections make the Classic 5 incredibly versatile. The rear-panel controls allow you to fine-tune high and low frequency response to match your room acoustics perfectly. Front-firing bass port ensures tight, controlled low-end response while the rugged MDF cabinet construction minimizes unwanted resonance for pristine audio reproduction."
       ],
       "inBox": [
         {
-          "name": "Speaker Unit",
-          "quantity": 2
+          "name": "Studio Monitor",
+          "quantity": 1
         },
         {
-          "name": "Speaker Cloth Panel",
-          "quantity": 2
+          "name": "Power Cable",
+          "quantity": 1
         },
         {
           "name": "User Manual",
           "quantity": 1
         },
         {
-          "name": "3.5mm 10m Audio Cable",
-          "quantity": 1
-        },
-        {
-          "name": "10m Optical Cable",
-          "quantity": 1
+          "name": "Foam Isolation Pads",
+          "quantity": 2
         }
       ],
-      "price": 1600,
-      "inStock": 14
-    },
-    {
-      "id": "s-02",
-      "newProduct": true,
-      "title": "ZX7 SPEAKER",
-      "shortName": "ZX7",
-      "generalInfo": "Enjoy seamless wireless streaming with minimal sound loss and experience audio in its purest form with the ZX7 bookshelf speaker. Engineered with high-end audiophile components, this premium speaker delivers exceptional clarity, depth, and balance, making it the perfect choice for both home entertainment and studio environments. As a top-of-the-line powered speaker, the ZX7 ensures rich, immersive sound reproduction, capturing every detail with precision. Whether you're an audio enthusiast or a professional seeking superior performance, the ZX7 redefines what’s possible in wireless high-fidelity sound.",
-      "images": {
-        "cover": "/zx7/cover.png",
-        "main": "/zx7/main.png",
-        "gallery": ["/zx7/top.png", "/zx7/right.png", "/zx7/bottom.png"]
-      },
-      "type": "speakers",
-      "features": [
-        "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.",
-        "The ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience."
-      ],
-      "inBox": [
-        {
-          "name": "Speaker Unit",
-          "quantity": 2
-        },
-        {
-          "name": "Speaker Cloth Panel",
-          "quantity": 2
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm 7.5m Audio Cable",
-          "quantity": 1
-        },
-        {
-          "name": "7.5m Optical Cable",
-          "quantity": 1
-        }
-      ],
-      "price": 1990,
-      "inStock": 1
+      "price": 2299,
+      "inStock": 6
     },
     {
       "id": "e-01",
@@ -325,6 +77,135 @@
       ],
       "price": 790,
       "inStock": 33
+    },
+    {
+      "id": "h-04",
+      "newProduct": true,
+      "title": "Premium Studio Headphones",
+      "shortName": "PS-100",
+      "generalInfo": "Discover professional-grade audio performance with the Premium Studio Headphones. Engineered for music producers, sound engineers, and audiophiles who demand absolute precision, these headphones deliver crystal-clear sound reproduction across the entire frequency spectrum. With advanced acoustic technology and premium materials, every listening session becomes an immersive journey into pure, uncompromised audio excellence.",
+      "images": {
+        "cover": "/PremiumStudioHeadphones/photo-1.jpg",
+        "main": "/PremiumStudioHeadphones/photo-2.jpg",
+        "gallery": ["/PremiumStudioHeadphones/photo-1.jpg", "/PremiumStudioHeadphones/photo-2.jpg", "/PremiumStudioHeadphones/photo-3.jpg", "/PremiumStudioHeadphones/photo-4.jpg"]
+      },
+      "type": "headphones",
+      "features": [
+        "Crafted with studio-quality 50mm neodymium drivers that deliver exceptional detail and accuracy. The closed-back design provides superior isolation, making these headphones perfect for professional recording sessions and critical listening. Premium memory foam ear cushions ensure all-day comfort, while the adjustable headband accommodates any head size with ease.",
+        "Advanced cable system with detachable design allows for easy replacement and customization. The gold-plated connectors ensure lossless signal transmission, while the reinforced cable construction guarantees long-lasting durability. Whether you're mixing tracks in the studio or enjoying your favorite albums at home, these headphones provide the clarity and depth you deserve."
+      ],
+      "inBox": [
+        {
+          "name": "Headphone Unit",
+          "quantity": 1
+        },
+        {
+          "name": "Replacement Earcups",
+          "quantity": 2
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "3.5mm 3m Audio Cable",
+          "quantity": 1
+        },
+        {
+          "name": "6.35mm Adapter",
+          "quantity": 1
+        },
+        {
+          "name": "Carrying Case",
+          "quantity": 1
+        }
+      ],
+      "price": 1799,
+      "inStock": 8
+    },
+    {
+      "id": "h-05",
+      "newProduct": true,
+      "title": "Nomad Acoustic Headphones",
+      "shortName": "Nomad Acoustic",
+      "generalInfo": "Unleash powerful, immersive sound with the Nomad Acoustic Headphones. Designed for those who appreciate both portability and premium audio quality, these versatile headphones combine rugged durability with sophisticated acoustic engineering. Whether you're at home, outdoors, or traveling, the Nomad Acoustic delivers rich, balanced sound that brings your music to life. With its sleek design and exceptional performance, it's the perfect companion for any audio enthusiast who refuses to compromise on sound quality.",
+      "images": {
+        "cover": "/NomadAcoustic/photo-1.jpg",
+        "main": "/NomadAcoustic/photo-2.jpg",
+        "gallery": ["/NomadAcoustic/photo-1.jpg", "/NomadAcoustic/photo-2.jpg", "/NomadAcoustic/photo-3.jpg"]
+      },
+      "type": "headphones",
+      "features": [
+        "Engineered with precision-tuned acoustic drivers and advanced digital signal processing, the Nomad Acoustic delivers exceptional clarity across the full frequency range. The robust build quality features premium materials designed to withstand the elements while maintaining pristine sound quality. Intuitive touch controls and LED indicators make operation seamless, while the ergonomic design ensures easy portability without sacrificing audio performance.",
+        "Extended battery life provides up to 20 hours of continuous playback, ensuring your music never stops. Multiple connectivity options including Bluetooth 5.2, aux input, and USB-C charging give you maximum flexibility. The built-in power bank feature lets you charge your devices on the go. Water-resistant construction with IPX6 rating means you can enjoy your music by the pool, at the beach, or in any outdoor setting without worry."
+      ],
+      "inBox": [
+        {
+          "name": "Speaker Unit",
+          "quantity": 1
+        },
+        {
+          "name": "USB-C Charging Cable",
+          "quantity": 1
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "3.5mm Aux Cable",
+          "quantity": 1
+        },
+        {
+          "name": "Carrying Strap",
+          "quantity": 1
+        }
+      ],
+      "price": 1299,
+      "inStock": 15
+    },
+    {
+      "id": "h-01",
+      "promoInfo": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
+      "promoted": true,
+      "newProduct": true,
+      "title": "XX99 Mark II Headphones",
+      "shortName": "XX99 MK II",
+      "generalInfo": "The new XX99 Mark II headphones represent the ultimate achievement in high-fidelity audio technology, delivering an unparalleled listening experience. Designed to redefine the standard for premium headphones, they reproduce sound with exceptional clarity, capturing every nuance with studio-quality precision. The meticulously balanced depth ensures that every note, beat, and instrument is heard exactly as intended, providing an immersive and true-to-life soundstage. Whether you are an audiophile seeking perfection or a casual listener craving superior audio, the XX99 Mark II headphones elevate your listening experience to a whole new level of excellence.",
+      "images": {
+        "cover": "/xx99II/cover.png",
+        "main": "/xx99II/main.png",
+        "gallery": ["/xx99II/top.png", "/xx99II/right.png", "/xx99II/bottom.png"]
+      },
+      "type": "headphones",
+      "features": [
+        "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
+        "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17-hour battery life, the XX99 Mark II headphones give you superior sound, cutting-edge technology, and a modern design aesthetic."
+      ],
+      "inBox": [
+        {
+          "name": "Headphone Unit",
+          "quantity": 1
+        },
+        {
+          "name": "Replacement Earcups",
+          "quantity": 2
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "3.5mm 5m Audio Cable",
+          "quantity": 1
+        },
+        {
+          "name": "Travel Bag",
+          "quantity": 1
+        }
+      ],
+      "price": 2410,
+      "inStock": 4
     }
   ],
   "categories": [
@@ -332,25 +213,29 @@
       "id": "headphones",
       "name": "Headphones",
       "path": "/headphones",
-      "src": "headphones.png"
+      "src": "headphones.png",
+      "banner": "/headphones.png"
     },
     {
       "id": "speakers",
       "name": "Speakers",
       "path": "/speakers",
-      "src": "speakers.png"
+      "src": "speakers.png",
+      "banner": "/speakers.png"
     },
     {
       "id": "earphones",
       "name": "Earphones",
       "path": "/earphones",
-      "src": "earphones.png"
+      "src": "earphones.png",
+      "banner": "/earphones.png"
     },
     {
       "id": "microphones",
       "name": "Microphones",
       "path": "/microphones",
-      "src": "earphones.png"
+      "src": "earphones.png",
+      "banner": "/earphones.png"
     }
   ],
   "newArticles": [
