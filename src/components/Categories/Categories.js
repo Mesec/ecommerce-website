@@ -44,11 +44,11 @@ export default function Categories() {
           const image = require(`../../assets/images/products${item.images.main}`);
           return (
             <SwiperSlide key={ item.id } className='Category-Swiper-Slide'>
-              <Box className="Category-Image-Container" style={ { backgroundImage: `url(${image})` } }>
+              <Link to={ `/article/${item.id}` } className="Category-Image-Container" style={ { backgroundImage: `url(${image})` } }>
                 <Box className='Category-Link-Container'>
-                  <Link to={ `/article/${item.id}` } className="Category-Slide-Link">{ item.title }</Link>
+                  <Typography variant='p'  className="Category-Slide-Link">{ item.title }</Typography>
                 </Box>
-              </Box>
+              </Link>
             </SwiperSlide>
           )
         })}

@@ -25,6 +25,7 @@
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .Category-Link-Container {
@@ -54,7 +55,6 @@
 
 .Category-Slide-Link{
   font-weight: bold;
-  text-decoration: none;
   color: white;
   padding: 0 10px;
   height: 100%;
