@@ -22,13 +22,16 @@ export default function Categories() {
         spaceBetween={ 10 }
         slidesPerView={ 3 }
         breakpoints={ {
-          1500: {
+          1600: {
             slidesPerView: 5,
           },
           1200: {
+            slidesPerView: 4,
+          },
+          900: {
             slidesPerView: 3,
           },
-          600: {
+          650: {
             slidesPerView: 2,
           },
           0: {
@@ -41,11 +44,10 @@ export default function Categories() {
           const image = require(`../../assets/images/products${item.images.main}`);
           return (
             <SwiperSlide key={ item.id } className='Category-Swiper-Slide'>
-              <Box className="Category-Slide">
-                <Link to={ `/article/${item.id}` } className="Slide-Image-Container">
-                  <img src={ image } alt={ item.title } />
-                </Link>
-                <Typography variant='p'>{ item.title }</Typography>
+              <Box className="Category-Image-Container" style={ { backgroundImage: `url(${image})` } }>
+                <Box className='Category-Link-Container'>
+                  <Link to={ `/article/${item.id}` } className="Category-Slide-Link">{ item.title }</Link>
+                </Box>
               </Box>
             </SwiperSlide>
           )

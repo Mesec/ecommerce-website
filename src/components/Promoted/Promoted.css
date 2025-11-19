@@ -5,6 +5,7 @@
   width: 100%;
   justify-content: center;
   min-height: calc(100vh - 50px);
+  height: 100%;
   padding-bottom: 20px;
 }
 
@@ -100,7 +101,8 @@
 
 @media screen and (min-width: 900px) {
   .Promoted {
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    height: 100%;
   }
   .Promoted-Info-Text {
     margin: 0 auto;
@@ -223,7 +225,7 @@
   .Promoted-Info-Text {
     text-align: left;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     padding: 0;
   }
   .Promoted-Info-Text h4 {

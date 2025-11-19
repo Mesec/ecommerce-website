@@ -5,55 +5,64 @@
   border-radius: 5px;
 }
 
-.Category-Slide {
+.Categories-Container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 20px;
+}
+
+.Category-Image-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  padding: 20px 0 30px 0;
   text-align: center;
   border-radius: 5px;
-  display: flex;
-  gap: 10px;
-  transition: all 0.3s ease-in-out;
+  height: 330px;
+  width: 330px;
+  background-size: cover;
+  border: 1px solid rgb(133, 128, 128);
+  border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.Slide-Image-Container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 180px;
-  height: 180px;
+.Category-Link-Container {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  border-radius: 10px;
-  padding: 10px;
+  opacity: 0;
+  transition: height 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), visibility 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.Category-Image-Container:hover .Category-Link-Container {
+  height: 100%;
+  opacity: 0.8;
+  background-color: black;
+  visibility: visible;
+  border: 2px solid #d87d4a;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
-  /* border: 2px solid rgb(79, 79, 79); */
-  overflow: hidden;
-
 }
 
-.Category-Slide > a {
+
+.Category-Slide-Link{
+  font-weight: bold;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  color: black;
-  transition: all 0.3s ease-in-out;
+  color: white;
 }
 
-.Category-Slide img {
-  padding: 10px;
-
-  width: 210px;
-  margin-bottom: 10px;
-  filter: grayscale(30%);
+.Category-Swiper-Slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 .swiper-button-next,
@@ -88,7 +97,6 @@
   height: 4px;
 }
 
-/* Aktivni deo (iskorišćeni progress) */
 .Categories-Container .swiper-pagination-progressbar-fill {
   background: #d87d4a !important;
   background: black !important;
@@ -100,4 +108,45 @@
   font-weight: bold;
   color: #d87d4a;
   color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .Categories-Swiper {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 80px;
+    border-radius: 5px;
+  }
+  .Category-Image-Container {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .Category-Image-Container {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Category-Image-Container {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .Category-Image-Container {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .Category-Image-Container {
+    width: 220px;
+    height: 220px;
+  }
 }
