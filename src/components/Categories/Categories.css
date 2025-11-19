@@ -42,7 +42,7 @@
 
 .Category-Image-Container:hover .Category-Link-Container {
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.7;
   background-color: black;
   visibility: visible;
   border: 2px solid #d87d4a;
@@ -56,6 +56,7 @@
   font-weight: bold;
   text-decoration: none;
   color: white;
+  padding: 0 10px;
 }
 
 .Category-Swiper-Slide {
