@@ -70,6 +70,7 @@
 
 .Promoted-Info button {
   background-color: transparent;
+  /* border: 1px solid #D87D4A; */
   border: 1px solid #D87D4A;
   color: #D87D4A;
   padding: 10px 20px;

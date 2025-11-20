@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
     return (
       <Link to='/'>
         <IconButton style={{ padding: '0'}}>
-          <img style={ { width: '143px', height: '25px' } } src={ Logo } alt='Audiophile' />
+          <img className='Logo-Image' src={ Logo } alt='Audiophile' />
         </IconButton>
       </Link>
     )
