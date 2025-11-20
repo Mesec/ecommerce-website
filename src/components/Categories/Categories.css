@@ -105,14 +105,10 @@
 .Categories-Container .swiper-pagination-progressbar-fill {
   background: #d87d4a !important;
   background: black !important;
-
 }
 
-.Categories-Title {
-  font-family: 'Manrope', sans-serif;
-  font-weight: bold;
-  color: #d87d4a;
-  color: black;
+.Categories-Tabs button{
+  font-size: 16px;
 }
 
 @media screen and (min-width: 600px) {

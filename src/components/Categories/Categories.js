@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Tab, Tabs, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -12,7 +12,23 @@ import data from '../../db/products.json';
 export default function Categories() {
   return (
     <div className='Categories-Container'>
-      <Typography className='Categories-Title' variant='h6'>Popular products:</Typography>
+      <Tabs
+       className='Categories-Tabs'
+        value='one'
+        // onChange={ handleChange }
+        aria-label="wrapped label tabs example"
+      >
+          <Tab
+            value="one"
+            label="Popular products"
+            wrapped
+          />
+          <Tab
+            value="two"
+            label="Recently viewed"
+            wrapped
+          />
+      </Tabs>
       <Swiper
         // loop={ true}
         pagination={ {
