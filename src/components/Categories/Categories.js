@@ -12,23 +12,6 @@ import data from '../../db/products.json';
 export default function Categories() {
   return (
     <div className='Categories-Container'>
-      <Tabs
-       className='Categories-Tabs'
-        value='one'
-        // onChange={ handleChange }
-        aria-label="wrapped label tabs example"
-      >
-          <Tab
-            value="one"
-            label="Popular products"
-            wrapped
-          />
-          <Tab
-            value="two"
-            label="Recently viewed"
-            wrapped
-          />
-      </Tabs>
       <Swiper
         // loop={ true}
         pagination={ {

@@ -142,10 +142,6 @@
   background: black !important;
 }
 
-.Categories-Tabs button{
-  font-size: 14px;
-}
-
 @media screen and (min-width: 600px) {
   .Categories-Swiper {
     width: 100%;
