@@ -76,6 +76,9 @@
   font-weight: bold;
 }
 
+.Logo-Image {
+  height: 18px;
+}
 @media screen and (min-width: 900px) {
   .NavBar-Wrapper {
     padding: 0 80px;
@@ -85,6 +88,10 @@
 @media screen and (min-width: 1200px) {
   .NavBar-Wrapper {
     padding: 0 100px;
+  }
+  .Logo-Image {
+    width: 143px;
+    height: 23px;
   }
 }
 

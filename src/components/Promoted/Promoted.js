@@ -30,7 +30,7 @@ export default function Promoted() {
           </Box>
           <Link to='#'>
             <Button variant="contained">
-              SEE PRODUCT
+              BROWSE PRODUCTS
             </Button>
           </Link>
         </Grid>

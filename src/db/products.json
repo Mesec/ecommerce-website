@@ -1,20 +1,98 @@
 {
   "products": [
     {
-      "id": "s-03",
+      "id": "s-04",
       "newProduct": true,
-      "title": "KRK Classic 5",
-      "shortName": "KRK Classic 5",
-      "generalInfo": "Experience studio-grade monitoring with the legendary KRK Classic 5 powered studio monitors. Trusted by audio professionals worldwide, these precision-engineered speakers deliver unmatched clarity, accuracy, and detail for critical listening. Whether you're producing music, mixing tracks, or mastering your latest project, the KRK Classic 5 ensures you hear every element of your sound with absolute transparency. With their iconic design and proven performance, these monitors have become the industry standard for professional audio production.",
+      "title": "Polk Audio T15 Bookshelf Speakers",
+      "shortName": "Polk Audio T15",
+      "generalInfo": "Transform your home entertainment with the Polk Audio T15 bookshelf speakers, delivering exceptional sound quality at an incredible value. These compact yet powerful speakers combine decades of Polk's audio engineering expertise with modern acoustic technology to create an immersive listening experience. Perfect for music lovers, home theater enthusiasts, and anyone seeking high-quality sound without breaking the bank. Whether used as main speakers in a smaller room or as surrounds in a larger home theater system, the T15 delivers clear dialogue, detailed highs, and surprisingly deep bass that defies their compact size.",
       "images": {
-        "cover": "/KrkClassic5/photo-1.jpg",
-        "main": "/KrkClassic5/photo-2.jpg",
-        "gallery": ["/KrkClassic5/photo-1.jpg", "/KrkClassic5/photo-2.jpg", "/KrkClassic5/photo-3.jpg"]
+        "cover": "/PolkAudioT15 /photo-1.webp",
+        "main": "/PolkAudioT15 /photo-1.webp",
+        "gallery": ["/PolkAudioT15 /photo-1.webp", "/PolkAudioT15 /photo-2.webp", "/PolkAudioT15 /photo-3.webp"]
       },
       "type": "speakers",
       "features": [
-        "The KRK Classic 5 features a 5-inch aramid glass composite woofer and 1-inch soft dome tweeter that deliver a flat frequency response from 53Hz to 20kHz. The bi-amped design provides 50 watts of Class A/B amplification, ensuring clean, powerful sound at any volume level. Professional-grade components and advanced waveguide technology create an expansive sweet spot, allowing for accurate monitoring from multiple listening positions.",
-        "Built-in room correction and multiple input options including balanced XLR, TRS, and RCA connections make the Classic 5 incredibly versatile. The rear-panel controls allow you to fine-tune high and low frequency response to match your room acoustics perfectly. Front-firing bass port ensures tight, controlled low-end response while the rugged MDF cabinet construction minimizes unwanted resonance for pristine audio reproduction."
+        "The Polk Audio T15 features a 5.25-inch composite Dynamic Balance driver that delivers smooth, detailed midrange and deep bass response down to 65Hz. The 0.75-inch silk dome tweeter provides crystal-clear highs with excellent dispersion for a wide sweet spot. Dynamic Balance technology, developed through advanced laser imaging, ensures distortion-free sound reproduction at any volume level. Wall-mountable design with keyhole slots offers flexible placement options to optimize your listening space.",
+        "Timbre-matched with other Polk T-series speakers for seamless integration in multi-channel home theater setups. High-efficiency design works beautifully with a wide range of amplifiers and receivers, requiring minimal power to fill your room with rich sound. Removable grille allows you to customize the look to match your decor. Durable MDF cabinet construction with sleek black finish provides both acoustic performance and elegant aesthetics. 5-way binding posts accept bare wire, pin connectors, or banana plugs for easy, secure connections."
+      ],
+      "inBox": [
+        {
+          "name": "Bookshelf Speaker",
+          "quantity": 1
+        },
+        {
+          "name": "Removable Grille",
+          "quantity": 1
+        },
+        {
+          "name": "Rubber Feet",
+          "quantity": 4
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        }
+      ],
+      "price": 599,
+      "inStock": 20
+    },
+    {
+      "id": "s-05",
+      "newProduct": true,
+      "title": "KRK Rokit RP10-3 G4 Studio Monitor",
+      "shortName": "KRK Rokit RP10-3 G4",
+      "generalInfo": "Elevate your music production to professional levels with the KRK Rokit RP10-3 G4, the flagship studio monitor from KRK's legendary Rokit series. Designed for serious producers, engineers, and audiophiles who demand uncompromising accuracy and powerful performance, this three-way studio monitor delivers exceptional clarity across the entire frequency spectrum. With its massive 10-inch woofer, dedicated midrange driver, and precision tweeter, the RP10-3 G4 provides the detail and headroom needed for professional mixing, mastering, and critical listening in larger studio environments.",
+      "images": {
+        "cover": "/KRKRokitRP10-3G4/photo-1.webp",
+        "main": "/KRKRokitRP10-3G4/photo-1.webp",
+        "gallery": ["/KRKRokitRP10-3G4/photo-1.webp", "/KRKRokitRP10-3G4/photo-2.webp", "/KRKRokitRP10-3G4/photo-3.webp"]
+      },
+      "type": "speakers",
+      "features": [
+        "The KRK Rokit RP10-3 G4 features a powerful 10-inch aramid glass composite woofer, 4-inch midrange driver, and 1-inch KRK-designed tweeter with advanced waveguide for exceptional sonic accuracy. The three-way design delivers extended frequency response from 27Hz to 40kHz with minimal distortion. Proprietary bi-amped Class D amplification provides 300 watts of total power (145W LF, 100W MF, 55W HF) ensuring clean, dynamic sound at any volume. Built-in DSP-driven room tuning with 25 visual graphic EQ settings allows precise calibration to your acoustic environment using the LCD screen.",
+        "ISO foam pads included for acoustic isolation and optimal speaker placement. Kevlar-reinforced woofer cone ensures tight, punchy bass response with minimal coloration. Front-firing bass port engineered for enhanced low-frequency extension and flexibility in room placement. Professional XLR, TRS, and RCA inputs accommodate any studio setup. Engineered and assembled in the USA with premium components for reliability and longevity. The iconic yellow Kevlar cone and modern cabinet design make an unmistakable statement in any studio environment."
+      ],
+      "inBox": [
+        {
+          "name": "Studio Monitor",
+          "quantity": 1
+        },
+        {
+          "name": "Power Cable",
+          "quantity": 1
+        },
+        {
+          "name": "ISO Foam Pads",
+          "quantity": 4
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "Quick Start Guide",
+          "quantity": 1
+        }
+      ],
+      "price": 5499,
+      "inStock": 8
+    },
+    {
+      "id": "s-06",
+      "newProduct": true,
+      "title": "Focal Alpha 65 Evo Professional Studio Monitor",
+      "shortName": "Focal Alpha 65 Evo",
+      "generalInfo": "Experience reference-grade monitoring with the Focal Alpha 65 Evo, the evolution of Focal's acclaimed Alpha series studio monitors. Designed and manufactured in France, these professional monitors combine Focal's legendary acoustic expertise with modern technology to deliver exceptionally accurate sound reproduction. Perfect for music production, mixing, mastering, and broadcast applications, the Alpha 65 Evo provides the clarity and precision needed to make critical decisions in your creative process. With enhanced features and improved performance over its predecessor, this monitor sets a new standard in its class.",
+      "images": {
+        "cover": "/FOCALALPHA65Evo/photo-1.webp",
+        "main": "/FOCALALPHA65Evo/photo-1.webp",
+        "gallery": ["/FOCALALPHA65Evo/photo-1.webp", "/FOCALALPHA65Evo/photo-2.webp", "/FOCALALPHA65Evo/photo-3.webp", "/FOCALALPHA65Evo/photo-4.webp"]
+      },
+      "type": "speakers",
+      "features": [
+        "The Focal Alpha 65 Evo features a 6.5-inch Slatefiber woofer cone, an exclusive Focal technology made in France from recycled carbon fiber, providing remarkable neutrality and dynamics. The 1-inch aluminum inverted dome tweeter with M-shaped design delivers crystal-clear highs up to 22kHz. Two-way design with optimized laminar port ensures precise, controlled bass response down to 40Hz. Bi-amplified design with 70W RMS power (35W tweeter + 35W woofer) delivers clean, powerful sound with exceptional headroom.",
+        "Innovative automatic standby mode reduces power consumption when not in use. Multiple input options including XLR, TRS, and RCA connections provide universal compatibility. High and low frequency shelving controls allow fine-tuning to match your room acoustics. Dual front-firing bass ports enable flexible placement near walls without compromising bass response. Elegant curved cabinet design with laminar ports minimizes acoustic diffraction for improved stereo imaging. ISO-compliant mounting points on rear panel for flexible installation options. Designed and manufactured in France with meticulous attention to detail and quality."
       ],
       "inBox": [
         {
@@ -30,77 +108,85 @@
           "quantity": 1
         },
         {
-          "name": "Foam Isolation Pads",
-          "quantity": 2
+          "name": "Quick Start Guide",
+          "quantity": 1
         }
       ],
-      "price": 2299,
-      "inStock": 6
+      "price": 3299,
+      "inStock": 12
     },
     {
-      "id": "h-04",
+      "id": "e-03",
       "newProduct": true,
-      "title": "Premium Studio Headphones",
-      "shortName": "PS-100",
-      "generalInfo": "Discover professional-grade audio performance with the Premium Studio Headphones. Engineered for music producers, sound engineers, and audiophiles who demand absolute precision, these headphones deliver crystal-clear sound reproduction across the entire frequency spectrum. With advanced acoustic technology and premium materials, every listening session becomes an immersive journey into pure, uncompromised audio excellence.",
+      "title": "EDIFIER X3S TWS Wireless Earbuds",
+      "shortName": "EDIFIER X3S",
+      "generalInfo": "Experience studio-quality sound on the go with the EDIFIER X3S TWS wireless earbuds. Engineered with precision and packed with advanced features, these true wireless earbuds deliver exceptional audio performance with powerful bass, crystal-clear mids, and sparkling highs. Perfect for music enthusiasts, fitness lovers, and busy professionals, the X3S TWS combines cutting-edge technology with an ergonomic design that ensures all-day comfort. With advanced noise cancellation and superior call quality, immerse yourself in your music while staying connected to what matters most.",
       "images": {
-        "cover": "/PremiumStudioHeadphones/photo-1.jpg",
-        "main": "/PremiumStudioHeadphones/photo-2.jpg",
-        "gallery": ["/PremiumStudioHeadphones/photo-1.jpg", "/PremiumStudioHeadphones/photo-2.jpg", "/PremiumStudioHeadphones/photo-3.jpg", "/PremiumStudioHeadphones/photo-4.jpg"]
+        "cover": "/EDIFIER-X3S-TWS/photo-1.webp",
+        "main": "/EDIFIER-X3S-TWS/photo-2.webp",
+        "gallery": ["/EDIFIER-X3S-TWS/photo-1.webp", "/EDIFIER-X3S-TWS/photo-2.webp", "/EDIFIER-X3S-TWS/photo-3.webp", "/EDIFIER-X3S-TWS/photo-4.webp", "/EDIFIER-X3S-TWS/photo-5.webp"]
       },
-      "type": "headphones",
+      "type": "earphones",
       "features": [
-        "Crafted with studio-quality 50mm neodymium drivers that deliver exceptional detail and accuracy. The closed-back design provides superior isolation, making these headphones perfect for professional recording sessions and critical listening. Premium memory foam ear cushions ensure all-day comfort, while the adjustable headband accommodates any head size with ease.",
-        "Advanced cable system with detachable design allows for easy replacement and customization. The gold-plated connectors ensure lossless signal transmission, while the reinforced cable construction guarantees long-lasting durability. Whether you're mixing tracks in the studio or enjoying your favorite albums at home, these headphones provide the clarity and depth you deserve."
+        "The EDIFIER X3S TWS features advanced 13mm dynamic drivers with composite titanium diaphragm for powerful, distortion-free sound. Hybrid Active Noise Cancellation (ANC) technology reduces ambient noise by up to 38dB, creating your personal sound sanctuary anywhere you go. Six built-in microphones with AI algorithm ensure exceptional call clarity, filtering out wind and background noise for professional-quality voice calls. Bluetooth 5.3 technology provides ultra-stable connectivity with low latency mode perfect for gaming and video streaming.",
+        "Ultra-lightweight design at just 4.2g per earbud ensures comfortable fit for extended listening sessions. IPX5 water resistance protects against sweat and light rain, making these ideal for workouts and outdoor activities. Impressive battery life delivers 8 hours of continuous playback per charge, with the compact charging case extending total playtime to 28 hours. Touch controls provide intuitive operation for music, calls, and voice assistant activation. Game Mode reduces latency to 80ms for lag-free mobile gaming experience."
       ],
       "inBox": [
         {
-          "name": "Headphone Unit",
+          "name": "Earbuds (Left & Right)",
+          "quantity": 2
+        },
+        {
+          "name": "Charging Case",
           "quantity": 1
         },
         {
-          "name": "Replacement Earcups",
-          "quantity": 2
+          "name": "Silicone Ear Tips (XS/S/M/L)",
+          "quantity": 8
+        },
+        {
+          "name": "USB-C Charging Cable",
+          "quantity": 1
         },
         {
           "name": "User Manual",
           "quantity": 1
         },
         {
-          "name": "3.5mm 3m Audio Cable",
+          "name": "Quick Start Guide",
           "quantity": 1
         },
         {
-          "name": "6.35mm Adapter",
-          "quantity": 1
-        },
-        {
-          "name": "Carrying Case",
+          "name": "Warranty Card",
           "quantity": 1
         }
       ],
-      "price": 1799,
-      "inStock": 8
+      "price": 749,
+      "inStock": 32
     },
     {
-      "id": "h-05",
+      "id": "e-04",
       "newProduct": true,
-      "title": "Nomad Acoustic Headphones",
-      "shortName": "Nomad Acoustic",
-      "generalInfo": "Unleash powerful, immersive sound with the Nomad Acoustic Headphones. Designed for those who appreciate both portability and premium audio quality, these versatile headphones combine rugged durability with sophisticated acoustic engineering. Whether you're at home, outdoors, or traveling, the Nomad Acoustic delivers rich, balanced sound that brings your music to life. With its sleek design and exceptional performance, it's the perfect companion for any audio enthusiast who refuses to compromise on sound quality.",
+      "title": "JBL Soundgear Sense Open-Ear Wireless Earbuds",
+      "shortName": "JBL Soundgear Sense",
+      "generalInfo": "Revolutionize your audio experience with the JBL Soundgear Sense, featuring innovative open-ear technology that lets you stay connected to your surroundings while enjoying premium JBL sound. Perfect for active lifestyles, these wireless earbuds deliver immersive audio without blocking your ears, making them ideal for running, cycling, and everyday activities where situational awareness is crucial. With JBL's legendary sound quality, exceptional comfort, and advanced features, the Soundgear Sense redefines what wireless earbuds can do.",
       "images": {
-        "cover": "/NomadAcoustic/photo-1.jpg",
-        "main": "/NomadAcoustic/photo-2.jpg",
-        "gallery": ["/NomadAcoustic/photo-1.jpg", "/NomadAcoustic/photo-2.jpg", "/NomadAcoustic/photo-3.jpg"]
+        "cover": "/JBLSoundgearSense/photo-1.webp",
+        "main": "/JBLSoundgearSense/photo-1.webp",
+        "gallery": ["/JBLSoundgearSense/photo-1.webp", "/JBLSoundgearSense/photo-2.webp", "/JBLSoundgearSense/photo-3.webp", "/JBLSoundgearSense/photo-4.webp"]
       },
-      "type": "headphones",
+      "type": "earphones",
       "features": [
-        "Engineered with precision-tuned acoustic drivers and advanced digital signal processing, the Nomad Acoustic delivers exceptional clarity across the full frequency range. The robust build quality features premium materials designed to withstand the elements while maintaining pristine sound quality. Intuitive touch controls and LED indicators make operation seamless, while the ergonomic design ensures easy portability without sacrificing audio performance.",
-        "Extended battery life provides up to 20 hours of continuous playback, ensuring your music never stops. Multiple connectivity options including Bluetooth 5.2, aux input, and USB-C charging give you maximum flexibility. The built-in power bank feature lets you charge your devices on the go. Water-resistant construction with IPX6 rating means you can enjoy your music by the pool, at the beach, or in any outdoor setting without worry."
+        "The JBL Soundgear Sense features revolutionary open-ear design with 16.2mm dynamic drivers that deliver rich, powerful JBL Signature Sound without sealing your ear canal. This innovative approach allows you to hear ambient sounds naturally while enjoying your music, perfect for outdoor activities and staying aware of your surroundings. Four-microphone system with VoiceAware technology ensures crystal-clear calls even in noisy environments. Adaptive EQ automatically adjusts sound based on your environment and listening preferences.",
+        "Ultra-comfortable open-ear design eliminates ear fatigue during extended wear, with flexible ear hooks that provide secure fit during any activity. IP54 water and dust resistance protects against sweat, rain, and outdoor elements. Impressive 24-hour total battery life with 6 hours per charge plus 18 hours from the charging case keeps your music going all day. Dual Connect allows independent use of either earbud. Fast Pair technology enables instant connection with Android devices, while Bluetooth 5.3 ensures stable connectivity with all your devices."
       ],
       "inBox": [
         {
-          "name": "Speaker Unit",
+          "name": "Earbuds (Left & Right)",
+          "quantity": 2
+        },
+        {
+          "name": "Charging Case",
           "quantity": 1
         },
         {
@@ -112,126 +198,36 @@
           "quantity": 1
         },
         {
-          "name": "3.5mm Aux Cable",
+          "name": "Quick Start Guide",
           "quantity": 1
         },
         {
-          "name": "Carrying Strap",
+          "name": "Safety Sheet",
+          "quantity": 1
+        },
+        {
+          "name": "Warranty Card",
           "quantity": 1
         }
       ],
-      "price": 1299,
-      "inStock": 15
+      "price": 1099,
+      "inStock": 28
     },
     {
-      "id": "h-06",
+      "id": "e-05",
       "newProduct": true,
-      "title": "HyperX Cloud 3 Gaming Headphones",
-      "shortName": "HyperX Cloud 3",
-      "generalInfo": "Elevate your gaming experience with the HyperX Cloud 3, the ultimate gaming headset designed for competitive gamers and streaming professionals. Featuring advanced acoustic technology and premium comfort, these headphones deliver crystal-clear audio with powerful bass and precise positional accuracy. Whether you're competing in esports tournaments or streaming to thousands of viewers, the Cloud 3 ensures you hear every footstep, gunshot, and voice command with exceptional clarity and detail.",
+      "title": "Marshall Minor IV True Wireless Earbuds",
+      "shortName": "Marshall Minor IV",
+      "generalInfo": "Experience legendary Marshall sound in a truly wireless package with the Minor IV earbuds. Combining iconic Marshall design with cutting-edge wireless technology, these earbuds deliver powerful, balanced audio with the signature rock 'n' roll character Marshall is famous for. Perfectly engineered for music lovers who demand authentic sound reproduction, exceptional comfort, and unmistakable style. Whether you're commuting, working out, or simply enjoying your favorite tracks, the Minor IV brings Marshall's legendary audio heritage to your daily soundtrack.",
       "images": {
-        "cover": "/HyperXCloud3/photo-1.png",
-        "main": "/HyperXCloud3/photo-1.png",
-        "gallery": ["/HyperXCloud3/photo-1.png", "/HyperXCloud3/photo-2.png", "/HyperXCloud3/photo-3.png"]
-      },
-      "type": "headphones",
-      "features": [
-        "The HyperX Cloud 3 features custom-tuned 53mm drivers that deliver immersive gaming audio with enhanced bass response and crystal-clear highs. The lightweight aluminum frame combined with memory foam ear cushions wrapped in premium leatherette ensures maximum comfort during extended gaming sessions. Advanced noise isolation technology blocks out distractions, allowing you to focus entirely on your game.",
-        "Equipped with a detachable noise-cancelling microphone certified by TeamSpeak and Discord, your voice commands and team communications come through with exceptional clarity. DTS Headphone:X spatial audio creates a precise 3D soundscape, giving you a competitive edge by accurately positioning in-game sounds. Multi-platform compatibility means you can use these headphones with PC, PlayStation, Xbox, Nintendo Switch, and mobile devices."
-      ],
-      "inBox": [
-        {
-          "name": "Headphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Detachable Microphone",
-          "quantity": 1
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "3.5mm Audio Cable",
-          "quantity": 1
-        },
-        {
-          "name": "USB-C to USB-A Cable",
-          "quantity": 1
-        },
-        {
-          "name": "Microphone Windscreen",
-          "quantity": 2
-        }
-      ],
-      "price": 1499,
-      "inStock": 12
-    },
-    {
-      "id": "m-01",
-      "newProduct": true,
-      "title": "Macro Flux Studio Microphone",
-      "shortName": "Macro Flux Studio",
-      "generalInfo": "Capture studio-quality audio with the Macro Flux Studio, a professional-grade condenser microphone designed for podcasters, streamers, musicians, and content creators. Engineered with precision acoustics and premium components, this microphone delivers broadcast-quality sound with exceptional clarity, warmth, and detail. Whether you're recording vocals, instruments, or hosting a podcast, the Macro Flux Studio ensures your voice is heard with uncompromising fidelity and professional polish.",
-      "images": {
-        "cover": "/MacroFluxStudio/photo-1.png",
-        "main": "/MacroFluxStudio/photo-1.png",
-        "gallery": ["/MacroFluxStudio/photo-1.png", "/MacroFluxStudio/photo-2.png", "/MacroFluxStudio/photo-3.png", "/MacroFluxStudio/photo-4.png"]
-      },
-      "type": "headphones",
-      "features": [
-        "The Macro Flux Studio features a large 34mm gold-sputtered diaphragm that captures every nuance of your voice with remarkable accuracy. The cardioid polar pattern effectively isolates your sound source while minimizing background noise and room reflections. Built-in shock mount system eliminates vibrations and handling noise, ensuring clean recordings every time. The premium metal construction provides durability while maintaining excellent acoustic properties.",
-        "Studio-grade circuitry with low self-noise (under 10dBA) ensures pristine audio quality for professional applications. Multiple polar pattern options allow you to adapt to different recording scenarios, from solo vocals to group discussions. High SPL handling capability means you can record everything from whispered ASMR to powerful vocal performances without distortion. USB and XLR connectivity provides versatility for both home studios and professional setups."
-      ],
-      "inBox": [
-        {
-          "name": "Microphone Unit",
-          "quantity": 1
-        },
-        {
-          "name": "Shock Mount",
-          "quantity": 1
-        },
-        {
-          "name": "Pop Filter",
-          "quantity": 1
-        },
-        {
-          "name": "User Manual",
-          "quantity": 1
-        },
-        {
-          "name": "USB-C Cable (3m)",
-          "quantity": 1
-        },
-        {
-          "name": "XLR Cable (3m)",
-          "quantity": 1
-        },
-        {
-          "name": "Carrying Case",
-          "quantity": 1
-        }
-      ],
-      "price": 2199,
-      "inStock": 7
-    },
-    {
-      "id": "e-02",
-      "newProduct": true,
-      "title": "AudioVerse Wireless Earbuds",
-      "shortName": "AudioVerse",
-      "generalInfo": "Experience premium wireless audio with the AudioVerse earbuds, designed for music lovers who demand exceptional sound quality and uncompromising comfort. These true wireless earbuds combine advanced acoustic engineering with sleek, modern design to deliver an immersive listening experience. Whether you're working out, commuting, or relaxing at home, AudioVerse earbuds provide crystal-clear highs, rich mids, and powerful bass that brings your favorite music to life with stunning clarity and detail.",
-      "images": {
-        "cover": "/AudioVerse/photo-1.png",
-        "main": "/AudioVerse/photo-1.png",
-        "gallery": ["/AudioVerse/photo-1.png", "/AudioVerse/photo-2.png", "/AudioVerse/photo-3.png"]
+        "cover": "/MARSHALLMinorIV/photo-1.webp",
+        "main": "/MARSHALLMinorIV/photo-1.webp",
+        "gallery": ["/MARSHALLMinorIV/photo-1.webp", "/MARSHALLMinorIV/photo-2.webp"]
       },
       "type": "earphones",
       "features": [
-        "The AudioVerse features premium 10mm dynamic drivers engineered to deliver balanced, high-fidelity sound across the entire frequency spectrum. Advanced Bluetooth 5.3 technology ensures stable connectivity with minimal latency, perfect for gaming and video streaming. Active noise cancellation intelligently blocks out ambient noise, while transparency mode lets you stay aware of your surroundings when needed. Touch controls on each earbud provide intuitive control over music, calls, and voice assistants.",
-        "Ergonomic design with multiple ear tip sizes ensures a secure, comfortable fit for extended wear. IPX7 waterproof rating means you can confidently use these earbuds during intense workouts or in light rain. Fast charging provides 8 hours of playback on a single charge, with the portable charging case extending total battery life to 32 hours. Premium matte finish and LED indicators add a touch of sophistication to these high-performance earbuds."
+        "The Marshall Minor IV features custom-tuned 12mm dynamic drivers delivering the iconic Marshall sound with punchy bass, clear mids, and crisp highs. Active Noise Cancelling technology blocks out unwanted ambient noise while Transparency Mode keeps you connected to your surroundings when needed. Six dedicated microphones ensure crystal-clear call quality with advanced wind noise reduction. Bluetooth 5.3 LE Audio support provides superior wireless connectivity with extended range and improved audio quality. Customizable sound via the Marshall Bluetooth app lets you tailor your listening experience with EQ presets.",
+        "Ergonomic design with customizable ear tips ensures secure, comfortable fit for all-day wear. IPX4 water resistance protects against sweat and splashes, perfect for workouts and outdoor use. Impressive 30-hour total battery life with 7 hours per charge plus 23 hours from the portable charging case keeps your music playing all day. Wireless charging support offers convenient cable-free power-ups. Iconic Marshall styling with textured case and signature script logo makes a bold statement. Touch controls provide intuitive operation for music, calls, and voice assistants."
       ],
       "inBox": [
         {
@@ -259,8 +255,188 @@
           "quantity": 1
         }
       ],
-      "price": 899,
-      "inStock": 24
+      "price": 1299,
+      "inStock": 22
+    },
+    {
+      "id": "h-07",
+      "newProduct": true,
+      "title": "SONY WHCH720NB.CE7",
+      "shortName": "SONY WHCH720NB",
+      "generalInfo": "Experience exceptional noise-cancelling performance with the Sony WH-CH720N wireless headphones. Engineered with Sony's renowned audio technology, these lightweight headphones deliver premium sound quality with powerful bass and crystal-clear highs. Perfect for music lovers, commuters, and professionals, the WH-CH720N combines advanced noise cancellation with all-day comfort and an impressive battery life. Immerse yourself in your favorite music, podcasts, and calls while blocking out the world around you with Sony's cutting-edge acoustic technology.",
+      "images": {
+        "cover": "/SONYWHCH720NB/photo-1.webp",
+        "main": "/SONYWHCH720NB/photo-1.webp",
+        "gallery": ["/SONYWHCH720NB/photo-1.webp", "/SONYWHCH720NB/photo-2.webp", "/SONYWHCH720NB/photo-3.webp", "/SONYWHCH720NB/photo-4.webp"]
+      },
+      "type": "headphones",
+      "features": [
+        "The Sony WH-CH720N features advanced Integrated Processor V1 for industry-leading noise cancellation that adapts to your environment. The powerful 30mm dynamic drivers deliver rich, balanced sound with deep bass response and detailed highs. Dual Noise Sensor technology and Precise Voice Pickup ensure crystal-clear call quality even in noisy environments. Adaptive Sound Control automatically adjusts ambient sound settings based on your activity, providing the perfect listening experience wherever you go.",
+        "Ultra-lightweight design at just 192g ensures maximum comfort for extended wear, with soft, pressure-relieving earpads that conform to your head shape. Multipoint connection allows seamless switching between two Bluetooth devices. Fast Pair and Swift Pair for instant connectivity with Android and Windows devices. Quick Charge feature provides 60 minutes of playback from just 3 minutes of charging, while full battery delivers up to 35 hours of wireless playback with noise cancelling, or 50 hours without."
+      ],
+      "inBox": [
+        {
+          "name": "Headphone Unit",
+          "quantity": 1
+        },
+        {
+          "name": "USB-C Charging Cable",
+          "quantity": 1
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "3.5mm Audio Cable",
+          "quantity": 1
+        },
+        {
+          "name": "Carrying Pouch",
+          "quantity": 1
+        },
+        {
+          "name": "Quick Start Guide",
+          "quantity": 1
+        }
+      ],
+      "price": 1599,
+      "inStock": 18
+    },
+    {
+      "id": "h-08",
+      "newProduct": true,
+      "title": "CORSAIR HS80 RGB Wireless Gaming Headset",
+      "shortName": "CORSAIR HS80",
+      "generalInfo": "Dominate your gaming sessions with the CORSAIR HS80 RGB Wireless, a premium gaming headset engineered for competitive players and streaming enthusiasts. Featuring custom-tuned 50mm neodymium audio drivers and Dolby Atmos spatial audio, the HS80 delivers immersive, multi-dimensional sound that gives you the edge in every match. With ultra-low latency wireless connectivity, plush memory foam earpads, and dynamic RGB lighting, this headset combines professional-grade performance with striking aesthetics for an unparalleled gaming experience.",
+      "images": {
+        "cover": "/CORSAIR-HS80/photo-1.webp",
+        "main": "/CORSAIR-HS80/photo-2.webp",
+        "gallery": ["/CORSAIR-HS80/photo-1.webp", "/CORSAIR-HS80/photo-2.webp", "/CORSAIR-HS80/photo-3.webp", "/CORSAIR-HS80/photo-4.webp"]
+      },
+      "type": "headphones",
+      "features": [
+        "The CORSAIR HS80 RGB features premium 50mm high-density neodymium audio drivers delivering exceptionally detailed sound with enhanced bass response. Dolby Atmos technology creates precise 3D positional audio, allowing you to hear enemies approaching from any direction. The broadcast-grade omnidirectional microphone with flip-to-mute functionality ensures crystal-clear communication with your team. Customizable RGB lighting with dynamic effects adds a personalized touch that syncs perfectly with your gaming setup through CORSAIR iCUE software.",
+        "Ultra-low latency 2.4GHz wireless connection provides up to 20 hours of battery life with RGB enabled, or 60 hours with RGB off. Memory foam earpads with premium leatherette covering provide exceptional comfort during marathon gaming sessions. Durable aluminum frame construction ensures long-lasting reliability while maintaining a lightweight feel at just 370g. Universal compatibility works seamlessly with PC, PlayStation 5, PlayStation 4, and other platforms. On-ear volume and mute controls provide instant adjustments without interrupting your gameplay."
+      ],
+      "inBox": [
+        {
+          "name": "Headphone Unit",
+          "quantity": 1
+        },
+        {
+          "name": "USB Wireless Adapter",
+          "quantity": 1
+        },
+        {
+          "name": "USB-C Charging Cable",
+          "quantity": 1
+        },
+        {
+          "name": "User Manual",
+          "quantity": 1
+        },
+        {
+          "name": "Quick Start Guide",
+          "quantity": 1
+        },
+        {
+          "name": "USB-A to USB-C Adapter",
+          "quantity": 1
+        }
+      ],
+      "price": 1899,
+      "inStock": 14
+    },
+    {
+      "id": "h-09",
+      "newProduct": true,
+      "title": "Apple AirPods Max Midnight",
+      "shortName": "AirPods Max Midnight",
+      "generalInfo": "Immerse yourself in the ultimate listening experience with Apple AirPods Max in stunning Midnight finish. Combining computational audio, high-fidelity sound, and adaptive technologies, these premium over-ear headphones redefine what wireless audio can be. Designed with a breathtaking attention to detail, AirPods Max feature custom-built drivers, advanced Active Noise Cancellation, spatial audio with dynamic head tracking, and seamless integration with all your Apple devices. Experience music exactly as artists intended with exceptional clarity, deep bass, and pristine highs.",
+      "images": {
+        "cover": "/APPLEAirPodsMaxMidnight/photo-1.webp",
+        "main": "/APPLEAirPodsMaxMidnight/photo-1.webp",
+        "gallery": ["/APPLEAirPodsMaxMidnight/photo-1.webp", "/APPLEAirPodsMaxMidnight/photo-2.webp", "/APPLEAirPodsMaxMidnight/photo-3.webp"]
+      },
+      "type": "headphones",
+      "features": [
+        "Apple AirPods Max feature custom-designed 40mm dynamic drivers powered by Apple H1 chip that deliver rich, deep bass, accurate mid-ranges, and crisp, clean high frequency extension. Industry-leading Active Noise Cancellation uses eight microphones and advanced software to continuously adapt to your environment and headphone fit, blocking outside noise for complete immersion. Transparency mode lets you hear the world around you naturally. Computational audio combines custom acoustic design with Apple H1 chip and software for breakthrough listening experiences including Adaptive EQ that tailors sound to the fit of the ear cushions.",
+        "Breathtaking build quality features an aluminum frame with telescoping arms and stainless steel headband, wrapped in a breathable knit mesh canopy. Memory foam ear cushions wrapped in acoustically engineered mesh create an exceptional seal for Active Noise Cancellation. Digital Crown provides precise volume control and ability to play/pause, skip tracks, answer calls, and activate Siri. Up to 20 hours of listening time with Active Noise Cancellation and spatial audio enabled. Seamless switching between Apple devices, audio sharing with another pair of AirPods, and support for Dolby Atmos and Spatial Audio create an immersive, theater-like experience."
+      ],
+      "inBox": [
+        {
+          "name": "AirPods Max",
+          "quantity": 1
+        },
+        {
+          "name": "Smart Case",
+          "quantity": 1
+        },
+        {
+          "name": "Lightning to USB-C Cable",
+          "quantity": 1
+        },
+        {
+          "name": "Documentation",
+          "quantity": 1
+        }
+      ],
+      "price": 4999,
+      "inStock": 9
+    },
+    {
+      "id": "h-10",
+      "newProduct": true,
+      "title": "Bang & Olufsen Beoplay H100 Wireless Headphones",
+      "shortName": "Beoplay H100",
+      "generalInfo": "Discover the pinnacle of luxury audio with Bang & Olufsen Beoplay H100, where Danish design meets extraordinary sound engineering. These flagship wireless headphones represent the ultimate expression of craftsmanship, featuring premium materials, modular design for sustainability, and cutting-edge audio technology. Meticulously tuned for authentic sound reproduction with exceptional clarity across the entire frequency spectrum. Experience uncompromising comfort with luxurious lambskin leather ear cushions and the longest battery life in the industry, making the H100 the perfect companion for discerning listeners who accept nothing less than perfection.",
+      "images": {
+        "cover": "/BANG&OLUFSENBeoplayH100/photo-1.webp",
+        "main": "/BANG&OLUFSENBeoplayH100/photo-1.webp",
+        "gallery": ["/BANG&OLUFSENBeoplayH100/photo-1.webp", "/BANG&OLUFSENBeoplayH100/photo-2.webp", "/BANG&OLUFSENBeoplayH100/photo-3.webp", "/BANG&OLUFSENBeoplayH100/photo-4.webp", "/BANG&OLUFSENBeoplayH100/photo-5.webp"]
+      },
+      "type": "headphones",
+      "features": [
+        "The Beoplay H100 features custom-designed 40mm titanium drivers with neodymium magnets delivering Bang & Olufsen's legendary Signature Sound with pristine clarity and powerful, controlled bass. Advanced Adaptive Active Noise Cancellation with 10 microphones intelligently adjusts to your environment for complete immersion. Revolutionary EarSense technology detects wearing status to automatically pause and resume playback. High-resolution audio support including aptX Lossless, aptX Adaptive, and AAC codecs ensures studio-quality wireless sound. Transparency mode with adjustable levels keeps you naturally connected to your surroundings.",
+        "Exquisite craftsmanship features aerospace-grade aluminum frame with premium lambskin leather and glass-fiber polymer construction. Modular, replaceable components including ear cushions, inner headband, and battery ensure longevity and sustainability. Industry-leading 90-hour battery life with ANC on, and up to 100+ hours with ANC off revolutionizes wireless listening. USB-C and wireless Qi charging provide flexible power options. Intuitive touch controls on aluminum discs provide seamless operation. Luxurious carrying case with premium materials protects your investment. Seamless app integration allows personalized sound tuning and firmware updates."
+      ],
+      "inBox": [
+        {
+          "name": "Beoplay H100 Headphones",
+          "quantity": 1
+        },
+        {
+          "name": "Premium Carrying Case",
+          "quantity": 1
+        },
+        {
+          "name": "USB-C to USB-C Cable",
+          "quantity": 1
+        },
+        {
+          "name": "3.5mm Audio Cable",
+          "quantity": 1
+        },
+        {
+          "name": "6.3mm Adapter",
+          "quantity": 1
+        },
+        {
+          "name": "Airplane Adapter",
+          "quantity": 1
+        },
+        {
+          "name": "User Guide",
+          "quantity": 1
+        },
+        {
+          "name": "Cleaning Cloth",
+          "quantity": 1
+        }
+      ],
+      "price": 11999,
+      "inStock": 5
     }
   ],
   "categories": [
