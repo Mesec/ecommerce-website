@@ -35,7 +35,7 @@ export default function Categories() {
           type: 'progressbar',
         } }
         modules={ [Pagination] }
-        spaceBetween={ 10 }
+        spaceBetween={ 30 }
         slidesPerView={ 3 }
         breakpoints={ {
           1600: {
@@ -60,11 +60,13 @@ export default function Categories() {
           const image = require(`../../assets/images/products${item.images.main}`);
           return (
             <SwiperSlide key={ item.id } className='Category-Swiper-Slide'>
-              <Link to={ `/article/${item.id}` } className="Category-Image-Container" style={ { backgroundImage: `url(${image})` } }>
-                <Box className='Category-Link-Container'>
-                  <Typography variant='p'  className="Category-Slide-Link">{ item.title }</Typography>
+              <Link to={ `/article/${item.id}` } className="Category-Link-Container">
+                <Box className="Category-Image-Container" style={ { backgroundImage: `url(${image})` } }>
                 </Box>
-              </Link>
+                <Box className='Category-Information-Container'>
+                  <Typography variant='p' className="Category-Information">{ item.title }</Typography>
+                  <Typography variant='p' className="Category-Information"> ${ item.price },00</Typography>
+                </Box></Link>
             </SwiperSlide>
           )
         })}
@@ -72,3 +74,5 @@ export default function Categories() {
     </div>
   );
 }
+
+// Link to={ `/article/${item.id}` }
