@@ -92,3 +92,9 @@
     min-height: 540px;
   }
 }
+
+@media (max-width: 900px) and (orientation: landscape) {
+.Home-Main-Content {
+    padding: 0 20px;
+  }
+}
