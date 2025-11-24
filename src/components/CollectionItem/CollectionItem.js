@@ -3,6 +3,7 @@ import { Button, Typography } from '@mui/material';
 import { Box } from '@mui/system'
 import './CollectionItem.css'
 import { Link, useNavigate } from 'react-router-dom';
+import { formatCurrency } from '../../utils/utils';
 
 export default function CollectionItem({ title, newProduct, generalInfo, id, images, price,  reverse }) {
   const thumbnail = require(`/src/assets/images/products${images?.main}`);
@@ -22,7 +23,7 @@ export default function CollectionItem({ title, newProduct, generalInfo, id, ima
         {/* <Button onClick={ redirectToArticle } variant='contained'>
             ${price},00
           </Button> */}
-        <Typography variant='h6' className='Collection-Item-Price'>Price: <span>${ price },00</span></Typography>
+        <Typography variant='h6' className='Collection-Item-Price'>Price: <span>{ formatCurrency(price) }</span></Typography>
       </Box>
     </Link>
   )

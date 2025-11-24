@@ -5,6 +5,7 @@ import Collection from '../../pages/Collection/Collection';
 import data from '../../db/products.json';
 import Article from '../../pages/Article/Article';
 import Checkout from '../../pages/Checkout/Checkout';
+import OrderSuccess from '../../pages/OrderSuccess/OrderSuccess';
 
 const PageRoutes = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const PageRoutes = () => {
         <Route path="/earphones" element={ <Collection products={ data.products } type='earphones'/> } />
         <Route path="/article/:id" element={ <Article/> } />
         <Route path="/checkout" element={ <Checkout /> } />
+        <Route path="/order-success" element={ <OrderSuccess /> } />
       </Routes>
   );
 }

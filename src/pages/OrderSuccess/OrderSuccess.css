@@ -1,0 +1,40 @@
+.OrderSuccess-Container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home-Button {
+  background-color: #d87d4a !important;
+  text-transform: none !important;
+  padding: 12px 40px !important;
+}
+
+.Home-Button:hover {
+  background-color: #c26d3a !important;
+}
+
+.Continue-Shopping-Button {
+  border-color: #d87d4a !important;
+  color: #d87d4a !important;
+  text-transform: none !important;
+  padding: 12px 40px !important;
+}
+
+.Continue-Shopping-Button:hover {
+  border-color: #c26d3a !important;
+  background-color: rgba(216, 125, 74, 0.04) !important;
+}
+
+@media (max-width: 600px) {
+  .OrderSuccess-Container {
+    padding: 20px;
+  }
+  
+  .Home-Button,
+  .Continue-Shopping-Button {
+    width: 100%;
+  }
+}
+

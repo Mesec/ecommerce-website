@@ -22,9 +22,10 @@
   text-decoration: none;
   box-sizing: border-box;
   border: 1px solid #afa8a8;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .Category-Image-Container {
@@ -36,6 +37,7 @@
   box-sizing: border-box;
   aspect-ratio: 4/4;
   background-color: white;
+  background-size: 200px;
 }
 
 .Category-Information-Container {
@@ -115,7 +117,7 @@
   background: black !important;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .Categories-Swiper {
     width: 100%;
     height: 100%;
@@ -124,6 +126,7 @@
   }
   .Category-Image-Container {
     width: 100%;
+    background-size: 130px;
     /* height: 230px; */
   }
 }
@@ -132,6 +135,7 @@
   .Category-Image-Container {
     width: 100%;
     /* height: 230px; */
+    background-size: 130px;
   }
 
   .Category-Information-Container {
@@ -180,6 +184,7 @@
   .Category-Image-Container {
     width: 100%;
     /* height: 230px; */
+    background-size: 160px;
   }
 }
 

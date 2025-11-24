@@ -17,3 +17,13 @@ export const increase = (id, quantity, inStock, message, dispatch, snackbarSette
 export const decrease = (id, quantity, dispatch) => {
     dispatch(decreaseCart({ id, quantity }));
   }
+
+
+export const formatCurrency = (number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(number);
+}

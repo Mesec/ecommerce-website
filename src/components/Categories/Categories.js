@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import './Categories.css';
 import { Link } from 'react-router-dom';
 import data from '../../db/products.json';
+import { formatCurrency } from '../../utils/utils';
 
 export default function Categories() {
   return (
@@ -48,7 +49,7 @@ export default function Categories() {
                 </Box>
                 <Box className='Category-Information-Container'>
                   <Typography variant='p' className="Category-Information">{ item.title }</Typography>
-                  <Typography variant='p' className="Category-Information"> ${ item.price },00</Typography>
+                  <Typography variant='p' className="Category-Information">{ formatCurrency(item.price) }</Typography>
                 </Box></Link>
             </SwiperSlide>
           )
