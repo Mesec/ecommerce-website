@@ -23,7 +23,7 @@ export default function ActiveLastBreadcrumb() {
   }
 
   return (
-    <div role="presentation" onClick={handleClick}>
+    <div role="presentation" onClick={handleClick} className='Breadcrumbs-Container'>
       <Breadcrumbs separator="›" aria-label="breadcrumb" className='Breadcrumbs'>
         <Link className='Breadcrumb-Link' to="/">
           Home

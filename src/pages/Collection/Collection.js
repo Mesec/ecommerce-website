@@ -10,9 +10,12 @@ export default function Collection(props) {
   return (
       <Box container className='Collection'>
       <Box className='Collection-Breadcrumbs'>
-        <ActiveLastBreadcrumb />
+        
       </Box>
-      <Grid spacing={ 4 } container justifyContent={ { xl: 'center' } } >
+      <Grid spacing={ 2 } container justifyContent={ { xl: 'center' } } >
+        <Grid xl={ 11 } lg={ 12 } md={ 12 } sm={ 12 } xs={ 12 } item className="collection-grid-item">
+          <ActiveLastBreadcrumb />
+        </Grid>
         {
           products?.map((item, index) => {
             const numberFromId = Number(item.id.split('-')[1]);
