@@ -15,30 +15,40 @@
   text-align: center;
 }
 
+.Footer-Description-Container {
+  padding-top: 0 !important;
+}
+
 .Footer-Description, .Footer-Copyright {
   color: #ffffff;
-  font-family: "Manrope-Medium", Helvetica;
-  font-size: 15px;
+  font-family: "Manrope-Medium";
+  font-size: 13px !important;
   font-weight: 500;
   letter-spacing: 0;
   opacity: 0.5;
   text-align: center;
 }
 
- .Footer-Copyright {
-  font-size: 14px;
- }
 
 .Footer-Copy-Right p:nth-child(1) {
  color: #ffffff;
   font-family: "Manrope-Bold", Helvetica;
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: 700;
   letter-spacing: 0;
   line-height: 25px;
   opacity: 0.5;
   width: 540px;
   text-align: left;
+}
+
+.Footer-Social-Icon {
+  cursor: pointer;
+}
+
+.Footer-Social-Icon:hover {
+  color: #d87d4a !important;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 600px) {

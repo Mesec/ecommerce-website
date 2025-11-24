@@ -2,10 +2,11 @@ import { Box, Grid, IconButton, Typography } from '@mui/material'
 import React from 'react'
 import Logo from '../../assets/icons/logo.svg'
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import './Footer.css'
 import NavigationItems from '../navbar/NavigationItems/NavigationItems';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -21,21 +22,34 @@ export default function Footer() {
         </Grid>
       </Grid>
       <Grid container spacing={ 2 } className='Footer-Bottom'>
-        <Grid xl={ 6 } sm={12} xs={12} item>
+        <Grid className='Footer-Description-Container' xl={ 6 } sm={12} xs={12} item>
           <Typography variant='body1' color='secondary' className='Footer-Description'>
-            Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
+            This e-commerce application was developed by Stefan Rakonjac as a demonstration
+            of modern web development capabilities. Built with React, Redux, and Material-UI,
+            it showcases a complete shopping experience with real-world features including
+            cart management, checkout flow, and responsive design.
+            <br />
+            <br />
+            This is a portfolio project demonstrating technical skills and can be extended
+            into a full-featured production-ready platform.
           </Typography>
         </Grid>
         <Grid xl={12} sm={6} xs={12} item>
           <Typography variant='body1' color='secondary' className='Footer-Copyright'>
-            Copyright 2021. All Rights Reserved
+            © 2025 Stefan Rakonjac. All Rights Reserved.
           </Typography>
         </Grid>
         <Grid xl={ 12 } sm={6} xs={12} item>
           <Box display='flex' justifyContent={{ xs: 'center', sm: 'right'}} gap={2} className='Social-Icons'>
-            <FacebookIcon color='secondary' />
-            <TwitterIcon color='secondary' />
-            <InstagramIcon color='secondary' />
+            <Link to='https://www.facebook.com/rakoniac' target='_blank'>
+              <FacebookIcon className='Footer-Social-Icon' color='secondary' />
+            </Link>
+            <Link to='https://www.linkedin.com/in/stefan-rakonjac-566304184/' target='_blank'>
+              <LinkedInIcon className='Footer-Social-Icon' color='secondary' />
+            </Link>
+           <Link to='https://www.instagram.com/cika_rale/' target='_blank'>
+              <InstagramIcon className='Footer-Social-Icon' color='secondary' />           
+           </Link>
           </Box>
         </Grid>
        </Grid>

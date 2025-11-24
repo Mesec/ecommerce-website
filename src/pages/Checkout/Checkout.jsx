@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Grid, Box, Typography, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Button, Card, CardContent, Divider, Dialog, DialogContent } from '@mui/material';
 import './Checkout.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { formatCurrency } from '../../utils/utils';
 import { SHIPPING_COST, VAT_RATE } from '../../app/constants';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { clearCart } from '../../features/cart/cartSlice';
 
 const Checkout = () => {
   const navigate = useNavigate();
   const [paymentMethod, setPaymentMethod] = useState('cash');
   const cartItems = useSelector((state) => state.cart.items);
-
+  const dispatch = useDispatch();
   const price = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const vatAmount = price * VAT_RATE;
   const totalPrice = price + vatAmount + SHIPPING_COST;
@@ -47,6 +48,7 @@ const Checkout = () => {
     // Auto redirect after 3 seconds
     setTimeout(() => {
       navigate('/order-success', { state: { orderId: newOrderId, total: formattedTotal } });
+      dispatch(clearCart());
     }, 3000);
   };
 

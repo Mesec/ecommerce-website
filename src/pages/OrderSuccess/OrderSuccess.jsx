@@ -62,7 +62,7 @@ const OrderSuccess = () => {
           <Button 
             variant="outlined" 
             size="large"
-            onClick={() => navigate('/collection/headphones')}
+            onClick={() => navigate('/headphones')}
             className="Continue-Shopping-Button"
           >
             Continue Shopping

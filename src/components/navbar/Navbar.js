@@ -79,14 +79,14 @@ function ResponsiveAppBar() {
                 <Grid xl={ 10 } md={ 4 } item className='Toolbar-Item-2'>
                   <NavigationItems />
                 </Grid>
-                <Grid xl={ 1 } md={ 4 } item className='Toolbar-Item-3'>
-                  <Button onClick={ handleOpenCart }>
-                    {
-                      cartLength && <Box className='Nav-Cart-Quantity'>{ cartLength }</Box>
-                    }
-                    <img src={ Cart } alt="Add to Cart" />
-                  </Button>
-                </Grid>
+                <Grid style={ location.pathname === '/checkout' ? { visibility: 'hidden' } : { visibility: 'visible' } } xl={ 1 } md={ 4 } item className='Toolbar-Item-3'>
+                    <Button onClick={ handleOpenCart }>
+                      {
+                        cartLength && <Box className='Nav-Cart-Quantity'>{ cartLength }</Box>
+                      }
+                      <img src={ Cart } alt="Add to Cart" />
+                    </Button>
+                  </Grid>
               </Grid>
             </Toolbar>
           </Box>
