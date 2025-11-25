@@ -10,7 +10,6 @@ export const cartSlice = createSlice({
     addToCart: (state, action) => {
       const { id, quantity, title, price, image, inStock } = action.payload;
       if (state.items.length === 0) {
-        console.log('Empty');
         state.items.push({
           id,
           quantity,
@@ -23,9 +22,6 @@ export const cartSlice = createSlice({
         const alreadyInCart = state.items.find(item => item.id === id);
         if (alreadyInCart) {
           const updatedCart = state.items.map(item => {
-            console.log('first', quantity);
-            console.log('second', item.quantity);
-            console.log('Already in', quantity + item.quantity);
             if (item.id === id) {
               return { ...item, quantity: item.quantity + quantity }
             } else {
@@ -35,7 +31,6 @@ export const cartSlice = createSlice({
 
           state.items = updatedCart;
         } else {
-          console.log('New product');
           state.items.push({
             id,
             quantity,
@@ -73,7 +68,6 @@ export const cartSlice = createSlice({
           }
         });
       }
-      console.log(updated);
       state.items = updated;
     },
     clearCart: (state) => {

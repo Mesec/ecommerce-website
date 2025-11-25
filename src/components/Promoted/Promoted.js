@@ -28,7 +28,7 @@ export default function Promoted() {
                 Experience every nuance with precision-tuned drivers, premium materials, and engineering built to deliver a truly immersive listening environment.
               </Typography>
           </Box>
-          <Link to='#'>
+          <Link to='/products'>
             <Button variant="contained">
               BROWSE PRODUCTS
             </Button>

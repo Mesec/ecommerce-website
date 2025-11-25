@@ -17,10 +17,13 @@ import { openCart } from '../../features/cart/cartSlice';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
-  const cartLength = useSelector((state) => state.cart.items).length;
+  const [cartAnimate, setCartAnimate] = React.useState(false);
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartLength = cartItems.length;
   const location = useLocation();
   const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
   const dispatch = useDispatch();
+  const prevCartLength = React.useRef(cartLength);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -33,6 +36,16 @@ function ResponsiveAppBar() {
   const handleOpenCart = () => {
     dispatch(openCart());
   }
+
+  React.useEffect(() => {
+    if (cartItems.length > 0) {
+      setCartAnimate(true);
+      const timer = setTimeout(() => {
+        setCartAnimate(false);
+      }, 800); // Match animation duration
+      return () => clearTimeout(timer);
+    }
+  }, [cartItems]);
 
   const renderLogo = () => {
     return (
@@ -80,7 +93,7 @@ function ResponsiveAppBar() {
                   <NavigationItems />
                 </Grid>
                 <Grid style={ location.pathname === '/checkout' ? { visibility: 'hidden' } : { visibility: 'visible' } } xl={ 1 } md={ 4 } item className='Toolbar-Item-3'>
-                    <Button onClick={ handleOpenCart }>
+                    <Button className={cartAnimate ? 'cart-bounce' : ''} onClick={ handleOpenCart }>
                       {
                         cartLength && <Box className='Nav-Cart-Quantity'>{ cartLength }</Box>
                       }
