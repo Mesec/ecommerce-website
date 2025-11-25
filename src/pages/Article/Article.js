@@ -115,23 +115,23 @@ export default function Article() {
             <Typography style={ { marginTop: `${product.newProduct ? '10px' : '0px'}` } } variant='h4'>{ product.title }</Typography>
           </Box>
           <Typography variant='body1'>{ product.generalInfo }</Typography>
-          <Box className='Article-Price-Container'>
+          <Box className='Article-Additional-Info-Container'>
             <Box>
               <Typography className='Article-Id' style={ { fontSize: '14px' } } variant='body1'>ID { product.id }</Typography>
-              <Box className='Article-Price' >
-                <Typography variant='h4'>$ { product.price },00</Typography>
-              </Box>
             </Box>
-            <Box>
-                { product?.inBox.map((item, index) => {
+            <Box className='Article-In-Box-Items-Container'>
+                {/* { product?.inBox.map((item, index) => {
                   return (
                     <Box className='In-Box-Items' key={ index }>
                       <Typography variant='body1'>{ `${item.quantity}x` }</Typography>
                       <Typography variant='body1'>{ item.name }</Typography>
                     </Box>
                   );
-                }) }
+                }) } */}
             </Box>
+          </Box>
+          <Box className='Article-Price' >
+            <Typography variant='h4'>$ { product.price },00</Typography>
           </Box>
           <Box className='Article-Controls'>
             <Box className='Article-Controls-Form'>

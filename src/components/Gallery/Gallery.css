@@ -2,19 +2,13 @@
   width: 100%;
   margin: auto;
   text-align: center;
-  /* border: 1px solid rgb(230, 225, 225); */
   border-radius: 5px;
-  /* border: 1px solid rgb(230, 225, 225);
-  border-radius: 5px;
-  padding: 10px; */
 }
 
 .product-gallery .main-slider {
   width: 100%;
   aspect-ratio: 4/4;
-  /* border: 1px solid rgb(230, 225, 225); */
   border-radius: 5px;
-  /* background-color: gray; */
   padding-top: 15px;
   
 }
@@ -43,7 +37,6 @@
   align-items: center;
   overflow: hidden;
   aspect-ratio: 3/3;
-  /* height: 80px; */
 }
 
 .product-gallery .thumbs-slider .swiper-slide:hover {

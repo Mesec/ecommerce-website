@@ -54,22 +54,24 @@
   line-height: 1.7;
 }
 
-.Article-Price-Container {
+.Article-Additional-Info-Container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: flex-end;
   margin-top: 10px;
   gap: 10px;
 }
 
 .Article-Price {
-  background-color: #D87D4A;
+  border: 1px solid #D87D4A;
   height: auto;
   padding: 5px 14px;
-  color: #ffffff;
+  color: #d87d4a;
   margin-top: 20px;
   border-radius: 4px;
   display: inline-block;
+  width: 140px;
 }
 .Article-Price > h4 {
   font-size: 20px !important;
@@ -102,8 +104,7 @@
 
 .Article-Controls-Form {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 15px;
   margin-top: 20px;
   width: 100%;
@@ -177,10 +178,16 @@
   font-size: 14px;
   width: 100%;
 }
+.Article-In-Box-Items-Container {
+  display: flex;
+  flex-direction: column;
+}
 
 .In-Box-Items {
   display: flex;
   gap: 24px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .In-Box-Items p {
@@ -213,7 +220,7 @@
   width: 100%;
 }
 .Article {
-  padding: 30px 30px 30px 30px;
+  padding: 50px 10px 50px 10px;
 }
 .Article-Price > h4 {
   font-size: 25px;
@@ -237,9 +244,6 @@
 }
 
 @media screen and (min-width: 900px) {
- .Article {
-    padding: 50px 100px 50px 100px;
-  }
   .Article-Top {
     flex-direction: row;
     gap: 60px;
@@ -251,7 +255,7 @@
   .Article-Description {
     width: 100%;
    }
-   .Article-Price-Container {
+   .Article-Additional-Info-Container {
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
@@ -275,7 +279,7 @@
 
 @media screen and (min-width: 1200px) {
   .Article {
-    padding: 80px 120px 80px 120px;
+    padding: 50px 120px 50px 120px;
   }
   .Article-Quantity-Input-Container {
     margin-left: auto;
@@ -300,29 +304,49 @@
 
 @media screen and (min-width: 1536px) {
   .Article {
-    padding: 80px 200px 80px 200px;
+    padding: 50px 200px 50px 200px;
   }
   .Article-Features {
     max-width: 550px;
   }
-  .Article-Price-Container {
+  .Article-Additional-Info-Container {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 20px;
   }
   .Article-Description {
-    height: 700px;
+    /* height: 700px; */
+    box-sizing: content-box;
   }
 }
 
-@media (max-width: 900px) and (orientation: landscape) {
-  .Article-Top {
-    gap: 20px;
+@media (max-width: 800px) and (orientation: landscape) {
+  .Article {
+   padding: 30px;
   }
   .Article-Description {
-    background-clip: red;
+    padding: 40px 10px;
+  }
+   .Article-Top {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .Article-Controls-Form {
+    flex-direction: column;
+  }
+}
+@media (min-width: 800px) and (max-width: 920px) and (orientation: landscape) {
+  .Article {
+    padding: 50px 10px;
+  }
+  .Article-Description {
+    padding: 40px 10px;
   }
   .Article-Top {
+    gap: 20px;
     flex-direction: row;
+  }
+  .Article-Controls-Form {
+    flex-direction: column;
   }
 }

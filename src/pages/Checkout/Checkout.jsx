@@ -36,8 +36,25 @@ const Checkout = () => {
   const [country, setCountry] = useState('');
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [orderId, setOrderId] = useState(null);
+  const [buttonAnimate, setButtonAnimate] = useState(false);
   
   const formVerified = name.trim() && email.trim() && phone.trim() && address.trim() && zipCode.trim() && city.trim() && country.trim();
+  const prevFormVerified = React.useRef(formVerified);
+
+  // Animate button when form becomes verified
+  React.useEffect(() => {
+    if (formVerified && !prevFormVerified.current) {
+      setButtonAnimate(false);
+      
+      requestAnimationFrame(() => {
+        setButtonAnimate(true);
+        setTimeout(() => {
+          setButtonAnimate(false);
+        }, 800);
+      });
+    }
+    prevFormVerified.current = formVerified;
+  }, [formVerified]);
   
   const handleCheckout = () => {
     // Generate order ID
@@ -254,7 +271,7 @@ const Checkout = () => {
                 disabled={!formVerified} 
                 fullWidth 
                 variant="contained" 
-                className="Continue-Button"
+                className={`Continue-Button ${buttonAnimate ? 'button-enabled' : ''}`}
                 onClick={handleCheckout}
               >
                 Continue & Pay
