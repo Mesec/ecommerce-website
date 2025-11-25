@@ -86,7 +86,7 @@ export default function Cart() {
                         } }
                       />
                       <Box>
-                        <Typography variant="subtitle1" fontWeight="bold">
+                        <Typography className="Cart-Item-Title" variant="subtitle1" fontWeight="bold">
                           { item.title }
                         </Typography>
                         <Typography variant="body2" color="text.secondary">

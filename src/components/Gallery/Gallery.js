@@ -14,7 +14,7 @@ const Gallery = ({ images }) => {
     <div className="product-gallery">
       <Swiper
         pagination={ {
-          type: 'progressbar',
+          type: 'bullets',
         } }
         spaceBetween={ 10 }
         navigation={ true }

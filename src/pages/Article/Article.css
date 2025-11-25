@@ -17,6 +17,7 @@
 
 .Article-Gallery {
   padding: 0 !important;
+  border-top: 3px solid #d87d4a;
 } 
 
 .Article-Title {
@@ -34,11 +35,15 @@
 .Article-Description {
   width: 100%;
   background-color: rgb(255, 253, 253);
-  border-radius: 8px;
   padding: 40px 20px;
   box-sizing: border-box;
   height: min-content;
-  border: 1px solid rgb(237, 231, 231);
+  /* border: 1px solid rgb(237, 231, 231); */
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -65,13 +70,12 @@
 
 .Article-Price {
   border: 1px solid #D87D4A;
-  height: auto;
-  padding: 5px 14px;
   color: #d87d4a;
   margin-top: 20px;
   border-radius: 4px;
   display: inline-block;
-  width: 140px;
+  /* width: 124px; */
+  width: max-content;
 }
 .Article-Price > h4 {
   font-size: 20px !important;
@@ -118,7 +122,16 @@
 .Article-Controls > button {
   padding: 10px 20px;
   width: 100%;
+  background-color: white;
+  color: #d87d4a;
+  font-weight: 600;
+  border: 2px solid #d87d4a;
+  box-shadow: none;
+}
+
+.Article-Controls > button:hover {
   background-color: #d87d4a;
+  color: white;
 }
 
 .Article-Benefits-Container {
@@ -243,11 +256,18 @@
   text-align: start;
 }
 
+.swiper-pagination-bullet {
+  background-color: #d87d4a !important;
+}
+
 @media screen and (min-width: 900px) {
   .Article-Top {
     flex-direction: row;
     gap: 60px;
     align-items: flex-start;
+  }
+  .Article-Gallery {
+    width: 500px;
   }
   .Article-Features {
     max-width: 350px;
@@ -298,6 +318,12 @@
   .Article-Description {
     width: 50%;
     padding: 50px 40px;
+  }
+  .Article-Controls {
+    align-items: flex-end;
+  }
+  .Article-Controls > button  {
+    width: 40%;
   }
 }
 

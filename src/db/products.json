@@ -39,7 +39,7 @@
     },
     {
       "id": "s-05",
-      "newProduct": true,
+      "newProduct": false,
       "title": "KRK Rokit RP10-3 G4 Studio Monitor",
       "shortName": "KRK Rokit RP10-3 G4",
       "generalInfo": "Elevate your music production to professional levels with the KRK Rokit RP10-3 G4, the flagship studio monitor from KRK's legendary Rokit series. Designed for serious producers, engineers, and audiophiles who demand uncompromising accuracy and powerful performance, this three-way studio monitor delivers exceptional clarity across the entire frequency spectrum. With its massive 10-inch woofer, dedicated midrange driver, and precision tweeter, the RP10-3 G4 provides the detail and headroom needed for professional mixing, mastering, and critical listening in larger studio environments.",
@@ -117,7 +117,7 @@
     },
     {
       "id": "e-03",
-      "newProduct": true,
+      "newProduct": false,
       "title": "EDIFIER X3S TWS Wireless Earbuds",
       "shortName": "EDIFIER X3S",
       "generalInfo": "Experience studio-quality sound on the go with the EDIFIER X3S TWS wireless earbuds. Engineered with precision and packed with advanced features, these true wireless earbuds deliver exceptional audio performance with powerful bass, crystal-clear mids, and sparkling highs. Perfect for music enthusiasts, fitness lovers, and busy professionals, the X3S TWS combines cutting-edge technology with an ergonomic design that ensures all-day comfort. With advanced noise cancellation and superior call quality, immerse yourself in your music while staying connected to what matters most.",
@@ -166,7 +166,7 @@
     },
     {
       "id": "e-04",
-      "newProduct": true,
+      "newProduct": false,
       "title": "JBL Soundgear Sense Open-Ear Wireless Earbuds",
       "shortName": "JBL Soundgear Sense",
       "generalInfo": "Revolutionize your audio experience with the JBL Soundgear Sense, featuring innovative open-ear technology that lets you stay connected to your surroundings while enjoying premium JBL sound. Perfect for active lifestyles, these wireless earbuds deliver immersive audio without blocking your ears, making them ideal for running, cycling, and everyday activities where situational awareness is crucial. With JBL's legendary sound quality, exceptional comfort, and advanced features, the Soundgear Sense redefines what wireless earbuds can do.",
@@ -305,7 +305,7 @@
     },
     {
       "id": "h-08",
-      "newProduct": true,
+      "newProduct": false,
       "title": "CORSAIR HS80 RGB Wireless Gaming Headset",
       "shortName": "CORSAIR HS80",
       "generalInfo": "Dominate your gaming sessions with the CORSAIR HS80 RGB Wireless, a premium gaming headset engineered for competitive players and streaming enthusiasts. Featuring custom-tuned 50mm neodymium audio drivers and Dolby Atmos spatial audio, the HS80 delivers immersive, multi-dimensional sound that gives you the edge in every match. With ultra-low latency wireless connectivity, plush memory foam earpads, and dynamic RGB lighting, this headset combines professional-grade performance with striking aesthetics for an unparalleled gaming experience.",
@@ -350,7 +350,7 @@
     },
     {
       "id": "h-09",
-      "newProduct": true,
+      "newProduct": false,
       "title": "Apple AirPods Max Midnight",
       "shortName": "AirPods Max Midnight",
       "generalInfo": "Immerse yourself in the ultimate listening experience with Apple AirPods Max in stunning Midnight finish. Combining computational audio, high-fidelity sound, and adaptive technologies, these premium over-ear headphones redefine what wireless audio can be. Designed with a breathtaking attention to detail, AirPods Max feature custom-built drivers, advanced Active Noise Cancellation, spatial audio with dynamic head tracking, and seamless integration with all your Apple devices. Experience music exactly as artists intended with exceptional clarity, deep bass, and pristine highs.",
@@ -387,7 +387,7 @@
     },
     {
       "id": "h-10",
-      "newProduct": true,
+      "newProduct": false,
       "title": "Bang & Olufsen Beoplay H100 Wireless Headphones",
       "shortName": "Beoplay H100",
       "generalInfo": "Discover the pinnacle of luxury audio with Bang & Olufsen Beoplay H100, where Danish design meets extraordinary sound engineering. These flagship wireless headphones represent the ultimate expression of craftsmanship, featuring premium materials, modular design for sustainability, and cutting-edge audio technology. Meticulously tuned for authentic sound reproduction with exceptional clarity across the entire frequency spectrum. Experience uncompromising comfort with luxurious lambskin leather ear cushions and the longest battery life in the industry, making the H100 the perfect companion for discerning listeners who accept nothing less than perfection.",
