@@ -1,10 +1,12 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import './Home.css'
-import Categories from '../../components/Categories/Categories'
+import ProductSlider from '../../components/ProductSlider/ProductSlider'
 import { Tab, Tabs } from '@mui/material';
+import data from '../../db/products.json';
 
 export default function Home() {
+  const popularProducts = data.products.filter(item => item.popularProduct);
   return (
     <Box className='Home-Main-Content'>
       <Tabs
@@ -25,7 +27,7 @@ export default function Home() {
         />
       </Tabs>
       <Box className='Home-Categories-Container'>
-        <Categories />
+        <ProductSlider products={ popularProducts }/>
       </Box>
     </Box>
   )

@@ -60,6 +60,25 @@
   background-color: #D87D4A;
 }
 
+/* Navigation arrows styling */
+.product-gallery .swiper-button-next,
+.product-gallery .swiper-button-prev {
+  color: #d87d4a;
+  width: 30px;
+  height: 30px;
+}
+
+.product-gallery .swiper-button-next::after,
+.product-gallery .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-gallery .swiper-button-next:hover,
+.product-gallery .swiper-button-prev:hover {
+  color: #000;
+}
+
 @media (min-width: 900px) {
   .product-gallery {
     max-width: 400px;
