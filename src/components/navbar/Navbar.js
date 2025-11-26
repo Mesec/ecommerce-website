@@ -14,6 +14,7 @@ import MenuNavBar from './MenuNavBar/MenuNavBar';
 import NavigationItems from './NavigationItems/NavigationItems';
 import Promoted from '../Promoted/Promoted';
 import { openCart } from '../../features/cart/cartSlice';
+import { enqueueSnackbar } from 'notistack';
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -23,7 +24,6 @@ function ResponsiveAppBar() {
   const location = useLocation();
   const borderPathNames = ['/', '/headphones', '/speakers', '/earphones'];
   const dispatch = useDispatch();
-  const prevCartLength = React.useRef(cartLength);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -34,7 +34,15 @@ function ResponsiveAppBar() {
   };
 
   const handleOpenCart = () => {
-    dispatch(openCart());
+    if (cartLength > 0) {
+      dispatch(openCart());
+    } else {
+      enqueueSnackbar('Your cart is empty. Add some products first!', {
+        variant: 'info',
+        style: { backgroundColor: '#d87d4a', color: 'white' },
+        anchorOrigin: { vertical: "bottom", horizontal: "center" },
+      });
+    }
   }
 
   React.useEffect(() => {
