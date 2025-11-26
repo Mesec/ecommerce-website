@@ -48,7 +48,7 @@ body.active-modal {
   transform: translateX(100%);
   opacity: 0;
   transition: all 0.4s ease;
-  background-color: #333232;
+  background-color: #ffffff;
 }
 
 
@@ -70,12 +70,12 @@ body.active-modal {
   align-items: center;
   height: 43px;
   /* margin-bottom: 5px; */
-  color: white;
+  color: #333;
   gap: 10px;
 }
 
 .Cart-Header h6 {
-  color: white;
+  color: #333;
   font-size: 18px;
   font-weight: 600;
 }
@@ -131,11 +131,11 @@ body.active-modal {
 }
 
 .Cart-Item-Info {
-  color: white !important;
+  color: #333 !important;
 }
 
 .Cart-Total-Amount {
-  color: white !important;
+  color: #333 !important;
 }
 
 .Cart-Discard-Button {

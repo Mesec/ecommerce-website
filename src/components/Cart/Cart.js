@@ -66,7 +66,7 @@ export default function Cart() {
             <LocalMallIcon />
             <Typography variant="h6"> Your Cart ({ cartItems.length })</Typography>
               <IconButton onClick={ closeCartHandler } size="small" sx={ { position: 'absolute', right: 8, top: '50%', transform: 'translateY(-50%)' } }>
-                <CloseIcon sx={ { color: 'white' } } />
+                <CloseIcon sx={ { color: '#333' } } />
               </IconButton>
             </Box>
             {/* Items */ }
@@ -115,7 +115,7 @@ export default function Cart() {
             {/* Controls */ }
             <Box padding={ 2 }>
               <Box display="flex" justifyContent="space-between" alignItems="center" mb={ 2 }>
-                <Typography style={ { color: 'white' } } variant="body1" fontWeight="bold">
+                <Typography style={ { color: '#333' } } variant="body1" fontWeight="bold">
                   Total
                 </Typography>
                 <Typography className='Cart-Total-Amount' variant="h6" fontWeight="bold">
@@ -126,7 +126,7 @@ export default function Cart() {
                 <Link className='Cart-Proceed-Button' to="/checkout">
                 Proceed to Checkout
                 </Link>
-                <Button className='Cart-Discard-Button' fullWidth variant="outlined" color="secondary" onClick={ clearCartHandler }>
+                <Button className='Cart-Discard-Button' fullWidth variant="outlined" color="primary" onClick={ clearCartHandler }>
                   Discard
                 </Button>
               </Box>
