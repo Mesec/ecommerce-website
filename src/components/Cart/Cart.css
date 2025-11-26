@@ -51,6 +51,7 @@ body.active-modal {
   background-color: #333232;
 }
 
+
 .ShowCart {
   right: 0;
   transform: translateX(0);
@@ -63,6 +64,7 @@ body.active-modal {
 
 /* Header */
 .Cart-Header {
+  position: relative;
   padding: 16px;
   display: flex;
   align-items: center;
