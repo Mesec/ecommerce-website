@@ -187,11 +187,11 @@
     backdrop-filter: blur(4px);
     border-top: none;
     color: white;
-    opacity: 0.9;
+    opacity: 0.8;
     bottom: 0;
     background-color: #d87d4a;
     background-color: white;
-    border-top: 1px solid #d87d4a;
+    border-top: 1px solid black;
 
   }
   .Product-Slider-Info {
