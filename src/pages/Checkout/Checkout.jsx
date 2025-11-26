@@ -1,12 +1,72 @@
 import React, { useState } from 'react';
-import { Grid, Box, Typography, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Button, Card, CardContent, Divider } from '@mui/material';
+import { Grid, Box, Typography, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Button, Card, CardContent, Divider, Dialog, DialogContent } from '@mui/material';
 import './Checkout.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { formatCurrency } from '../../utils/utils';
+import { SHIPPING_COST, VAT_RATE } from '../../app/constants';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { clearCart } from '../../features/cart/cartSlice';
 
 const Checkout = () => {
-  const [paymentMethod, setPaymentMethod] = useState('e-money');
-
+  const navigate = useNavigate();
+  const [paymentMethod, setPaymentMethod] = useState('cash');
+  const cartItems = useSelector((state) => state.cart.items);
+  const dispatch = useDispatch();
+  const price = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const vatAmount = price * VAT_RATE;
+  const totalPrice = price + vatAmount + SHIPPING_COST;
+  
+  // Format for display
+  const formattedPrice = formatCurrency(price);
+  const formattedVAT = formatCurrency(vatAmount);
+  const formattedShipping = formatCurrency(SHIPPING_COST);
+  const formattedTotal = formatCurrency(totalPrice);
+  
   const handlePaymentChange = (event) => {
-  setPaymentMethod(event.target.value);
+    setPaymentMethod(event.target.value);
+  };
+  
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [address, setAddress] = useState('');
+  const [zipCode, setZipCode] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [orderId, setOrderId] = useState(null);
+  const [buttonAnimate, setButtonAnimate] = useState(false);
+  
+  const formVerified = name.trim() && email.trim() && phone.trim() && address.trim() && zipCode.trim() && city.trim() && country.trim();
+  const prevFormVerified = React.useRef(formVerified);
+
+  // Animate button when form becomes verified
+  React.useEffect(() => {
+    if (formVerified && !prevFormVerified.current) {
+      setButtonAnimate(false);
+      
+      requestAnimationFrame(() => {
+        setButtonAnimate(true);
+        setTimeout(() => {
+          setButtonAnimate(false);
+        }, 800);
+      });
+    }
+    prevFormVerified.current = formVerified;
+  }, [formVerified]);
+  
+  const handleCheckout = () => {
+    // Generate order ID
+    const newOrderId = 'ORD-' + Date.now();
+    setOrderId(newOrderId);
+    setShowSuccessModal(true);
+    
+    // Auto redirect after 3 seconds
+    setTimeout(() => {
+      navigate('/order-success', { state: { orderId: newOrderId, total: formattedTotal } });
+      dispatch(clearCart());
+    }, 3000);
   };
 
   return (
@@ -26,13 +86,37 @@ const Checkout = () => {
             </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
-                <TextField size="small" fullWidth label="Name" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="Name" 
+                  variant="outlined"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <TextField size="small" fullWidth label="Email Address" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="Email Address" 
+                  variant="outlined"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </Grid>
               <Grid item xs={12}>
-                <TextField size="small" fullWidth label="Phone Number" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="Phone Number" 
+                  variant="outlined"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
               </Grid>
             </Grid>
           </Box>
@@ -44,16 +128,48 @@ const Checkout = () => {
             </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField size="small" fullWidth label="Address" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="Address" 
+                  variant="outlined"
+                  type="text"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <TextField size="small" fullWidth label="ZIP Code" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="ZIP Code" 
+                  variant="outlined"
+                  type="text"
+                  value={zipCode}
+                  onChange={(e) => setZipCode(e.target.value)}
+                />
               </Grid>
               <Grid item xs={12} sm={6}>
-                <TextField size="small" fullWidth label="City" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="City" 
+                  variant="outlined"
+                  type="text"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                />
               </Grid>
               <Grid item xs={12}>
-                <TextField size="small" fullWidth label="Country" variant="outlined" />
+                <TextField 
+                  size="small" 
+                  fullWidth 
+                  label="Country" 
+                  variant="outlined"
+                  type="text"
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
+                />
               </Grid>
             </Grid>
           </Box>
@@ -76,7 +192,7 @@ const Checkout = () => {
                 className="Payment-Options"
               >
                 <Box className="Payment-Option-Box">
-                  <FormControlLabel value="e-money" control={<Radio />} label="e-Money" />
+                  <FormControlLabel disabled value="e-money" control={<Radio />} label="e-Money" />
                 </Box>
                 <Box className="Payment-Option-Box">
                   <FormControlLabel value="cash" control={<Radio />} label="Cash on Delivery" />
@@ -113,33 +229,29 @@ const Checkout = () => {
               </Typography>
 
               {/* Example Products */}
-              <Box display="flex" justifyContent="space-between" mb={2}>
-                <Typography>XX99 MK II</Typography>
-                <Typography>$2,999</Typography>
+              <Box>
+                { cartItems?.map(item => {
+                  return (
+                    <Box key={item.id} display="flex" justifyContent="space-between" mb={2}>
+                      <Typography>{ item.title }</Typography>
+                      <Typography>{ formatCurrency(item.price * item.quantity) }</Typography>
+                    </Box>
+                  )
+                })}
               </Box>
-              <Box display="flex" justifyContent="space-between" mb={2}>
-                <Typography>XX59</Typography>
-                <Typography>$899 x2</Typography>
-              </Box>
-              <Box display="flex" justifyContent="space-between" mb={2}>
-                <Typography>YX1</Typography>
-                <Typography>$599</Typography>
-              </Box>
-
               <Divider sx={{ my: 2 }} />
-
               {/* Total */}
               <Box display="flex" justifyContent="space-between" mb={1}>
                 <Typography variant="body2">Total</Typography>
-                <Typography variant="body2">$5,396</Typography>
+                <Typography variant="body2">{ formattedPrice }</Typography>
               </Box>
               <Box display="flex" justifyContent="space-between" mb={1}>
                 <Typography variant="body2">Shipping</Typography>
-                <Typography variant="body2">$50</Typography>
+                <Typography variant="body2">{ formattedShipping }</Typography>
               </Box>
               <Box display="flex" justifyContent="space-between" mb={1}>
                 <Typography variant="body2">VAT (Included)</Typography>
-                <Typography variant="body2">$1,079</Typography>
+                <Typography variant="body2">{ formattedVAT }</Typography>
               </Box>
 
               <Divider sx={{ my: 2 }} />
@@ -150,18 +262,48 @@ const Checkout = () => {
                   Grand Total
                 </Typography>
                 <Typography variant="subtitle1" fontWeight="bold">
-                  $5,446
+                  { formattedTotal }
                 </Typography>
               </Box>
 
               {/* Continue Button */}
-              <Button fullWidth variant="contained" className="Continue-Button">
+              <Button 
+                disabled={!formVerified} 
+                fullWidth 
+                variant="contained" 
+                className={`Continue-Button ${buttonAnimate ? 'button-enabled' : ''}`}
+                onClick={handleCheckout}
+              >
                 Continue & Pay
               </Button>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
+
+      {/* Success Modal */}
+      <Dialog 
+        open={showSuccessModal} 
+        onClose={() => setShowSuccessModal(false)}
+        maxWidth="sm"
+        fullWidth
+      >
+        <DialogContent sx={{ textAlign: 'center', py: 4 }}>
+          <CheckCircleIcon sx={{ fontSize: 80, color: '#4caf50', mb: 2 }} />
+          <Typography variant="h5" gutterBottom fontWeight="bold">
+            Order Placed Successfully!
+          </Typography>
+          <Typography variant="body1" color="text.secondary" mb={2}>
+            Thank you for your purchase
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Order ID: <strong>{orderId}</strong>
+          </Typography>
+          <Typography variant="body2" color="text.secondary" mt={1}>
+            Redirecting to order confirmation...
+          </Typography>
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 };

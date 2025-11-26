@@ -76,6 +76,19 @@
   font-weight: bold;
 }
 
+/* Cart button bounce animation when item is added */
+.Toolbar-Item-3 .cart-bounce {
+  animation: bounce 0.8s ease-in-out;
+}
+
+@keyframes bounce {
+  30% { transform: scale(1.2); }
+  40%, 60% { transform: rotate(-5deg) scale(1.1); }
+  50% { transform: rotate(5deg) scale(1.1); }
+  70% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 .Logo-Image {
   height: 18px;
 }
@@ -99,4 +112,44 @@
   .NavBar-Wrapper {
     padding: 0 200px;
   }
+}
+
+/* Menu Drawer Styles */
+.MenuNavBar {
+  padding: 16px 16px 16px 0 !important;
+  min-width: 200px;
+}
+
+.MenuNavBar a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 100%;
+  padding-left:14px;
+}
+
+.MenuNavBar a:hover {
+  color: #d87d4a;
+  font-weight: 600;
+}
+
+.MenuNavBar a.active {
+  color: #d87d4a;
+  font-weight: 700;
+  border-left: 3px solid #d87d4a;
+  padding-left: 6px;
+  margin: 4px;
+}
+
+.MenuNavBar-Title {
+  background-color: #d87d4a;
+  padding: 0;
+  color: white;
+  font-weight: bold;
+  padding: 15px 0;
+  text-align: center;
 }

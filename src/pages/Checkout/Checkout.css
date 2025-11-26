@@ -100,10 +100,24 @@
   padding: 12px 0;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+
 }
 
-.Continue-Button:hover {
-  background-color: #c56c3d !important;
+/* Animation when button becomes enabled */
+.Continue-Button.button-enabled {
+  animation: bounce 0.8s ease-in-out;
+}
+
+@keyframes bounce {
+  30% { transform: scale(1.1); }
+  40%, 60% { transform: rotate(-2deg) scale(1.1); }
+  50% { transform: rotate(2deg) scale(1.1); }
+  70% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.Continue-Button:disabled {
+  background-color: #867b76 !important;
 }
 
 @media screen and (min-width: 600px) {

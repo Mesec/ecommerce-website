@@ -64,8 +64,11 @@ body.active-modal {
 .Cart-Header {
   background-color: #d87d4a;
   padding: 16px;
-  text-align: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  margin-bottom: 5px;
 }
 
 .Cart-Header h6 {
@@ -161,6 +164,14 @@ body.active-modal {
   width: 100px;
   height: auto;
   opacity: 0.8;
+}
+
+.Cart-Item-Title {
+  font-size: 14px !important;
+}
+
+.Cart .quantity-input-container {
+  width: 70px;
 }
 
 /* Responsive */

@@ -9,20 +9,13 @@ import { clearCart, closeCart, decreaseCart, increaseCart } from '../../features
 import { openSnackbar } from '../../features/snackbar/snackbarSlice';
 import CartIcon from '../../assets/icons/cart-black.svg';
 import './Cart.css';
+import { formatCurrency } from '../../utils/utils';
 
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
   const open = useSelector((state) => state.cart.isCartOpen);
   const location = useLocation();
   const dispatch = useDispatch();
-
-  function formatCurrency(number) {
-    return number.toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-    });
-  }
 
   const calculateTotal = () => {
     return cartItems.reduce((acc, product) => acc + product.price * product.quantity, 0);
@@ -39,7 +32,7 @@ export default function Cart() {
 
   const increaseProductHandler = (id, quantity, inStock) => {
     dispatch(increaseCart({ id, quantity }));
-    if (quantity + 1 === inStock) {
+    if (quantity === inStock) {
       dispatch(openSnackbar('No more products in stock.'));
     }
   };
@@ -93,7 +86,7 @@ export default function Cart() {
                         } }
                       />
                       <Box>
-                        <Typography variant="subtitle1" fontWeight="bold">
+                        <Typography className="Cart-Item-Title" variant="subtitle1" fontWeight="bold">
                           { item.title }
                         </Typography>
                         <Typography variant="body2" color="text.secondary">

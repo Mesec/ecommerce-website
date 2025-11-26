@@ -1,17 +1,17 @@
-.Categories-Swiper {
+.Product-Slider-Swiper {
   width: 100%;
   height: 100%;
   margin-bottom: 80px;
 }
 
-.Categories-Container {
+.Product-Slider-Container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
 }
 
-.Category-Link-Container {
+.Product-Slider-Link {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,12 +22,13 @@
   text-decoration: none;
   box-sizing: border-box;
   border: 1px solid #afa8a8;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
 }
 
-.Category-Image-Container {
+.Product-Slider-Image {
   /* height: 330px; */
   width: 100%;
   background-size: contain;
@@ -36,9 +37,10 @@
   box-sizing: border-box;
   aspect-ratio: 4/4;
   background-color: white;
+  background-size: 200px;
 }
 
-.Category-Information-Container {
+.Product-Slider-Info-Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +55,7 @@
   padding: 20px 20px;
 }
 
-.Category-Information{
+.Product-Slider-Info{
   font-weight: 500;
   padding: 0 10px;
   display: flex;
@@ -65,17 +67,32 @@
   transition: all 0.3s ease-in-out;
 }
 
-.Category-Information-Container > span:nth-child(1) {
+.Product-Slider-Info-Container > span:nth-child(1) {
   font-size: 16px;
 }
 
-.Category-Information-Container > span:nth-child(2) {
+.Product-Slider-Info-Container > span:nth-child(2) {
   font-size: 22px;
   color: #d87d4a;
 }
 
-.Category-Swiper-Slide {
+.Product-Slider-Slide {
   padding-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect: Blur all slides ONLY when a slide is actually hovered */
+.Product-Slider-Swiper:has(.Product-Slider-Slide:hover) .Product-Slider-Slide:not(:hover) {
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+/* Keep the hovered slide focused */
+.Product-Slider-Slide:hover {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.0);
+  z-index: 10;
 }
 
 .swiper-button-next,
@@ -100,7 +117,7 @@
   padding-bottom: 20px;
 }
 
-.Categories-Container .swiper-pagination-progressbar {
+.Product-Slider-Container .swiper-pagination-progressbar {
   top: auto !important;
   bottom: 0 !important;
 }
@@ -110,31 +127,33 @@
   height: 4px;
 }
 
-.Categories-Container .swiper-pagination-progressbar-fill {
+.Product-Slider-Container .swiper-pagination-progressbar-fill {
   background: #d87d4a !important;
   background: black !important;
 }
 
-@media screen and (min-width: 600px) {
-  .Categories-Swiper {
+@media screen and (min-width: 650px) {
+  .Product-Slider-Swiper {
     width: 100%;
     height: 100%;
     margin-bottom: 80px;
  
   }
-  .Category-Image-Container {
+  .Product-Slider-Image {
     width: 100%;
+    background-size: 130px;
     /* height: 230px; */
   }
 }
 
 @media screen and (min-width: 900px) {
-  .Category-Image-Container {
+  .Product-Slider-Image {
     width: 100%;
     /* height: 230px; */
+    background-size: 130px;
   }
 
-  .Category-Information-Container {
+  .Product-Slider-Info-Container {
     position: absolute;
     bottom: -100%;
     left: 0;
@@ -146,83 +165,89 @@
     color: white;
     color: #683d24;
     padding: 0 10px;
-    border-top: 1px solid #000;
     padding: 0;
   }
 
-  .Category-Information-Container > span:nth-child(1) {
+  .Product-Slider-Info-Container > span:nth-child(1) {
     font-weight: bold;
     font-size: 14px;
   }
 
-  .Category-Information-Container > span:nth-child(2) {
+  .Product-Slider-Info-Container > span:nth-child(2) {
     font-weight: 400;
     font-size: unset;
+    color: white;
+    color: black;;
+    color: #d87d4a;
+    font-weight: bold;
   }
-  .Category-Link-Container:hover .Category-Information-Container {
-    height: 100%;
+  .Product-Slider-Link:hover .Product-Slider-Info-Container {
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
     border-top: none;
-    color: #000;
+    color: white;
     opacity: 0.9;
     bottom: 0;
-  }
+    background-color: #d87d4a;
+    background-color: white;
+    border-top: 1px solid #d87d4a;
 
-  .Category-Link-Container:hover .Category-Information:last-child {
-    font-size: 22px;
-    font-weight: 700;
-    color: #d87d4a;
+  }
+  .Product-Slider-Info {
+    color: white;
+    color: black;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .Category-Image-Container {
+  .Product-Slider-Image {
     width: 100%;
     /* height: 230px; */
+    background-size: 160px;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .Category-Image-Container {
+  .Product-Slider-Image {
     width: 100%;
     /* height: 280px; */
   }
 }
 
 @media (max-width: 700px) and (orientation: landscape) {
-  .Category-Image-Container {
+  .Product-Slider-Image {
     background-size: 130px;
     width: 60%;
   }
 
-  .Category-Information-Container {
+  .Product-Slider-Info-Container {
     height: 100px;
   }
 
-  .Category-Information-Container > span:nth-child(1) {
+  .Product-Slider-Info-Container > span:nth-child(1) {
     font-weight: bold;
     font-size: 14px;
   }
 
-  .Category-Information-Container > span:nth-child(2) {
+  .Product-Slider-Info-Container > span:nth-child(2) {
     font-weight: bold;
     font-size: unset;
   }
 }
 
 @media (min-width: 701px) and (max-width: 900px) and (orientation: landscape) {
-  .Category-Image-Container {
+  .Product-Slider-Image {
     background-size: 150px;
     width: 50%;
   }
 
-  .Category-Information-Container {
+  .Product-Slider-Info-Container {
     height: 100px;
     font-size: 14px;
   }
 
-  .Category-Information-Container > span:nth-child(2) {
+  .Product-Slider-Info-Container > span:nth-child(2) {
     font-weight: bold;
     font-size: 15px;
   }

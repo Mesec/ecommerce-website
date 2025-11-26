@@ -2,30 +2,24 @@
   width: 100%;
   margin: auto;
   text-align: center;
-  /* border: 1px solid rgb(230, 225, 225); */
   border-radius: 5px;
-  /* border: 1px solid rgb(230, 225, 225);
-  border-radius: 5px;
-  padding: 10px; */
 }
 
 .product-gallery .main-slider {
   width: 100%;
   aspect-ratio: 4/4;
-  /* border: 1px solid rgb(230, 225, 225); */
   border-radius: 5px;
-  /* background-color: gray; */
   padding-top: 15px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-gallery .main-slider img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
   border-radius: 5px;
   box-sizing: border-box;
-  
+  padding: 100px;
 }
 
 .product-gallery .thumbs-slider {
@@ -43,7 +37,6 @@
   align-items: center;
   overflow: hidden;
   aspect-ratio: 3/3;
-  /* height: 80px; */
 }
 
 .product-gallery .thumbs-slider .swiper-slide:hover {
@@ -65,6 +58,25 @@
 
 .product-gallery .swiper-pagination-progressbar-fill {
   background-color: #D87D4A;
+}
+
+/* Navigation arrows styling */
+.product-gallery .swiper-button-next,
+.product-gallery .swiper-button-prev {
+  color: #d87d4a;
+  width: 30px;
+  height: 30px;
+}
+
+.product-gallery .swiper-button-next::after,
+.product-gallery .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-gallery .swiper-button-next:hover,
+.product-gallery .swiper-button-prev:hover {
+  color: #000;
 }
 
 @media (min-width: 900px) {

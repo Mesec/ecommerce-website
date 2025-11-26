@@ -1,8 +1,7 @@
 .Home-Main-Content {
   box-sizing: border-box;
   padding: 0 30px;
-  margin-top: 40px;
-  margin-bottom: 100px;
+  margin-top: 50px;
 }
 .Home-Header {
   margin: 0;
@@ -23,7 +22,6 @@
 
 @media screen and (min-width: 600px) {
   .Home-Main-Content {
-    margin-top: 100px;
     padding: 0 100px;
   }
  .Home-Header {
@@ -34,7 +32,6 @@
 @media screen and (min-width: 900px) {
   .Home-Main-Content {
     padding: 0 100px;
-    margin-top: 100px;
   }
  .Home-Header {
     margin-bottom: 60px

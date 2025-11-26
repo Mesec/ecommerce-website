@@ -1,5 +1,5 @@
-.Collection {
-  padding: 30px 20px 0 20px;
+.AllProducts {
+  padding: 50px 20px 0 20px;
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -7,42 +7,43 @@
 }
 
 @media screen and (min-width: 600px) {
- .Collection {
-    padding: 30px 100px 0 100px;
+ .AllProducts {
+    padding: 50px 100px 0 100px;
   }
 }
 
 @media screen and (min-width: 900px) {
- .Collection {
-    padding: 30px 100px 0 100px;
+ .AllProducts {
+    padding: 50px 100px 0 100px;
   }
 }
 
 @media screen and (min-width: 1200px) {
- .Collection {
-    padding: 30px 120px 0 120px;
+ .AllProducts {
+    padding: 80px 120px 0 120px;
     margin-bottom: 80px;
   }
 }
 
 @media screen and (min-width: 1536px) {
- .Collection {
-    padding: 30px 200px 0 200px;
+ .AllProducts {
+    padding: 80px 200px 0 200px;
   }
-   .collection-grid-item {
+   .allproducts-grid-item {
     padding-left: 0 !important;
    }
 }
 
 @media (max-width: 896px) and (orientation: landscape) {
-  .collection-grid-item {
+  .allproducts-grid-item {
     max-width: 100% !important;
     flex-basis: 100% !important;
   }
 }
 
 @media  (max-width: 667px) and (orientation: landscape) {
-  .Collection {
-    padding: 30px 50px 0 50px;
+  .AllProducts {
+    padding: 20px 50px 0 50px;
   }
 }
+
